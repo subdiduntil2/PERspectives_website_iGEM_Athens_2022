@@ -1,9 +1,10 @@
+import sys
 from os import path
 from pathlib import Path
 
 from flask import Flask, render_template
 from flask_frozen import Freezer
-
+from livereload import Server
 
 template_folder = path.abspath('./wiki')
 
@@ -32,4 +33,11 @@ def pages(page):
 
 # Main Function, Runs at http://0.0.0.0:8080
 if __name__ == "__main__":
-    app.run(port=8080)
+
+    if len(sys.argv) > 1 and sys.argv[1] == 'dev':
+        app.debug = True
+        Server(app.wsgi_app).serve()
+    else:
+        app.run(port=8080)
+
+   
