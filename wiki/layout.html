@@ -8,17 +8,20 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
     <!-- Bootstrap CSS -->
-    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/style.css') }}" rel="stylesheet">
+
+    <!--Custom Menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_2.css')}}" rel="stylesheet">
 
     <title>{% block title %}{% endblock %} | Athens - iGEM 2022 (manos's version)</title>
 
 </head>
 <body>
   <!-- Navigation -->
-  {% include 'menu.html' %}
+  {% include 'menu_custom.html' %}
 
   <!-- Header -->
   <header class="bg-hero py-5 mb-5">
@@ -44,6 +47,6 @@
   {% include 'wiki-tools.html' %} -->
 
   <!-- Bootstrap Bundle with Popper -->
-  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'css/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

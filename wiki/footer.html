@@ -1,44 +1,137 @@
 <style>
-.footer{
-  background-color:#61b872;
-  color: #eceff4;
+  .footer {
+    position: realtive;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #050a30;
+    color:  #eceff4;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .footer_div {
+    position: relative;
+    top: 60px;
+    left: 77%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+  
+  .social_media ul{
+  position: relative;
+  top: 70px;
+  left: 80%;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  }
+  
+  .social_media ul li{
+  list-style: none;
+  margin: 0 15px;
+  } 
+
+  .social_media ul li .fa{ 
+  font-size: 30px;
+  line-height: 60px;
+  transition: .6s;
+  color: #050a30;
+  } 
+
+  .social_media ul li .fa:hover{
+  color: #eceff4;  
+  }
+  .social_media ul li a{ 
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #eceff4;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4 px rgba(0,0,0,.5);
+  } 
+
+  .social_media ul li a:hover{
+  transform: translate(0, -10px); 
+  } 
+
+  .social_media ul li:nth-child(1) a:hover{
+  background-color: #db4437;
+  } 
+
+  .social_media ul li:nth-child(2) a:hover{
+  background-color: #1877f2;
+  }
+  
+  .social_media ul li:nth-child(3) a:hover{
+  background-color: #c32aa3;
+  }
+
+  .social_media ul li:nth-child(4) a:hover{
+  background-color: #1da1f2;
+  }
+
+  .social_media ul li:nth-child(5) a:hover{
+  background-color: #0a66c2;
+  } 
+
+  .social_media ul li:nth-child(6) a:hover{
+  background-color: #fc6d26;
+  }
+
+  .social_media ul li:nth-child(7) a:hover{
+  background-color: #ced1ce;
+  }
+
+   /* unvisited link */
+a:link {
+  color: #3aa9c5;
+  text-decoration: none;
 }
-</style>
+
+/* visited link */
+a:visited {
+  color: #3aa9c5;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #ffc973;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #ffe3b3;
+  text-decoration: none;
+} 
+  </style>
 
 
 
-<footer class="pt-4 pb-4 footer py-4 mt-4">
-  <div class="container">
-    <div class="row h-100 align-items-center">
-      <div class="col-lg-6 col-xs-12">
-        <h2 style="color:  #eceff4;"class="mb-3" >Contact Us</h2>
-        <a href="mailto:igemathens2022@gmail.com">igemathens2022@gmail.com</a>
+
+    <div class="footer">
+      <div class="social_media">
+        <ul>
+          <li><a href="mailto:igemathens2022@gmail.com"><i class="fa fa-email"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/at.svg" width="55"></i></a></li>
+          <li><a href="https://www.facebook.com/iGEM.Athens"><i class="fa fa-facebook"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/facebook-f.svg" width="27"></i></a></li>
+          <li><a href="https://www.instagram.com/igemathens/?hl=en"><i class="fa fa-instagram"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/instagram.svg" width="48"></i></a></li>
+          <li><a href="https://twitter.com/igemathens?lang=en"><i class="fa fa-twitter"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/twitter.svg" width="44"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/igem-athens/?viewAsMember=true"><i class="fa fa-linkedin"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/linkedin-in.svg" width="40"></i></a></li>
+          <li><a href="https://gitlab.igem.org/2022/athens"><i class="fa fa-linkedin"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/gitlab.svg" width="40"></i></a></li>
+          <li><a href="https://creativecommons.org/licenses/by/4.0/"><i class="fa fa-linkedin"><img src="https://static.igem.wiki/teams/4294/wiki/social-media-icons/creative-commons.svg" width="40"></i></a></li>
+        </ul>
       </div>
-      <!-- <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
-          <ul class="m-2 p-2">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">Nam mauris velit</a></li>
-            <li><a href="#">Etiam vitae mauris</a></li>
-            <li><a href="#">Fusce scelerisque</a></li>
-            <li><a href="#">Sed faucibus</a></li>
-            <li><a href="#">Mauris efficitur nulla</a></li>
-          </ul>
-      </div> -->
-      <!-- <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-        <p class="mb-0">(541) 754-3010</p>
-        <p>info@hsdf.com</p>
-      </div> -->
-    </div>
-    <hr>
-    <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
-    <div class="row mt-4">
-      <div class="col">
-        <p class="mb-0"><small>© 2022 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
-	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2022/athens">gitlab.igem.org/2022/athens</a>.</small></p>
+      <br>
+      <br>
+      <div class="footer_div">
+          <p>© 2022 - Content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>  
       </div>
-    </div>
-  </div>
-</footer>
+    </div> 
