@@ -46,7 +46,7 @@ body {
 }
 
 .navbar ul li {
-  padding: 25px 35px;
+  padding: 20px 35px;
   position: relative;
 }
 
@@ -55,16 +55,20 @@ body {
   color: var(--color-white);
   text-decoration: none;
   padding-bottom: 10px;
-  transition: all 0.3s; 
+  transition: all 0.3s;  
 }
 
 .navbar ul li a:hover {
   color: var(--yellow);
 }
 
+.navbar ul li a:hover #white-image {
+  opacity:0;
+}
+
 
 .dropdown {
-  opacity: 0;
+  opacity:0;
   z-index:-1;
   display: block;
   position: absolute;
@@ -77,7 +81,7 @@ body {
   box-shadow: 1px 1px 1px 1px rgba(256, 256, 256, 0.2);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  transition: all 1s ease; 
+  transition: opacity 0.4s ease-in-out;
 }
 
 
@@ -95,24 +99,36 @@ body {
   box-shadow: 1px 1px 1px 1px rgba(256, 256, 256, 0.2);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  transform:translateY(10px)
 }
 
-.navbar ul li:hover .dropdown ul {
+.dropdown ul {
   display:block;
   margin: 0px;
   padding-left:0px;
   text-align: center;
 }
 
-.navbar ul li:hover .dropdown ul li {
+.dropdown ul li {
   width: 150px;
   padding: 10px;
 }
 
-.drylab-logo{
-  transition: all 0.3s; 
-  width:30px;
+
+
+.logos img{
+  position:absolute;
+  left:0px;
+  width:55px;
+  padding-right:20px;
+  right:0px;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.logos img.logo-white:hover{
+  opacity:0;
+}
+
 
 .wetlab-logo{
   width:50px;
@@ -123,9 +139,6 @@ body {
   width:50px;
 }
 
-.drylab-logo:hover{
-  background-color:var(--yellow)
-}
 
 .project-logo{
   width:50px;
