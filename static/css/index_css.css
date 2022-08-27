@@ -1,22 +1,237 @@
 *{
     margin: 0;
     padding: 0;
+    /* background-color: #050a30; */
 }
 
-.header{
-    min-height: 100vh;
+.backup_dark{
     width: 100%;
-    background-image: url("https://static.igem.wiki/teams/4294/wiki/draft-gif-v1.gif");
-    background-position: center;
-    background-size: cover;
-    position: raletive;
+    background: #050a30;
+    color: #e9e9eb;
+    padding: 2%;
 }
 
-.other_header{
-    min-height: 100vh;
+.backup_light{
     width: 100%;
-    background-image: linear-gradient(#ebebe9, #102a4e), url("https://static.igem.wiki/teams/4294/wiki/home-page-staff/1.png");
+    background: #102a4e;
+    color: #e9e9eb;
+    padding: 2%;
+}
+
+.supergif{
+    padding-top: 1100px;
+    padding-bottom: 0px;
+    width: 100%;
+    background-color: #102a4e;
+    background-image: url("https://static.igem.wiki/teams/4294/wiki/home-page-staff/teaser-perspectives-final.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position: center;
-    background-size: cover;
+}
+
+
+.biology_to_cs{
+    padding-top: 0;
+    width: 100%;
+    background-image: linear-gradient(#102a4e, #102a4e);
+    background-position: center;
+    background-size: 100%;
     position: realtive;
+    padding-bottom: -1000px;
 }
+
+/* our project section*/
+.our_project{
+    background-image:linear-gradient(#102a4e, #050a30, #102a4e);
+    color: #e9e9eb;
+    background-size: 100%;
+    padding: 10px;
+}
+
+/* our aims section*/
+.goals{
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    background-color: #102a4e;
+    color: #e9e9eb;
+    background-size: 100%;
+    padding: 100px;
+}
+
+.row{
+    margin: 5%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image_box{
+    background: #102a4e;
+    border-radius: 30px;
+    margin: 1%;
+    padding: 3%;
+    box-sizing: content-box;
+}
+
+.text_col{
+    background: #102a4e;
+    border-radius: 30px;
+    margin: 1%;
+    padding: 3%;
+    box-sizing: content-box;
+}
+
+.text_col:hover{
+    transform: translate(0, -15px); 
+    background: #050a30;
+    border-radius: 30px;
+    margin: 1%;
+    padding: 3%;
+    box-sizing: content-box;
+    transition: 0.7s;
+}
+
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* Triple Section */
+
+.triple_section{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: #050a30;
+    color: #e9e9eb;
+    padding-top: 50px;
+    }   
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.container .box{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background-color: #102a4e;
+    border-radius: 40px;
+    /* box-shadow: 0 5px 15px; */
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container .box:before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    }
+
+
+.container .box .icon{
+    position: relative;
+    width: 88px;
+    height: 88px;
+    background: #050a30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+} 
+
+.container .box:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px #3aa9c5;
+}
+
+.container .box:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px #61b872;
+}
+
+.container .box:nth-child(3):hover .icon{
+    box-shadow: 0 0 0 400px #ffc973;
+}
+
+.container .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container .box:hover .content{
+    color: #e9e9eb;
+}
+
+.container .box .content h3{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.container .box .content p{
+    margin: 0;
+    padding: 0;
+}
+.contaner .box .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e9e9eb;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #050a30;
+    margin-top: 30px;
+}
+
+/* .sections_row{
+    margin: 5%;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sections_col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sections_col img{
+    width: 100%;
+}
+
+.layer_wet{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer_wet:hover{
+    background: rgba(226, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
