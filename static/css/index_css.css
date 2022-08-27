@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://static.igem.wiki/teams/4294/wiki/draft-gif-v1.gif");
+    background-position: center;
+    background-size: cover;
+    position: raletive;
+}
+
+.other_header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#ebebe9, #102a4e), url("https://static.igem.wiki/teams/4294/wiki/home-page-staff/1.png");
+    background-position: center;
+    background-size: cover;
+    position: realtive;
+}

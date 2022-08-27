@@ -8,11 +8,8 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 
-    <!-- Bootstrap CSS -->
-    <link href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}" rel="stylesheet">
-
     <!-- Custom CSS -->
-    <!-- <link href="{{ url_for('static', filename = 'css/style.css') }}" rel="stylesheet"> -->
+    <link href="{{ url_for('static', filename = 'css/pages_style.css') }}" rel="stylesheet">
 
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/home_page_menu.css')}}" rel="stylesheet">
@@ -25,11 +22,21 @@
     <!-- <title>{% block title %}{% endblock %} | Athens - iGEM 2022 (manos's version)</title> -->
 
 </head>
+
 <body>
   <!-- Navigation -->
   {% include 'menu_custom.html' %}
 
   <!-- Header -->
+  <header class="pages_header">Header</header>
+
+  <!--Page Content-->
+  
+  <section class="text_box">middle section</section>
+  <section class="bacteria_bg_section">Bacteria Background Secion</section>
+
+
+  <!-- Header
   <header class="bg-hero py-5 mb-5">
     <div class="container h-100">
       <div class="row h-100 align-items-center">
@@ -39,20 +46,15 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
-  Page Content
+  <!-- Page Content
   <div class="container">
     {% block page_content %}{% endblock %}
-  </div>
+  </div> -->
 
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
   {% include 'footer.html' %}
 
-  <!-- Wiki Tools: Teams are allowed to remove it--->
-  <!-- {% include 'wiki-tools.html' %} -->
-
-  <!-- Bootstrap Bundle with Popper -->
-  <!-- <script src="{{ url_for('static', filename = 'css/bootstrap.bundle.min.js') }}"></script> -->
 </body>
 </html>

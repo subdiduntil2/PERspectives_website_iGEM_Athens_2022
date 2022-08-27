@@ -1,0 +1,154 @@
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9e9;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Glacial Indifference';
+}
+
+/* navigation bar background*/
+.navbar{
+  background-color:var(--dark-blue);
+  height:6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  position:fixed;
+}
+
+
+/* navigation bar text list */
+.navbar ul {
+    list-style: none;
+    display: flex;
+  }
+
+/* navigation bar text position */  
+.navbar ul li {
+    padding: 20px 35px;
+    position: relative;
+  }
+
+/* navigation bar text decoration */    
+.navbar ul li a {
+    display: felx;
+    font-size: 25px;
+    color: var(--color-white);
+    text-decoration: none;
+    padding-bottom: 10px;
+    transition: all 0.3s;  
+  }
+  
+.navbar ul li a:hover {
+    color: var(--yellow);
+  }
+  
+.navbar ul li a:hover #white-image {
+    opacity:0;
+  }
+
+/* this the after effect with the yellow line */
+.navbar ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    }
+    
+    .navbar ul li:hover::after {
+    width: 100%;
+    }
+
+/* logo position and other log related staff */
+.navbar-logo {
+  display: flex;
+  padding: 0% 5%;
+  width: auto;
+  padding: 0px;
+  padding-top: 10px;
+  margin-top: 5%;
+  padding-left:20px;
+  height: 90px;
+  transition: 0.4s;
+  float: left;
+  position: relative;
+  bottom: 0.55em;
+  font-size:15px; /*doksasi ton panagatho*/
+  text-align: left;
+}
+
+/* dropdown menu when not hovered */
+.dropdown {
+  display: none;
+}
+
+/* dropdown hovered */ 
+.navbar ul li:hover .dropdown {
+  display: block;
+  position: absolute;
+  left: 0; 
+  top: 100%;
+  background-color:var(--dark-blue);
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px  #205a7a;
+}
+
+.navbar ul li:hover .dropdown ul {
+  display:block;
+  margin: 10px;
+  text-align: center;
+}
+
+.navbar ul li:hover .dropdown ul li {
+  width: max-content;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.logos img{
+  position:absolute;
+  left: -20px;
+  width: 60px;
+  padding-right:20px;
+  right:10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.logos img.logo-white:hover{
+  opacity:0;
+}
+
+
+.wetlab-logo{
+  width:50px;
+  
+}
+
+.hp-logo{
+  width:50px;
+}
+
+
+.project-logo{
+  width:50px;
+}
+
+.team-logo{
+  width:50px;
+}

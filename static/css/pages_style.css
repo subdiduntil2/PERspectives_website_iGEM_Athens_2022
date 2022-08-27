@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.pages_header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://static.igem.wiki/teams/4294/wiki/home-page-staff/1.png");
+    background-position: center;
+    background-size: 100%;
+    position: realtive;
+}
+
+.bacteria_bg_section{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://static.igem.wiki/teams/4294/wiki/home-page-staff/3.png");
+    background-position: center;
+    background-size: cover;
+    position: realtive;
+}
+
+.text_box{
+    background-image: linear-gradient(#050a30, #102a4e);
+    min-height: 100vh;
+}

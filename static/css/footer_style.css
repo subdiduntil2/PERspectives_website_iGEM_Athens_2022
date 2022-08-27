@@ -1,0 +1,146 @@
+
+.footer {
+   position: relative;
+   align-items: center;
+   width: 100%;
+   background-color: #050a30;
+   color:  #eceff4;
+   padding: 50px 0;
+ }
+
+ .footer .social_media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+ }
+ 
+ .social_media ul{
+    position: relative;
+    align-content: center;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    }
+
+.social_media ul li{
+    list-style: none;
+    margin: 0 15px;
+    } 
+
+.social_media ul li .email{ 
+    font-size: 50px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li .facebook{ 
+    font-size: 30px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li .instagram{ 
+    font-size: 40px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li .twitter{ 
+    font-size: 30px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li .linkedin{ 
+    font-size: 30px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li .gitlab{ 
+    font-size: 30px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li .cc{ 
+    font-size: 28px;
+    line-height: 85px;
+    transition: .6s;
+    color: #050a30;
+    }
+
+.social_media ul li a{ 
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #eceff4;
+    transition: .6s;
+    /* box-shadow: 0 5px 4px rgba(0,0,0,.5); */
+    } 
+       
+        .social_media ul li a:hover{
+        transform: translate(0, -10px); 
+        } 
+       
+        .social_media ul li:nth-child(1) a:hover{
+        background-color: #db4437;
+        } 
+       
+        .social_media ul li:nth-child(2) a:hover{
+        background-color: #1877f2;
+        }
+        
+        .social_media ul li:nth-child(3) a:hover{
+        background-color: #c32aa3;
+        }
+       
+        .social_media ul li:nth-child(4) a:hover{
+        background-color: #1da1f2;
+        }
+       
+        .social_media ul li:nth-child(5) a:hover{
+        background-color: #0a66c2;
+        } 
+       
+        .social_media ul li:nth-child(6) a:hover{
+        background-color: #fc6d26;
+        }
+       
+        .social_media ul li:nth-child(7) a:hover{
+        background-color: #ced1ce;
+        }
+       
+         /* unvisited link */
+       a:link {
+        color: #3aa9c5;
+        text-decoration: none;
+       }
+       
+       /* visited link */
+       a:visited {
+        color: #3aa9c5;
+        text-decoration: none;
+       }
+       
+       /* mouse over link */
+       a:hover {
+        color: #ffc973;
+        text-decoration: none;
+       }
+       
+       /* selected link */
+       a:active {
+        color: #ffe3b3;
+        text-decoration: none;
+       } 

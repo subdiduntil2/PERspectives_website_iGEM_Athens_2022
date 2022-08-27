@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/index_css.css') }}" rel="stylesheet">
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/home_page_menu.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style.css')}}" rel="stylesheet">
+    
+    <link href="{{ url_for('static', filename = 'css/fonts.css') }}" rel="stylesheet">
+
+    <title> Perspectives | Athens - iGEM 2022</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<section class="header">
+
+</section>
+
+
+
+<section class="other_header">
+
+</section>
+
+<!-- Footer -->
+{% include 'footer.html' %}
+
+
+</body>
+</html>
