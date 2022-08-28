@@ -1,125 +1,62 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
-    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
-    
-    <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename = 'css/index_page_style_aspa.css') }}" rel="stylesheet">
-
-    <!--Custom menu CSS-->
-    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
-
-    <!--Custom footer CSS-->
-    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
-
-    <title> Perspectives | Athens - iGEM 2022</title>
-</head>
-
-<body>
-<!-- Navigation -->
-{% include 'menu_custom.html' %}
-
-<!-- Super GIF -->
-<section class="supergif">
-</section>
+{% extends "layout.html" %}
 
 
-<!-- From biology to cs section -->
-<section class="biology_to_cs">
-    <img src="https://static.igem.wiki/teams/4294/wiki/home-page-staff/from-biology-to-computer-science.png" width="100%">
-</section>
+{% block title %}PERspectives{% endblock %}
+{% block lead %}iGEM Athens 2022{% endblock %}
 
+{% block page_content %}
+<header class="container"> 
+  <img src="https://static.igem.wiki/teams/4294/wiki/draft-gif-v1.gif" alt="funny GIF" width="100%"> 
+</header>
 
-<section class="generic_sections">
-    <img src="https://static.igem.wiki/teams/4294/wiki/home-page-staff/home-page-staff-1.gif" width="100%">
-</section>
-
-
-<section class="generic_sections">
-    <img src="https://static.igem.wiki/teams/4294/wiki/home-page-staff/home-page-staff-2.gif" width="100%">
-</section>
-
-<!-- PERspectives-->
-<!-- <section class="backup_dark">
-<section class="our_project">
-    <h1 style="font-size: 60px;">What is <span style="color: #3aa9c5 ; font-family:'Glacial Indifference Bold'">PER</span>spectives?</h1>
-    <img src="https://static.igem.wiki/teams/4294/wiki/favicon-white.png" width="100%">
-    <div text_box>
-        
-    </div>
-</section>   
-</section> -->
-
-
-<!-- PERspectives
-<section class="backup_light">
-<section class="goals">
-    <h1 style="font-size: 60px;">Where do we <span style="color: #ef4b4c ; font-family:'Glacial Indifference Bold'">aim</span>?</h1>
-    <img src="https://static.igem.wiki/teams/4294/wiki/home-page-staff/aim.png" class="image-box">
-    <div class="text-box">
-        <p style="font-size: 30px; text-align: justify">Our proposing system aims to achieve complex sensing capabilities by separating simple sensing tasks in different subpopulations of a cell population. We are offering a new perspective in the biosensing field and transfer this ideation from a bacterial population to the cooperation of multiple ones. Due to its intrinsic capability of cellular decision making, our biocomputing circuit can have various biosensing applications in medicine, the environment, industry, and limitless other fields.</p>
-    </div>         
-</section>
-</section> -->
-
-<!-- Triple Section ----> 
-<section class="backup_dark">
-<section class="triple_section">
-<div class="container">
-    <div class="box">
-        <div class="icon"><i class="img_icon"><img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/navbar-wet-lab.png" width="75px"></i></div>
-        <div class="content">
-            <br><br><br><br>
-        <a href="#"><h1 style="font-size: 60px; font-family: 'Glacial Indifference Bold">Wet Lab</h1></a>
-        </div>
-    </div>
-
-    <div class="box">
-        <div class="icon"><img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/navbar-dry-lab.png" width="75px"></div>
-        <div class="content">
-            <br><br><br><br>
-        <a href="#"><h1 style="font-size: 60px; font-family: 'Glacial Indifference Bold'">Dry Lab</h1></a>
-        </div>
-    </div>
-
-    <div class="box">
-        <div class="icon"><img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/navbar-hp.png" width="75px"></div>
-        <div class="content">
-            <br><br><br>
-        <a href="#"><h1 style="font-size: 60px; font-family: 'Glacial Indifference Bold';">Human Practices</h1></a>
-        </div>
-    </div>
+<div class="row">
+  <div class="col">
+    <h2>Before you start</h2>
+    <hr>
+    <p>Please read the following pages:</p>
+    <ul>
+      <li><a href="https://competition.igem.org/">The Competition Page</a></li>
+      <li><a href="https://competition.igem.org/deliverables/team-wiki">Wiki Requirements page</a></li>
+    </ul>
+  </div>
 </div>
-</section>
+<div class="row mt-4">
+  <div class="col">
+    <h2>Styling your wiki</h2>
+    <hr>
+    <p>You may style this page as you like or you can simply leave the style as it is. You can easily keep the styling and edit the content of these default wiki pages with your project information and completely fulfill the requirement to document your project.</p>
+    <p>While you may not win Best Wiki with this styling, your team is still eligible for all other awards. This default wiki meets the requirements, it improves navigability and ease of use for visitors, and you should not feel it is necessary to style beyond what has been provided.</p>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-lg-8">
+    <h2>Tips</h2>
+    <hr>
+    <p>Glacial Indifference This wiki will be your team's first interaction with the rest of the world, so here are a few tips to help you get started:</p>
+    <ul>
+      <li>State your accomplishments! Tell people what you have achieved from the start.</li>
+      <li>Be clear about what you are doing and how you plan to do this.</li>
+      <li>You have a global audience! Consider the different backgrounds that your users come from.</li>
+      <li>Make sure information is easy to find; nothing should be more than 3 clicks away.</li>
+      <li>Avoid using very small fonts and low contrast colors; information should be easy to read.</li>
+      <li>Start documenting your project as early as possible; don't leave anything to the last minute before the Wiki Freeze. For a complete list of deadlines visit the iGEM 2022 calendar</li>
+      <li>Have lots of fun!</li>
+    </ul>
+  </div>
+  <div class="col-lg-4">
+    <h2>Inspiration</h2>
+    <hr>
+    <p>You can also view other team wikis for inspiration! Here are some examples:</p>
+    <ul>
+      <li><a href="https://2019.igem.org/Team:Vilnius-Lithuania">2019 Vilnius Lithuania</a></li>
+      <li><a href="https://2019.igem.org/Team:NUS_Singapore">2019 NUS Singapore</a></li>
+      <li><a href="https://2019.igem.org/Team:Lambert_GA">2019 Lambert GA</a></li>
+      <li><a href="https://2020.igem.org/Team:Waterloo">2020 Waterloo</a></li>
+      <li><a href="https://2020.igem.org/Team:TUDelft">2020 TUDelft</a></li>
+      <li><a href="https://2020.igem.org/Team:XMU-China">2020 XMU China </a></li>
+      <li><a href="https://2020.igem.org/Team:TAS_Taipei">2020 TAS Taipei </a></li>
+    </ul>
+  </div>
+</div>
 
-
-
-
-<!-- <div class="sections_row">
-    <div class="sections_col">
-        <div class="layer_wet">
-            <img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/navbar-dry-lab.png">
-            Wet Lab
-        </div>
-        <div class="layer_dry">
-            <img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/navbar-dry-lab.png">
-            Dry Lab
-        </div>
-        <div class="layer_hp">
-            <img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/navbar-dry-lab.png">
-            Human Practices
-        </div>
-    </div>
-
-</div> -->
-</section>
-
-<!-- Footer -->
-{% include 'footer.html' %}
-
-
-</body>
-</html>
+{% endblock %}
