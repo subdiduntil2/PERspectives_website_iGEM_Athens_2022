@@ -144,3 +144,10 @@
         color: #ffe3b3;
         text-decoration: none;
        } 
+
+
+@media(max-width: 35rem){
+    .social_media{
+        flex-direction: column;
+    }
+}

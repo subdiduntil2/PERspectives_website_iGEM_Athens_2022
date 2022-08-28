@@ -1,9 +1,22 @@
-<nav class="navbar">
-    <a href="{{ url_for('pages', page = 'index_custom') }}">
+ <script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+var scrolled = (winScroll / height) * 100;
+document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+</script>
+
+
+<nav id="primary navigation" class="navbar">
+    <a href="{{ url_for('pages', page = 'index') }}">
         <img class="navbar-logo" src="https://static.igem.wiki/teams/4294/wiki/favicon-white.png">
     </a>
     <ul>
-        <li>  <!--Team Section-->
+        <li>
             <a href="#"> 
                 <div class="logos">
                     <img class="logo-yellow" src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/2022-08-27/2-navbar-yel-team.png">
@@ -15,6 +28,7 @@
                 <ul>
                     <li><a href="{{ url_for('pages', page = 'test_page') }}">Members</a></li>
                     <li><a href="{{ url_for('pages', page = 'attributions') }}">Attributions</a></li>
+                    <li><a href="{{ url_for('pages', page = 'sponsors') }}">Sponsors</a></li>
                 </ul>
             </div>
         </li>
@@ -98,5 +112,14 @@
                 Awards
             </a>
         </li>
-    </ul>
+    </ul>    
 </nav>
+
+<div class="header">
+    <div class="progress-container ">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>
+
+
+

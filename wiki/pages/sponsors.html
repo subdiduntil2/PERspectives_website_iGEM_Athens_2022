@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/pages_style_aspa.css') }}" rel="stylesheet">
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename = 'css/fonts.css') }}" rel="stylesheet">
+
+    <!-- <title>{% block title %}{% endblock %} | Athens - iGEM 2022 (manos's version)</title> -->
+
+</head>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .pages_header{
+        width: 100%;
+        background-image: url("https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/ponsors-gif.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 0;
+    }
+    
+   .generic_sections{
+        width: 100%;
+        background-position: center;
+        background-color: #050a30;
+        text-align: center;
+        font-size: 0;
+    }
+    
+</style>
+    
+
+<body>
+  <!-- Navigation -->
+  {% include 'menu_custom.html' %}
+
+<section class="pages_header">
+    
+</section>
+
+<section class="generic_sections">
+    <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/2.png" width="1600px">
+</section>
+<section class="generic_sections">
+    <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/3.png" width="1600px">
+</section>
+<section class="generic_sections">
+    <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/4.png" width="1600px">
+</section>
+<section class="generic_sections">
+    <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/5.png" width="1600px">
+</section>
+<section class="generic_sections">
+    <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/6.png" width="1600px">
+<section class="generic_sections">
+    <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/7.png" width="1600px">
+</section>
+
+
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  {% include 'footer.html' %}
+
+</body>
+</html>

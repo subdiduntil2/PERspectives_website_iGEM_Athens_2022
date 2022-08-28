@@ -1,3 +1,6 @@
+@import url(fonts.css);
+
+
 :root {
     --dark-blue: #050a30;
     --light-blue: #3aa9c5;
@@ -10,22 +13,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-  
-body {
     font-family: 'Glacial Indifference';
 }
+  
 
 /* navigation bar background*/
 .navbar{
   background-color:var(--dark-blue);
-  height:6rem;
+  height: 80px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0;
   position:fixed;
+  z-index: 9999;
 }
 
 
@@ -152,3 +154,64 @@ body {
 .team-logo{
   width:50px;
 }
+
+/* progress bar style*/
+
+.header {
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  background-color: #f1f1f1;
+  left: 0.1vh;
+  z-index: 1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 90px;
+  background: #050a30;
+}
+
+.progress-bar {
+  background: #3aa9c5;
+  position: fixed;
+  width: 0%;
+  height:90px;
+  animation: progress 1s linear;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+} 
+
+/*fixing mobile preview*/
+
+@media (max-width: 35rem){
+  .navbar ul{
+    --gap: 2em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 25%;
+    
+    flex-direction: column;
+    padding: min(30vh, 10rem) 3em;
+    background: #050a30;
+  }
+
+
+}
+
+  .mobile-nav-toggle{
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url("https://static.igem.wiki/teams/4294/wiki/favicon-white.png");
+    background-repeat: no-repeat;
+    width: 4rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+
+
+  }
