@@ -1,0 +1,169 @@
+@import url(fonts.css);
+
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9eb;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #050a30;
+    color: #e9e9eb;
+    font-family: 'Glacial Indifference';
+}
+
+.page_header{
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+    color: #050a30;
+}
+
+.img_header{
+    filter: blur(4px);
+}
+
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    font-size: 100px;
+    color: #050a30;
+    background-color:rgba(58, 169, 197, 0.5);
+    width: 100%;
+    height: 120px;
+    font-family: 'Glacial Indifference';
+}
+
+
+.container{
+    padding-top: 100px;
+    color: #e9e9eb;
+    background-color: #102a4e;
+}
+
+.profiles{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+}
+
+.profile{
+    flex-basis: 260px;
+}
+
+.profile .profile-img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.profile .profile-img:hover{
+    filter: grayscale(0);
+}
+
+
+.user-name{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 55px;
+}
+
+.old, .new{
+    display: block;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+.old {
+    height: auto;
+    opacity: 1;
+    width: auto;
+  }
+
+.new {
+    color: #fff;
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+.profile:hover .old {
+    height: 0px;
+    opacity: 0;
+    width: 0px;
+  }
+.profile:hover .new {
+    height: auto;
+    opacity: 1;
+    width: auto;
+  }
+
+.profile h5{
+    font-size: 35px;
+    margin: 20px;
+    text-align: center;
+}
+
+.profile p{
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1150px) {
+    .profiles{
+        flex-direction: column;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile p{
+        text-align: center;
+        margin: 20px 60px 80px 60px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
