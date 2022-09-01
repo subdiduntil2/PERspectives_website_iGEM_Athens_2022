@@ -1,0 +1,138 @@
+@import url(fonts.css);
+
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9eb;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Glacial Indifference';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.header_one{
+    width: 100%;
+    height:100%;
+    margin-bottom: 0em;
+    background-size:cover;
+    z-index:1;
+    background-color: #102a4e;
+}
+
+.header_one img {
+    height:50em;
+    background-color: #102a4e;
+}
+
+.cc{
+width: 100%;
+height:100%;
+outline:none;
+padding-right: 10em;
+padding-left: 10em;
+display:flex;
+flex-wrap: wrap;
+padding-top:3em;
+padding-bottom:3em;
+margin-right: auto;
+margin-left: auto;
+background-color:#102a4e;
+}
+
+
+.senders{
+    margin-left: 20em;
+    margin-right: 2em;
+    font-size:30px;
+}
+
+.left-side{
+    color:var(--color-white);
+    margin-left: 0em;
+    padding-right: 0px;
+    padding-left: 0.2em;
+    width:30%;
+    font-size:30px;
+}
+
+
+.right-side{
+    color:var(--color-white);
+    margin-left: 0em;
+    padding-right: 0px;
+    padding-left: 0em;
+    width:70%;
+}
+
+.index-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    padding-bottom: 0px;
+    margin-top: 1em;
+    top:150px;
+    bottom:200px;
+}
+
+.lateral-index{
+    background-color: var(--dark-blue);
+    transition: all .2s ease;
+    list-style-type: circle;
+    display:inline-block;
+    border-radius: 0.4em !important;
+    margin-left: 0;
+    padding: 1em 1em 1em 2.6em !important;
+    margin-top:2em;
+}
+
+
+
+li.lateral-content {
+    margin-bottom: 0px !important;
+    padding-bottom: 1em !important;
+    padding-top: initial !important;
+    padding-left: 0em !important;
+  }
+
+
+  
+.index-bar ul li{
+    color:var(--color-white);
+    transition: all 0.2s ease;
+}
+
+.index-bar ul li:hover {
+    color:var(--yellow);
+}
+
+
+.index-bar ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+    
+.index-bar ul li:hover::after {
+    width: 100%;
+}
+
+
+.anchorOffset {
+    display: block !important;
+    position: relative !important;
+    top: -100px !important;
+    visibility: hidden !important;
+  }

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/model_style.css') }}" rel="stylesheet">
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <title> Perspectives | Athens - iGEM 2022</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<div class="header_one">
+    <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/t-tjusls-china-face-model.jpg" width="100%">
+</div>
+
+
+<div class="cc">
+    <div class="left-side">
+        <div class="index-bar">
+            <h2><b>Index</b></h2>
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a class="inner-link" href="#intro">Introduction</a>
+                </li>
+                <li class="lateral-content">
+                    <a class="inner-link" href="#results">Results</a>
+                </li>
+                <li class="lateral-content">
+                    <a class="inner-link" href="#discussion">Discussion</a>
+                </li>
+                <li class="lateral-content">
+                    <a class="inner-link" href="#references">References</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-side">
+        <section class="introduction">
+            <a id="intro" class="anchorOffset"></a>
+            <br><br>
+            <h1><b>Senders Model</b></h1>
+            <br><br>
+            <h2>Senders Prep</h2>
+            <br>
+            <p> Senders model intro, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+        </section>
+        <section class="main" >
+            <a id="results" class="anchorOffset"></a>
+            <br>
+            <h2>Senders Results</h2>
+            <br>
+            <p> Senders model results, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/senders-img.png">
+            <br>
+            <p> Senders model commentary, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. </p>
+            <br>
+        </section>
+        <section class="discussion">
+            <a id="discussion" class="anchorOffset"></a>
+            <br>
+            <h2>Senders Future Plans</h2>
+            <br>
+            <p> Senders future plans, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+        </section> 
+    </div>
+</div>            
+
+
+
+        
+        
+
+
+
+<!-- Footer -->
+{% include 'footer.html' %}
+
+
+
+
+</body>
+</html>
