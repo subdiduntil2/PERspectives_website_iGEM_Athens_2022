@@ -115,7 +115,7 @@ li.lateral-content {
 }
 
 
-.index-bar ul li::after {
+.index-bar ul li a::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -125,7 +125,7 @@ li.lateral-content {
     transition: all 0.5s;
   }
     
-.index-bar ul li:hover::after {
+.index-bar ul li a:hover::after {
     width: 100%;
 }
 
@@ -167,7 +167,7 @@ li.lateral-content {
     color:var(--yellow)
 }
 
-.button a::after {
+.inner-link::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -177,7 +177,7 @@ li.lateral-content {
     transition: all 0.5s;
   }
     
-.button a:hover::after {
+.inner-link:hover::after {
     width: 30%;
 }
 
@@ -187,4 +187,85 @@ li.lateral-content {
 
 #cc-senders-2{
     display:none;
+}
+
+.collapsible{
+    padding-top:30px;
+}
+
+
+.coll-up{
+    display:flex;
+}
+
+
+.collapsible label {
+    padding:20px 20px;
+    position:relative;
+    z-index:1;
+    font-weight:600;
+    padding:20px 20px;
+    text-align: left;
+    transition: all 0.3s linear;
+    background-color:#050a30;
+    border-radius:20px;
+    display:flex;
+    position:relative;
+    color:#e9e9eb;
+    cursor:pointer;
+    font-size: 30px;
+}
+
+.collapsible img{
+    position:relative;
+    
+}
+
+
+.collapsible label:hover{
+    color:var(--yellow)
+}
+
+/*
+.collapsible label a::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto; 
+    transition: all 0.5s;
+  }
+    
+.collapsible label a:hover::after {
+    width: 30%;
+}
+*/
+.collapsible-content{
+    overflow:hidden;
+    max-height:0px;
+    padding-bottom:25px;
+    overflow:hidden;
+    top:-100%;
+    opacity:0;
+    transition: max-height 0.5s ease-out;
+    transition: all 0.5s ease;
+}
+
+.collapsible input{
+    display:none;
+}
+
+.collapsible input:checked ~ .collapsible-content{
+    max-height:300px;
+    padding-bottom:5px;
+    background-color:#102a4e;
+    opacity:1;
+    top:0;
+}
+
+.collapsible-content cite a {
+     padding: 10px 10px;
+     color:#e9e9eb;
+     display:block;
 }
