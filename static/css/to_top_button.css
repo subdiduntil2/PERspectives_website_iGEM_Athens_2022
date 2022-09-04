@@ -1,0 +1,66 @@
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color:var(--color-white);
+    color:var(--color-white);
+    cursor: pointer;
+    outline: none;
+    border: 3px solid var(--dark-blue);
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    z-index:20000;
+  }
+
+  #back-to-top-btn img {
+    color:var(--light-blue);
+    width:60%;
+  }
+  #back-to-top-btn:hover {
+    background-color: var(--light-blue);
+    color: var(--yellow);  
+  }
+
+  #back-to-top-btn:hover img, #back-to-top-btn:focus img {
+    filter:opacity(0.4) color(0 0 0 white);
+  }
+
+  .btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+  }
+
+  @keyframes btnEntrance {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;  
+    animation-name: btnExit;
+  }
+
+  /* fadeOutDown */
+  @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }

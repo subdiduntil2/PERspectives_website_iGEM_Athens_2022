@@ -9,18 +9,29 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/team_page_style_aspa.css') }}" rel="stylesheet">
 
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
     <!--Custom footer CSS-->
     <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
 
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
     <title> Perspectives | Athens - iGEM 2022</title>
 </head>
 
 <body>
 <!-- Navigation -->
 {% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
 
 <div class="page_header">
     <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/team-page/project-reveal-1920-1080-px-1.gif" width="100%">
@@ -155,6 +166,9 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
         </div>
 </div>
+
+<!--Loader-->   
+{% include 'loader.html'%}
 
 <!-- Footer -->
 {% include 'footer.html' %}

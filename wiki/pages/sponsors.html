@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/pages_style_aspa.css') }}" rel="stylesheet">
@@ -19,8 +21,12 @@
 
     <link href="{{ url_for('static', filename = 'css/fonts.css') }}" rel="stylesheet">
 
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
     <!-- <title>{% block title %}{% endblock %} | Athens - iGEM 2022 (manos's version)</title> -->
 
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
 </head>
 
 <style>
@@ -54,6 +60,9 @@
   <!-- Navigation -->
   {% include 'menu_custom.html' %}
 
+  <!--To top button-->
+{% include 'to_top_button.html'%}
+
 <section class="pages_header">
     
 </section>
@@ -76,10 +85,11 @@
     <img src="https://static.igem.wiki/teams/4294/wiki/sponsors-logos/final-page-material/7.png" width="100%">
 </section>
 
+<!--Loader-->   
+{% include 'loader.html'%}
 
-
-  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-  {% include 'footer.html' %}
+<!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+{% include 'footer.html' %}
 
 </body>
 </html>
