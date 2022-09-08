@@ -89,7 +89,7 @@ background-color:#102a4e;
 
 .lateral-index{
     background-color: var(--dark-blue);
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     list-style-type: circle;
     display:inline-block;
     border-radius: 0.4em !important;
@@ -210,7 +210,7 @@ li.lateral-content {
     font-weight:600;
     padding:20px 20px;
     text-align: left;
-    transition: all 0.3s linear;
+    transition: all 0.5s linear;
     background-color:#050a30;
     border-radius:20px;
     display:flex;
@@ -272,4 +272,8 @@ li.lateral-content {
      padding: 10px 10px;
      color:#e9e9eb;
      display:block;
+}
+
+.equations{
+    font-size: 20px;
 }
