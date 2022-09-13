@@ -76,6 +76,7 @@ background-color:#102a4e;
     padding-right: 0px;
     padding-left: 0em;
     width:70%;
+    font-size:30px;
 }
 
 .index-bar{
@@ -100,24 +101,28 @@ background-color:#102a4e;
 
 
 
-li.lateral-content {
-    margin-bottom: 0px !important;
-    padding-bottom: 1em !important;
-    padding-top: initial !important;
-    padding-left: 0em !important;
+.index-bar ul li {
+    padding-bottom: 1em;
+    padding-top:0em;
+    position: relative;
   }
 
 
+/* navigation bar text decoration */    
+.index-bar ul li a {
+    /*display: flex; */ 
+    font-size: 25px;
+    color: var(--color-white);
+    text-decoration: none;
+    padding-bottom: 10px;
+    transition: all 0.3s;  
+  }
   
-.index-bar ul li a{
-    color:var(--color-white);
-    transition: all 0.2s ease;
-}
-
 .index-bar ul li a:hover {
-    color:var(--yellow);
-}
+    color: var(--yellow);
+  }
 
+/* this the after effect with the yellow line */
 
 .index-bar ul li a::after {
     content: '';
@@ -126,12 +131,13 @@ li.lateral-content {
     background-color: #ffc973;
     display: block;
     margin: auto;
-    transition: all 0.5s;
+    transition: 0.5s;
   }
     
 .index-bar ul li a:hover::after {
-    width: 100%;
-}
+    width: 0%;
+    }
+
 
 .anchorOffset {
     display: block !important;
@@ -171,19 +177,6 @@ li.lateral-content {
     color:var(--yellow)
 }
 
-.inner-link::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: #ffc973;
-    display: block;
-    margin: auto;
-    transition: all 0.5s;
-  }
-    
-.inner-link:hover::after {
-    width: 30%;
-}
 
 #cc-receivers{
     display:none;
@@ -254,6 +247,7 @@ li.lateral-content {
     opacity:0;
     transition: max-height 0.5s ease-out;
     transition: all 0.5s ease;
+    font-size:20px;
 }
 
 .collapsible input{
@@ -277,3 +271,45 @@ li.lateral-content {
 .equations{
     font-size: 20px;
 }
+
+
+/* Table */
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px !important;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 1px var(--light-blue);
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #102a4e;
+  }
