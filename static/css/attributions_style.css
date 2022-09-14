@@ -42,3 +42,29 @@ body{
     height: 130px;
     font-family: 'Glacial Indifference Bold';
 }
+
+.container{
+    padding-top: 50px;
+    color: #e9e9eb;
+    background-color: #102a4e;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+
+.container h1{
+    font-size: 50pt;
+    color: #ef4b4c;
+    padding-bottom: 20px;
+}
+
+.container p{
+    font-size: 24pt;
+    text-align: justify;
+}
+
+.container ul li{
+    font-size: 24pt;
+    text-align: justify;
+    padding-bottom: 20px;
+}

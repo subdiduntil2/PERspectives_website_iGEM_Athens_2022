@@ -27,7 +27,7 @@ document.getElementById("myBar").style.width = scrolled + "%";
             <div class="dropdown">
                 <ul>
                     <li><a href="{{ url_for('pages', page = 'team_custom') }}">Members</a></li>
-                    <li><a href="{{ url_for('pages', page = 'attributions') }}">Attributions</a></li>
+                    <li><a href="{{ url_for('pages', page = 'attributions_custom') }}">Attributions</a></li>
                     <li><a href="{{ url_for('pages', page = 'collaborations_custom') }}">Collaborations</a></li>
                     <li><a href="{{ url_for('pages', page = 'sponsors') }}">Sponsors</a></li>
                 </ul>
@@ -47,7 +47,7 @@ document.getElementById("myBar").style.width = scrolled + "%";
                     <li><a href="{{ url_for('pages', page = 'contribution') }}">Contribution</a></li>
                     <li><a href="{{ url_for('pages', page = 'engineering') }}">Engineering</a></li>
                     <li><a href="{{ url_for('pages', page = 'implementation') }}">Implementation</a></li>
-                    <li><a href="{{ url_for('pages', page = 'proof-of-concept') }}">Proof of Concept</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Proof of Concept</a></li>
                 </ul>
             </div>
         </li>
@@ -63,13 +63,13 @@ document.getElementById("myBar").style.width = scrolled + "%";
             </a>
             <div class="dropdown">
                 <ul>
-                    <li><a href="{{ url_for('pages', page = '#') }}">Design</a></li>
-                    <li><a href="{{ url_for('pages', page = 'parts') }}">Parts</a></li>
-                    <li><a href="{{ url_for('pages', page = 'improve') }}">Improve</a></li>
-                    <li><a href="{{ url_for('pages', page = 'safety') }}">Safety</a></li>
-                    <li><a href="{{ url_for('pages', page = '#') }}">Interlab</a></li>
-                    <li><a href="{{ url_for('pages', page = 'measurement') }}">Measurements</a></li>
-                    <li><a href="{{ url_for('pages', page = 'notebook') }}">Wet Notebook</a></li>
+                    <li><a href="{{ url_for('pages', page = 'design') }}">Design</a></li>
+                    <li><a href="{{ url_for('pages', page = 'parts_custom') }}">Parts</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Improve</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Safety</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Interlab</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Measurements</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Wet Lab Notebook</a></li>
                 </ul>
             </div>
         </li>
@@ -85,7 +85,7 @@ document.getElementById("myBar").style.width = scrolled + "%";
                 <ul>
                     <li><a href="{{ url_for('pages', page = 'model_custom') }}">Model</a></li>
                     <li><a href="{{ url_for('pages', page = 'software') }}">Software</a></li>
-                    <li><a href="{{ url_for('pages', page = 'notebook') }}">Dry Notebook</a></li>
+                    <li><a href="{{ url_for('pages', page = 'dry_notebook') }}">Dry Lab Notebook</a></li>
             </div>
         </li>
         <li>
@@ -98,10 +98,11 @@ document.getElementById("myBar").style.width = scrolled + "%";
             </a>
             <div class="dropdown">
                 <ul>
-                    <li><a href="{{ url_for('pages', page = 'human-practices') }}">Overview</a></li>
-                    <li><a href="{{ url_for('pages', page = '#') }}">Integrated</a></li>
-                    <li><a href="{{ url_for('pages', page = 'communication') }}">Communication</a></li>
-                    <li><a href="{{ url_for('pages', page = 'education') }}">Education</a></li>
+                    <li><a href="{{ url_for('pages', page = 'hp_overview') }}">Overview</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Integrated Human Practices</a></li>
+                    <li><a href="{{ url_for('pages', page = 'under_construction') }}">Education & Communication</a></li>
+                    <li><a href="{{ url_for('pages', page = 'collaborations_custom') }}">Collaborations</a></li>
+                    <!-- <li><a href="{{ url_for('pages', page = 'education') }}">Education</a></li> -->
             </div>
         </li>
         <li>

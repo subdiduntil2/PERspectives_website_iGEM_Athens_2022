@@ -20,10 +20,22 @@ body{
     font-family: 'Glacial Indifference';
 }
 
-.section{
+.hero{
     background-color: #102a4e;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.section_img{
-    width: 100%;
+.inspiration{
+    background-color: #102a4e;
+    color: #e9e9eb;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 60px;
 }

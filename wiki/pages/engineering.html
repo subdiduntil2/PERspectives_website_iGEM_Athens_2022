@@ -1,20 +1,65 @@
-{% extends "layout.html" %}
-  
-{% block title %}Engineering Success{% endblock %}
-{% block lead %}Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle.{% endblock %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/engineering_style.css') }}" rel="stylesheet">
 
-{% block page_content %}
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #1</h4>
-      <p>Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.<p>
-      <p>If you plan to show engineering success by creating a new Part that has been shown to work as expected, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
-  </div>
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title> Perspectives | Engineering</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/contribution/project-bg.gif" width="100%">
+    <div class="heading">Engineering Success</div>    
 </div>
 
-{% endblock %}
+<div class="container">
+  <h1>Section 1</h1>
+  <h3>all you need to know</h3>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
+</div>
+
+<div class="container">
+  <h1>Section 2</h1>
+  <h3>all you need to know</h3>
+  <img class="eng_cycle" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/engineering-success-header-2.gif" width="50%">
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
+</div>
+
+<div class="container">
+  <h1>Section 3</h1>
+  <h3>all you need to know</h3>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
+</div>
+
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}

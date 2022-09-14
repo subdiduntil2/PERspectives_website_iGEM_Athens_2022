@@ -23,8 +23,37 @@ html{
     scroll-behavior: smooth;
 }
 
+/*Aspa*/
 
-.header_one{
+.page_header{
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+    background-color: #050a30;
+
+}
+
+.img_header{
+    filter: blur(4px);
+}
+
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    font-size: 100px;
+    color: var(--color-white);
+    background-color:rgba(58, 169, 197, 0.6);
+    width: 100%;
+    height: 130px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+
+
+/*Manos*/
+/* .header_one{
     width: 100%;
     height:100%;
     margin-bottom: 0em;
@@ -36,7 +65,7 @@ html{
 .header_one img {
     height:50em;
     background-color: #102a4e;
-}
+} */
 
 .cc{
 width: 100%;

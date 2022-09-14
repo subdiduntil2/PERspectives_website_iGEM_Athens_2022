@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/hp_overview_style.css') }}" rel="stylesheet">
+
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>PERspectives | Human Practices Overview</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/human-practices/hp-bg.gif" width="100%">
+    <div class="heading">Human Practices Overview</div>    
+</div>
+
+<div class="container">
+  <div class="profiles">
+  <!---  Annie -->    
+      <div class="profile">
+          <img src="https://static.igem.wiki/teams/4294/wiki/team-page/anny-retus.jpg" class="profile-img">
+          <h3 class="user-name">        
+          <span class="old">Annie</span>
+          <span class="new">Annie 🔥☕️ </span> 
+          </h3>
+          <h5>
+          <span class="old">Wet Lab Member</span>
+          <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+      </div>
+
+  <!---  Anthi -->
+  <div class="profile">
+      <img src="https://static.igem.wiki/teams/4294/wiki/team-page/anthi-retus.jpg" class="profile-img">
+      <h3 class="user-name">        
+      <span class="old">Anthi</span>
+      <span class="new">Anthi ✨📰 </span> 
+      </h3>
+      <h5>
+      <span class="old">Wet Lab Member</span>
+      <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+  </div>
+
+  <!---  Aristotelis -->
+      <div class="profile">
+          <img src="https://static.igem.wiki/teams/4294/wiki/team-page/aris-retus.jpg" class="profile-img">
+          <h3 class="user-name">
+          <span class="old">Aristotelis</span>
+          <span class="new">Aristotelis ⚡️🤫 </span> 
+          </h3>
+          <h5>
+          <span class="old">Wet Lab Member</span>
+          <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+      </div>
+
+</div>
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}

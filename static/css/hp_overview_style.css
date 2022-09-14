@@ -27,22 +27,21 @@ body{
 }
 
 .img_header{
-    filter: blur(4px);
+    filter: blur(5px);
 }
 
 .heading{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -30%);
     font-size: 100px;
-    color: #050a30;
-    background-color:rgba(97, 184, 114, 0.7);
+    color: #e9e9eb;
+    background-color:rgba(239, 75, 76, 0.8);
     width: 100%;
     height: 130px;
     font-family: 'Glacial Indifference Bold';
 }
-
 
 .container{
     padding-top: 100px;
@@ -61,8 +60,8 @@ body{
 }
 
 .profile .profile-img{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     border-radius: 50%;
     filter: grayscale(100%);
     cursor: pointer;
@@ -138,32 +137,4 @@ body{
         font-size: 20px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
