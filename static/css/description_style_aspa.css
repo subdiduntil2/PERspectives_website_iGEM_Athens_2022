@@ -1,0 +1,29 @@
+@import url(fonts.css);
+
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9eb;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+body{
+    background-color: #050a30;
+    color: #e9e9eb;
+    font-family: 'Glacial Indifference';
+}
+
+.section{
+    background-color: #102a4e;
+}
+
+.section_img{
+    width: 100%;
+}

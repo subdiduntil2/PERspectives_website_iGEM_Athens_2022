@@ -28,6 +28,7 @@ document.getElementById("myBar").style.width = scrolled + "%";
                 <ul>
                     <li><a href="{{ url_for('pages', page = 'team_custom') }}">Members</a></li>
                     <li><a href="{{ url_for('pages', page = 'attributions') }}">Attributions</a></li>
+                    <li><a href="{{ url_for('pages', page = 'collaborations_custom') }}">Collaborations</a></li>
                     <li><a href="{{ url_for('pages', page = 'sponsors') }}">Sponsors</a></li>
                 </ul>
             </div>
@@ -42,7 +43,7 @@ document.getElementById("myBar").style.width = scrolled + "%";
             </a>
             <div class="dropdown">
                 <ul>
-                    <li><a href="{{ url_for('pages', page = 'description') }}">Description</a></li>
+                    <li><a href="{{ url_for('pages', page = 'description_custom') }}">Description</a></li>
                     <li><a href="{{ url_for('pages', page = 'contribution') }}">Contribution</a></li>
                     <li><a href="{{ url_for('pages', page = 'engineering') }}">Engineering</a></li>
                     <li><a href="{{ url_for('pages', page = 'implementation') }}">Implementation</a></li>
