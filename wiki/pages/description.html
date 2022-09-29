@@ -1,57 +1,72 @@
-{% extends "layout.html" %}
-  
-{% block title %}Project Description{% endblock %}
-{% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/description_style_aspa.css') }}" rel="stylesheet">
 
-{% block page_content %}
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #3</h4>
-      <p>Describe how and why you chose your iGEM project.<p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>PERspectives | Project Description</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<!--Header-->
+
+<!-- <div class="hero">
+    <div class="inspiration">
+        <h1>Inspiration</h1>
+        <p>Networks have come to pervade the world we live in, from the Internet to networks of public transport, disease transmission, even brain neurons. By imitating those very neurons, computer scientists designed the first Artificial Neural Network (ANN), forever revolutionizing the data processing domain. With data processing being crucial to biological procedures as well, we thought that going backwards and designing a bacterial artificial intelligence system based on ANNs would provide new prospects in many fields. 
+            It is true that cells can process information and proceed to a specific action based on their environment. In most applications of biological engineering, not only in biomedicine but also in ecology and industry, single cells or cellular systems are used for the detection of specific molecules that lead to a specific reaction. Therefore, all these applications are based on the ability of cells to process information. However, one of the current problems in synthetic biology is that single cell engineering, and thus information processing, is limited by two factors. First there is the necessary molecular complexity, and secondly this complexity is accompanied by the metabolic burden of synthetic circuits. 
+            Our inspiration to create a biological system that implements the perceptron algorithm aims to tackle this problem and be able to process multiple complex information in order to proceed to a specific action.
+        </p>
     </div>
-  </div>
+</div> -->
+
+
+
+<div class="section">
+    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>A clear and concise description of your project.</li>
-      <li>A detailed explanation of why your team chose to work on this particular project.</li>
-      <li>References and sources to document your research.</li>
-      <li>Use illustrations and other visual resources to explain your project.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Leiden/Description">2019 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
-      <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
-      <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
-      <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
-      <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
-    </ul>
-  </div>
+<div class="section">
+    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Some advice</h2>
-    <hr>
-    <p>We encourage you to put up a lot of information and content on your wiki, but we also encourage you to include summaries as much as possible. If you think of the sections in your project description as the sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements. Your Project Description should include more information than your project abstract.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>References</h2>
-    <hr>
-    <p>iGEM teams are encouraged to record references you use during the course of your research. They should be posted somewhere on your wiki so that judges and other visitors can see how you thought about your project and what works inspired you.</p>
-  </div>
+<div class="section">
+    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
 </div>
 
-{% endblock %}
+<div class="section">
+    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
+</div>
+
+
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}
