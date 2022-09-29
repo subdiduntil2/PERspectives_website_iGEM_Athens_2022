@@ -9,8 +9,8 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/team_page_style_aspa.css') }}" rel="stylesheet">
 
-    <!--For loader JS script-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- For loader JS script
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
@@ -29,6 +29,9 @@
 <body>
 <!-- Navigation -->
 {% include 'menu_custom.html' %}
+
+<!--Loader-->   
+{% include 'loader.html'%}
 
 <!--To top button-->
 {% include 'to_top_button.html'%}
