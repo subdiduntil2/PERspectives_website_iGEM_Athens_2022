@@ -252,21 +252,6 @@ background-color:#102a4e;
     color:var(--yellow)
 }
 
-/*
-.collapsible label a::after {
-    content: '';
-    width: 0%;
-    height: 1px;
-    background-color: #ffc973;
-    display: block;
-    margin: auto; 
-    transition: all 0.5s;
-  }
-    
-.collapsible label a:hover::after {
-    width: 30%;
-}
-*/
 .collapsible-content{
     overflow:hidden;
     max-height:0px;
