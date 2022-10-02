@@ -1,0 +1,263 @@
+@import url(fonts.css);
+
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9eb;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Glacial Indifference';
+}
+
+iframe{
+    display:none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Aspa*/
+
+.page_header{
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+    background-color: #050a30;
+
+}
+
+.img_header{
+    filter: blur(4px);
+}
+
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 100px;
+    color: var(--color-white);
+    background-color:rgba(58, 169, 197, 0.4);
+    width: 100%;
+    height: 130px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+
+
+.cc{
+width: 100%;
+height:100%;
+outline:none;
+padding-right: 5em;
+padding-left: 5em;
+display:flex;
+flex-wrap: wrap;
+padding-top:3em;
+padding-bottom:3em;
+margin-right: auto;
+margin-left: auto;
+background-color:#102a4e;
+}
+
+.left-side{
+    color:var(--color-white);
+    margin-left: 0em;
+    padding-right: 0px;
+    padding-left: 0em;
+    width: 15%;
+    font-size:30px;
+    justify-content: center;
+}
+
+
+.right-side{
+    color:var(--color-white);
+    margin-left: 0em;
+    padding-right: 0px;
+    padding-left: 1em;
+    width:85%;
+    font-size:0%;
+    align-content: center;
+}
+
+
+.index-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    padding-bottom: 0px;
+    margin-top: 1em;
+    top:150px;
+    bottom:200px;
+    justify-content: center;
+}
+
+.lateral-index{
+    background-color: var(--dark-blue);
+    transition: all 0.2s ease;
+    list-style-type: none;
+    display:inline-block;
+    border-radius: 0.4em !important;
+    margin-left: 0;
+    padding: 1em 1em 1em 2.6em !important;
+    margin-top:1em;
+    justify-content: center;
+}
+
+.index-bar ul li {
+    padding-bottom: 1em;
+    padding-top:0em;
+    position: relative;
+  }
+
+
+/* navigation bar text decoration */    
+.index-bar ul li a {
+    /*display: flex; */ 
+    font-size: 25px;
+    color: var(--color-white);
+    text-decoration: none;
+    padding-bottom: 10px;
+    transition: all 0.3s;  
+  }
+  
+.index-bar ul li a:hover {
+    color: var(--yellow);
+  }
+
+/* this the after effect with the yellow line */
+
+.index-bar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+    
+.index-bar ul li a:hover::after {
+    width: 0%;
+    }
+
+
+.anchorOffset {
+    display: block !important;
+    position: relative !important;
+    top: -100px !important;
+    visibility: hidden !important;
+  }
+
+  .buttons{
+    align-items:flex-end;
+    margin-left: 0px;
+    margin-right: 0em;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#102a4e;
+}
+
+.button {
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #050a30;
+    border-radius: 10px;
+  }
+
+.button a {
+    color: #e9e9eb;
+    font-size: 1.375em;
+    cursor: pointer;
+    display: block;
+    padding: 1em 0;
+    transition: all 0.3s;  
+}
+
+.button a:hover{
+    color:var(--yellow)
+}
+
+
+.collapsible{
+    padding-top:20px;
+}
+
+
+.coll-up{
+    display:flex;
+}
+
+
+.collapsible label {
+    padding:20px 20px;
+    position:relative;
+    z-index:1;
+    font-weight:600;
+    padding:20px 20px;
+    text-align: left;
+    transition: all 0.5s linear;
+    background-color:#050a30;
+    border-radius:20px;
+    display:flex;
+    position:relative;
+    color:#e9e9eb;
+    cursor:pointer;
+    font-size: 30px;
+}
+
+.collapsible img{
+    position:relative;
+    
+}
+
+
+.collapsible label:hover{
+    color:var(--yellow)
+}
+
+
+.collapsible-content{
+    overflow:hidden;
+    max-height:0px;
+    padding-bottom:25px;
+    overflow:hidden;
+    top:-100%;
+    opacity:0;
+    transition: max-height 0.5s ease-out;
+    transition: all 0.5s ease;
+    font-size:20px;
+}
+
+.collapsible input{
+    display:none;
+}
+
+.collapsible input:checked ~ .collapsible-content{
+    max-height:300px;
+    padding-bottom:5px;
+    background-color:#102a4e;
+    opacity:1;
+    top:0;
+}
+
+.collapsible-content cite a {
+     padding: 10px 10px;
+     color:#e9e9eb;
+     display:block;
+}
+
+.equations{
+    font-size: 20px;
+}
+
+

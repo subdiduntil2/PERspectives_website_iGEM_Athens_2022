@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/timeline_style.css') }}" rel="stylesheet">
+
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>Perspectives | Implementation</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/timeline/timeline-2400-1080-px.gif" width="100%">
+    <div class="heading">Road to <span style="color: #3aa9c5; font-family: 'Glacial Indifference Bold'">Paris</span></div>    
+</div>
+
+
+<div class="cc" id="cc-timeline">
+  <div class="left-side">
+      <div class="index-bar">
+          <h2><b>Timeline</b></h2>
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#jan">January</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#jan">February</a>
+            </li>
+              <li class="lateral-content">
+                  <a href="#mar">March</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#apr">April</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#may">May</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#jun">June</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#jul">July</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#aug">August</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#sep">September</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#oct">October</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="right-side">
+      <section class="img_section">
+          <a id="jan" class="anchorOffset"></a>
+          <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/3.png" width="100%">
+      </section>
+      <section class="img_section">
+        <a id="mar" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/4.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="apr" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/5.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="may" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/6.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="jun" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/7.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="jun" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/8.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="aug" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/9.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="sep" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/10.png" width="100%">
+    </section>
+    <section class="img_section">
+        <a id="oct" class="anchorOffset"></a>
+        <img class="img_timeline" src="https://static.igem.wiki/teams/4294/wiki/timeline/11.png" width="100%">
+    </section>
+  </div>
+</div>
+
+
+<script>
+    function show(param_div_id) {
+    document.getElementById('cc-senders').innerHTML = document.getElementById(param_div_id).innerHTML;
+  }
+</script>
