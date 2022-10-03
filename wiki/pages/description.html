@@ -34,40 +34,189 @@
 <!--To top button-->
 {% include 'to_top_button.html'%}
 
-<!--Header-->
-
-<!-- <div class="hero">
-    <div class="inspiration">
-        <h1>Inspiration</h1>
-        <p>Networks have come to pervade the world we live in, from the Internet to networks of public transport, disease transmission, even brain neurons. By imitating those very neurons, computer scientists designed the first Artificial Neural Network (ANN), forever revolutionizing the data processing domain. With data processing being crucial to biological procedures as well, we thought that going backwards and designing a bacterial artificial intelligence system based on ANNs would provide new prospects in many fields. 
-            It is true that cells can process information and proceed to a specific action based on their environment. In most applications of biological engineering, not only in biomedicine but also in ecology and industry, single cells or cellular systems are used for the detection of specific molecules that lead to a specific reaction. Therefore, all these applications are based on the ability of cells to process information. However, one of the current problems in synthetic biology is that single cell engineering, and thus information processing, is limited by two factors. First there is the necessary molecular complexity, and secondly this complexity is accompanied by the metabolic burden of synthetic circuits. 
-            Our inspiration to create a biological system that implements the perceptron algorithm aims to tackle this problem and be able to process multiple complex information in order to proceed to a specific action.
-        </p>
-    </div>
-</div> -->
-
-
-
-<div class="section">
-    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
-</div>
-
-<div class="section">
-    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
-</div>
-
-<div class="section">
-    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
-</div>
-
-<div class="section">
-    <img class="section_img" src="https://static.igem.wiki/teams/4294/wiki/description/description-page.gif" width="100%">  
-</div>
-
-
-
 <!--Loader-->   
 {% include 'loader.html'%}
+
+<div class="cc" id="cc-description">
+  <div class="left-side">
+      <div class="index-bar">
+          <h2><b>PERspectives <br> in a Nutshell</b></h2>
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#inspiration">Inspiration</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#perceptron">Perceptron</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#quorum_sensing">Quorum Sensing</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#perspectives">PERspectives</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="right-side">
+    <div class="bg-image">
+        <div class="container_1">
+            <a id="inspiration" class="anchorOffset"></a>
+            <h1>INSPIRATION <img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/navbar-yel-project.png" width="9%"></h1>
+            <br>
+            <p>
+                This year, our inspiration comes from a structure that dominates the world around us: networks. 
+                From the Internet and routes of public transport to disease transmission and spider webs, networks abundantly 
+                surround human-centered and natural activities by providing nodes and links for the exchange of information, ideas or physical beings. 
+            </p>
+            <br><br>
+            <img class="network_img" src="https://static.igem.wiki/teams/4294/wiki/description/2.png" width="100%">
+            <p>The central concept of our project can be summarized by the greek word “αντιδάνειο” [andiδánio], which, in english, roughly translates to reborrowing,
+                 loanword, or repatriated loan. The term loanword is defined as “a word loaned from one language into another and borrowed back (in a modified 
+                 form and/or meaning) by the first language” [1] and elegantly describes our brainstorming path. 
+                 By drawing inspiration from neural circuits in the brain, scientists of the previous century devised the first Artificial Neural Network (ANN), 
+                 forever revolutionizing the data processing domain. Since data processing is crucial to biological procedures as well, we thought that going backwards 
+                 and designing a bacterial artificial intelligence system based on ANNs would offer new prospects in several fields. So, following in the footsteps of 
+                 a loanword, we went from Biology to Computer Science and back to Biology.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-image">
+        <div class="container_2">
+            <p>
+                It is true that cells can process environmental information and proceed to a response based on this very information. In most applications of biological 
+                engineering, single cells or cellular systems are deployed for the detection of specific molecules that lead to a specific reaction. Therefore, all these 
+                applications are based on the ability of cells to process information. However, one of the current problems in Synthetic Biology is that single cell 
+                engineering, and thus information processing, is limited by two factors: firstly, there is the necessary molecular complexity and, secondly, this 
+                complexity is accompanied by the metabolic burden of synthetic circuits. 
+            </p>
+            <br><br>
+            <p>Our idea to create a biological system that implements the perceptron algorithm aims to tackle this problem by being able to process multiple complex 
+                information in order to “make a decision” and proceed to a specific action.
+            </p>
+            <img class="antidaneio_img" src="https://static.igem.wiki/teams/4294/wiki/description/4.png" width="100%">
+        </div>
+    </div>
+    
+    <!-- Perceptron -->
+    
+    <div class="bg-image">
+        <div class="container_3">
+            <a id="perceptron" class="anchorOffset"></a>
+            <h1>THE PERCEPTRON</h1>
+            <p>
+                The Perceptron is a single layer neural network that is considered as a <span style="color: #3aa9c5;">Linear Binary Classifier</span>. In machine learning, binary classification is a 
+                supervised learning algorithm that categorizes novel observations into one of two classes. 
+            </p>
+            <br><br>
+            <img class="perceptron_gif" src="https://static.igem.wiki/teams/4294/wiki/description/perceptron.gif">
+            <p>The basic parts of a perceptron are <span style="color: #ffc973;">the neurons (or nodes), the input values, the weights and biases, the weighted sum, the activation function and 
+                the output values</span>. Weights show the strength of the particular node and a bias value allows you to shift the activation function curve up or down. 
+                All the inputs x are multiplied with their weights w. All the multiplied values and the biases are added up resulting in the weighted sum. The activation 
+                function is used to determine whether the weighted sum is higher than a threshold value. So, the output value represents the class that every novel 
+                observation belongs to. Practically, the perceptron is an algorithm that can make a decision between two options and this exact property we took advantage 
+                of for the creation of our biological system.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-image">
+            <div class="container_4">
+                <a id="quorum_sensing" class="anchorOffset"></a>
+                <h1>QUORUM SENSING</h1>
+                <p>
+                    Quorum sensing (QS) constitutes a well-studied mechanism of intercellular communication among bacteria, which enables them to detect alterations in 
+                    cell population density and regulate their gene expression accordingly. Like hormones in the human body, bacterial exchange of information of this 
+                    sort is achieved through synthesis of specialized signaling molecules, resulting in coordination of several biochemical processes and communal 
+                    behaviours, such as sporulation, bioluminescence, virulence, conjugation, competence and biofilm formation. 
+                </p>
+                <br><br>
+                <img class="quorum_sensing_gif" src="https://static.igem.wiki/teams/4294/wiki/description/quorum-sensing.gif">
+                <p>In the case of Gram-negative bacteria, including E.coli, the signaling molecules -also called autoinducers- belong to the family of <span style="color: #ef4b4c;">acyl-homoserine 
+                    lactones (AHLs)</span>. AHLs are produced throughout the reproductive cycle of bacteria and diffuse through their cell wall, gradually accumulating in the 
+                    extracellular space as bacteria multiply. Once their concentration in the growth medium reaches a critical point, it becomes thermodynamically 
+                    unfavourable for AHL molecules to continue to exit the cell. The consequent increase in their intracellular concentration leads to their binding to 
+                    specific receptors, ultimately activating the expression of key genes [2].
+                </p>
+            </div>
+    </div>
+    
+    <div class="bg-image">
+        <div class="container_5">
+            <a id="perspectives" class="anchorOffset"></a>
+            <h1>OUR PROJECT</h1>
+            <br>
+            <p>
+                This year, we aim to design and <span style="color: #3aa9c5;">implement the perceptron algorithm in a biological system by taking advantage of the quorum sensing 
+                mechanism</span>. With our project, we hope to take bacterial artificial intelligence a step further by building a biological perceptron not in a 
+                single cell but on a population scale. 
+            </p>
+            <br><br>
+            <img class="project_img" src="https://static.igem.wiki/teams/4294/wiki/description/project.gif">
+            <p>The central concept of our project can be summarized by the greek word “αντιδάνειο” [andiδánio], which, in english, roughly translates to reborrowing,
+                 loanword, or repatriated loan. The term loanword is defined as “a word loaned from one language into another and borrowed back (in a modified 
+                 form and/or meaning) by the first language” [1] and elegantly describes our brainstorming path. 
+                 By drawing inspiration from neural circuits in the brain, scientists of the previous century devised the first Artificial Neural Network (ANN), 
+                 forever revolutionizing the data processing domain. Since data processing is crucial to biological procedures as well, we thought that going backwards 
+                 and designing a bacterial artificial intelligence system based on ANNs would offer new prospects in several fields. So, following in the footsteps of 
+                 a loanword, we went from Biology to Computer Science and back to Biology.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-image">
+        <div class="container_6">
+            <img class="table_img" src="https://static.igem.wiki/teams/4294/wiki/description/12.png">
+            <p>
+                The simplest implementation of a perceptron performs the following steps given a sequence of inputs (<span style="font-family: 'Glacial Indifference Bold';"></span>x1, x2, …, xn</span>):
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 1: Weights Assignment:</span> It assigns weights (<span style="font-family: 'Glacial Indifference Bold';"></span>w1, w2, …wn</span>) to the given inputs.
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 2: Summation:</span> It calculates the summation Σ(wixi) 
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 3: Activation Function:</span> It feeds the summation to an activation function. 
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 4: Classification:</span> Based on the output of the activation function, it decides whether this pattern belongs to class A (0) or class B (1).
+                <br><br>
+                Implementing the perceptron in our system:
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 1: Weights Assignment:</span> Synthetic RBSs are introduced in the different sender bacteria. The expression of the QS molecule (LuxI->OC6) is controlled by each specific RBS resulting in different quantities of OC6 being produced. 
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 2: Summation:</span> The total OC6 produced is summed and received by the receivers. 
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 3: Activation Function:</span> Our receiver genetic circuit is engineered with a steep activation response to OC6 to resemble an ON/OFF switch.
+                <br>
+                <span style="font-family: 'Glacial Indifference Bold';">Step 4: Classification:</span> mNeonGreen is produced based on the biological activation function system and in this way the class is chosen, or it could be said that a decision is made.
+            </p>
+        </div>
+    </div>
+    
+    
+    <div class="bg-image">
+        <div class="container_7">
+            <p>
+                Adding to previous and current work, our project will provide an alternative point of view in the design of synthetic biological systems. Our proposed 
+                implementation of the perceptron weights with the use of synthetic RBS sequences could become the template for the development of plug-and-play devices 
+                that enable the modification of the inputs' weights regarding the desired behavior and application. Overall, such a multicellular system has various 
+                applications in many scientific fields, from medicine to environment and the thriving field of biocomputing. It could become the starting point for the 
+                development of
+                 “smart biosensors” or “smart drugs” and even perform complex computational tasks using much less energy than the amount needed by a computer, 
+                aiming to solve one of the most popular problems nowadays, the high cost of computational performances. 
+            </p>
+            <br><br>
+            <img class="perspectives_img" src="https://static.igem.wiki/teams/4294/wiki/description/14.png">
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    function show(param_div_id) {
+    document.getElementById('cc-description').innerHTML = document.getElementById(param_div_id).innerHTML;
+  }
+</script>
 
 <!-- Footer -->
 {% include 'footer.html' %}
