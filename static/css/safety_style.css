@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Glacial Indifference';
 }
 
 iframe{
@@ -43,7 +42,7 @@ html{
     left: 50%;
     transform: translate(-50%, 20%);
     font-size: 100px;
-    color: var(--color-white);
+    color:  #050a30;
     background-color:rgba(58, 169, 197, 0.6);
     width: 100%;
     height: 130px;
@@ -52,60 +51,43 @@ html{
 
 
 
-/*Manos*/
-/* .header_one{
+.cc{
     width: 100%;
     height:100%;
-    margin-bottom: 0em;
-    background-size:cover;
-    z-index:1;
-    background-color: #102a4e;
-}
-
-.header_one img {
-    height:50em;
-    background-color: #102a4e;
-} */
-
-.cc{
-width: 100%;
-height:100%;
-outline:none;
-padding-right: 10em;
-padding-left: 10em;
-display:flex;
-flex-wrap: wrap;
-padding-top:3em;
-padding-bottom:3em;
-margin-right: auto;
-margin-left: auto;
-background-color:#102a4e;
-}
-
-
-.senders{
-    margin-left: 20em;
-    margin-right: 2em;
-    font-size:30px;
+    outline:none;
+    padding-right: 0em;
+    padding-left: 2em;
+    display:flex;
+    flex-wrap: wrap;
+    padding-top:3em;
+    padding-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:#102a4e;
 }
 
 .left-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 0px;
-    padding-left: 0.2em;
-    width:30%;
-    font-size:30px;
+    padding-right: 1em;
+    padding-left: 0em;
+    width: 15%;
+    font-size:25px;
+    justify-items: center;
 }
 
+.left-side h2{
+    text-align: center;
+}
 
 .right-side{
     color:var(--color-white);
     margin-left: 0em;
     padding-right: 0px;
-    padding-left: 0em;
-    width:70%;
-    font-size:30px;
+    padding-left: 1em;
+    width:80%;
+    align-content: center;
+    font-size: 25px;
 }
 
 .index-bar{
@@ -120,7 +102,7 @@ background-color:#102a4e;
 .lateral-index{
     background-color: var(--dark-blue);
     transition: all 0.2s ease;
-    list-style-type: disc;
+    list-style-type: none;
     display:inline-block;
     border-radius: 0.4em !important;
     margin-left: 0;
@@ -173,7 +155,7 @@ background-color:#102a4e;
     visibility: hidden !important;
   }
 
-  .buttons{
+.buttons{
     align-items:flex-end;
     margin-left: 0px;
     margin-right: 0em;
@@ -340,3 +322,50 @@ background-color:#102a4e;
     font-weight: bold;
     color: #102a4e;
   }
+
+
+.introduction{
+    text-align: justify;
+}  
+    
+.introduction h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #3aa9c5;
+    font-size: 50px;
+}
+
+.safety_intro{
+    width: 40%;
+    float: right;
+    padding-left: 1em;
+    padding-top: 10px;
+}
+
+.lab_safety{
+    text-align: justify;
+}
+
+.lab_safety h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #009879;
+    font-size: 50px;
+}
+
+.lab_safety h2{
+    color: #009879;
+    font-size: 35px;
+}
+
+.pasteur_img{
+    width: 30%;
+    float: left;
+    padding-right: 1em;
+    padding-top: 10px;
+}
+
+.generic_img{
+    width: 40%;
+    float: right;
+    padding-left: 1em;
+    padding-top: 10px;    
+}

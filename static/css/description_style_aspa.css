@@ -223,13 +223,16 @@ body{
     .left-side{
         color:var(--color-white);
         margin-left: 0em;
-        padding-right: 0px;
+        padding-right: 1em;
         padding-left: 0em;
         width: 15%;
         font-size:25px;
         justify-items: center;
     }
     
+    .left-side h2{
+        text-align: center;
+    }
     
     .right-side{
         color:var(--color-white);

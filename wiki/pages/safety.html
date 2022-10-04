@@ -1,50 +1,218 @@
-{% extends "layout.html" %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/safety_style.css') }}" rel="stylesheet">
+
+    <!--For loader JS script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>Perspectives | Safety</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif" width="100%">
+    <div class="heading">Safety</div>    
+</div>
+
+
+<div class="cc" id="cc-implementaion">
+  <div class="left-side">
+      <div class="index-bar">
+          <h2><b>Index</b></h2>
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#intro">Introduction</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#lab_safety">Laboratory Safety</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#project_safety">Project Safety</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#iGEM_deliverables">iGEM Safety Deliverables</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#science_comm_actions">Science Communication Actions Safety</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#public_awareness">Public Awareness</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#references">References</a>
+              </li>
+          </ul>
+      </div>
+  </div>
   
-{% block title %}Safety{% endblock %}
-{% block lead %}Describe all the safety issues of your project.{% endblock %}
-
-{% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Safety and Security Award</h4>
-      <p>Synthetic biology will need to be used safely and securely if local people are to solve local problems all around the world. In 2022, the Safety and Security Committee is challenging teams to apply biological engineering approaches to manage risks associated with synthetic biology. Can you take the next step in incremental progress towards knowledge, understanding, and tools that will make the use of synthetic biology safer and more secure?</p>
-      <p>To compete for the Safety and Security award, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
-    </div>
+  <div class="right-side">
+      <section class="introduction">
+          <a id="intro" class="anchorOffset"></a>
+          <br><br>
+          <h1><b>Introduction</b></h1><br>
+          <img class="safety_intro" src="https://static.igem.wiki/teams/4294/wiki/safety/intro-safety.jpg">
+          <p> Safety is one of the basic principles of science. Safety rules have been established in order to protect the general public, but also scientists themselves. 
+            There are many different aspects of biosafety. First of all, laboratory safety concerns the protective measures followed in laboratory spaces to secure, on the 
+            one hand, that workers’ health is not put in danger and, on the other hand, that hazardous factors are not released. Except for laboratory safety, project safety 
+            ensures that the final scientific product will be safe for human beings, animals and the environment. Project safety also deals with different ways to control 
+            the growth and expansion of genetically modified organisms, such as kill switches and growth-controlling factors. Lastly, there is a social and ethical face of 
+            biosafety. It is very crucial that scientific innovations will be used prudently and morally. History has taught us that it is society’s responsibility to enact 
+            laws in order to avoid exploitation of scientific discoveries. 
+            <br><br>
+            Our team, through our journey in the iGEM competition, has taken action to deal responsibly with biosafety issues concerning our project and our work in 
+            the laboratory. Moreover, we want to underline that safety in science should be communicated to people, and so, some of our educational actions and 
+            collaborations aimed to help people learn and discuss about biosafety. 
+            </p>
+          <br>
+      </section>
+      <section class="lab_safety">
+        <a id="lab_safety" class="anchorOffset"></a>
+        <br><br>
+        <h1><b>Laboratory Safety</b></h1>
+        <br>
+        <img class="pasteur_img" src="https://static.igem.wiki/teams/4294/wiki/safety/pasteur-safety.jpg">
+        <h2>Training</h2>
+        <br>
+        <h3>At the National and Kapodistrian University of Athens:</h3>
+        <br>
+        <p>
+          Before starting our experiments we were trained by our supervisor, Elena Pappa, on how to use the laboratory equipment safely, and we emphasised on the 
+          potential hazards, for example, UV light and toxic chemicals. We also were informed about the guidelines we have to follow in case of emergency, like fire, 
+          gas leak or someone being wounded. 
+          <br><br>
+          <h3>At the Hellenic Pasteur Institute:</h3>
+          <br>
+          <p>
+          We attended the Safety Seminar delivered by Dr Thanos Kakkanas at the Hellenic Pasteur Institute as well. The seminar focused on the potential dangers 
+          when working in the laboratory, such as carcinogens, mutagens, highly flammable chemicals, acids and corrosive chemicals, cytotoxic reagents, neurotoxic 
+          chemicals, respiratory, skin and eye irritants, inflammatory reagents etc. Another part of the workshop concerned disinfection and sterilisation. We were 
+          finally informed about the health problems provoked by constant standing and bad posture when working on the bench. 
+          </p>
+        <br><br>
+        <h2>General Laboratory Safety Rules</h2>
+        <br>
+        <p>
+        Our experiments were conducted at Professor A. Agathagelidis’ laboratory at the Biology Department of the National Kapodistrian University of Athens, 
+        which is a BSL 1 standard laboratory.  The organisms we were using are the following E. coli strains: DH5-alpha, DH5-alpha-Z1, DH10-beta, BL21. Some of 
+        our experiments were also hosted at other laboratories of the Biology department that provided us with the special equipment  we needed (for example Dr. 
+        Dedos laboratory provided us with the plate reader). All of these laboratories are BSL1 standard laboratories. 
+          <br><br>
+          For that reason, we aimed to follow all the laws and regulations of laboratory operations according to the European Union, the Greek Government, and the 
+          host institution for our experiments (NKUA). You can read more about those laws and regulations below:
+          <br><br>
+          <ul>
+            <li><a href="https://ec.europa.eu/growth/sectors/chemicals/good-laboratory-practice_en">
+              Guidelines about Good Laboratory Practice from the European Union</a></li>
+            <li><a href="https://eody.gov.gr/wp-content/uploads/2018/12/vioasfaleia.ppt">
+              Guidelines about Biosafety, in greek, from the Hellenic National Public Health Organization</a></li>
+            <li><a href="http://www.biol.uoa.gr/programmata-spoydon/kanones-asfaleias-sta-ergastiria.html">
+              Guidelines for laboratory biosafety, in greek, from the Department of Biology of NKUA</a></li>
+          </ul>
+          </p>
+          <img class="generic_img" src="https://static.igem.wiki/teams/4294/wiki/safety/generic-safety.png">
+          <p>   
+          <br><br>
+          All team members followed strictly and responsibly the dress code, which includes closed shoes, full-length trousers, and mandatory use of a lab coat, 
+          mask and nitrile gloves, not only when doing experiments, but also when spectating. 
+          We made sure that no food or drinks were exposed in the laboratory spaces by keeping them in a separate freezer in another room.
+          We were also very cautious with our waste management; we never discarded any living organisms or chemicals. Our used Petri dishes were all autoclaved 
+          before discarding, and all liquid cultures and consumables that were exposed to the microorganisms, such as tips and eppendorfs, were incubated overnight 
+          with a strong chlorine/soap solution, before disposal. When working with dangerous substances, such as ethidium bromide, we always worked on a separate 
+          special bench and used another pair of gloves.
+          </p>
+          <br><br>
+          <p> 
+          Warning signs and safety instructions were hung on our walls.
+          Our laboratory was provided with a fire safety corner.
+          Moreover, there was never one person working in the laboratory alone, in case an emergency happened and they needed help.    
+          <br><br>
+          As the organism we used was E.coli disinfection played a very important role while conducting our experiments. An aseptic technique was always used and 
+          our microbiological work was done under flame. All the workstations were sterilised with 70% ethanol both prior to and after each experiment.
+          </p>
+      </section>
+      <section class="project_safety">
+          <a id="project_safety" class="anchorOffset"></a>
+          <br><br>
+          <h1><b>Project Safety</b></h1>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sequi nulla explicabo, in eum aut voluptates maiores? Qui, non cum ab fugiat perferendis impedit aperiam ad officia. Ab, magnam minima.</p>
+          <br>
+      </section>
+      <section class="iGEM_deliverables">
+          <a id="iGEM_deliverables" class="anchorOffset"></a>
+          <br><br>
+          <h1><b>iGEM Safety Deliverables</b></h1>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sequi nulla explicabo, in eum aut voluptates maiores? Qui, non cum ab fugiat perferendis impedit aperiam ad officia. Ab, magnam minima.</p>
+          <br>
+      </section>
+      <section class="science_comm_actions">
+          <a id="science_comm_actions" class="anchorOffset"></a>
+          <br><br>
+          <h1><b>Science Communication Actions Safety</b></h1>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sequi nulla explicabo, in eum aut voluptates maiores? Qui, non cum ab fugiat perferendis impedit aperiam ad officia. Ab, magnam minima.</p>
+          <br>
+      </section>
+      <section class="public_awareness" >
+          <a id="public_awareness" class="anchorOffset"></a>
+          <br>
+          <h2>Public Awareness</h2>
+          <br>
+          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, asperiores nihil pariatur esse quia accusamus necessitatibus officiis perspiciatis. Quas porro reiciendis quae labore, velit temporibus molestiae et nihil omnis non?.</p>
+          <br>
+      </section>
+      <section class="collapsible">
+          <a id="references" class="anchorOffset"></a>
+          <input type="checkbox" id="collapsible-head">
+              <label for ="collapsible-head">References</label>    
+              <div class="collapsible-content">
+              <cite>
+                  <a href="https://www.nature.com/articles/s41467-021-23336-0">
+                      1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
+                  </a>
+              </cite>
+              <cite>
+                  <a href="https://2014.igem.org/Team:ETH_Zurich">
+                      2. Team Zurich 2014
+                  </a>
+              </cite>
+          </div>
+      </section>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>On this page of your wiki, you should write about how you are addressing any safety issues in your project. The wiki is a place where you can go beyond the questions on the safety forms, and write about whatever safety topics are most interesting in your project. (You do not need to copy your safety forms onto this wiki page.)</p>
-    <div class="bd-callout bd-callout-info">
-      <p>Please visit the <a href="https://responsibility.igem.org/safety-policies/introduction">Safety Policies page</a> to find this year's safety requirements & deadlines, and to learn about safe & responsible research in iGEM.</p>
-    </div>
-  </div>
-</div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Safe Project Design</h2>
-    <hr>
-    <p>Does your project include any safety features? Have you made certain decisions about the design to reduce risks? Write about them here! For example:</p>
-    <ul>
-      <li>Choosing a non-pathogenic chassis</li>
-      <li>Choosing parts that will not harm humans / animals / plants</li>
-      <li>Substituting safer materials for dangerous materials in a proof-of-concept experiment</li>
-      <li>Including an "induced lethality" or "kill-switch" device</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Safe Lab Work</h2>
-    <hr>
-    <p>What safety procedures do you use every day in the lab? Did you perform any unusual experiments, or face any unusual safety issues? Write about them here!</p>
-  </div>
-</div>
+<script>
+    function show(param_div_id) {
+    document.getElementById('cc-senders').innerHTML = document.getElementById(param_div_id).innerHTML;
+  }
+</script>
 
-{% endblock %}
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}
