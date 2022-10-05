@@ -315,6 +315,77 @@ html{
     font-size: 40px;
 } 
 
+.container_ngos{
+    translate: 40%;
+    position: relative;
+    width: 800px;
+    height: 650px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+    z-index: 1;
+}
+
+.container_ngos .wrapper_ngos{
+    width: 700px;
+    height: 520px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_ngos .wrapper-holder-ngos{
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_ngos #slider-img-1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/ngos/ngos-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_ngos #slider-img-2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/ngos/ngos-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+.container_ngos #slider-img-3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/ngos/ngos-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+.container_ngos #slider-img-4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/ngos/ngos-4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+.container_ngos .button-holder-ngos .button_ngos{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_ngos .button-holder-ngos{
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+.button_ngos:hover{
+    background-color: #61b872;
+}
+
 .unique{
     text-align: justify;
 }
@@ -325,6 +396,65 @@ html{
     color: #61b872;
     font-size: 40px;
 } 
+
+.container_unique{
+    translate: 40%;
+    position: relative;
+    width: 800px;
+    height: 650px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+    z-index: 1;
+}
+
+.container_unique .wrapper_unique{
+    width: 700px;
+    height: 520px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_unique .wrapper-holder-unique{
+    display: grid;
+    grid-template-columns: repeat(2 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_unique #slider-img-5{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/unique-days/unique-days-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_unique #slider-img-6{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/unique-days/unique-days-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+
+.container_unique .button-holder-unique .button_unique{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_unique .button-holder-unique{
+    position: absolute;
+    left: 47%;
+    bottom: 0%;
+}
+.button_unique:hover{
+    background-color: #61b872;
+}
+
 
 .biochem_day{
     text-align: justify;
@@ -344,7 +474,94 @@ html{
     font-family: 'Glacial Indifference Bold';
     color: #61b872;
     font-size: 40px;
-} 
+}
+
+.container_socials{
+    translate: 52%;
+    position: relative;
+    width: 650px;
+    height: 1000px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+    z-index: 1;
+}
+
+.container_socials .wrapper_socials{
+    width: 520px;
+    height: 900px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_socials .wrapper-holder-socials{
+    display: grid;
+    grid-template-columns: repeat(10, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_socials #socials1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_socials #socials2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_socials #socials3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_socials #socials4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_socials #socials5{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_socials #socials6{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_socials #socials7{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_socials .button-holder-socials .button_socials{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_socials .button-holder-socials{
+    position: absolute;
+    left: 35%;
+    bottom: 0%;
+}
+.button_socials:hover{
+    background-color: #61b872;
+}
 
 .tedx{
     text-align: justify;
@@ -354,7 +571,112 @@ html{
     font-family: 'Glacial Indifference Bold';
     color: #61b872;
     font-size: 40px;
-} 
+}
+
+.container_tedx{
+    translate: 40%;
+    position: relative;
+    width: 800px;
+    height: 650px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+    z-index: 1;
+}
+
+.container_tedx .wrapper_tedx{
+    width: 700px;
+    height: 520px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_tedx .wrapper-holder-tedx{
+    display: grid;
+    grid-template-columns: repeat(10, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_tedx #tedx1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/proti-tdex.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-a.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-b.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-c.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx5{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx6{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-e.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx7{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx8{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-g.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx9{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-s.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx10{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/photo-tdex-site.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_tedx .button-holder-tedx .button_tedx{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_tedx .button-holder-tedx{
+    position: absolute;
+    left: 30%;
+    bottom: 0%;
+}
+.button_tedx:hover{
+    background-color: #61b872;
+}
 
 .schms{
     text-align: justify;
@@ -366,6 +688,87 @@ html{
     font-size: 40px;
 } 
 
+.container_schms{
+    translate: 40%;
+    position: relative;
+    width: 800px;
+    height: 650px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+    z-index: 1;
+}
+
+.container_schms .wrapper_schms{
+    width: 700px;
+    height: 520px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_schms .wrapper-holder-schms{
+    display: grid;
+    grid-template-columns: repeat(10, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_schms #schms1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/esfie/esfie-a.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_schms #schms2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/esfie/esfie-b.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_schms #schms3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/esfie/esfie-d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_schms #schms4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/esfie/esfie-e.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_schms #schms5{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/esfie/esfie-k.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_schms #schms6{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/esfie/esfie-n.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_schms .button-holder-schms .button_schms{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_schms .button-holder-schms{
+    position: absolute;
+    left: 40%;
+    bottom: 0%;
+}
+.button_schms:hover{
+    background-color: #61b872;
+}
+
 .debate{
     text-align: justify;
 }
@@ -375,6 +778,88 @@ html{
     color: #61b872;
     font-size: 40px;
 } 
+
+.container_debate{
+    translate: 40%;
+    position: relative;
+    width: 800px;
+    height: 650px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+    z-index: 1;
+}
+
+.container_debate .wrapper_debate{
+    width: 700px;
+    height: 520px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_debate .wrapper-holder-debate{
+    display: grid;
+    grid-template-columns: repeat(10, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_debate #debate1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/debate/debate-bio.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_debate #debate2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/debate/bios.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_debate #debate3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/debate/biosafety.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_debate #debate4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/debate/biosaff.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_debate #debate5{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/debate/biosaf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_debate #debate6{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/debate/biodebate.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_debate .button-holder-debate .button_debate{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_debate .button-holder-debate{
+    position: absolute;
+    left: 40%;
+    bottom: 0%;
+}
+.button_debate:hover{
+    background-color: #61b872;
+}
+
 
 .journal{
     text-align: justify;
@@ -396,11 +881,51 @@ html{
     font-size: 40px;
 }
 
+.sarakas{
+    text-align: justify;
+}
+
+.sarakas h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+}
+
+.researchers_night{
+    text-align: justify;
+}
+
+.researchers_night h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+}
+
 .fairytale{
     text-align: justify;
 }
 
 .fairytale h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+}
+
+.from_us{
+    text-align: justify;
+}
+
+.from_us h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+}
+
+.on_us{
+    text-align: justify;
+}
+
+.on_us h1{
     font-family: 'Glacial Indifference Bold';
     color: #61b872;
     font-size: 40px;
