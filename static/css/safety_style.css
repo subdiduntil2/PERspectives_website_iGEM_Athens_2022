@@ -339,6 +339,7 @@ html{
     float: right;
     padding-left: 1em;
     padding-top: 10px;
+    border-radius: 50px;
 }
 
 .lab_safety{
@@ -361,13 +362,15 @@ html{
     float: left;
     padding-right: 1em;
     padding-top: 10px;
+    border-radius: 50px;
 }
 
 .generic_img{
     width: 40%;
     float: right;
-    padding-left: 1em;
-    padding-top: 10px;    
+    padding-left: 50px;
+    padding-top: 10px; 
+    border-radius: 50px;   
 }
 
 .project_safety{
@@ -383,6 +386,14 @@ html{
 .project_safety h2{
     color: #ffc973;
     font-size: 35px;
+}
+
+.senders_receivers{
+    float: left;
+    width: 50%;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-right: 50px;
 }
 
 .iGEM_deliverables{
@@ -425,14 +436,23 @@ html{
     font-size: 35px;
 }
 
+.debate_img{
+    width: 50%;
+    float: right;
+    padding-left: 2em;
+    border-radius: 50px;
+}
+
 .gmos_img{
     width: 70%;
+    border-radius: 50px;
 }
 
 .what_img{
     width: 30%;
     float: left;
     padding-right: 2em;
+    border-radius: 50px;
 }
 
 
