@@ -330,7 +330,7 @@ html{
     
 .introduction h1{
     font-family: 'Glacial Indifference Bold';
-    color: #3aa9c5;
+    color: #e9e9eb;
     font-size: 50px;
 }
 
@@ -347,12 +347,12 @@ html{
 
 .lab_safety h1{
     font-family: 'Glacial Indifference Bold';
-    color: #009879;
+    color: #3aa9c5;
     font-size: 50px;
 }
 
 .lab_safety h2{
-    color: #009879;
+    color: #3aa9c5;
     font-size: 35px;
 }
 
@@ -369,3 +369,60 @@ html{
     padding-left: 1em;
     padding-top: 10px;    
 }
+
+.project_safety{
+    text-align: justify;
+}
+
+.project_safety h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #ffc973;
+    font-size: 50px;    
+}
+
+.project_safety h2{
+    color: #ffc973;
+    font-size: 35px;
+}
+
+.iGEM_deliverables{
+    text-align: justify;
+}
+
+.iGEM_deliverables h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;    
+}
+
+.science_comm_actions{
+    text-align: justify;
+}
+
+.science_comm_actions h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #ef4b4c;
+    font-size: 50px;    
+}
+
+.science_comm_actions h2{
+    color: #ef4b4c;
+    font-size: 35px;
+}
+
+.public_awareness{
+    text-align: justify;
+}
+
+.public_awareness h1{
+    font-family: 'Glacial Indifference';
+    color: #8a72c1;
+    font-size: 50px;    
+}
+
+.public_awareness h2{
+    color: #8a72c1;
+    font-size: 35px;
+}
+
+
