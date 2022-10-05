@@ -68,9 +68,9 @@ html{
 .left-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 1em;
+    padding-right: 20px;
     padding-left: 0em;
-    width: 15%;
+    width: 20%;
     font-size:25px;
     justify-items: center;
 }
@@ -82,7 +82,7 @@ html{
 .right-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 0px;
+    padding-right: 60px;
     padding-left: 1em;
     width:80%;
     align-content: center;
@@ -92,7 +92,8 @@ html{
 .index-bar{
     position: -webkit-sticky;
     position: sticky;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    padding-left: 1em;
     margin-top: 1em;
     top:150px;
     bottom:200px;
@@ -280,49 +281,6 @@ html{
     font-size: 20px;
 }
 
-
-/* Table */
-
-.content-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 20px !important;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 1px var(--light-blue);
-  }
-  
-  .content-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .content-table th,
-  .content-table td {
-    padding: 12px 15px;
-  }
-  
-  .content-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  .content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
-  
-  .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
-  
-  .content-table tbody tr.active-row {
-    font-weight: bold;
-    color: #102a4e;
-  }
-
-
 .aim_box{
     margin: 3px;
     background-color: #050a30;
@@ -330,12 +288,12 @@ html{
     padding: 50px;
     transition: .6s;
     text-align: justify;
-    display: flex;
+    height: 350px;
 }  
 
 .aim_box:hover{
     transform: translate(0, -10px);
-    box-shadow: 1px 1px #ef4b4c;
+    box-shadow: 3px 3px #ef4b4c;
 }  
 
 .aim_img{
@@ -345,134 +303,105 @@ html{
 
 .introduction{
     text-align: justify;
-}  
-    
-.introduction h1{
-    font-family: 'Glacial Indifference Bold';
-    color: #969696;
-    font-size: 50px;
-}
+} 
 
-.safety_intro{
-    width: 40%;
-    float: right;
-    padding-left: 1em;
-    padding-top: 10px;
-    border-radius: 50px;
-}
-
-
-.lab_safety{
+.ngos{
     text-align: justify;
 }
 
-.lab_safety h1{
-    font-family: 'Glacial Indifference Bold';
-    color: #3aa9c5;
-    font-size: 50px;
-}
-
-.lab_safety h2{
-    color: #3aa9c5;
-    font-size: 35px;
-}
-
-.pasteur_img{
-    width: 30%;
-    float: left;
-    padding-right: 1em;
-    padding-top: 10px;
-    border-radius: 50px;
-}
-
-.generic_img{
-    width: 40%;
-    float: right;
-    padding-left: 50px;
-    padding-top: 10px; 
-    border-radius: 50px;   
-}
-
-.project_safety{
-    text-align: justify;
-}
-
-.project_safety h1{
-    font-family: 'Glacial Indifference Bold';
-    color: #ffc973;
-    font-size: 50px;    
-}
-
-.project_safety h2{
-    color: #ffc973;
-    font-size: 35px;
-}
-
-.senders_receivers{
-    float: left;
-    width: 50%;
-    border-radius: 50px;
-    padding-top: 0px;
-    padding-right: 50px;
-}
-
-.iGEM_deliverables{
-    text-align: justify;
-}
-
-.iGEM_deliverables h1{
+.ngos h1{
     font-family: 'Glacial Indifference Bold';
     color: #61b872;
-    font-size: 50px;    
-}
+    font-size: 40px;
+} 
 
-.science_comm_actions{
+.unique{
     text-align: justify;
 }
 
-.science_comm_actions h1{
+
+.unique h1{
     font-family: 'Glacial Indifference Bold';
-    color: #ef4b4c;
-    font-size: 50px;    
-}
+    color: #61b872;
+    font-size: 40px;
+} 
 
-.science_comm_actions h2{
-    color: #ef4b4c;
-    font-size: 35px;
-}
-
-.public_awareness{
+.biochem_day{
     text-align: justify;
 }
 
-.public_awareness h1{
-    font-family: 'Glacial Indifference';
-    color: #8a72c1;
-    font-size: 50px;    
+.biochem_day h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+} 
+
+.social_media{
+    text-align: justify;
 }
 
-.public_awareness h2{
-    color: #8a72c1;
-    font-size: 35px;
+.social_media h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+} 
+
+.tedx{
+    text-align: justify;
 }
 
-.debate_img{
-    width: 50%;
-    float: right;
-    padding-left: 2em;
-    border-radius: 50px;
+.tedx h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+} 
+
+.schms{
+    text-align: justify;
 }
 
-.gmos_img{
-    width: 70%;
-    border-radius: 50px;
+.schms h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+} 
+
+.debate{
+    text-align: justify;
 }
 
-.what_img{
-    width: 30%;
-    float: left;
-    padding-right: 2em;
-    border-radius: 50px;
+.debate h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+} 
+
+.journal{
+    text-align: justify;
 }
 
+.journal h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+} 
 
+.school_visit{
+    text-align: justify;
+}
+
+.school_visit h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+}
+
+.fairytale{
+    text-align: justify;
+}
+
+.fairytale h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+}
