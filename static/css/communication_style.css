@@ -1,0 +1,478 @@
+@import url(fonts.css);
+
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9eb;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+iframe{
+    display:none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Aspa*/
+
+.page_header{
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+    background-color: #050a30;
+
+}
+
+.img_header{
+    filter: blur(4px);
+}
+
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 100px;
+    color: #e9e9eb;
+    background-color:rgba(239, 75, 76, 0.8);
+    width: 100%;
+    height: 130px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+
+.cc{
+    width: 100%;
+    height:100%;
+    outline:none;
+    padding-right: 0em;
+    padding-left: 2em;
+    display:flex;
+    flex-wrap: wrap;
+    padding-top:3em;
+    padding-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:#102a4e;
+}
+
+.left-side{
+    color:var(--color-white);
+    margin-left: 0em;
+    padding-right: 1em;
+    padding-left: 0em;
+    width: 15%;
+    font-size:25px;
+    justify-items: center;
+}
+
+.left-side h2{
+    text-align: center;
+}
+
+.right-side{
+    color:var(--color-white);
+    margin-left: 0em;
+    padding-right: 0px;
+    padding-left: 1em;
+    width:80%;
+    align-content: center;
+    font-size: 25px;
+}
+
+.index-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    padding-bottom: 20px;
+    margin-top: 1em;
+    top:150px;
+    bottom:200px;
+}
+
+.lateral-index{
+    background-color: var(--dark-blue);
+    transition: all 0.2s ease;
+    list-style-type: none;
+    display:inline-block;
+    border-radius: 0.4em !important;
+    margin-left: 0;
+    padding: 1em 1em 1em 2.6em !important;
+    margin-top:2em;
+}
+
+.index-bar ul li {
+    padding-bottom: 1em;
+    padding-top:0em;
+    position: relative;
+  }
+
+
+/* navigation bar text decoration */    
+.index-bar ul li a {
+    /*display: flex; */ 
+    font-size: 25px;
+    color: var(--color-white);
+    text-decoration: none;
+    padding-bottom: 10px;
+    transition: all 0.3s;  
+  }
+  
+.index-bar ul li a:hover {
+    color: var(--yellow);
+  }
+
+/* this the after effect with the yellow line */
+
+.index-bar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+    
+.index-bar ul li a:hover::after {
+    width: 0%;
+    }
+
+
+.anchorOffset {
+    display: block !important;
+    position: relative !important;
+    top: -100px !important;
+    visibility: hidden !important;
+  }
+
+.buttons{
+    align-items:flex-end;
+    margin-left: 0px;
+    margin-right: 0em;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#102a4e;
+}
+
+.button {
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #050a30;
+    border-radius: 10px;
+  }
+
+.button a {
+    color: #e9e9eb;
+    font-size: 1.375em;
+    cursor: pointer;
+    display: block;
+    padding: 1em 0;
+    transition: all 0.3s;  
+}
+
+.button a:hover{
+    color:var(--yellow)
+}
+
+
+#cc-receivers{
+    display:none;
+}
+
+#cc-senders-2{
+    display:none;
+}
+
+.collapsible{
+    padding-top:30px;
+}
+
+
+.coll-up{
+    display:flex;
+}
+
+
+.collapsible label {
+    padding:20px 20px;
+    position:relative;
+    z-index:1;
+    font-weight:600;
+    padding:20px 20px;
+    text-align: left;
+    transition: all 0.5s linear;
+    background-color:#050a30;
+    border-radius:20px;
+    display:flex;
+    position:relative;
+    color:#e9e9eb;
+    cursor:pointer;
+    font-size: 30px;
+}
+
+.collapsible img{
+    position:relative;
+    
+}
+
+
+.collapsible label:hover{
+    color:var(--yellow)
+}
+
+/*
+.collapsible label a::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto; 
+    transition: all 0.5s;
+  }
+    
+.collapsible label a:hover::after {
+    width: 30%;
+}
+*/
+.collapsible-content{
+    overflow:hidden;
+    max-height:0px;
+    padding-bottom:25px;
+    overflow:hidden;
+    top:-100%;
+    opacity:0;
+    transition: max-height 0.5s ease-out;
+    transition: all 0.5s ease;
+    font-size:20px;
+}
+
+.collapsible input{
+    display:none;
+}
+
+.collapsible input:checked ~ .collapsible-content{
+    max-height:300px;
+    padding-bottom:5px;
+    background-color:#102a4e;
+    opacity:1;
+    top:0;
+}
+
+.collapsible-content cite a {
+     padding: 10px 10px;
+     color:#e9e9eb;
+     display:block;
+}
+
+.equations{
+    font-size: 20px;
+}
+
+
+/* Table */
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px !important;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 1px var(--light-blue);
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #102a4e;
+  }
+
+
+.aim_box{
+    margin: 3px;
+    background-color: #050a30;
+    border-radius: 50px;
+    padding: 50px;
+    transition: .6s;
+    text-align: justify;
+    display: flex;
+}  
+
+.aim_box:hover{
+    transform: translate(0, -10px);
+    box-shadow: 1px 1px #ef4b4c;
+}  
+
+.aim_img{
+    width: 25%;
+    float: left;
+}
+
+.introduction{
+    text-align: justify;
+}  
+    
+.introduction h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #969696;
+    font-size: 50px;
+}
+
+.safety_intro{
+    width: 40%;
+    float: right;
+    padding-left: 1em;
+    padding-top: 10px;
+    border-radius: 50px;
+}
+
+
+.lab_safety{
+    text-align: justify;
+}
+
+.lab_safety h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #3aa9c5;
+    font-size: 50px;
+}
+
+.lab_safety h2{
+    color: #3aa9c5;
+    font-size: 35px;
+}
+
+.pasteur_img{
+    width: 30%;
+    float: left;
+    padding-right: 1em;
+    padding-top: 10px;
+    border-radius: 50px;
+}
+
+.generic_img{
+    width: 40%;
+    float: right;
+    padding-left: 50px;
+    padding-top: 10px; 
+    border-radius: 50px;   
+}
+
+.project_safety{
+    text-align: justify;
+}
+
+.project_safety h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #ffc973;
+    font-size: 50px;    
+}
+
+.project_safety h2{
+    color: #ffc973;
+    font-size: 35px;
+}
+
+.senders_receivers{
+    float: left;
+    width: 50%;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-right: 50px;
+}
+
+.iGEM_deliverables{
+    text-align: justify;
+}
+
+.iGEM_deliverables h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;    
+}
+
+.science_comm_actions{
+    text-align: justify;
+}
+
+.science_comm_actions h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #ef4b4c;
+    font-size: 50px;    
+}
+
+.science_comm_actions h2{
+    color: #ef4b4c;
+    font-size: 35px;
+}
+
+.public_awareness{
+    text-align: justify;
+}
+
+.public_awareness h1{
+    font-family: 'Glacial Indifference';
+    color: #8a72c1;
+    font-size: 50px;    
+}
+
+.public_awareness h2{
+    color: #8a72c1;
+    font-size: 35px;
+}
+
+.debate_img{
+    width: 50%;
+    float: right;
+    padding-left: 2em;
+    border-radius: 50px;
+}
+
+.gmos_img{
+    width: 70%;
+    border-radius: 50px;
+}
+
+.what_img{
+    width: 30%;
+    float: left;
+    padding-right: 2em;
+    border-radius: 50px;
+}
+
+
