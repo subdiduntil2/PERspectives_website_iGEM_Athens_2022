@@ -1,20 +1,16 @@
-<script>
-    $(window).on("load",function(){
-        $(".loader-wrapper").fadeOut("slow");
-    });
- </script>
-
-<script>
+<!--<script>
     window.scroll({
         top: 0, 
         left: 0, 
         behavior: 'smooth',
     });
-</script>
+</script>-->
 <!-- For loader JS script-->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<!-- Custom CSS -->
+<link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
 <script type= "text/javascript" src="../static/scripts/jquery.min.js"></script>
-<div class="loader-wrapper">
+
+<div class="loader-wrapper" id="loader-wrapper">
     <span class="circle circle-1"></span>
     <span class="circle circle-2"></span>
     <span class="circle circle-3"></span>
@@ -24,6 +20,13 @@
     <span class="circle circle-7"></span>
     <span class="circle circle-8"></span>
 </div>
+
+<script>
+    $(window).on('load', function () {
+      $('#loader-wrapper').hide();
+    }) 
+</script>
+  
 
 
 
