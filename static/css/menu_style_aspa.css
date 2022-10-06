@@ -165,9 +165,14 @@ header label{
   animation-fill-mode: both;
 } 
 
-@media(max-width:1200px){
+@media(max-width:1300px){
     header{
+      width: 100%;
       padding: 20px;
+    }
+
+    .progress_header{
+      width: 100%;
     }
 
     header label{
@@ -181,6 +186,7 @@ header label{
       border-top: 1px solid rgba(0,0,0, .1);
       display: none;
       padding-left: 30px;
+      width: 100%;
     }
 
     header .navbar ul li{

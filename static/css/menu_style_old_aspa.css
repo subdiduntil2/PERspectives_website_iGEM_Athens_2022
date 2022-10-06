@@ -74,7 +74,7 @@
     
   .navbar ul li a:hover::after {
     width: 100%;
-    }
+  }
 
 /* logo position and other log related stuff */
 .navbar-logo {

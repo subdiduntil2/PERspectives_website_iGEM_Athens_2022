@@ -11,13 +11,8 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
-
-html{
-    scroll-behavior: smooth;
-}
 
 body{
     background-color: #050a30;
@@ -158,109 +153,6 @@ body{
     visibility: hidden !important;
   }
 
-.buttons{
-    align-items:flex-end;
-    margin-left: 0px;
-    margin-right: 0em;
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    background-color:#102a4e;
-}
-
-.button {
-    width: 20%;
-    text-align: center;
-    cursor: pointer;
-    background-color: #050a30;
-    border-radius: 10px;
-  }
-
-.button a {
-    color: #e9e9eb;
-    font-size: 1.375em;
-    cursor: pointer;
-    display: block;
-    padding: 1em 0;
-    transition: all 0.3s;  
-}
-
-.button a:hover{
-    color:var(--yellow)
-}
-
-
-/* .collapsible{
-    padding-top:30px;
-}
-
-
-.coll-up{
-    display:flex;
-}
-
-
-.collapsible label {
-    padding:20px 20px;
-    position:relative;
-    z-index:1;
-    font-weight:600;
-    padding:20px 20px;
-    text-align: left;
-    transition: all 0.5s linear;
-    background-color:#050a30;
-    border-radius:20px;
-    display:flex;
-    position:relative;
-    color:#e9e9eb;
-    cursor:pointer;
-    font-size: 30px;
-}
-
-.collapsible img{
-    position:relative;
-    
-}
-
-
-.collapsible label:hover{
-    color:var(--yellow)
-}
-
-.collapsible-content{
-    overflow:hidden;
-    max-height:0px;
-    padding-bottom:25px;
-    overflow:hidden;
-    top:-100%;
-    opacity:0;
-    transition: max-height 0.5s ease-out;
-    transition: all 0.5s ease;
-    font-size:20px;
-}
-
-.collapsible input{
-    display:none;
-}
-
-.collapsible input:checked ~ .collapsible-content{
-    max-height:300px;
-    padding-bottom:5px;
-    background-color:#102a4e;
-    opacity:1;
-    top:0;
-}
-
-.collapsible-content cite a {
-     padding: 10px 10px;
-     color:#e9e9eb;
-     display:block;
-} */
-
-.equations{
-    font-size: 20px;
-}
-
 .aim_box{
     margin: 3px;
     background-color: #050a30;
@@ -309,7 +201,7 @@ body{
 }
 
 .container_ngos .wrapper_ngos{
-    width: 700px;
+    width: 90%;
     height: 520px;
     translate: 0% -5%;
     border-radius: 50px;   
@@ -918,13 +810,28 @@ body{
     font-size: 40px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1300px){
+    .heading{
+        transform: translate(-50%, -20%);
+        font-size: 35px;
+        height: 100px;
+    }
+
+    .aim_img{
+        display: none;
+    }
+
     .left-side{
-        width: 0%;    
+        display: none; 
     }
     
     .right-side{
         width: 100%;
+        font-size: 20px;
+    }
+
+    .right-side h1{
+        font-size: 25px;
     }
 
     .aim_box{
@@ -932,6 +839,109 @@ body{
     }
 
     .container_ngos{
+        translate: 0%;
+        width: 100%;
         height: fit-content;
+    }
+    
+    .container_ngos .wrapper_ngos{
+        width: 90%;
+        height: 200px;
+        translate: 0% 0%;
+    }
+
+    .container_ngos .button-holder-ngos{
+        left: 30%;
+        bottom: 5%;
+    }
+
+    .container_unique{
+        translate: 0%;
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .container_unique .wrapper_unique{
+        width: 90%;
+        height: 200px;
+        translate: 0% 0%;
+    }
+
+    .container_unique .button-holder-unique{
+        left: 40%;
+        bottom: 5%;
+    }
+
+    .container_socials{
+        translate: 0%;
+        width: 100%;
+        height: 600px;
+    }
+    
+    .container_socials .wrapper_socials{
+        width: 90%;
+        height: 400px;
+        translate: 0% 0%;
+    }
+
+    .container_socials .button-holder-socials{
+        left: 8%;
+        bottom: 5%;
+    }
+
+    .container_tedx{
+        translate: 0%;
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .container_tedx .wrapper_tedx{
+        width: 90%;
+        height: 200px;
+        translate: 0% 0%;
+    }
+
+    .container_tedx .button-holder-tedx{
+        left: 10%;
+        bottom: 10%;
+    }
+
+    .container_schms{
+        translate: 0%;
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .container_schms .wrapper_schms{
+        width: 90%;
+        height: 200px;
+        translate: 0% 0%;
+    }
+
+    .container_schms .button-holder-schms{
+        left: 15%;
+        bottom: 10%;
+    }
+
+    .container_debate{
+        translate: 0%;
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .container_debate .wrapper_debate{
+        width: 90%;
+        height: 200px;
+        translate: 0% 0%;
+    }
+
+    .container_debate .button-holder-debate{
+        left: 15%;
+        bottom: 10%;
+    }
+
+    .journal-img{
+        width: 100%;
+        translate: 0%;
     }
 }
