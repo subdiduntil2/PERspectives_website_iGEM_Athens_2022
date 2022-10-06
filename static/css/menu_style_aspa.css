@@ -17,135 +17,115 @@
 }
   
 
-/* navigation bar background*/
-.navbar{
-  background-color:var(--dark-blue);
+header{
+  position: fixed;
   height: 80px;
-  width: 100%;
+  top: 0; left: 0; right: 0;
+  background: #050a30;
+  padding: 0px 1%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
-  position:fixed;
   z-index: 9999;
 }
 
-
-/* navigation bar text list */
-.navbar ul {
-    list-style: none;
-    display: flex;
-  }
-
-/* navigation bar text position */  
-.navbar ul li {
-    padding: 20px 35px;
-    position: relative;
-  }
-
-/* navigation bar text decoration */    
-.navbar ul li a {
-    display: felx;
-    font-size: 25px;
-    color: var(--color-white);
-    text-decoration: none;
-    padding-bottom: 10px;
-    transition: all 0.3s;  
-  }
-  
-.navbar ul li a:hover {
-    color: var(--yellow);
-  }
-  
-.navbar ul li a:hover #white-image {
-    opacity:0;
-  }
-
-/* this the after effect with the yellow line */
-.navbar ul li a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: #ffc973;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-  }
-    
-  .navbar ul li a:hover::after {
-    width: 100%;
-    }
-
-/* logo position and other log related stuff */
-.navbar-logo {
-  display: flex;
-  padding: 0% 5%;
-  width: auto;
-  padding-top: 15px;
-  padding-left: 30px;
-  padding-bottom: 5px;
-  margin-top: 5%;
-  height: 90px;
-  transition: 0.4s;
-  float: left;
-  position: relative;
-  bottom: 0.55em;
-  font-size:15px; /*doksasi ton panagatho*/
-  text-align: left;
+header .navbar-logo{
+  width: 30%;
+  padding: 15px;
 }
 
-/* dropdown menu when not hovered */
-.dropdown {
+header .navbar ul{
+  list-style: none;
+}
+
+header .navbar ul li{
+  position: relative;
+  float: left;
+  padding: 15px;
+}
+
+header .navbar ul li a{
+  font-size: 26px;
+  padding: 20px;
+  color: #e9e9eb;
+  display: block;
+}
+
+header .navbar ul li a:hover{
+  font-size: 26px;
+  padding: 20px;
+  color: #ffc973;
+  display: block;
+}
+
+
+header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #050a30;
+  box-shadow: 1px 1px 0px 1px #3aa9c5;
+  border-radius: 20px;
   display: none;
 }
 
-/* dropdown hovered */ 
-.navbar ul li:hover .dropdown {
-  display: block;
-  position: absolute;
-  left: 0; 
-  top: 100%;
-  background-color:var(--dark-blue);
-  border-radius: 20px;
-  box-shadow: 1px 1px 1px 1px  #205a7a;
-}
-
-.navbar ul li:hover .dropdown ul {
-  display:block;
-  margin: 10px;
-  text-align: center;
-}
-
-.navbar ul li:hover .dropdown ul li {
+header .navbar ul li ul li{
   width: max-content;
-  padding: 10px;
-  text-align: center;
+  padding: 1px;
 }
 
+header .navbar ul li:hover > ul{
+  display: block;
+}
+
+/* this the after effect with the yellow line */
+header .navbar ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #ffc973;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+  
+header .navbar ul li a:hover::after {
+  width: 100%;
+}
+
+
+#menu-bar{
+  display: none;
+}
+
+header label{
+  font-size: 26px;
+  color: #e9e9eb;
+  cursor: pointer;
+  display: none;
+}
 
 .logos img{
   position:absolute;
-  left: -20px;
+  left: -15px;
   width: 60px;
   padding-right:20px;
-  right:10px;
-  transition: opacity 0.3s ease-in-out;
+  padding-left: 2px;
+  right:0px;
+  transition: opacity 0.1s ease-in-out;
 }
 
 .logos img.logo-white:hover{
   opacity:0;
 }
 
-
 .wetlab-logo{
   width:50px;
-  
 }
 
 .hp-logo{
   width:50px;
 }
-
 
 .project-logo{
   width:50px;
@@ -155,9 +135,10 @@
   width:50px;
 }
 
+
 /* progress bar style*/
 
-.header {
+.progress_header {
   height: 90px;
   position: fixed;
   width: 100%;
@@ -184,34 +165,39 @@
   animation-fill-mode: both;
 } 
 
-/*fixing mobile preview*/
+@media(max-width:1200px){
+    header{
+      padding: 20px;
+    }
 
-@media (max-width: 35rem){
-  .navbar ul{
-    --gap: 2em;
+    header label{
+      display: initial;
+    }
 
-    position: fixed;
-    z-index: 1000;
-    inset: 0 0 0 25%;
-    
-    flex-direction: column;
-    padding: min(30vh, 10rem) 3em;
-    background: #050a30;
-  }
+    header .navbar{
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #050a30;
+      border-top: 1px solid rgba(0,0,0, .1);
+      display: none;
+      padding-left: 30px;
+    }
 
+    header .navbar ul li{
+      width: 100%;
+    }
 
+    header .navbar ul li ul{
+      position: relative;
+      width: 100%;
+      box-shadow: 0px 0px 0px 0px #3aa9c5;
+    }
+
+    header .navbar ul li ul li{
+      background: #050a30;
+    }
+
+    #menu-bar:checked ~ .navbar{
+      display: initial;
+    }
 }
-
-  .mobile-nav-toggle{
-    display: block;
-    position: absolute;
-    z-index: 9999;
-    background: url("https://static.igem.wiki/teams/4294/wiki/favicon-white.png");
-    background-repeat: no-repeat;
-    width: 4rem;
-    aspect-ratio: 1;
-    top: 2rem;
-    right: 2rem;
-
-
-  }

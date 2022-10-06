@@ -1,24 +1,23 @@
- <script>
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-var scrolled = (winScroll / height) * 100;
-document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-</script>
-
-<header>
-    <a href="{{ url_for('pages', page = 'index') }}">
-        <img class="navbar-logo" src="https://static.igem.wiki/teams/4294/wiki/favicon-white.png">
-    </a>
-
-    <input type="checkbox" id="menu-bar">
-    <label for="menu-bar">Menu</label>
-
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    
+    </script>
+    
     <nav class="navbar">
+        <a href="{{ url_for('pages', page = 'index') }}" class="perspectives_logo">
+            <img class="navbar-logo" src="https://static.igem.wiki/teams/4294/wiki/favicon-white.png">
+        </a>
+    
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+    
         <ul>
             <li>
                 <a href="#"> 
@@ -28,12 +27,14 @@ document.getElementById("myBar").style.width = scrolled + "%";
                     </div>
                     Team
                 </a>
+                <div class="dropdown">
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'team_custom') }}">Members</a></li>
                         <li><a href="{{ url_for('pages', page = 'attributions') }}">Attributions</a></li>
                         <li><a href="{{ url_for('pages', page = 'collaborations') }}">Collaborations</a></li>
                         <li><a href="{{ url_for('pages', page = 'sponsors') }}">Sponsors</a></li>
                     </ul>
+                </div>
             </li>
             <li>
                 <a href="#">
@@ -43,6 +44,7 @@ document.getElementById("myBar").style.width = scrolled + "%";
                     </div>
                     Project
                 </a>
+                <div class="dropdown">
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'description') }}">Description</a></li>
                         <li><a href="{{ url_for('pages', page = 'timeline') }}">Timeline</a></li>
@@ -51,15 +53,19 @@ document.getElementById("myBar").style.width = scrolled + "%";
                         <li><a href="{{ url_for('pages', page = 'implementation') }}">Implementation</a></li>
                         <li><a href="{{ url_for('pages', page = 'proof-of-concept') }}">Proof of Concept</a></li>
                     </ul>
+                </div>
             </li>
             <li>
-                    <a href="#">                        
+                <a href=#>
+                    <a href="#">
                         <div class="logos">
                             <img class="logo-yellow" src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/2022-08-27/6-navbar-yel-wet-lab.png">
                             <img class="logo-white" id="white-image" src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/2022-08-27/5-navbar-wet-lab.png">
                         </div>
                         Wet Lab
                     </a>
+                </a>
+                <div class="dropdown">
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'design') }}">Design</a></li>
                         <li><a href="{{ url_for('pages', page = 'parts_custom') }}">Parts</a></li>
@@ -67,8 +73,9 @@ document.getElementById("myBar").style.width = scrolled + "%";
                         <li><a href="{{ url_for('pages', page = 'safety') }}">Safety</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Interlab</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Measurements</a></li>
-                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Lab Notebook</a></li>
+                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Wet Lab Notebook</a></li>
                     </ul>
+                </div>
             </li>
             <li>
                 <a href="#">
@@ -78,12 +85,13 @@ document.getElementById("myBar").style.width = scrolled + "%";
                     </div> 
                     Dry Lab
                 </a>
+                <div class="dropdown">
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'model') }}">Model</a></li>
                         <li><a href="{{ url_for('pages', page = 'software') }}">Software</a></li>
                         <li><a href="{{ url_for('pages', page = 'hardware') }}">Hardware</a></li>
-                        <li><a href="{{ url_for('pages', page = 'dry_notebook') }}">Lab Notebook</a></li>
-                    </ul>
+                        <li><a href="{{ url_for('pages', page = 'dry_notebook') }}">Dry Lab Notebook</a></li>
+                </div>
             </li>
             <li>
                 <a href="#">
@@ -93,12 +101,12 @@ document.getElementById("myBar").style.width = scrolled + "%";
                     </div>
                     Human Practices
                 </a>
+                <div class="dropdown">
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'human-practices') }}">Overview</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Integrated Human Practices</a></li>
                         <li><a href="{{ url_for('pages', page = 'communication') }}">Education & Communication</a></li>
                         <li><a href="{{ url_for('pages', page = 'collaborations') }}">Collaborations</a></li>
-                    </ul>
                         <!--<li><a href="{{ url_for('pages', page = 'partnership') }}">Partnership</a></li> -->
                         <!-- <li><a href="{{ url_for('pages', page = 'education') }}">Education</a></li> -->
                 </div>
@@ -114,15 +122,13 @@ document.getElementById("myBar").style.width = scrolled + "%";
             </li>
         </ul>    
     </nav>
-</header>
-
-<div class="progress_header">
-    <div class="progress-container ">
-      <div class="progress-bar" id="myBar"></div>
+    
+    <div class="header">
+        <div class="progress-container ">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
     </div>
-</div>
-
-
-
-
-
+    
+    
+    
+    
