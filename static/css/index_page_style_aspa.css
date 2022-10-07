@@ -102,17 +102,17 @@
     width: 44%;
     text-align: justify;
     float: right;
-    translate: -25%;
+    translate: -25% 5%;
 }
 
 .text-box-aim p{
-    font-size: 36px;
-    padding: 3%;
+    font-size: 40px;
+    padding: 4%;
     color: #e9e9eb;
 }
 
 .blibli-img{
-    width: 45%;
+    width: 40%;
 }
 
 
