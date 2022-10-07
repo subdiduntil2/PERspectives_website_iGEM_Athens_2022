@@ -9,6 +9,9 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/implementation_style.css') }}" rel="stylesheet">
 
+    <!--For loader JS script-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -185,11 +188,9 @@
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
 </div> --> 
 
-<!--Loader-->   
-{% include 'loader.html'%}
+</body>
 
 <!-- Footer -->
 {% include 'footer.html' %}
 
-</body>
 </html>

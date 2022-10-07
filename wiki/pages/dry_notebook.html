@@ -9,6 +9,9 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/dry_notebook_style.css') }}" rel="stylesheet">
 
+    <!--For loader JS script-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -38,8 +41,9 @@
   <p>Here we will probably embed a pdf with the dry notebook or any other idea.</p>
 </div>
 
-<!--Loader-->   
-{% include 'loader.html'%}
+</body>
 
 <!-- Footer -->
 {% include 'footer.html' %}
+
+</html>

@@ -9,8 +9,6 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/collaborations_style_aspa.css') }}" rel="stylesheet">
 
-    <script type= "text/javascript" src="../static/scripts/jquery.min.js"></script>
-
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -29,9 +27,8 @@
 <!--To top button-->
 {% include 'to_top_button.html'%}
 
-
 <!--Loader-->   
-{% include 'loader.html'%}
+<!-- {% include 'loader.html'%} -->
 
 <!--Header-->
 
@@ -86,7 +83,46 @@
                         <br>
                         2. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4033672/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4033672/</a> 
                     </p>
-                </div>
+                    <br><br>
+                    <div class="container_tedx">
+                        <div class="wrapper_tedx">
+                            <div class="wrapper-holder-tedx">
+                                <div id="tedx1"></div>
+                                <div id="tedx2"></div>
+                                <div id="tedx3"></div>
+                                <div id="tedx4"></div>
+                                <div id="tedx5"></div>
+                                <div id="tedx6"></div>
+                                <div id="tedx7"></div>
+                                <div id="tedx8"></div>
+                                <div id="tedx9"></div>
+                                <div id="tedx10"></div>
+                                <div id="tedx11"></div>
+                                <div id="tedx12"></div>
+                                <div id="tedx13"></div>
+                                <div id="tedx14"></div>
+                                <div id="tedx15"></div>
+                            </div>
+                        </div>
+                        <div class="button-holder-tedx">
+                            <a href="#tedx1" class="button_tedx"></a>
+                            <a href="#tedx2" class="button_tedx"></a>
+                            <a href="#tedx3" class="button_tedx"></a>
+                            <a href="#tedx4" class="button_tedx"></a>
+                            <a href="#tedx5" class="button_tedx"></a>
+                            <a href="#tedx6" class="button_tedx"></a>
+                            <a href="#tedx7" class="button_tedx"></a>
+                            <a href="#tedx8" class="button_tedx"></a>
+                            <a href="#tedx9" class="button_tedx"></a>
+                            <a href="#tedx10" class="button_tedx"></a>
+                            <a href="#tedx11" class="button_tedx"></a>
+                            <a href="#tedx12" class="button_tedx"></a>
+                            <a href="#tedx13" class="button_tedx"></a>
+                            <a href="#tedx14" class="button_tedx"></a>
+                            <a href="#tedx15" class="button_tedx"></a>
+                        </div>
+                    </div>
+                </div>       
             </div>
         </div>
     </div>
@@ -332,12 +368,9 @@
    </section>
 
 
+</body>
 
 <!-- Footer -->
 {% include 'footer.html' %}
 
-
-
-
-</body>
 </html>

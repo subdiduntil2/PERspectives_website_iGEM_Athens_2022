@@ -6,6 +6,13 @@
     <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
+    <!--For loader JS script-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <!-- <script type= "text/javascript" src="../static/scripts/jquery.min.js"></script> -->
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/model_style.css') }}" rel="stylesheet">
+
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -381,16 +388,9 @@
 
 
         
-<!--Loader-->   
-{% include 'loader.html'%}
-
+</body>
 
 <!-- Footer -->
 {% include 'footer.html' %}
 
-
-
-
-
-</body>
 </html>

@@ -94,7 +94,6 @@ body{
     padding-left: 1em;
     margin-top: 1em;
     top:150px;
-    bottom:200px;
 }
 
 .lateral-index{
@@ -190,21 +189,19 @@ body{
 } 
 
 .container_ngos{
-    translate: 40%;
     position: relative;
     width: 800px;
     height: 650px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
-    z-index: 1;
 }
 
 .container_ngos .wrapper_ngos{
     width: 90%;
     height: 520px;
     translate: 0% -5%;
-    border-radius: 50px;   
+    border-radius: 0px;   
     margin: 5rem auto;
     overflow: hidden;
 }
@@ -253,7 +250,7 @@ body{
 .container_ngos .button-holder-ngos{
     position: absolute;
     left: 45%;
-    bottom: 0%;
+    bottom: 4%;
 }
 .button_ngos:hover{
     background-color: #61b872;
@@ -271,15 +268,12 @@ body{
 } 
 
 .container_unique{
-    translate: 40%;
-    position: relative;
     width: 800px;
     height: 650px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
     position: relative;
-    z-index: 1;
 }
 
 .container_unique .wrapper_unique{
@@ -293,7 +287,7 @@ body{
 
 .container_unique .wrapper-holder-unique{
     display: grid;
-    grid-template-columns: repeat(2 100%);
+    grid-template-columns: repeat(2, 100%);
     height: 100%;
     width: 100%;
 }
@@ -322,7 +316,7 @@ body{
 .container_unique .button-holder-unique{
     position: absolute;
     left: 47%;
-    bottom: 0%;
+    bottom: 4%;
 }
 .button_unique:hover{
     background-color: #61b872;
@@ -350,15 +344,11 @@ body{
 }
 
 .container_socials{
-    translate: 52%;
-    position: relative;
     width: 650px;
     height: 1000px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
-    position: relative;
-    z-index: 1;
 }
 
 .container_socials .wrapper_socials{
@@ -372,30 +362,30 @@ body{
 
 .container_socials .wrapper-holder-socials{
     display: grid;
-    grid-template-columns: repeat(10, 100%);
+    grid-template-columns: repeat(7, 100%);
     height: 100%;
     width: 100%;
 }
 .container_socials #socials-img-1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media1.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_socials #socials-img-2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_socials #socials-img-3{
     background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
+.container_socials #socials-img-3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 .container_socials #socials-img-4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media4.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/social-media/social-media2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -447,22 +437,19 @@ body{
 }
 
 .container_tedx{
-    translate: 40%;
-    position: relative;
     width: 800px;
     height: 650px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
     position: relative;
-    z-index: 1;
 }
 
 .container_tedx .wrapper_tedx{
     width: 700px;
     height: 520px;
     translate: 0% -5%;
-    border-radius: 50px;   
+    border-radius: 0px;   
     margin: 5rem auto;
     overflow: hidden;
 }
@@ -545,7 +532,7 @@ body{
 .container_tedx .button-holder-tedx{
     position: absolute;
     left: 30%;
-    bottom: 0%;
+    bottom: 4%;
 }
 .button_tedx:hover{
     background-color: #61b872;
@@ -562,29 +549,26 @@ body{
 } 
 
 .container_schms{
-    translate: 40%;
-    position: relative;
     width: 800px;
     height: 650px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
     position: relative;
-    z-index: 1;
 }
 
 .container_schms .wrapper_schms{
     width: 700px;
     height: 520px;
     translate: 0% -5%;
-    border-radius: 50px;   
+    border-radius: 0px;   
     margin: 5rem auto;
     overflow: hidden;
 }
 
 .container_schms .wrapper-holder-schms{
     display: grid;
-    grid-template-columns: repeat(10, 100%);
+    grid-template-columns: repeat(6, 100%);
     height: 100%;
     width: 100%;
 }
@@ -636,7 +620,7 @@ body{
 .container_schms .button-holder-schms{
     position: absolute;
     left: 40%;
-    bottom: 0%;
+    bottom: 4%;
 }
 .button_schms:hover{
     background-color: #61b872;
@@ -653,29 +637,26 @@ body{
 } 
 
 .container_debate{
-    translate: 40%;
-    position: relative;
     width: 800px;
     height: 650px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
     position: relative;
-    z-index: 1;
 }
 
 .container_debate .wrapper_debate{
     width: 700px;
     height: 520px;
     translate: 0% -5%;
-    border-radius: 50px;   
+    border-radius: 0px;   
     margin: 5rem auto;
     overflow: hidden;
 }
 
 .container_debate .wrapper-holder-debate{
     display: grid;
-    grid-template-columns: repeat(10, 100%);
+    grid-template-columns: repeat(6, 100%);
     height: 100%;
     width: 100%;
 }
@@ -727,7 +708,7 @@ body{
 .container_debate .button-holder-debate{
     position: absolute;
     left: 40%;
-    bottom: 0%;
+    bottom: 4%;
 }
 .button_debate:hover{
     background-color: #61b872;
@@ -827,7 +808,7 @@ body{
     
     .right-side{
         width: 100%;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .right-side h1{

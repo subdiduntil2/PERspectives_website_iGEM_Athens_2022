@@ -178,7 +178,7 @@ body{
 }
 
 .collapsible input:checked ~ .collapsible-text{
-    max-height: 4000px;
+    max-height: 40000px;
     padding: 15px;
     background: #050a30;
     opacity: 1;
@@ -195,21 +195,20 @@ body{
 }
 
 .container_tedx{
-    translate: 40%;
+    translate: 0%;
     position: relative;
-    width: 800px;
-    height: 650px;
+    width: 580px;
+    height: 720px;
     border-radius: 80px;
-    border: 10px solid #050a30;
+    border: 10px solid #3aa9c5;
     background: #e9e9e9;
     position: relative;
-    z-index: 1;
 }
 
 .container_tedx .wrapper_tedx{
-    width: 700px;
-    height: 520px;
-    translate: 0% -5%;
+    width: 500px;
+    height:620px;
+    translate: 0% -8%;
     border-radius: 50px;   
     margin: 5rem auto;
     overflow: hidden;
@@ -217,66 +216,96 @@ body{
 
 .container_tedx .wrapper-holder-tedx{
     display: grid;
-    grid-template-columns: repeat(10, 100%);
+    grid-template-columns: repeat(15, 100%);
     height: 100%;
     width: 100%;
 }
 .container_tedx #tedx1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/proti-tdex.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-a.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-b.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-c.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx5{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-d.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/5.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx6{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-e.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/6.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx7{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-f.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/7.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx8{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-g.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/8.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx9{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/tdex-s.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/9.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_tedx #tedx10{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/tedx/photo-tdex-site.png);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx11{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/11.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx12{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/12.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx13{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/13.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx14{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/14.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedx15{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/noise/15.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -292,15 +321,16 @@ body{
 }
 .container_tedx .button-holder-tedx{
     position: absolute;
-    left: 30%;
-    bottom: 0%;
+    justify-content: center;
+    left: 12%;
+    bottom: 1%;
 }
 .button_tedx:hover{
     background-color: #61b872;
 }
 
 /* responsive */
-@media(max-width: 991px){
+@media(max-width: 1300px){
     .timeline-items-athens::before{
 		left: 7px;
 	}
@@ -347,6 +377,23 @@ body{
     }
 
     .collapsible-text p{
-        font-size: 15px;
+        font-size: 20px;
     }
+
+    /* .container_tedx{
+        translate: 0%;
+        width: 50%;
+        height: fit-content;
+    }
+    
+    .container_tedx .wrapper_tedx{
+        width: 90%;
+        height: 200px;
+        translate: 0% 0%;
+    }
+
+    .container_tedx .button-holder-tedx{
+        left: 10%;
+        bottom: 10%;
+    } */
 }
