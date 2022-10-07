@@ -45,9 +45,10 @@ document.getElementById("myBar").style.width = scrolled + "%";
                 </a>
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'description') }}">Description</a></li>
+                        <li><a href="{{ url_for('pages', page = 'design') }}">Design</a></li>
+                        <li><a href="{{ url_for('pages', page = 'engineering') }}">Engineering Success</a></li>
                         <li><a href="{{ url_for('pages', page = 'timeline') }}">Timeline</a></li>
                         <li><a href="{{ url_for('pages', page = 'contribution') }}">Contribution</a></li>
-                        <li><a href="{{ url_for('pages', page = 'engineering') }}">Engineering</a></li>
                         <li><a href="{{ url_for('pages', page = 'implementation') }}">Implementation</a></li>
                         <li><a href="{{ url_for('pages', page = 'proof-of-concept') }}">Proof of Concept</a></li>
                     </ul>
@@ -61,12 +62,12 @@ document.getElementById("myBar").style.width = scrolled + "%";
                         Wet Lab
                     </a>
                     <ul>
-                        <li><a href="{{ url_for('pages', page = 'design') }}">Design</a></li>
                         <li><a href="{{ url_for('pages', page = 'parts_custom') }}">Parts</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Improve</a></li>
                         <li><a href="{{ url_for('pages', page = 'safety') }}">Safety</a></li>
-                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Interlab</a></li>
+                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Results</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Measurements</a></li>
+                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Protocols</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Lab Notebook</a></li>
                     </ul>
             </li>
@@ -95,8 +96,9 @@ document.getElementById("myBar").style.width = scrolled + "%";
                 </a>
                     <ul>
                         <li><a href="{{ url_for('pages', page = 'human-practices') }}">Overview</a></li>
-                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Integrated Human Practices</a></li>
+                        <li><a href="{{ url_for('pages', page = 'human-practices') }}">Human Practices</a></li>
                         <li><a href="{{ url_for('pages', page = 'communication') }}">Education & Communication</a></li>
+                        <li><a href="{{ url_for('pages', page = 'under_construction') }}">Integrated Human Practices</a></li>
                         <li><a href="{{ url_for('pages', page = 'collaborations') }}">Collaborations</a></li>
                     </ul>
                         <!--<li><a href="{{ url_for('pages', page = 'partnership') }}">Partnership</a></li> -->
