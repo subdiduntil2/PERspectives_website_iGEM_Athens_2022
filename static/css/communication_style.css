@@ -417,10 +417,11 @@ body{
     display: inline-block;
     margin: .3rem;
 }
+
 .container_socials .button-holder-socials{
-    position: absolute;
-    left: 35%;
-    bottom: 0%;
+    position: relative;
+    left: 30%;
+    bottom: 11.5%;
 }
 .button_socials:hover{
     background-color: #61b872;

@@ -9,6 +9,9 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/collaborations_style_aspa.css') }}" rel="stylesheet">
 
+    <!--For loader JS script-->
+    <script type= "text/javascript" src="../../static/scripts/jquery.min.js"></script>
+
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -28,7 +31,7 @@
 {% include 'to_top_button.html'%}
 
 <!--Loader-->   
-<!-- {% include 'loader.html'%} -->
+{% include 'loader.html'%}
 
 <!--Header-->
 
@@ -63,19 +66,47 @@
                         of the main insights contributed by the discipline, since it reconstructs our comprehension of why, how and when specific genes are expressed. 
                         Within synthetic biology research, the use of the term noise often refers to stochastic fluctuations which can potentially have a functional status. For example, with synthetic biology pursuing the re-organisation and control of biological components to make functional devices, biological noise can be a source of inspiration and a field of observation for scientists in order to design new systems that exhibit the desired properties. Another way to approach biological stochasticity as a functional tool, is by considering it as an accelerator of the pace of evolution. 
                         <br><br>
-                        However, despite the positive effect of biological noise in the field of synthetic biology, there are cases where the systems being designed must be very precise. One such example is the system our team has designed this year. The decision-making in the system we propose in our project is based on multi-prismatic stimuli which have different weight and importance for the final result. With our system based on data collection and evaluation biological noise can lead to false results and be a problem for making the final decision.
+                        However, despite the positive effect of biological noise in the field of synthetic biology, there are cases where the systems being designed 
+                        must be very precise. One such example is the system our team has designed this year. The decision-making in the system we propose in our 
+                        project is based on multi-prismatic stimuli which have different weight and importance for the final result. With our system based on data 
+                        collection and evaluation biological noise can lead to false results and be a problem for making the final decision.
                         <br><br>
-                        This is why our team during the Aegean Meeting, organised by iGEM Patras, gathered many Greek iGEMers and organised the following collaboration. Wanting to observe noise in biological systems and in which cases it can be a problem, we organised the following game. Twenty iGEMers were placed in specific positions to form a square and each of them was given three circular cards of different color, one red, one green and one blue. Each time a member of our team told the participants a specific word and then they had to pick up the card with the color they thought matched the word they had heard and place it above their head. Their decision shouldn’t have been influenced by what color the other participants had picked. We took a photo of how the square was shaped in color for each word that was heard. The technique we followed was simple. At the beginning we told the participants apparently 'simple' words that clearly express one of the three colors. For example, the word 'fire' would obviously be represented by the color red for most participants. But then we moved on to much more complex words, much more abstract, where the choice of color is purely subjective and is not influenced by the physical properties of the idea or the object. The result for each word is shown below.
+                        This is why our team during the Aegean Meeting, organised by iGEM Patras, gathered many Greek iGEMers and organised the following collaboration. 
+                        Wanting to observe noise in biological systems and in which cases it can be a problem, we organised the following game. Twenty iGEMers were 
+                        placed in specific positions to form a square and each of them was given three circular cards of different color, one red, one green and one 
+                        blue. Each time a member of our team told the participants a specific word and then they had to pick up the card with the color they thought 
+                        matched the word they had heard and place it above their head. Their decision shouldn’t have been influenced by what color the other 
+                        participants had picked. We took a photo of how the square was shaped in color for each word that was heard. The technique we followed was 
+                        simple. At the beginning we told the participants apparently 'simple' words that clearly express one of the three colors. For example, the 
+                        word 'fire' would obviously be represented by the color red for most participants. But then we moved on to much more complex words, much more 
+                        abstract, where the choice of color is purely subjective and is not influenced by the physical properties of the idea or the object. The result
+                         for each word is shown below.
                         <br><br>
-                        Having now received the photos in our hands we were ready to do a little statistical analysis of the results and draw our conclusions about the noise. The following chart summarizes our findings.  
+                        Having now received the photos in our hands we were ready to do a little statistical analysis of the results and draw our conclusions about 
+                        the noise. The following chart summarizes our findings.  
                         <br><br>
                         <img src="https://static.igem.wiki/teams/4294/wiki/collaborations/noise/screenshot-2022-10-02-at-15-35-42-noise-our-collab-noise-our-collab-pdf.png" width="100%">
                         <br><br>
-                        The square formed by the participants during our collaboration represents a biological system, by observing the choice of the chosen color for each word we are able to judge how an individual member would react in relation to the decision that the entire biological system finally made. As expected in the first words the participants heard the final decision was clear, the word fire brings to mind the color red, the word sky blue and the word forest green. The three words that showed 100% agreement between participants were the word fire, the word forest, and the words sky and dream. However, as we progress to much more complex concepts such as the word success or the word teamwork, the biological noise increases and now each participant can have a different opinion than what the biological system as a whole finally chooses. The most biological noise was presented in the words success and party on the island where the change of the decision of two participants would have a great influence on the final result. 
+                        The square formed by the participants during our collaboration represents a biological system, by observing the choice of the chosen color for 
+                        each word we are able to judge how an individual member would react in relation to the decision that the entire biological system finally made. 
+                        As expected in the first words the participants heard the final decision was clear, the word fire brings to mind the color red, the word sky 
+                        blue and the word forest green. The three words that showed 100% agreement between participants were the word fire, the word forest, and the 
+                        words sky and dream. However, as we progress to much more complex concepts such as the word success or the word teamwork, the biological noise 
+                        increases and now each participant can have a different opinion than what the biological system as a whole finally chooses. The most biological 
+                        noise was presented in the words success and party on the island where the change of the decision of two participants would have a great 
+                        influence on the final result. 
                         <br><br>
-                        The conclusions we draw from this action have a big impact on how we approach our system. It is also an explanation of the reason why the biosensor we designed consists of multiple populations. So, as our system aims to recognize and analyse multifaceted stimuli and combine information, the final decision must come from many populations and be the result of the majority of the decision of the individual populations. Ιf we had designed a biosensor that consisted of only one population, it might be effective in detecting simple stimuli and recognizing small patterns, but it could not be reliable for making decisions based on complex stimuli, each of which has to have a different weight for the final decision. In conclusion, the proposed system consists of many subpopulations of bacteria and thus can overcome metabolic barriers and make better decisions since it is based on majority-based choices.
+                        The conclusions we draw from this action have a big impact on how we approach our system. It is also an explanation of the reason why the 
+                        biosensor we designed consists of multiple populations. So, as our system aims to recognize and analyse multifaceted stimuli and combine 
+                        information, the final decision must come from many populations and be the result of the majority of the decision of the individual populations.
+                         If we had designed a biosensor that consisted of only one population, it might be effective in detecting simple stimuli and recognizing small 
+                         patterns, but it could not be reliable for making decisions based on complex stimuli, each of which has to have a different weight for the 
+                         final decision. In conclusion, the proposed system consists of many subpopulations of bacteria and thus can overcome metabolic barriers and 
+                         make better decisions since it is based on majority-based choices.
                         <br><br>
-                        Finally, we would like to thank iGEM Patras because our collaboration took place during the Aegean Meeting they organised. Also, we would like to thank the teams that participated: Patras, Crete, Thessaloniki and Thessaly, (Upi Patras?) for their excellent cooperation and the will to explore biological noise with us! 
+                        Finally, we would like to thank iGEM Patras because our collaboration took place during the Aegean Meeting they organised. Also, we would like 
+                        to thank the teams that participated: Patras, Crete, Thessaloniki and Thessaly, Patras_Uni_Hellas for their excellent cooperation and the will 
+                        to explore biological noise with us! 
                         <br><br>
                         References
                         <br><br>
@@ -148,6 +179,9 @@
                         many questions and possible solutions from synthetic biology fans. Some of them were very close to the real solution of the problems we were 
                         presenting each time.
                     </p>
+                    <img class="story-1-img" src="https://static.igem.wiki/teams/4294/wiki/collaborations/story1.png">
+                    <img class="story-2-img" src="https://static.igem.wiki/teams/4294/wiki/collaborations/story2.png">
+                    <img class="story-3-img" src="https://static.igem.wiki/teams/4294/wiki/collaborations/story3.png">
                 </div>
             </div>
         </div>
@@ -161,16 +195,17 @@
                 <label for="mistakes">Beautiful Mistakes</label>
                 <div class="collapsible-text">
                     <p>
-                        One day in the lab we noticed that a plate was contaminated and maggots had grown on it. However, looking at them through the stereoscope, 
-                        we noticed that they had grown into a beautiful shape that had a grace to it. Wanting to emphasize the spirit that mistakes are part of the 
-                        process, and we can learn from them and become better, we decided to create a mini collage to emphasize that our mistakes, if they are harmless,
-                         can be very beautiful.
-                        <br><br>
-                        We also thought that we are probably not the only group that has encountered these kinds of problems, and that many of our colleagues may have 
-                        made "beautiful mistakes". So we decided to approach them for a collaboration. We asked them to send us photos of lab errors that had an 
-                        aesthetically pleasing look. We are so happy that the teams iGEM Tec CEM, Estonia_TUIT and iGEM-RUM responded. We saw beautiful mistakes in 
-                        every picture they sent us, from gels that were not running in a proper way to single dots growing on plates. We thank them for not being ashamed 
-                        to show the world that mistakes are pretty and useful sometimes, and we hope they enjoy the collage as much as we do!
+                    One day in the lab we noticed that a plate was contaminated and maggots had grown on it. However, looking at them through the stereoscope, 
+                    we noticed that they had grown into a beautiful shape that had a grace to it. Wanting to emphasize the spirit that mistakes are part of the 
+                    process, and we can learn from them and become better, we decided to create a mini collage to emphasize that our mistakes, if they are harmless, 
+                    can be very beautiful.
+                    <img class="mistakes-img" src="https://static.igem.wiki/teams/4294/wiki/collaborations/mistakes.png">
+                    <br><br>
+                    We also thought that we are probably not the only group that has encountered these kinds of problems, and that many of our colleagues may have 
+                    made "beautiful mistakes". So we decided to approach them for a collaboration. We asked them to send us photos of lab errors that had an 
+                    aesthetically pleasing look. We are so happy that the teams iGEM Tec CEM, Estonia_TUIT and iGEM-RUM responded. We saw beautiful mistakes in 
+                    every picture they sent us, from gels that were not running in a proper way to single dots growing on plates. We thank them for not being ashamed 
+                    to show the world that mistakes are pretty and useful sometimes, and we hope they enjoy the collage as much as we do!
                     </p>
                 </div>
             </div>
@@ -289,7 +324,8 @@
                        organisms with completely different ways of living, metabolizing and reproducing. As the young representatives of the scientific community, we 
                        believe it is important to make clear that every form of life is far more complicated naturally than it is in theory. 
                        <br><br>
-                       *<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3917220/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3917220/</a></p>
+                       <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3917220/">*Harini K, Ajila V, Hegde S. Bdellovibrio bacteriovorus : A 
+                        future antimicrobial agent? J Indian Soc Periodontol. 2013 Nov;17(6):823-5. doi: 10.4103/0972-124X.124534. PMID: 24554900; PMCID: PMC3917220.</a></p>
                    </div>
                </div>
            </div>
@@ -321,12 +357,13 @@
                    <input type="checkbox" id="iGEM IISER">
                    <label for="iGEM IISER">Biosafety video</label>
                    <div class="collapsible-text">
+                   <img class="biosafety-video-img" src="https://static.igem.wiki/teams/4294/wiki/collaborations/biosafety-video.png">   
                    <p>We participated  in a series of informative videos based on Biosafety Practices organized by Team IISER Mohali from India. This initiative aims 
                        to inform the public about  the measures that are carried out in the laboratories and reduce the skepticism regarding Genetic Engineering and 
                        Synthetic Biology.
                       <br><br>
                        Our team demonstrated some of the Biosafety measures followed in our laboratory. It was a very fun and creative procedure! You can find our video 
-                       <a href="">here</a>.</p>
+                       <a href="https://www.youtube.com/watch?v=noctwnApqTg">here</a>.</p>
                    </div>
                </div>
            </div>
@@ -339,12 +376,12 @@
                    <input type="checkbox" id="DNA post">
                    <label for="DNA post">Creating a post for the World DNA Day</label>
                    <div class="collapsible-text">
-                       <p>
-                           We are very happy for our contribution in creating an informative post for world dna day. Team Patras_Medicine invited you to take a photo 
-                           holding one of the letters A, T, U, G. They then created a beautiful collage, creating a double helix structure, simulating the DNA. The post 
-                           was accompanied by informative facts about the DNA. Best way to celebrate world DNA Day. 
-                           (Post)                        
-                       </p>
+                    <p>
+                    We are very happy for our contribution in creating an informative post for world dna day. Team Patras_Medicine invited you to take a photo 
+                    holding one of the letters A, T, U, G. They then created a beautiful collage, creating a double helix structure, simulating the DNA. The post 
+                    was accompanied by informative facts about the DNA. Best way to celebrate world DNA Day.                       
+                    </p>
+                    <img class="dna-collab-img" src="https://static.igem.wiki/teams/4294/wiki/collaborations/dna-collab.png">
                    </div>
                </div>
            </div>
@@ -358,7 +395,14 @@
                    <label for="The plates">The plates</label>
                    <div class="collapsible-text">
                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis consectetur labore a quis iste facilis aspernatur vero, fuga nisi nam ducimus repudiandae quam. Architecto reprehenderit inventore labore minus, minima est?                        
+                        This year we faced many difficulties with the laboratory consumables and the equipment we had available to carry out our laboratory experiments. 
+                        So when we needed two 96-well plates with black clear bottom, we turned to tram iGEM Thessaly. The members of  the team were very willing to send 
+                        us what we needed and we thank them for their prompt and quick response. For our part, we were able to fill their need for two 96-well plates 
+                        with black bottom that they were lacking.
+                        <br><br>
+                        We are very happy that through our cooperation we were able to cover the gaps of each group and help each other. We thank them for the excellent 
+                        cooperation and communication in every step of the way. We believe that it is the competition’s spirit to form collaborations like this, when one 
+                        team is lacking something and another that actually has a surplus helps.                                                
                        </p>
                    </div>
                </div>

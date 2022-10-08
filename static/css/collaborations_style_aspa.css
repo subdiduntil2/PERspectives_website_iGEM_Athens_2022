@@ -123,6 +123,47 @@ body{
 	border-radius: 15px;
 }
 
+.biosafety-video-img{
+    width: 50%;
+    padding-top: 5px;
+    padding-left: 20px;
+    border-radius: 30px;
+}
+
+.dna-collab-img{
+    width: 80%;
+    padding-top: 5px;
+    padding: 3%;
+    border-radius: 30px;
+    translate: 10%;
+}
+
+.story-1-img{
+    width: 30%;
+    padding: 2%;
+    translate: 13%;
+}
+
+.story-2-img{
+    width: 30%;
+    padding: 2%;
+    translate: 13%;
+}
+
+.story-3-img{
+    width: 30%;
+    padding: 2%;
+    translate: 13%;
+}
+
+.mistakes-img{
+    width: 80%;
+    float: left;
+    padding-top: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    border-radius: 30px;
+}
 
 .collapsible{
     max-width: 800px;
@@ -195,7 +236,7 @@ body{
 }
 
 .container_tedx{
-    translate: 0%;
+    translate: 10%;
     position: relative;
     width: 580px;
     height: 720px;
@@ -378,6 +419,18 @@ body{
 
     .collapsible-text p{
         font-size: 20px;
+    }
+
+    .dna-collab-img{
+        width: 100%;
+        padding-top: 5px;
+        padding-left: 3%;
+        border-radius: 30px;
+        translate: 0%;
+    }
+
+    .container_tedx{
+        translate: 0%;
     }
 
     /* .container_tedx{

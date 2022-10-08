@@ -51,6 +51,23 @@
     <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/t-tjusls-china-face-model.jpg" width="100%">
 </div> -->
 
+<div class="overview-model">
+    <h1>Overview</h1>
+    <p>
+        Alongside with our wet lab work, computational modelling of our PERspectives system has been proven to be crucial in order to establish a workflow for future 
+        applications. Our model is divided into two separate parts, the modelling of the senders and the modelling of the receivers. 
+        <br><br>
+        The aim of the model is to predict the change in concentrations of key chemical substances, the rate of gene expression and to evaluate the regulatory capacity 
+        of our system. Also, based on the experimental work carried out by the wet lab, we determined some kinetic constants to create a customised kinetic model for 
+        our system. But we did not limit ourselves to just creating a kinetic model. For our system it is also important to observe the effect of lactone diffusion as 
+        well as the stability analysis.
+        <br><br>
+        In the following sections, we describe an outline of the aforementioned models and, most importantly, the thinking process we followed during their development. 
+        We hope they will serve as a helpful companion to anyone who wishes to use the PERspective system in the future, and, as everything else in iGEM, open to 
+        recommendations and improvements from the SynBio community.
+    </p>
+</div>
+
 
 <div class="buttons">
     <div class="button">
@@ -88,16 +105,16 @@
         <section class="introduction">
             <a id="intro" class="anchorOffset"></a>
             <br><br>
-            <h1><b>Senders Model</b></h1>
+            <h1><b>Senders System: Explained</b></h1>
             <br><br>
-            <h2>Senders Prep</h2>
+            <h2>aTc promoter</h2>
             <br>
-            <p> Senders model intro, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p> aTc promoter:
+                The purpose of our team is to create 3x1 patterns of E.coli ‘Senders’ subpopulations that express the LuxI gene at a different rate. <br>
+                To achieve this, we designed a regulatory system based on the aTc promoter. If there is no aTc in the system, the promoter is repressed by the TetR 
+                regulator. If aTc is present in the system, then it binds with the TetR, creating a complex that is pumped out of the cell, allowing the mRNA of the 
+                following gene to be produced. A simple explanation of the operation of the aTc is presented in the picture below:
+                </p>
             <br>
         </section>
         <section class="main" >
@@ -367,19 +384,7 @@
             </cite>
         </div>
     </section>
-    </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+    
 <script>
     function show(param_div_id) {
     document.getElementById('cc-senders').innerHTML = document.getElementById(param_div_id).innerHTML;
