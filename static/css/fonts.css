@@ -19,33 +19,3 @@
   font-weight: 100 900;
   src: url(../fonts/Glacial_Indifference/GlacialIndifference-Italic.otf) format("opentype");
 }
-
-@font-face {
-  font-family: 'Gyre';
-  font-style: normal;
-  font-weight: 100 900;
-  src: url(../fonts/Gyre/tex-gyre-pagella.regular.otf) format("opentype");
-}
-
-@font-face {
-font-family: 'Gyre Bold';
-font-style: bold;
-font-weight: 100 900;
-src: url(../fonts/Gyre/tex-gyre-pagella.bold.otf) format("opentype");
-}
-
-
-@font-face {
-font-family: 'Gyre Italics';
-font-style: italic;
-font-weight: 100 900;
-src: url(../fonts/Gyre/tex-gyre-pagella.italic.otf) format("opentype");
-}
-
-@font-face {
-  font-family: 'Gyre Bold Italics';
-  font-style: italic;
-  font-weight: 100 900;
-  src: url(../fonts/Gyre/tex-gyre-pagella.bold-italic.otf) format("opentype");
-  }
-
