@@ -6,9 +6,8 @@
     <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
-    <!--For loader JS script-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
-    <!-- <script type= "text/javascript" src="../static/scripts/jquery.min.js"></script> -->
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
 
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/model_style.css') }}" rel="stylesheet">
@@ -19,6 +18,9 @@
     <!--Custom footer CSS-->
     <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
 
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">    
+
     <!--CSS for Model Page-->
     <link href="{{url_for('static',filename='css/model_style.css')}}" rel="stylesheet">
 
@@ -27,10 +29,10 @@
 
     <!--MathJax Import-->
 
-    <script type= "text/javascript" src="../static/scripts/polyfill.min.js"></script>
-    <script type= "text/javascript" src="../static/scripts/tex-chtml.js"></script>
-    <!--<script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    <!-- <script type= "text/javascript" src="../../athens/static/scripts/polyfill.min.js"></script>
+    <script type= "text/javascript" src="../../athens/static/scripts/tex-chtml.js"></script> -->
+    <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
     <title>Perspectives | Model</title>
 </head>
@@ -42,14 +44,11 @@
 <!--To top button-->
 {% include 'to_top_button.html'%}
 
+
 <div class="page_header">
     <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/model-page-images/dry-notebook-header.gif" width="100%">
     <div class="heading">Model</div>    
 </div>
-
-<!-- <div class="header_one">
-    <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/t-tjusls-china-face-model.jpg" width="100%">
-</div> -->
 
 <div class="overview-model">
     <h1>Overview</h1>

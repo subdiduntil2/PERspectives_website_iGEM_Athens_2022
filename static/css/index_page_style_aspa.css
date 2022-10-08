@@ -21,17 +21,6 @@
     padding: 2%;
 }
 
-/* .supergif{
-    padding-top: 1100px;
-    padding-bottom: 0px;
-    width: 100%;
-    background-color: #102a4e;
-    background-image: url("https://static.igem.wiki/teams/4294/wiki/home-page-staff/teaser-perspectives-final.gif");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-} */
-
 .supergif{
     padding-top: 90px;
     position: relative;
@@ -68,6 +57,11 @@
     border-radius: 50px;
     width: 55%;
     text-align: justify;
+    transition: .3s;
+}
+
+.text-box-what:hover{
+    transform: translate(0, -20px);
 }
 
 .text-box-what p{
@@ -103,6 +97,11 @@
     text-align: justify;
     float: right;
     translate: -25% 5%;
+    transition: .3s;
+}
+
+.text-box-aim:hover{
+    transform: translate(0, -20px);
 }
 
 .text-box-aim p{
@@ -116,221 +115,237 @@
 }
 
 
-/* .our_project{
-    background-image:linear-gradient(#102a4e, #050a30, #102a4e);
-    color: #e9e9eb;
-    background-size: 100%;
-    padding: 10px;
-}
-
-/* our aims section*/
-/* .goals{
-    width: 80%;
-    background-color: #102a4e;
-    color: #e9e9eb;
-    background-size: 100%;
-    padding: 2%;
-} */
-
-
-/* .image-box{
-    background: transparent;
-    width: 70px;
-    float: left;
-} */
-
-/* .text-box{
-    background: #102a4e;
-    border-radius: 30px;
-    margin: 0;
-    padding: 3%;
-    box-sizing: content-box;
-    float: right;
-}
-
-.text-box:hover{
-    transform: translate(0, -15px); 
-    background: #050a30;
-    border-radius: 30px;
-    margin: 1%;
-    padding: 3%;
-    box-sizing: content-box;
-    transition: 0.7s;
-}
-
-@media(max-width: 35rem){
-    .goals{
-        flex-direction: column;
-    }
-} */
-
 /* Triple Section */
 
-.row{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.triple_section{
-    width: 95%;
-    margin: auto;
-    text-align: center;
-    background-color: #050a30;
-    color: #e9e9eb;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    }   
 
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    padding: 7%;
 }
 
+/* WET LAB */
 
-.container .box{
-    position: relative;
+.box-wet{
     width: 500px;
     height: 500px;
-    padding: 50px;
     background-color: #102a4e;
-    border-radius: 60px;
-    /* box-shadow: 0 5px 15px; */
-    margin: 10px;
+    border-radius: 70px;
     box-sizing: border-box;
     overflow: hidden;
+    transition: .3s;
+    text-align: center;
+    justify-content: center;
+    transition: .3s;
 }
 
-.container .box:before{
-    content: "";
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    }
+.box-wet:hover{
+    background: url(https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif);
+    transform: translate(0, -10px);
+    box-shadow: 5px 5px #61b872;
+}
 
-
-.container .box .icon{
-    position: relative;
-    width: 88px;
-    height: 88px;
+.triple_logos_wet{
+    width: 100px;
+    height: 100px;
     background: #050a30;
+    border-radius: 50%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    border-radius: 50%;
-    font-size: 40px;
-    font-weight: 700;
-    transition: 1s;
-} 
-
-.container .box:nth-child(1):hover .icon{
-    box-shadow: 0 0 0 400px #3aa9c5;
+    margin: 20% auto;
+    transition: .3s;
 }
 
-.container .box:nth-child(2):hover .icon{
-    box-shadow: 0 0 0 400px #61b872;
+.box-wet:hover .triple_logos_wet{
+    width: 100px;
+    height: 100px;
+    background: #61b872;
+    box-shadow: 0 0 0 50px#61b872;
 }
 
-.container .box:nth-child(3):hover .icon{
-    box-shadow: 0 0 0 400px #ef4b4c;
+.triple_logos_wet .non-hover-img-wet{
+    width: 100px;
+    padding-top: 15%;
+    transition: .3s;
 }
 
-.container .box .content{
-    position: relative;
-    z-index: 1;
-    transition: 0.5s;
+.hover-img-wet{
+    display: none;
+    transition: .3s;
 }
 
-.container .box:hover .content{
-    color: #e9e9eb;
+.box-wet:hover .non-hover-img-wet{
+    display: none;
 }
 
-.container .box .content h3{
-    font-size: 20px;
-    margin: 10px 0;
-    padding: 0;
+.box-wet:hover .hover-img-wet{
+    display: initial;
+    width: 200px;
+    padding-top: 15%;
 }
 
-.container .box .content p{
-    margin: 0;
-    padding: 0;
+.box-wet h1{
+    font-size: 60px;
+    font-family: 'Glacial Indifference Bold';
+    transition: .3s;
 }
-.contaner .box .content a{
-    display: inline-block;
-    padding: 10px 20px;
-    background: #e9e9eb;
-    border-radius: 10px;
-    text-decoration: none;
+
+.box-wet:hover h1{
+    font-size: 70px;
     color: #050a30;
-    margin-top: 30px;
+    font-family: 'Glacial Indifference Bold';
 }
 
-/* .sections_row{
-    margin: 5%;
-    padding: 2%;
-    display: flex;
-    justify-content: space-between;
-}
 
-.sections_col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
+
+.box-dry{
+    width: 500px;
+    height: 500px;
+    background-color: #102a4e;
+    border-radius: 70px;
+    box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    transition: .3s;
 }
 
-.sections_col img{
-    width: 100%;
+.box-dry:hover{
+    background: url(https://static.igem.wiki/teams/4294/wiki/model-page-images/dry-notebook-header.gif);
+    transform: translate(0, -10px);
+    box-shadow: 5px 5px  #3aa9c5;
 }
 
-.layer_wet{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
+.triple_logos_dry{
+    width: 100px;
+    height: 100px;
+    background: #050a30;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20% auto;
+    transition: .3s;
 }
 
-.layer_wet:hover{
-    background: rgba(226, 0, 0, 0.2);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-} */
+.box-dry:hover .triple_logos_dry{
+    width: 100px;
+    height: 100px;
+    background: #3aa9c5;
+    box-shadow: 0 0 0 50px#3aa9c5;
+}
 
-/* unvisited link */
-/* .container .box .content a:link {
-    color: #050a30;
-    text-decoration: none;
-    }
-    
-    /* visited link */
-    a:visited {
-    color: #050a30;
-    text-decoration: none;
-    }
-    
-    /* mouse over link */
-    a:hover {
-    color: #ffc973;
-    text-decoration: none;
-    }
-    
-    /* selected link */
-    a:active {
-    color: #ffe3b3;
-    text-decoration: none;
-    }
+.triple_logos_dry .non-hover-img-dry{
+    width: 100px;
+    padding-top: 1%;
+    transition: .3s;
+}
+
+.hover-img-dry{
+    display: none;
+    transition: .3s;
+}
+
+.box-dry:hover .non-hover-img-dry{
+    display: none;
+}
+
+.box-dry:hover .hover-img-dry{
+    translate: 0% -5%;
+    display: initial;
+    width: 200px;
+    padding-top: 15%;
+}
+
+.box-dry h1{
+    font-size: 60px;
+    font-family: 'Glacial Indifference Bold';
+    transition: .3s;
+}
+
+.box-dry:hover h1{
+    font-size: 70px;
+    color: #e9e9eb;
+    font-family: 'Glacial Indifference Bold';
+}
+
+
+.box-hp{
+    width: 500px;
+    height: 500px;
+    background-color: #102a4e;
+    border-radius: 70px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.box-hp:hover{
+    background: url(https://static.igem.wiki/teams/4294/wiki/human-practices/hp-bg.gif) rgba(239, 75, 76, 0.5);
+    background-size: cover;
+    background-repeat: repeat-y;
+    transform: translate(0, -10px);
+    box-shadow: 5px 5px  #ef4b4c;
+}
+
+
+.triple_logos_hp{
+    width: 100px;
+    height: 100px;
+    background: #050a30;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20% auto;
+    transition: .3s;
+}
+
+.box-hp:hover .triple_logos_hp{
+    width: 100px;
+    height: 100px;
+    background: #ef4b4c;
+    box-shadow: 0 0 0 50px#ef4b4c;
+}
+
+.triple_logos_hp .non-hover-img-hp{
+    width: 100px;
+    padding-top: 1%;
+    transition: .3s;
+}
+
+.hover-img-hp{
+    display: none;
+    transition: .3s;
+}
+
+.box-hp:hover .non-hover-img-hp{
+    display: none;
+}
+
+.box-hp:hover .hover-img-hp{
+    padding-top: 0%;
+    display: initial;
+    width: 200px;
+    padding-top: 15%;
+}
+
+.box-hp h1{
+    font-size: 65px;
+    font-family: 'Glacial Indifference Bold';
+    transition: .3s;
+}
+
+.box-hp:hover h1{
+    font-size: 70px;
+    color: #102a4e;
+    font-family: 'Glacial Indifference Bold';
+}
 

@@ -9,11 +9,14 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/safety_style.css') }}" rel="stylesheet">
 
-    <!--For loader JS script-->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
 
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom loader CSS-->
+    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">   
 
     <!--Custom footer CSS-->
     <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
@@ -29,6 +32,9 @@
 
 <!--To top button-->
 {% include 'to_top_button.html'%}
+
+<!--Loader-->   
+{% include 'loader.html'%}
 
 <div class="page_header">
     <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif" width="100%">

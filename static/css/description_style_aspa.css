@@ -21,9 +21,9 @@ body{
 }
 
 
-.bg-image {
+.bg-image-1{
     color: #e9e9eb;
-    padding-top: 10em;
+    padding-top: 5em;
     padding-left: 5em;
     padding-right: 5em;
     padding-bottom: 0;
@@ -63,6 +63,21 @@ body{
     padding: 1px 20px 10px 1px;
 }
 
+.bg-image-2{
+    color: #e9e9eb;
+    padding-top: 0;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 5em;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
+
 /* Antidaneio */
 .container_2{
     background: #102a4e;
@@ -70,7 +85,7 @@ body{
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     width: 100%;
-    transform: translate(0%, -21%);
+    transform: translate(0%, 0%);
 }
 
 .container_2 p{
@@ -85,6 +100,21 @@ body{
 }
 
 /* <!-- Perceptron --> */
+
+.bg-image-3{
+    color: #e9e9eb;
+    padding-top: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 3em;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
 .container_3{
     background: #102a4e;
     padding: 50px;
@@ -112,6 +142,21 @@ body{
 }
 
 /* <!-- Quorum Sensing --> */
+
+.bg-image-4{
+    color: #e9e9eb;
+    padding-top: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 3em;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
 .container_4{
     background: #102a4e;
     padding: 50px;
@@ -133,11 +178,26 @@ body{
 
 .quorum_sensing_gif{
     float: center;
-    width: 80%;
+    width: 70%;
 }
 
 
 /* Our Project */
+.bg-image-5{
+    color: #e9e9eb;
+    padding-top: 5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 0;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
+
 .container_5{
     background: #102a4e;
     padding: 50px;
@@ -165,11 +225,25 @@ body{
     padding-bottom: 5em;
 }
 
+.bg-image-6{
+    color: #e9e9eb;
+    padding-top: 0;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 0;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
 .container_6{
     background: #102a4e;
     padding: 50px;
     width: 100%;
-    transform: translate(0%, -20%);
+    transform: translate(0%, 0%);
 }
 
 .container_6 p{
@@ -185,16 +259,100 @@ body{
     padding-top: 1em;
 }
 
+.bg-image-7{
+    color: #e9e9eb;
+    padding-top: 0;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 0;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
 .container_7{
+    background: #102a4e;
+    padding: 50px;
+    width: 100%;
+    transform: translate(0%, 0%);
+}
+
+.container_7 p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+.pattern_1_img{
+    width: 20%;
+     border-radius: 20px;
+}
+
+.bg-image-8{
+    color: #e9e9eb;
+    padding-top: 0;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 0;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
+.container_8{
+    background: #102a4e;
+    padding: 50px;
+    width: 100%;
+    transform: translate(0%, 0%);
+}
+
+.container_8 p{
+    font-size: 25px;
+    text-align: justify;
+}
+.pattern_2_img{
+    width: 20%;
+    float: right;
+    padding: 50px;
+}
+
+.table_img{
+    float: right;
+    padding: 0;
+    width: 52%;
+    padding-left: 3em;
+    padding-top: 1em;
+}
+
+.bg-image-9{
+    color: #e9e9eb;
+    padding-top: 0;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 5em0;
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/description/description-page-bg.gif);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+}
+
+.container_9{
     background: #102a4e;
     padding: 50px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     width: 100%;
-    transform: translate(0%, -40%);
+    transform: translate(0%, 0%);
 }
 
-.container_7 p{
+.container_9 p{
     font-size: 25px;
     text-align: justify;
 }
@@ -225,6 +383,7 @@ body{
         margin-left: 0em;
         padding-right: 1em;
         padding-left: 0em;
+        padding-bottom: 1em;
         width: 15%;
         font-size:25px;
         justify-items: center;
@@ -310,3 +469,73 @@ body{
         top: -100px !important;
         visibility: hidden !important;
       }
+
+
+    
+.collapsible{
+    padding-top:30px;
+    transform: translate(0%, 0%);
+}
+
+
+.coll-up{
+    display:flex;
+}
+
+
+.collapsible label {
+    padding:20px 20px;
+    position:relative;
+    z-index:1;
+    font-weight:600;
+    padding:20px 20px;
+    text-align: left;
+    transition: all 0.5s linear;
+    background-color:#050a30;
+    border-radius:20px;
+    display:flex;
+    position:relative;
+    color:#e9e9eb;
+    cursor:pointer;
+    font-size: 30px;
+}
+
+.collapsible img{
+    position:relative;
+    
+}
+
+
+.collapsible label:hover{
+    color:var(--yellow);
+}
+
+.collapsible-content{
+    overflow:hidden;
+    max-height:0px;
+    padding-bottom:25px;
+    overflow:hidden;
+    top:-100%;
+    opacity:0;
+    transition: max-height 0.5s ease-out;
+    transition: all 0.5s ease;
+    font-size:20px;
+}
+
+.collapsible input{
+    display:none;
+}
+
+.collapsible input:checked ~ .collapsible-content{
+    max-height:300px;
+    padding-bottom:5px;
+    background-color:#102a4e;
+    opacity:1;
+    top:0;
+}
+
+.collapsible-content cite a {
+     padding: 10px 10px;
+     color:#e9e9eb;
+     display:block;
+}

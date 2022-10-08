@@ -9,6 +9,9 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/attributions_style.css') }}" rel="stylesheet">
 
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
+
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -26,6 +29,9 @@
 
 <!--To top button-->
 {% include 'to_top_button.html'%}
+
+<!--Loader-->   
+{% include 'loader.html'%}
 
 <div class="page_header">
     <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/team-page/project-reveal-1920-1080-px-4.gif" width="100%">

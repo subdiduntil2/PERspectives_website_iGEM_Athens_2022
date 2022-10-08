@@ -9,17 +9,14 @@
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/description_style_aspa.css') }}" rel="stylesheet">
 
-    <!--For loader JS script-->
-    <script type= "text/javascript" src="../../static/scripts/jquery.min.js"></script>
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
 
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
     <!--Custom footer CSS-->
     <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
-
-    <!--Custom loader CSS-->
-    <link href="{{url_for('static',filename='css/loader_style.css')}}" rel="stylesheet">
 
      <!--Custom to top button CSS-->
      <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
@@ -53,12 +50,15 @@
               <li class="lateral-content">
                 <a href="#perspectives">PERspectives</a>
               </li>
+              <li class="lateral-content">
+                <a href="#references">References</a>
+              </li>
           </ul>
       </div>
   </div>
   
   <div class="right-side">
-    <div class="bg-image">
+    <div class="bg-image-1">
         <div class="container_1">
             <a id="inspiration" class="anchorOffset"></a>
             <h1>INSPIRATION <img src="https://static.igem.wiki/teams/4294/wiki/navbar-icons/updated-icons/navbar-yel-project.png" width="9%"></h1>
@@ -81,7 +81,7 @@
         </div>
     </div>
     
-    <div class="bg-image">
+    <div class="bg-image-2">
         <div class="container_2">
             <p>
                 It is true that cells can process environmental information and proceed to a response based on this very information. In most applications of biological 
@@ -100,7 +100,7 @@
     
     <!-- Perceptron -->
     
-    <div class="bg-image">
+    <div class="bg-image-3">
         <div class="container_3">
             <a id="perceptron" class="anchorOffset"></a>
             <h1>THE PERCEPTRON</h1>
@@ -120,7 +120,7 @@
         </div>
     </div>
     
-    <div class="bg-image">
+    <div class="bg-image-4">
         <div class="container_4">
             <a id="quorum_sensing" class="anchorOffset"></a>
             <h1>QUORUM SENSING</h1>
@@ -141,7 +141,7 @@
         </div>
     </div>
     
-    <div class="bg-image">
+    <div class="bg-image-5">
         <div class="container_5">
             <a id="perspectives" class="anchorOffset"></a>
             <h1>OUR PROJECT</h1>
@@ -153,18 +153,17 @@
             </p>
             <br><br>
             <img class="project_img" src="https://static.igem.wiki/teams/4294/wiki/description/project.gif">
-            <p>The central concept of our project can be summarized by the greek word “αντιδάνειο” [andiδánio], which, in english, roughly translates to reborrowing,
-                 loanword, or repatriated loan. The term loanword is defined as “a word loaned from one language into another and borrowed back (in a modified 
-                 form and/or meaning) by the first language” [1] and elegantly describes our brainstorming path. 
-                 By drawing inspiration from neural circuits in the brain, scientists of the previous century devised the first Artificial Neural Network (ANN), 
-                 forever revolutionizing the data processing domain. Since data processing is crucial to biological procedures as well, we thought that going backwards 
-                 and designing a bacterial artificial intelligence system based on ANNs would offer new prospects in several fields. So, following in the footsteps of 
-                 a loanword, we went from Biology to Computer Science and back to Biology.
+            <p>
+            We have engineered two E.coli populations, the senders and the receivers, in order to perform a binary classification task, using the well-characterized 
+            QS system of LuxR/I, that utilizes Acyl-Homoserines Lactones. Senders will evaluate the inputs and communicate their importance to the receiver population 
+            to make a decision. Different synthetic RBSs are introduced to senders to control the expression of the QS molecule (LuxI➡︎OC6), resulting in different OC6 
+            concentrations. The total OC6 produced is received by the receivers, where a genetic circuit with a steep activation response to OC6 is engineered, to 
+            resemble an ON/OFF switch. Finally, mNeonGreen is produced based on the aforementioned biological activation function system and… a decision is made.    
             </p>
         </div>
     </div>
     
-    <div class="bg-image">
+    <div class="bg-image-6">
         <div class="container_6">
             <img class="table_img" src="https://static.igem.wiki/teams/4294/wiki/description/12.png">
             <p>
@@ -190,25 +189,83 @@
             </p>
         </div>
     </div>
-    
-    
-    <div class="bg-image">
+
+    <div class="bg-image-7">
         <div class="container_7">
             <p>
-                Adding to previous and current work, our project will provide an alternative point of view in the design of synthetic biological systems. Our proposed 
-                implementation of the perceptron weights with the use of synthetic RBS sequences could become the template for the development of plug-and-play devices 
-                that enable the modification of the inputs' weights regarding the desired behavior and application. Overall, such a multicellular system has various 
-                applications in many scientific fields, from medicine to environment and the thriving field of biocomputing. It could become the starting point for the 
-                development of
-                 “smart biosensors” or “smart drugs” and even perform complex computational tasks using much less energy than the amount needed by a computer, 
-                aiming to solve one of the most popular problems nowadays, the high cost of computational performances. 
+            The biological sensor our team aims to create, is intending to analyse complex stimuli. The system we propose was therefore originally designed to 
+            recognize 3x1 bits patterns. These patterns are created by on-off bits. We consider “on” a subpopulation of senders that is induced with aTc and “off” a 
+            senders' subpopulation that is not induced with aTc, and as a result, there will be no lactone production regardless of the RBS. The possible patterns are:
+            </p>
+            <br><br>
+            <img class="pattern_1_img" src="https://static.igem.wiki/teams/4294/wiki/description/desc-pattern-1.png">
+            <br><br><br><br>
+            <p>
+            The 166 RBSs that make up the library we have created were divided into three families according to the rate of translation they show when followed by the 
+            LuxI gene. The RBSs that have high translation initiation rate are called the “Strong (S)” RBSs, the ones with medium translation initiation rate are 
+            called the “Medium (M)” RBSs and the ones with low translation initiation rate are called “Weak (W)”. So by creating different combinations of RBS triads, 
+            we expect different amounts of lactone produced.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-image-8">
+        <div class="container_8">
+            <p>
+            <img class="pattern_2_img" src="https://static.igem.wiki/teams/4294/wiki/description/desc-pattern-2.png">
+            <br><br>
+            Thus combining RBSs with different strength in populations that are induced or not, we create patterns that can be provided to the senders as inputs, 
+            which our system will be able to recognize. Theoretically, from each 3x1 bit pattern, we expect a different amount of lactone production when all senders 
+            subpopulations are induced with aTc. Since the strength of each RBS is translated into an amount of lactone produced and finally the subpopulations of 
+            senders are mixed, the position of each bit does not matter but only what RBS each subpopulation has and if the population is induced or not. Furthermore, 
+            it is obvious that the maximum amount of the lactone will be produced in case no. 2 where the subpopulations of the senders all have very strong RBSs. 
+            Respectively, the lower amount of the lactone is expected in case no. 4 where the subpopulations of the senders all have very weak RBSs. 
+            <br><br>
+            Our proposed implementation of the perceptron weights with the use of synthetic RBS sequences could become the template for the development of 
+            plug-and-play devices that enable the modification of the inputs' weights regarding the desired behaviour and application. We selected to use RBSs 
+            instead of promoters for the pattern recognition because of their versatility and it is quicker to and easier to predict the translation initiation rate 
+            of an RBS instead of direct evolutionize a promoter to have the desired strength. Overall, such a multicellular system has various applications in many 
+            scientific fields, from medicine to environment and the thriving field of biocomputing. It could become the starting point for the development of “smart 
+            biosensors” or “smart drugs” and even perform complex computational tasks using much less energy than the amount needed by a computer, aiming to solve one 
+            of the most popular problems nowadays, the high cost of computational performances.
+            </p>
+        </div>
+    </div>
+    
+    <div class="bg-image-9">
+        <div class="container_9">
+            <p>
+            Adding to previous and current work, our project will provide an alternative point of view in the design of synthetic biological systems. Our proposed 
+            implementation of the perceptron weights with the use of synthetic RBS sequences could become the template for the development of plug-and-play devices 
+            that enable the modification of the inputs' weights regarding the desired behavior and application. Overall, such a multicellular system has various 
+            applications in many scientific fields, from medicine to environment and the thriving field of biocomputing. It could become the starting point for the 
+            development of “smart biosensors” or “smart drugs” and even perform complex computational tasks using much less energy than the amount needed by a computer, 
+            aiming to solve one of the most popular problems nowadays, the high cost of computational performances. 
             </p>
             <br><br>
             <img class="perspectives_img" src="https://static.igem.wiki/teams/4294/wiki/description/14.png">
         </div>
+        <section class="collapsible">
+            <a id="references" class="anchorOffset"></a>
+                <input type="checkbox" id="collapsible-head">
+            <label for ="collapsible-head">References</label>
+            <div class="collapsible-content">
+                <cite>
+                    <a href="https://www.nature.com/articles/s41467-021-23336-0">
+                        1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
+                    </a>
+                </cite>
+                <cite>
+                    <a href="https://2014.igem.org/Team:ETH_Zurich">
+                        2. Team Zurich 2014
+                    </a>
+                </cite>
+            </div>
+        </section>
     </div>
   </div>
 </div>
+
 
 
 <script>
