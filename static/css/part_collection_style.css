@@ -132,46 +132,156 @@ body{
     visibility: hidden !important;
   }
 
-/* Table */
 
-.content-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 20px !important;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 1px var(--light-blue);
-  }
-  
-  .content-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .content-table th,
-  .content-table td {
-    padding: 12px 15px;
-  }
-  
-  .content-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  .content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
-  
-  .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
-  
-  .content-table tbody tr.active-row {
-    font-weight: bold;
-    color: #102a4e;
-  }
+.introduction{
+    text-align: justify;
+}  
+    
+.introduction h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #969696;
+    font-size: 50px;
+}
+
+.safety_intro{
+    width: 40%;
+    float: right;
+    padding-left: 1em;
+    padding-top: 10px;
+    border-radius: 50px;
+}
+
+.lab_safety{
+    text-align: justify;
+}
+
+.lab_safety h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #3aa9c5;
+    font-size: 50px;
+}
+
+.lab_safety h2{
+    color: #3aa9c5;
+    font-size: 35px;
+}
+
+.pasteur_img{
+    width: 30%;
+    float: left;
+    padding-right: 1em;
+    padding-top: 10px;
+    border-radius: 50px;
+}
+
+.generic_img{
+    width: 40%;
+    float: right;
+    padding-left: 50px;
+    padding-top: 10px; 
+    border-radius: 50px;   
+}
+
+.project_safety{
+    text-align: justify;
+}
+
+.project_safety h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #ffc973;
+    font-size: 50px;    
+}
+
+.project_safety h2{
+    color: #ffc973;
+    font-size: 35px;
+}
+
+.senders_receivers{
+    float: left;
+    width: 50%;
+    border-radius: 50px;
+    padding-top: 0px;
+    padding-right: 50px;
+}
+
+.iGEM_deliverables{
+    text-align: justify;
+}
+
+.iGEM_deliverables h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;    
+}
+
+.zoom_img{
+    width: 50%;
+    border-radius: 50px;
+}
+
+.science_comm_actions{
+    text-align: justify;
+}
+
+.science_comm_actions h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #ef4b4c;
+    font-size: 50px;    
+}
+
+.science_comm_actions h2{
+    color: #ef4b4c;
+    font-size: 35px;
+}
+
+.ren_biosafety{
+    width: 30%;
+    float: left;
+    padding-right: 2em;
+    border-radius: 50px;
+}
+
+.public_awareness{
+    text-align: justify;
+}
+
+.public_awareness h1{
+    font-family: 'Glacial Indifference';
+    color: #8a72c1;
+    font-size: 50px;    
+}
+
+.public_awareness h2{
+    color: #8a72c1;
+    font-size: 35px;
+}
+
+.debate_img_1{
+    width: 35%;
+    float: right;
+    padding-left: 2em;
+    border-radius: 50px;
+}
+
+.debate_img_2{
+    width: 35%;
+    float: left;
+    padding-right: 2em;
+    border-radius: 50px;
+}
+
+.gmos_img{
+    width: 70%;
+    border-radius: 50px;
+}
+
+.what_img{
+    width: 30%;
+    float: left;
+    padding-right: 2em;
+    border-radius: 50px;
+}
 
 
 @media screen and (max-width: 1200px){

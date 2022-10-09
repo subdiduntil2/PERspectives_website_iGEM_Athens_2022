@@ -1,128 +1,607 @@
-{% extends "layout.html" %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/parts_style.css') }}" rel="stylesheet">
+
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>PERspectives | Parts</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif" width="100%">
+    <div class="heading">Parts</div>    
+</div>
+
+<div class="cc" id="cc-parts">
+    <div class="left-side">
+        <div class="index-bar">
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a href="#overview">Overview</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#basic">Basic Parts</a>
+                </li>
+                <li class="lateral-content">
+                  <a href="#compsite">Composite Parts</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#existing">Existing Parts Used</a>
+                </li>
+                <!-- <li class="lateral-content">
+                    <a href="#references">References</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    
+    <div class="right-side">
   
-{% block title %}Parts{% endblock %}
-{% block lead %}This page contains information about the parts created by the team.{% endblock %}
+  <!-- Overview -->
+          <section class="overview">
+              <a id="overview" class="anchorOffset"></a>
+              <br><br>
+              <h1>Overview</h1>
+              <br>
+              <p> 
+  
+              </p>
+              <br>
+          </section>
+  
+  <!-- Basic Parts -->
+          <section class="basic">
+          <a id="basic" class="anchorOffset"></a>
+          <br><br>
+          <h1>Basic Parts</h1>
+          <br>
 
-{% block page_content %}
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>BioBrick</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Designer</th>
+                <th>Length(bp)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294301"> BBa_K4294301</a></td>
+                <td>Regulatory</td>
+                <td>Promoter LuxR-Phlf hybrid </td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>55</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294150"> BBa_K4294150</a></td>
+                <td>Regulatory</td>
+                <td>Promoter LacI</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>54</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294004"> BBa_K4294004</a></td>
+                <td>RBS</td>
+                <td>Synthetic RBS Ath4: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>29</td>
+                </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294005"> BBa_K4294005</a></td>
+                <td>RBS</td>
+                <td>Synthetic RBS Ath5: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>29</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294010"> BBa_K4294010</a></td>
+                <td>RBS</td>
+                <td>Synthetic RBS Ath10: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>29</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294011"> BBa_K4294011</a></td>
+                <td>RBS</td>
+                <td>Synthetic RBS Ath11: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>29</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294012"> BBa_K4294012</a></td>
+                <td>RBS</td>
+                <td>Synthetic RBS Ath12: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>29</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294013"> BBa_K4294013</a></td>
+                <td>RBS</td>
+                <td>Synthetic RBS Ath13: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>29</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294102"> BBa_K4294102</a></td>
+                <td>RBS</td>
+                <td>BCD2</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>88</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294114"> BBa_K4294114</a></td>
+                <td>RBS</td>
+                <td>BCD14</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>88</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294151"> BBa_K4294151</a></td>
+                <td>RBS</td>
+                <td>RBS lac1</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>28</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294210"> BBa_K4294210</a></td>
+                <td>Coding</td>
+                <td>LuxI codon optimised for E Coli (+6His Tag)</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>615</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294207"> BBa_K4294207</a></td>
+                <td>Coding</td>
+                <td>36nt LuxI - sfGFP </td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>753</td>
+              </tr>
+               <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294220"> BBa_K4294220</a></td>
+                <td>Coding</td>
+                <td>TetX enzyme</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>1167</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294221"> BBa_K4294221</a></td>
+                <td>Coding</td>
+                <td>LacI Repressor</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>1086</td>
+              </tr>
+               </tr>
+               <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294401"> BBa_K4294401</a></td>
+                <td>Coding</td>
+                <td>LuxR Activator/Repressor Codon Optimised for E Coli</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>756</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294410"> BBa_K4294410</a></td>
+                <td>Coding</td>
+                <td>mNeonGreen Codon Optimised for E Coli</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>714</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294420"> BBa_K4294420</a></td>
+                <td>Coding</td>
+                <td>PhlF with a degradation tag</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>633</td>
+              </tr>
+              <tr>
+                <td><a href="http://parts.igem.org/Part:BBa_K4294421"> BBa_K4294421</a></td>
+                <td>Coding</td>
+                <td>PhlF</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>603</td>
+              </tr>
+              <tr class="active-row">
+                <td><a href="http://parts.igem.org/Part:BBa_K4294999"> BBa_K4294999</a></td>
+                <td>Other</td>
+                <td>Spacer for separating TUs</td>
+                <td>Aristotelis Anastopoulos</td>
+                <td>68</td>
+              </tr>
+              
+            </tbody>
+        </table>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Overview</h2>
-    <hr>
-    <p>Each team will make new parts during iGEM and will add them to the Registry of Standard Biological Parts</p>
-    <p>Remember that the goal of proper part documentation is to describe and define a part, so that it can be used without needing to refer to the primary literature. Registry users in future years should be able to read your documentation and be able to use the part successfully. Also, you should provide proper references to acknowledge previous authors and to provide for users who wish to know more.</p>
-  </div>
-</div>
+          </section>
+  
+  <!-- Composite Parts -->
+        <section class="composite">
+            <a id="composite" class="anchorOffset"></a>
+            <br><br>
+            <h1>Composite Parts</h1>
+            <br>
+            <h2>Senders</h2>
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>BioBrick</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Designer</th>
+                    <th>Length(bp)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294704"> BBa_K4294704</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with the Ath4 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>831</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294705"> BBa_K4294705</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with the Ath5 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>831</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294710"> BBa_K4294710</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with the Ath10 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>831</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294711"> BBa_K4294711</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with the Ath11 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>831</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294712"> BBa_K4294712</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with the Ath12 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>830</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294713"> BBa_K4294713</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with the Ath13 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>831</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294721"> BBa_K4294721</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with BCD1 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>886</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294722"> BBa_K4294722</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with BCD2 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>890</td>
+                  </tr>
+                   <tr>
+                     <td><a href="http://parts.igem.org/Part:BBa_K4294723"> BBa_K4294723</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with BCD8 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>886</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294724"> BBa_K4294724</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with BCD12 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>886</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294725"> BBa_K4294725</a></td>
+                    <td>Composite</td>
+                    <td>LuxI Transcriptional unit with BCD14 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>890</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294754"> BBa_K4294754</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI - sfGFP Transcriptional unit with the Ath4 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>969</td>
+                  </tr>
+                   <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294755"> BBa_K4294755</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI -sfGFP Transcriptional unit with the Ath5 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>969</td>
+                  </tr>
+                   <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294760"> BBa_K4294760</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with the Ath10 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>969</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294761"> BBa_K4294761</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with the Ath11 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>969</td>
+                  </tr>
+                   <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294762"> BBa_K4294762</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with the Ath12 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>968</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294763"> BBa_K4294763</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with Ath13 Synthetic RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>969</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294771"> BBa_K4294771</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with the BCD1 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1024</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294772"> BBa_K4294772</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with BCD2 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1028</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294773"> BBa_K4294773</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with the BCD8 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1024</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294774"> BBa_K4294774</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with BCD12 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1024</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294775"> BBa_K4294775</a></td>
+                    <td>Composite</td>
+                    <td>36ntLuxI-sfGFP Transcriptional unit with BCD14 RBS (TetR Regulated)</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1028</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294790"> BBa_K4294790</a></td>
+                    <td>Composite</td>
+                    <td>TetX TU</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1364</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294780"> BBa_K4294780</a></td>
+                    <td>Composite</td>
+                    <td>TetR TU</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>803</td>
+                  </tr>
+                  
+                </tbody>
+            </table>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Table</h2>
-    <hr>
-    <p>Please include a table of all the parts your team has made during your project on this page. For example:</p>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Type</th>
-          <th scope="col">Description</th>
-          <th scope="col">Designers</th>
-          <th scope="col">Length</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="http://parts.igem.org/Part:BBa_B0011">BBa_B0011</a></th>
-          <td>Terminator</td>
-          <td>LuxICDABEG (+/-)</td>
-          <td>Reshma Shetty</td>
-          <td>46 bp</td>
-        </tr>
-        <tr>
-          <td><a href="http://parts.igem.org/Part:BBa_C0012">BBa_C0012</a></th>
-          <td>Coding lacI</td>
-          <td>lacI repressor from E. coli (+LVA)</td>
-          <td>Grace Kenney, Daniel Shen, Neelaksh Varshney, Samantha Sutton</td>
-          <td>1153 bp</td>
-        </tr>
-        <tr>
-          <td><a href="http://parts.igem.org/Part:BBa_E0020">BBa_E0020</a></th>
-          <td>Coding ecfp</td>
-          <td>engineered cyan fluorescent protein derived from A. victoria GFP</td>
-          <td>Caitlin Conboy and Jennifer Braff</td>
-          <td>723 bp</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-warning">
-      <h4>Note</h4>
-      <p>Parts must be well documented on each Part's Main Page on the <a href="http://parts.igem.org">Registry</a>. This documentation includes all of the characterization data for your parts. <b>The part's data MUST be on the part's Main Page on the Registry for your team to be eligible for medals and special prizes pertaining to parts.</b></p>
-      <p>This page serves to <i>showcase</i> the parts you have made and should include links to the Registry pages for your parts. Future teams and other users are much more likely to find parts by looking in the Registry than by looking at your team wiki.</p>
+            <h2>Receivers</h2>
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>BioBrick</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Designer</th>
+                    <th>Length(bp)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294801"> BBa_K4294801</a></td>
+                    <td>Composite</td>
+                    <td>OpenLoop</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1910</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294802"> BBa_K4294802</a></td>
+                    <td>Composite</td>
+                    <td>PF</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>1930</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294803"> BBa_K4294803</a></td>
+                    <td>Composite</td>
+                    <td>PFc</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>2843</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294804"> BBa_K4294804</a></td>
+                    <td>Composite</td>
+                    <td>PFR</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>2808</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4294805"> BBa_K4294805</a></td>
+                    <td>Composite</td>
+                    <td>PFc+R</td>
+                    <td>Aristotelis Anastopoulos</td>
+                    <td>3864</td>
+                  </tr>
+                  
+                </tbody>
+            </table>    
+    
+        </section>
+  
+  <!-- Exisiting Parts -->
+        <section class="exisitng">
+            <a id="exisitng" class="anchorOffset"></a>
+            <br><br>
+            <h1>Existing Parts Used</h1>
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>BioBrick</th>
+                    <th>Type</th>
+                    <th>Short Description</th>
+                    <th>Length(bp)</th>
+                    <th>Group</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_J23105"> BBa_J23105</a></td>
+                    <td>Regulatory</td>
+                    <td>Anderson Promoter (constitutive promoter family member)</td>
+                    <td>35</td>
+                    <td>iGEM2006_Berkeley</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_J23106"> BBa_J23106</a></td>
+                    <td>Regulatory</td>
+                    <td>Anderson Promoter (constitutive promoter family member)</td>
+                    <td>35</td>
+                    <td>iGEM2006_Berkeley</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K3424010"> BBa_K3424010</a></td>
+                    <td>Regulatory</td>
+                    <td>TetR promoter</td>
+                    <td>76</td>
+                    <td>iGEM20_UFlorida</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_R0062"> BBa_R0062</a></td>
+                    <td>Regulatory</td>
+                    <td>Promoter (luxR & HSL regulated -- lux pR)</td>
+                    <td>55</td>
+                    <td>Antiquity</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_J107103"> BBa_J107103</a></td>
+                    <td>Regulatory</td>
+                    <td>LuxR-repressible promoter library member</td>
+                    <td>36</td>
+                    <td>Magni_UNIPV_Lab</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_J428046"> BBa_J428046</a></td>
+                    <td>Regulatory</td>
+                    <td>ptac</td>
+                    <td>56</td>
+                    <td>2021_Engineering_Committee</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_J428034"> BBa_J428034</a></td>
+                    <td>RBS</td>
+                    <td>BCD1</td>
+                    <td>84</td>
+                    <td>2021_Engineering_Committee</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_K2680561"> BBa_K2680561</a></td>
+                    <td>RBS</td>
+                    <td>BCD8</td>
+                    <td>84</td>
+                    <td>iGEM18_William_and_Mary</td>
+                  </tr>
+                   <tr>
+                     <td><a href="http://parts.igem.org/Part:BBa_K2680529"> BBa_K2680529</a></td>
+                    <td>RBS</td>
+                    <td>BCD12</td>
+                    <td>84</td>
+                    <td>iGEM18_William_and_Mary</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td><a href="http://parts.igem.org/Part:BBa_B0034"> BBa_B0034</a></td>
+                    <td>RBS</td>
+                    <td>RBS (Elowitz 1999)</td>
+                    <td>12</td>
+                    <td>Antiquity</td>
+                  </tr>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_B0015"> BBa_B0015</a></td>
+                    <td>Terminator</td>
+                    <td>Double Terminator</td>
+                    <td>129</td>
+                    <td>Antiquity</td>
+                  </tr>
+                </tbody>
+            </table>
+       
+        </section>
+        <!-- <section class="collapsible">
+            <a id="references" class="anchorOffset"></a>
+            <input type="checkbox" id="collapsible-head">
+                <label for ="collapsible-head">References</label>    
+                <div class="collapsible-content">
+                <cite>
+                    <a href="https://www.nature.com/articles/s41467-021-23336-0">
+                        1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
+                    </a>
+                </cite>
+                <cite>
+                    <a href="https://2014.igem.org/Team:ETH_Zurich">
+                        2. Team Zurich 2014
+                    </a>
+                </cite>
+            </div>
+        </section> -->
     </div>
   </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col">
-    <h2>Adding parts to the Registry</h2>
-    <hr>
-    <p>You can add parts to the Registry at our <a href="http://parts.igem.org/Add_a_Part_to_the_Registry">Add a Part to the Registry</a> page.</p>
-    <p>We encourage teams to start adding and documenting their parts on the Registry as soon as they can. Once you add your parts to the Registry, you can continue to add documentation to them throughout the iGEM season (up until the Registry freeze). This will allow you to remember all the details about your parts and store their history in the wiki. Documentation includes the characterization data of your parts.</p>
-    <a class="btn btn-primary" href="http://parts.igem.org/Add_a_Part_to_the_Registry" role="button">Add Parts</a>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col">
-    <h2>Basic Part Inspirations</h2>
-    <hr>
-    <p>We have a created a <a href="http://parts.igem.org/Well_Documented_Parts">collection of well documented parts</a> that can help you get started.</p>
-    <p>You can also take a look at the following examples for Basic Parts on the Registry:</p>
-    <ul>
-      <li><a href="http://parts.igem.org/Part:BBa_K3114006">2019 Calgary </a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3027000">2019 GO Paris Saclay</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3187028">2019 TU Darmstadt</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3552000">2020 Links China</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3558000">2020 UNSW Australia</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3338002">2020 Hannover</a></li>
-    </ul>
-  </div>
-  <div class="col">
-    <h2>Composite Part Inspirations</h2>
-    <hr>
-    <p>We have a created a <a href="http://parts.igem.org/Well_Documented_Parts">collection of well documented parts</a> that can help you get started.</p>
-    <p>You can also take a look at the following examples for Composite Parts on the Registry:</p>
-    <ul>
-      <li><a href="http://parts.igem.org/Part:BBa_K3198007">2019 NUS Singapore </a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K2932003">2019 Mingdao</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K2980009">2019 Tsinghua</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3407022">2020 TUDelft</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3380500">2020 Edinburgh</a></li>
-      <li><a href="http://parts.igem.org/Part:BBa_K3512042">2020 BITSPilani Goa India</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col">
-    <h2>What information do I need to start putting my parts on the Registry?</h2>
-    <hr>
-    <p>The information needed to initially create a part on the Registry is:</p>
-    <ul>
-      <li>Part Name</li>
-      <li>Part type</li>
-      <li>Creator</li>
-      <li>Sequence</li>
-      <li>Short Description (60 characters on what the DNA does)</li>
-      <li>Long Description (Longer description of what the DNA does)</li>
-      <li>Design considerations</li>
-    </ul>
-    <p>We encourage you to put up <em>much more</em> information as you gather it over the summer. If you have images, plots, characterization data and other information, you must also put it up on the part page.</p>
-  </div>
-</div>
-
-{% endblock %}
+  
+  
+  </body>
+  
+  <!--Loader-->   
+  {% include 'loader.html'%}
+  
+  <!-- Footer -->
+  {% include 'footer.html' %}
+  
+  </html>

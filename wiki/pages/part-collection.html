@@ -1,25 +1,142 @@
-{% extends "layout.html" %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/parts_style.css') }}" rel="stylesheet">
+
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>PERspectives | Part Collection</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif" width="100%">
+    <div class="heading">Part Collection</div>    
+</div>
+
+<div class="cc" id="cc-parts">
+  <div class="left-side">
+      <div class="index-bar">
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#overview">Overview</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#collection">Part Collection</a>
+              </li>
+              <!-- <li class="lateral-content">
+                  <a href="#references">References</a>
+              </li> -->
+          </ul>
+      </div>
+  </div>
   
-{% block title %}Part Collection{% endblock %}
-{% block lead %}Describe your parts collection on this page, so the judges can evaluate you for the Best Part Collection award.{% endblock %}
+  <div class="right-side">
 
-{% block page_content %}
+<!-- Overview -->
+        <section class="overview">
+            <a id="overview" class="anchorOffset"></a>
+            <br><br>
+            <h1>Overview</h1>
+            <br>
+            <p> 
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Part Collection Special Prize</h4>
-      <p>Did your team make a lot of great parts? Is there a theme that ties all your parts together? Do you have more than 10 parts in this collection? Did you make a CRISPR collection, a MoClo collection, or a collection of awesome pigment parts? Describe your parts collection on this page, so the judges can evaluate you for the Best Part Collection award.</p>
-      <p>To be eligible for this award, each part in the collection must be well documented on the Part's Main Page on the <a href="http://parts.igem.org">Registry</a>. If you have a collection of parts you wish to nominate for this <a href="https://competition.igem.org/judging/awards">special prize</a>, make sure you add your part numbers to your <a href="https://competition.igem.org/deliverables/judging-form">judging form</a> and delete the alert box at the top of this page.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
-    </div>
- 
-    <div class="bd-callout bd-callout-warning">
-      <h4>Note</h4>
-      <p>This page should list all the parts in the collection your team made during your project, explaining how all your parts form a collection, and include direct links to your Parts main pages on the <a href="http://parts.igem.org">Registry</a>. <b>You must add all characterization information for your parts on Parts Main Page on the Registry.</b> You should <b>not</b> put characterization information on this page.</p>
-    </div>
+            </p>
+            <br>
+        </section>
+
+<!-- Part Collection -->
+        <section class="collection">
+        <a id="collection" class="anchorOffset"></a>
+        <br><br>
+        <h1>Part Collection</h1>
+        <br>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>BioBrick</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Designer</th>
+              <th>Length(bp)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="http://parts.igem.org/Part:BBa_K4294004"> BBa_K4294004</a></td>
+              <td>RBS</td>
+              <td>Synthetic RBS Ath4: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team. </td>
+              <td>Aristotelis Anastopoulos</td>
+              <td>29</td>
+            </tr>
+            <tr class="active-row">
+              <td><a href="http://parts.igem.org/Part:BBa_K4294005"> BBa_K4294005</a></td>
+              <td>RBS</td>
+              <td>Synthetic RBS Ath5: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+              <td>Aristotelis Anastopoulos</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td><a href="http://parts.igem.org/Part:BBa_K4294010"> BBa_K4294010</a></td>
+              <td>RBS</td>
+              <td>Synthetic RBS Ath10: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+              <td>Aristotelis Anastopoulos</td>
+              <td>29</td>
+            </tr>
+            <tr class="active-row">
+              <td><a href="http://parts.igem.org/Part:BBa_K4294011"> BBa_K4294011</a></td>
+              <td>RBS</td>
+              <td>Synthetic RBS Ath11: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+              <td>Aristotelis Anastopoulos</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td><a href="http://parts.igem.org/Part:BBa_K4294012"> BBa_K4294012</a></td>
+              <td>RBS</td>
+              <td>Synthetic RBS Ath12: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+              <td>Aristotelis Anastopoulos</td>
+              <td>29</td>
+            </tr>
+            <tr class="active-row">
+              <td><a href="http://parts.igem.org/Part:BBa_K4294013"> BBa_K4294013</a></td>
+              <td>RBS</td>
+              <td>Synthetic RBS Ath13: A synthetic ribosome binding site for prokaryotic protein expression, built with the guidance of the RBS calculator and characterized by our team.</td>
+              <td>Aristotelis Anastopoulos</td>
+              <td>29</td>
+            </tr>
+            
+          </tbody>
+      </table>
+     </section>
   </div>
 </div>
 
-{% endblock %}
+
+</body>
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}
+
+</html>

@@ -62,7 +62,8 @@ document.getElementById("myBar").style.width = scrolled + "%";
                         Wet Lab
                     </a>
                     <ul>
-                        <li><a href="{{ url_for('pages', page = 'parts_custom') }}">Parts</a></li>
+                        <li><a href="{{ url_for('pages', page = 'parts') }}">Parts</a></li>
+                        <li><a href="{{ url_for('pages', page = 'part-collection') }}">Part Collection</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Improve</a></li>
                         <li><a href="{{ url_for('pages', page = 'safety') }}">Safety</a></li>
                         <li><a href="{{ url_for('pages', page = 'under_construction') }}">Results</a></li>
