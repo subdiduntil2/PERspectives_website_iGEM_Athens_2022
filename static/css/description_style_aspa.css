@@ -239,6 +239,61 @@ body{
     justify-content: center;
 }
 
+
+.anchorOffset {
+    display: block !important;
+    position: relative !important;
+    top: -100px !important;
+    visibility: hidden !important;
+  }
+
+.buttons{
+    align-items:flex-end;
+    margin-left: 0px;
+    margin-right: 0em;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#102a4e;
+}
+
+.button {
+    width: 25%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #050a30;
+    border-radius: 100px;
+    border: solid 5px #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Bold';
+    transition: .3s;
+  }
+
+.button a {
+    font-size: 35px;
+    color: #e9e9eb;
+    font-size: 1.375em;
+    cursor: pointer;
+    display: block;
+    padding: 1em 0;
+    transition: all 0.3s;  
+}
+
+.button a:hover{
+    font-family: 'Glacial Indifference Bold';
+    font-size: 35px;
+    color: #102a4e;
+}
+
+.button:hover{
+    background: url(https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(0, -10px);
+    box-shadow: 5px 5px  #61b872;
+    border: 0px;
+}
+
 .container_6{
     background: #102a4e;
     padding: 50px;
@@ -527,10 +582,12 @@ body{
 }
 
 .collapsible input:checked ~ .collapsible-content{
-    max-height:300px;
-    padding-bottom:5px;
+    max-height:3000px;
+    padding:15px;
+    border-radius: 20px;
     background-color:#102a4e;
     opacity:1;
+    text-align: left;
     top:0;
 }
 
