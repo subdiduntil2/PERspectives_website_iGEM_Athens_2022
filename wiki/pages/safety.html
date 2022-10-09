@@ -33,9 +33,6 @@
 <!--To top button-->
 {% include 'to_top_button.html'%}
 
-<!--Loader-->   
-{% include 'loader.html'%}
-
 <div class="page_header">
     <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif" width="100%">
     <div class="heading">Safety</div>    
@@ -324,13 +321,10 @@
 </div>
 
 
-<script>
-    function show(param_div_id) {
-    document.getElementById('cc-senders').innerHTML = document.getElementById(param_div_id).innerHTML;
-  }
-</script>
-
 </body>
+
+<!--Loader-->   
+{% include 'loader.html'%}
 
 <!-- Footer -->
 {% include 'footer.html' %}

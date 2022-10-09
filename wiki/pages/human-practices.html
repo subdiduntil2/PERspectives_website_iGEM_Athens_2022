@@ -30,9 +30,6 @@
 <!--To top button-->
 {% include 'to_top_button.html'%}
 
-<!--Loader-->   
-{% include 'loader.html'%}  
-
 <div class="page_header">
     <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/human-practices/hp-bg.gif" width="100%">
     <div class="heading"> Human Practices</div>    
@@ -63,346 +60,136 @@
 </div>
 
 
-<div class="buttons">
-    <div class="button">
-        <a href="https://2022.igem.wiki/athens/human-practices">Human Practices</a>
-    </div>
-    <div class="button">
-        <a href="https://2022.igem.wiki/athens/integrated-human-practices">Integrated HP</a>
-    </div>
-</div>
-
-
-<div class="cc">
-
-<div class="process-wrapper">
-    <div id="progress-bar-container">
-        <ul>
-            <li class="step step01 active"><div class="step-inner">Project Ideation</div></li>
-            <li class="step step02"><div class="step-inner">Feasibility issues</div></li>
-            <li class="step step03"><div class="step-inner">Project execution</div></li>
-            <li class="step step04"><div class="step-inner">Reaching out</div></li>
-            <li class="step step05"><div class="step-inner">Software and wiki</div></li>
-            <li class="step step06"><div class="step-inner">SciCo strategies</div></li>
-        </ul>
-        
-        <div id="line">
-            <div id="line-progress"></div>
+<div class="cc" id="cc-implementaion">
+    <div class="left-side">
+        <div class="index-bar">
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a href="#awareness">Awareness & Sensitivity</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#journey">Our Journey with experts</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#values">Serving our values</a>
+                </li>
+                <!-- <li class="lateral-content">
+                    <a href="#references">References</a>
+                </li> -->
+            </ul>
         </div>
     </div>
     
-    <div id="progress-content-section">
-        <div class="section-content discovery active">
-            <h2>Making a worthy decision</h2>
+    <div class="right-side">
+  
+  <!-- Awareness & Sensitivity  -->
+          <section class="awareness">
+              <a id="awareness" class="anchorOffset"></a>
+              <br><br>
+              <h1>Awareness & Sensitivity</h1>
+              <br>
+              <h2>Choosing the right moment</h2>
+              <br>
+              <p> Going through the era of Big Data, information management becomes more and more challenging. In front of a vast amount of information, how to choose the most significant one? How to define that one input is more important than another, and in terms of quantity how much is this difference? How does the weight of each input determine the final output? In which way the total inputs should be summed up in order to lead to the right output? Is there any threshold? What about the intermediate steps before the final decision? And, is one individual capable of going through this process all alone? 
+              <br><br>
+              Considering all these questions and after research and communication with plenty of experts, we concluded that a typical computational algorithm wouldn’t be adequate to deal with the enormous complexity of biological inputs and natural environments. On the other hand, “Perceptron” inspired cell and genetic networks are a promising alternative to the most common “logic gate” inspired approach.
+              </p>
+              <br>
+
+              <h2>From a single cell to population scale</h2>
+              <br>
+              <p> Single cell engineering is limited by the necessary molecular complexity and the accompanying metabolic burden of synthetic circuits. Our Perceptron-like sensor was not engineered on the single cell level. This design would probably pose a metabolic burden to the host cell. So we decided to build our system on the population scale. In E. Coli consortia simple tasks were engineered into cells. From these simple tasks more complex computations emerged by exploiting the well characterised bacterial quorum sensing signals, AHLs.
+              <br><br>
+              Working on our project,  we explored and characterised the manipulation of the RBS (Ribosome Binding Sites) sequence to determine our Perceptron’s weights, characterise and adapt bacterial computations based on QS based on previous research and construct a whole system that will sense stochasticly and respond logically. Compartmentalising the circuit ensures more reliable computation by population-averaging the response.
+              <br><br>
+              The proposed workflow might guide future scientists to build systems that will be able to decide if an output is needed, judging on multiple environmental conditions. Multi-cellular sensors will open new horizons towards complex biocomputing tasks and applications.
+              </p>
+              <br>
+
+              <h2>The philosophical aspect of the project</h2>
+              <br>
+              <p> The conceptual background of our project was based on the notion of “determinism”.  Determinism is the philosophical idea that every event or state of affairs, including every decision and action, is the inevitable and necessary consequence of antecedent states of affairs. Under this point of view, all the events and the decisions are determined completely by previously existing causes. In other words, in terms of determinism decision-making is not a result of completely free will. It’s almost undeniable that the main effect that affects choices is one’s situation, so the number and the form of received inputs for external and internal environment.
+              <br><br>
+              In nature, environmental systems are characterised by a source of randomness, also perceived and as biological noise. Biological noise refers to the substantial cell-to-cell variation that is observed in populations of genetically identical cells. So even between two identical cells with the same quality and amount of inputs, the output may differ. (παραπομπή στο κολάμπ με τον θόρυβο και την Πάτρα) 
+              <br><br>
+              Wanting to overcome this natural randomness by finding a way to ensure that certain inputs would lead to a standard output, we went for designing a biological circuit working as a computational algorithm. In this way, inputs will have specific weights according to their importance for the final output, and they will be summed up in order to the system receive the full image of the external environment. Environmental changes will be perceived and depending on their form or extent, they will affect the final decision respectively. Either way, sometimes an output may seriously  affect a next decision, in case of a therapeutic or preventive application of the circuit.
+              <br>
+              As stated by Richard Dawkins, a British evolutionary biologist and author, “people believe the only alternative to randomness is intelligent design”. We are these people, and so we believe. 
+              </p>
+              <br>
+          </section>
+  
+  <!-- Journey -->
+          <section class="journey">
+          <a id="journey" class="anchorOffset"></a>
+          <br><br>
+          <h1>Our Journey shared with experts</h1>
+          <br>
+          <p>
+          After having strengthened our theoretical background, we were inspired to be involved in the troubleshooting more personally. We then decided to engage with the people that motivated us the most to learn more about their experiences. The Integrated Human Practices Part, including the hilarious interaction with diverse researchers and scientists, exerted great influence on our workflow, idea, design, implementation and potential applications. Nothing would have been the same without the advice, the help and the knowledge feedback we got after these contacts. (Παραπομπή στα Integrated).
+          </p>
+          </section>
+  
+  <!-- Values -->
+        <section class="values">
+            <a id="values" class="anchorOffset"></a>
+            <br><br>
+            <h1>The serving of our values</h1>
+            <br>
             <p>
-            Meeting with Dr. Apostolos Papalois, Director of the Experimental and Research Center of ELPEN Pharmaceutical Industry and Visiting 
-            Professor of Harvard Medical School
+
+            <h2>Inclusivity</h2> 
+            <br>
+            Our project creates a system with no geographic boundaries. This means that it is able to solve problems globally, as it constitutes a minimal circuit solving complex problems. We aspire to make an in vivo decision making system, with applications not only on our local community, but also on a worldwide level. 
             <br><br>
-            After one and a half month of vigorous brainstorming sessions, our team was torn between two ideas for our final project: the first 
-            revolved around a new therapeutic device for keratitis and the second one was a biological analogue of the perceptron algorithm, capable 
-            of cellular decision making. Since we were unable to choose between the two, we searched for a professional who could evaluate our ideas. 
-            Our search brought us in contact with Dr. Apostolos Papalois, who also has significant experience in patent registration, so we asked for 
-            his view on the subject; he eagerly agreed to have a conversation with us and share his opinion. After having heard our two project ideas, 
-            he showed a clear preference towards the second one, the biological system imitating the perceptron algorithm, which he found very fresh 
-            and innovative, and he proposed that we develop it into a biomedical sensor for multifactorial health conditions. His thoughts and comments 
-            sparked our passion towards biocomputing and cellular information processing and after careful consideration, we indeed decided to proceed 
-            with the biological perceptron as our project for this year; however, as it is described in the following text, since we were concerned 
-            with the feasibility of such an approach, we adapted our goals to designing such a system at a foundational level, to build a versatile 
-            sensing tool that could be easily adapted for use to several domains.
-            <br><br>   
-            {Papaloi}
-                
-            Video call meeting with Dr. Apostolos Papalois to evaluate our potential project ideas
-            </p>
-        </div>
-        
-        <div class="section-content strategy">
-            <h2>Bridging the gap between our desires and feasibility</h2>
-            <p>
-            We have to admit that, in the beginning of our journey, we were quite ambitious and optimistic about what could be really achieved in such a tight time window. Furthermore, the majority of Greek universities do not include Synthetic Biology related subjects in their curriculum and, even though our PIs and Instructors provided us with valuable support, everyone was unfamiliar in the field of SynBio.
+            Beside that, we are convinced that inclusivity leads to innovation. Increasing the diversity of the scientists and the experts we approached, had the impact of expanding our pool of ideas, broadening perspectives, and incorporating new ways of thinking. Science depends on innovation. Paradigm shifts and revolutionary thinking do not happen within an environment of stagnation.
             <br><br>
-            We wanted to build a biological perceptron that solves a classification problem with a real world application. Tumor-targeting bacteria and gut dysbiosis were our primary interests (for more information regarding the potential applications of biological perceptrons please visit the Implementation tab). However, as we were diving more into bibliography and consulted researchers from the field of Synthetic Biology, we realized that these goals were out of our reach and we would not be able to provide results that could be a valuable contribution to the iGEM community and Synthetic Biology in general.
+            The same goes to the Science Communication and Education target groups. We jumped through hoops to include a variety of people of different ages and academic backgrounds. This has been our major ambition, in order to receive feedback and reflections on our project idea and implementation from heterogenous people.
             <br><br>
-            Our final decision was to prove that a simple pattern recognition problem could be solved by manipulating the Ribosome Binding Site (RBS) and ,thus, the translation rate of LuxI, the synthase that catalyzes the synthesis of OC6, our selected intermediate molecule for the weighted sum of our biological perceptron. Based on previous research, tackling this information processing challenge could contribute to the field of biocomputing and its applications.
+            It’s not exaggerating to say that without diverse opinions, our project’s creativity and progress would have remained stagnant and infertile. 
             <br><br>
-            Meetings with Asterios Arampatzis, Athanasios Theocharis and Charilaos (Charis) Giannitsis, members of iGEM Greece 2017
+
+
+            <h2>Versatility</h2> 
+            <br>
+            Our planet, and at the same time our local community, confront plenteous serious problems and plagues that emerge for an efficient solution. Being confused and indecisive about which one we should pick up to cope with it, we ended up thinking that the alternative of creating a multi-system would be the best idea. So we fixed our attention on developing a “tool” capable of turning easily from fields of endeavour. We consider that PERpectives represents an adaptable biosensor, with various applications in decent sectors.  Personalised medicine (biosensors processing and reacting to complex environments living therapeutics  autonomous drug delivery systems), water quality, productivity in a bioreactor, energy consumption for computational tasks, pollution sensor are only a few of the examples of its implementation.  All in all, besides our contribution to the field of biocomputing and the  introduction of  biocomputing to Greece for the first time, we aimed to design a universal tool, versatile enough to solve both local and global problems. 
             <br><br>
-            One of our first meetings during the period of our goal setting was with members of iGEM Greece 2017, the first iGEM team from Greece. They are all still actively involved in the field of synthetic biology and their project included the classification of colon cells as malignant or not by an E.coli delivered classification circuit incorporating miRNA interactions. We presented to them our initial ideas to create a coordinated tumor-invading bacterial population (see the Implementation tab for more) or a simpler biological perceptron that would classify inducer input patterns and shared our concerns about the time and resources available to accomplish such a goal. They supported the latter idea, because it seemed more feasible to construct a complete biocomputing circuit. More specifically, they made a crucial point. Promoters controlled by different inducible systems vary in strength and engineering sets of different inducible promoters would be out of reach. They suggested selecting one input and tune the weights via different RBS sequences, since they are more versatile parts. Proving that such a biological perceptron is functional and able to solve a simple task by manipulating the translation rates would add to previous work (the paper that was our main inspiration, see meetings with Prof. Daniel Ramez and Dr. Ximing Li below) and support the use of RBS variants as plug-and-play versatile devices to tune the inputs’ weights. 
-            <br><br>
-            <br><br>
-                {Asteris and Athanasios} {Charis First}   
             
-            Video calls with Asterios, Athanasios and Charis to discuss our ideation and project execution
+            <h2>Biosafety</h2> 
+            <br>
+            Since the very beginning of our work, getting along with biosafety rules has been a cornerstone for our project. We consider it crucial to follow safety seminars and training before starting lab work, with the purpose of being well-prepared to protect our physical and mental health while dealing with our experimental part, as well as prevent misfortune events that may occur. We took into serious consideration that biosafety isn’t only about protecting yourself, but also your colleagues and even the entire planet from potential biological hazards. We put great effort in improving the biosafety conditions in our working space by investing money and time in buying enough protective equipment (gloves, alcohol, disinfectants, camping gas for working under sterile environment) and handling properly our liquid (bottles with chlorine) and solid (meticulous use of UV incubator) waste. Doing our best to reduce the health-related risks associated with handling infectious agents, toxins and other biological hazards in a laboratory setting was not our only goal.
             <br><br>
-            
-            Meeting with Dr. Christos Gournas, Researcher at Microbial Molecular Genetics Laboratory of the National Centre for Scientific Research “Demokritos”
+            Except for biosafety in the lab level, we also focused on our project design safety by proposing an effective kill switch (παραπομπή στην σελίδα του safety wet lab).
             <br><br>
-            During the same period with the previous meetings, we were considering implementing our system in yeast, since it had already been done in bacteria. In this particular case, instead of RBS sequences, we were discussing tuning the different weights of our biological ANN by engineering the Kozak sequence in the 5’ UTR, which can be viewed as the eukaryotic counterpart of the RBS [1]. To learn more about yeast and the way two yeast populations can communicate with each other, we came in contact with Dr. Christos Gournas. We conversed about several ways yeast cells share information with each other, such as with specialized aminoacid transporters they express on their cellular membranes [2] or with sex hormones [3]. Dr. Gournas even agreed to provide us with a special laboratory strain to realize our project. Unfortunately, after a couple of weeks, he informed us that acquiring this strain would be impossible, and, since yeast cells are harder to culture than bacterial cells (they require more time and conditions our infrastructure could not support), we ultimately decided to implement our biological perceptron in a bacterial system.
+            Our biosafety portfolio would be incomplete if we hadn’t organised a relevant event to spread awareness about the topic to future young scientists and generally higher education students. This is why we hosted a biosafety debate to inform our audience about the definition and the significance of biosafety and then catch their attention with a debate on genetically engineered organisms (GMOs) and some other bioethical dilemmas. (παραπομπή στη σελίδα Science Education and communication> Debate)
             <br><br>
+
+            <h2>Scientific Diversity</h2> 
+            <br>
+            Being aware that the field of bio-computing (and especially the incorporation of computational models in biological systems) is not represented in our country, we hope to make a meaningful contribution in our scientific community via the communications we have with multiple scientists from Greek Universities and Research Centres. The lack of Greek scientists who were focused on Biocomputing and Synthetic Biology didn’t discourage us. On the contrary, we were challenged to approach scientists and academic experts from different, but relative to our project fields to complete the missing pieces of our project’s “puzzle”. 
             <br><br>
-            Meeting with Prof. Ramez Daniel, Associate Professor at Faculty of Biomedical Engineering of Technion-Israel Institute of Technology
+            For the biological segment, we started reaching out to researcher Professors of Biology  (Dr.Dedos Scarlatos, Dr.Diallinas Georgios, Dr.Ourania Tsistsilonis, Dr.Efthimiopoulos Spyros, Dr.Xatzinikolaou Dimitrios), of Medicine (Dr. Giamarelos Evaggelos, Dr.Maria Gazouli) and of Pharmacy (Dr.Demetzos Konstantinos, Dr.Marakos Panagiotis, Dr.Pouli Nikolais, Dr.Stefanidou Maria, Dr.Athanaselis Sotirios, Dr.Dona Artemis) departments of National and Kapodistrian University of Athens.
             <br><br>
-            Gaining feedback from the authors of the paper “Synthetic neural-like computing in microbial consortia for pattern recognition” [4] that inspired our project was of utmost importance. They built a biological perceptron for pattern recognition and generated a promoter library of different strengths to tune the weights via mutagenesis. We contacted the corresponding author of the paper, Prof. Ramez Daniel who is actively involved in Synthetic Biology projects, and we arranged a meeting. He listened to our dilemma regarding solving a real world classification problem by building a similar system versus building a biological perceptron that would solve an information processing problem. One of the main pieces of advice he gave us was that our time to develop our system was more limited than we thought and to think wisely of our final choice. Moreover, he made valuable comments on how such research endeavors could offer a new point of view in biosensor design and information science. Then, he referred us to the first author of the paper, Dr. Ximing Li, and he personally notified her to schedule a meeting with us.
+            At a subsequent time, they referred us to even more relevant scientists of Biological  Research Institutes/ Centres (Dr.Gournas Christos, Dr.Miriagou Vivi, Dr. Scretas Dimitrios) to receive valuable feedback on our project’s design, organism’s selection and potential changes and adaptations in the system. 
             <br><br>
-            
-            Meeting with Dr. Ximing Li, Postdoc Researcher at New York University Abu Dhabi
+            However, we didn’t communicate only with Biology experts, but also with scientists from the engineering and the computing field, particularly for the computational segment. 
             <br><br>
-            
-            After our meeting with Prof. Daniel, we wasted no time and reached Dr. Ximing Li. Similarly, we explained to her our ideation, goals and time limits. We mostly discussed the idea of building a biological perceptron for pattern recognition problems via manipulating the RBS. She provided us with valuable technical input, since our project is quite similar to her research and explained to us parts of her paper and genetic circuit design that were confusing. Moreover, she provided valuable advice on potential genetic circuit topologies to achieve a steep activation function and a switch-like response. More specifically, she referred to positive feedback loops like the one she used in her paper and transcriptional cascades. Last but not least, since mutagenesis and the generation of a complete RBS library were unrealistic goals for our time and budget, she recommended the RBS Calculator by Prof. Howard Salis’ Lab as a useful online tool to predict the suitable RBS sequences for our biological classifier.
+            Then, we extended towards the international Synthetic Biology community with our Integrated Human Practices meetings and interviews with a view to acquiring a more global image for our circuit. (click here με παραπομπή στα Integrated) 
             <br><br>
-                                    {Ximing Li}
-                                    <br><br>
-            Video call with Dr. Ximing Li to ask for advice regarding our biological perceptron
+            Finally, yet importantly, we got in contact with old iGem Greece members with speciality on the theme with an eye toward testing our system’s limitations, defaults and weak points. 
             <br><br>
-            
-            After several meetings, studying and the feedback mentioned, we decided that our final goals were to build a simple biological perceptron deploying RBS variants as the determining factors of the different weights and test circuit topologies that would imitate a perceptron’s activation function.
+            The combination of the knowledge and advice of all these experts formed our final design and broadened our horizons as far as our bionsensor’s applications are concerned. After our experience, we witnessed that interdisciplinarity, as well as scientific diversity, help advance critical thinking and cognitive development. 
             </p>
-        </div>
-        
-        <div class="section-content creative">
-            <h2>Realizing our ideas</h2>
-            <p>
-            Communication with Prof. Howard Salis, Associate Professor of Biological and Chemical Engineering and Synthetic Biology at Penn State 
-            University
-            <br><br>
-            One of the occupations of the researchers in Prof. Howard Salis’ lab is the development of  biophysical models for genetic regulation and the experimental testing of their predictions in industrially and medically useful microorganisms [5]. However, what we were most interested in, was combining these models with optimization algorithms to automatically design synthetic DNA sequences with desired biological functions. So, when we needed an algorithm to create our own library of RBS, each with a determined translation initiation rate, his help was crucial as to how lab work could integrate what we had in mind. 
-            <br><br>
-            As Dr. Ximing Li had suggested, we utilized the RBS Calculator to calculate the rate of translation conferred by a particular RBS when followed by the gene of our choice.  Using this online software, we created a small library of RBS found in literature and at the iGEM Registry, separated in three discrete classes: the strong RBS, the medium RBS, and the weak RBS. Meanwhile, we realized the importance of this tool on our project and we also had some questions about it, so we decided to reach out to Prof. Howard Salis directly. 
-            <br><br>
-            Not only was he happy to help us, but he also made a decisive suggestion for our project; He told us that the library we had generated with the existing RBS sequences might work for our project, but a more accurate approach would be to create our own synthetic sequences targeting a specific translation rate. He advised us to use the RBS Calculator in the reverse way than the one we had been using it until then. Namely, he told us to use the RBS Calculator to design a set of synthetic RBS sequences with different translation initiation rates. The best way we could do this was to “set our target rates at logarithmically varied #s, for example, from 100 to 500 to 1000 to 5000 to 10000 to 50000” as he said. Another useful tip he gave us was: “use the RBS Library Calculator to design a degenerate RBS sequence that systematically varies the translation initiation rate. Set the minimum target at 100 and the maximum target at 50000. Library size can be 16 to 32. The algorithm will design an RBS sequence using the UIPAC degenerate code, which can be ordered as a single oligonucleotide and used in a PCR extension reaction to produce a library of products for cloning“. 
-            <br><br>
-            After his interventions, the RBS library we had created was enriched with new synthetic sequences and took its final form in order to be used for the design of our laboratory experiments.
-            <br><br>
-            <br><br>
-            Communication with Prof. Michail Kavousanakis, Assistant Professor at School of Chemical Engineering of the National Technical University of Athens
-            <br><br>
-            Modeling our biological system was one of the biggest challenges we were asked to tackle. Our project does not only involve enzymatic reactions and predicting the amount of production of certain chemical species, but it also embodies a multi-level quantification analysis of different compounds in bacterial populations and subpopulations and the study of the communication between these populations through quorum sensing. Since the diffusion of the quorum sensing lactone we used in our system, OC6,  was a big concern for us, we reached out to Prof. Michalis Kavousanakis, whose research interests revolve around mass transfer phenomena.
-            <br><br>
-            Prof. Kavousanakis and we discussed the diffusion mechanism of OC6 in and out of the sender and the receiver cells. We already had Fick’s Law in mind and how we would make use of it and Prof. Kavousanakis helped us create a small simulation in COMSOL to indicatively see how the concentration of our lactone would vary spatially throughout our system.
-            <br><br>
-            Our main problem was how to model the diffusion of OC6 in the 6 well-plates where the sender subpopulations would be separated from the receivers by a membrane manufactured out of Polycarbonate (PC), which has pores of 0.4nm in diameter. This membrane was limitedly utilized at the last stages of our experiments, so we wanted to model the diffusion of the lactone through it. At first, we tried to simulate the PC membrane as a new material with its own properties, but that did not work well, because of the lack of information about the membrane. Prof. Kavousanakis suggested we add a flux at the interface between the senders and the receivers instead of adding it as an extra material; this specific flux would be introduced into the COMSOL environment and would be proportional to the difference in lactone concentration inside and outside the membrane multiplied by the membrane permeability. This advice helped us simulate the "resistance" that the lactone would encounter in its passage through the membrane.
-            <br><br>
-            Prof. Kavousanakis also explained and showed us the way to simulate chemical reactions in a specific area of our geometry in COMSOL, but also suggested to import all the differential equations of our model in the console, thus cross-checking the reliability of our model. Unfortunately, there was no time to implement all his suggestions, but we managed to complete an analysis that took advantage of the data of the differential equations we solved for the senders and also took into account the consumption of the membrane in the form of chemical reactions inside the membrane. We created a simulation that aims to show how the lactone will move in our system, so that the diffusion phenomenon is understandable for future researchers who are not necessarily familiar with mass transfer phenomena. We are very willing to implement all his suggestions in the future, but even up to the point we built our simulation, his advice really upgraded our approach.
-            <br><br>
-            <br><br>
-            Meeting with Dr. Georgios Skretas, Research Director of Enzyme and Synthetic Biotechnology Laboratory at the National Hellenic Research Foundation
-            <br><br>
-            A well-designed genetic circuit does not offer much without the right cells to express it, so we searched for an expert in bacterial protein expression systems. We decided to contact Dr. Skretas, who, alongside with a postdoc researcher from his lab, Dr. Dimitra Zarafeta, provided valuable insight into the most common E.coli strains used for protein production depending on the biochemical and biophysical properties of the protein to be expressed. Since we were also thinking about inserting two plasmids in our cells to tackle cross-talk issues, they pointed out key factors regarding plasmid compatibility to take into consideration in case we placed two vectors to coexist in a single cell. As we found this information particularly useful, we proceeded to integrate it in our final design.
-            <br><br>
-            {Skretas}
-            <br><br>
-            Video call with Dr. Georgios Skretas to talk about potential E.coli chassis and vectors
-            <br><br>
-            Meeting with Dr. Nicolas Kylilis, Research Fellow in Synthetic Biology and Bioinformatics at University of Cyprus
-            <br><br>
-            <br><br>
-            Our system incorporates two bacterial populations, the senders and the receivers, which communicate using quorum sensing molecules. There are plenty of well-characterized quorum sensing systems available, so we needed guidance towards the right one for our system. We were looking for a quorum sensing system that would provide a large dynamic range and negligible leakiness compared to its output production at the maximum induction state. A system with a natively steeper transfer function would be more suitable as well. 
-            <br><br> 
-            Our research led us to Dr. Nicolas Kylilis’ paper ‘‘Tools for engineering coordinated system behaviour in synthetic microbial consortia’’ [6]. In this paper, different quorum sensing devices are evaluated in terms of their cross-talk with other systems’ inducers and a software was developed that aided the selection of multiple quorum sensing systems to engineer coordinated bacterial populations. Information regarding their dynamic range and leakiness is also provided. We contacted Dr. Kylilis seeking his feedback on the selection of the appropriate system for our purpose. We were thinking of either choosing the CinR system, like in Dr. Ximing Li’s research because of its steep transfer function and acceptable dynamic range, or the LuxR system, which might not be steep enough, but shows a large dynamic range. He advised us to use the LuxR system if we wanted to differentiate our work from Dr. Li’s research, since, except for the mentioned traits, it comprises a well-studied mechanism and there is plenty of literature about it to use for troubleshooting. Indeed, during our research afterwards, we encountered the paper “Escherichia coli “Marionette” strains with 12 highly optimized small-molecule sensors” [7], in the context of which an extensive characterization of inducers was performed, including one quorum sensing molecule, the inducer of LuxR, and provided us with useful backup information about it.
-            <br><br>
-            Additionally, Dr. Kylilis highlighted that, if we wanted to incorporate more than one quorum sensing systems, for example to build a perceptron with a hidden layer or with two output nodes, we could use the LasR system on the grounds that it does not show significant cross-talk with the LuxR system in the concentrations of lactone for max induction of each one respectively. Even though we did not construct such a system, this advice was useful later, when we decided to theoretically design a biocontainment mechanism for our perceptron after interacting with the public during the debate we organized about biosafety.
-            <br><br>
-            {Kylilis}
-            <br><br>
-            Video call with Dr. Nicolas Kylilis to discuss quorum sensing mechanisms
-            <br><br>
-            Meeting with Prof. Barbara Di Ventura, Professor of Biological Signaling Research at University of Freiburg
-            <br><br>
-            One important factor of our project was the input signal that senders would recognize to switch from the “off” to the “on” state (0 to 1). Incorporating different inputs would add another factor to our project, the relative promoter strength of each input-controlled promoter. Salis Lab Promoter Calculator is a relatively new software, thus we could not be sure about its reliability, since we would not be able to test the promoter strength experimentally as an extra parameter and we would solely rely on this prediction tool. Based on those thoughts, we eventually decided to follow Dr. Ximing Li’s approach and create patterns of 0 and 1 generated by the recognition of one input alone by all sender subpopulations. Each sender subpopulation would be activated or not by the input and, then, senders would be mixed together and activate the receivers.
-            <br><br>
-            Nevertheless, the issue of cross-talk between senders arises. By cross-talk in this context we mean the activation of supposedly inactivated senders by residual inducer molecules when they are mixed with activated senders, which will mess up the initial pattern. This is true for every chemical inducer in such an experimental setup, so we asked ourselves if we could build a system that would be activated with a non-chemical input. During the research that followed, optogenetics caught our attention; inducing senders with light and mixing them afterwards would, on the one side, remove the constant induction of the ‘1’ state senders, but, on the other side, would allow us to keep the inactivated senders at a constant ‘0’ state and, so, our desired pattern would be preserved for some time. Furthermore,considering the biocomputing nature of our project, we came up with the idea of adapting our biological perceptron to a bacterial device that would imitate the RGB system of computer vision by encompassing a different RBS sequence/weight for each colour.
-            <br><br>
-            While researching ways to induce our system with light, we stumbled upon the paper “Engineering AraC to make it responsive to light instead of arabinose” [8], which we found  particularly interesting. We contacted Prof. Barbara Di Ventura, one of the corresponding authors of the paper; she kindly responded to our call and we scheduled a video call. She agreed with us regarding our thoughts, but informed us about the demanding experimental equipment needed for optogenetic experiments, which could not be obtained in our facilities; we, therefore, returned to our initial plan, a chemically-induced biological analogue of the perceptron algorithm. 
-            <br><br>
-            The most important aspect of our meeting was her constructive criticism on our goals. To our surprise, she is the PI of Team Freiburg this year. Being familiar with the iGEM competition, she underlined the importance of keeping our project simple, precise and providing results that could be a valuable contribution to the iGEM community. Using more common induction systems and finding simpler ideas for the cross-talk issue would reduce experimental complexity and allow us to focus on troubleshooting and part characterisation. 
-            <br><br>
-            {Barbara}
-            <br><br>
-            Video call with Prof. Barbara Di Ventura to talk about optogenetics
-            <br><br>
-            Second meeting with Dr. Christos Gournas, Researcher at Microbial Molecular Genetics Laboratory of the National Centre for Scientific Research “Demokritos”, and his associate, George Kapetanakis, PhD Student at Institute of Molecular Biology and Medicine of Université Libre de Bruxelles
-            <br><br>
-            While designing the suitable experimental setup to test our biological perceptron, we came in contact again with Dr. Gournas and his associate, George Kapetanakis. As they had previous experience with yeast communication systems, we asked them for advice regarding the characterization of microorganism interactions. They recommended a porous membrane compartmentalization system that would separate senders from receivers, allowing only the quorum sensing lactone to freely diffuse through the membrane. Such a setup would enable the evaluation of the system’s response in a more realistic setting where senders and receivers would be segregated, but able to exchange chemical signals (e.g. in a culture with a porous membrane or in a microfluidic device).
-            <br><br>
-            {gournas}
-            <br><br>
-            Meeting with Dr. Christos Gournas and PhD student, George Kapetanakis, to seek their advice on compartmentalization systems
-            <br><br>
-            Second meeting with Charilaos (Charis) Giannitsis, member of iGEM Greece 2017
-            <br><br>
-            As we were designing our genetic circuits, we were struggling with dilemmas regarding circuit topologies that were the most likely to work in our short time window. We scheduled a second meeting with Charilaos Giannitsis to review our designs. He examined our constructs and parts and provided feedback on the repressors’ and activators’ dynamics, repressive LuxR system, senders’ cross-talk ideas, our new promoter part and activation function modules. After the meeting, we were able to finalize our designs in the form that are presented in the Design section. His advice was to keep ourselves down to earth and incorporate factors that we would actually be able to tune and measure. For example, one potential circuit design to achieve a steep activation response from the receiver cells was a transcriptional cascade with a number of intermediate respressors. However, such systems need precise tuning of each repressor level, not to mention a supply with each repressors’ inducer; such a scheme was out of reach both financially and from a time perspective. Charis endorsed our step-by-step approach in achieving a steeper response and helped us rule out complex or more difficult-to-tune circuits.
-            <br><br>
-            {Charis design} {Charis design 2}
-            <br><br>
-            Second video call with Charilaos Giannitsis to discuss our design options
-            <br><br>
-            Reaching out and facing our project more holistically (Reaching out to the public)
-            <br><br>
-            After having shared our thoughts and concerns with experts, not only in the field of Biology and Biocomputing, but also in various other fields, we wanted to take a step further and receive feedback from the general public. During this procedure we had to be very careful, as our project requires knowledge of Biology and Computer science to be easily understood and does not have direct applications in society. 
-            <br><br>
-            We thought that our Debate on Biosafety would be a great opportunity to present our project briefly to the public, since the participants came from different study fields. What we wanted was to hear the opinion of our audience and discuss potential concerns they had. 
-            A significant portion of the participants stated that they were particularly excited we had designed our biological perceptron as a foundational tool, as this would enable our device to later evolve into a multifunctional system, while others expressed their clear preference towards a more applied approach and even gave us their own ideas for possible implementations on the spot.
-            <br><br>
-            {Gallery of Debate Integrated 1 - 3}
-            <br><br>
-            Participants in the Debate event talking about biosafety concerns related to our project
-            <br><br>
-            However, this was not the only outcome of the Debate event. The main theme of the Debate was Biosafety. People were inspired by the topics we presented and made some good observations on how our project could become safer. They expressed their concerns on how to control the two bacterial populations of our system, the senders and the receivers. More specifically, they asked how we could be sure that the one or both populations will not multiply uncontrollably. After having heard their thoughts, we decided to do some research on this issue and design a kill switch. Our investigation led us to a previous iGEM team, Team Imperial College 2016 [9]. They created a system for co-cultures that does not allow one population to grow more than the other. As explained in our Safety section, we propose a differentiation of their system incorporating the genes of a toxin and an antitoxin for our first kill switch. We also designed a second kill switch system, based on a heat-sensitive RNA molecule containing an RNase E cleavage site to be used in case our biological perceptron is deployed as a theranostic tool in the future [10]; more information about our second kill switch scheme can be found in the Safety tab once again.
-            <br><br>
-            Overall, with the Debate event, not only did we educate our audience, but they also helped us ameliorate various sides of our project. This is proof that scientific projects are formed by the needs of the society they are developed in.
-            </p>
-        </div>
-        
-        <div class="section-content production">
-            <h2>Reaching out and facing our project more holistically</h2>
-            <p>
-            After having shared our thoughts and concerns with experts, not only in the field of Biology and Biocomputing, but also in various other fields, we wanted to take a step further and receive feedback from the general public. During this procedure we had to be very careful, as our project requires knowledge of Biology and Computer science to be easily understood and does not have direct applications in society. 
-            <br><br>
-            We thought that our Debate on Biosafety would be a great opportunity to present our project briefly to the public, since the participants came from different study fields. What we wanted was to hear the opinion of our audience and discuss potential concerns they had. 
-            A significant portion of the participants stated that they were particularly excited we had designed our biological perceptron as a foundational tool, as this would enable our device to later evolve into a multifunctional system, while others expressed their clear preference towards a more applied approach and even gave us their own ideas for possible implementations on the spot.
-            <br><br>
-            {Gallery of Debate Integrated 1 - 3}
-            <br><br>
-            Participants in the Debate event talking about biosafety concerns related to our project
-            <br><br>
-            However, this was not the only outcome of the Debate event. The main theme of the Debate was Biosafety. People were inspired by the topics we presented and made some good observations on how our project could become safer. They expressed their concerns on how to control the two bacterial populations of our system, the senders and the receivers. More specifically, they asked how we could be sure that the one or both populations will not multiply uncontrollably. After having heard their thoughts, we decided to do some research on this issue and design a kill switch. Our investigation led us to a previous iGEM team, Team Imperial College 2016 [9]. They created a system for co-cultures that does not allow one population to grow more than the other. As explained in our Safety section, we propose a differentiation of their system incorporating the genes of a toxin and an antitoxin for our first kill switch. We also designed a second kill switch system, based on a heat-sensitive RNA molecule containing an RNase E cleavage site to be used in case our biological perceptron is deployed as a theranostic tool in the future [10]; more information about our second kill switch scheme can be found in the Safety tab once again.
-            <br><br>
-            Overall, with the Debate event, not only did we educate our audience, but they also helped us ameliorate various sides of our project. This is proof that scientific projects are formed by the needs of the society they are developed in.
-            <br><br>
-            </p>
-        </div>
-        
-        <div class="section-content analysis">
-            <h2>Making our software and wiki come to life</h2>
-            <p>
-            Meeting with Miltiadis Stouras, Computer Science PhD Student at École Polytechnique Fédérale de Lausanne
-            <br><br>
-            Apart from our wet lab design, our team decided to build a software to render the reproduction of our biological system more accessible to future teams. Since Miltiadis Stouras’ research interests are focused on Theoretical Informatics and, more specifically, on algorithms and on developing software tools, we believed he was the right person from whom to seek help. When we talked to him about what we were aiming to accomplish, he pointed out that the time required to complete a piece of software the way we had in mind would take a lot of time and require team members working full time on it. 
-            <br><br>
-            Instead, he showed us an alternative way of implementing the software we were aiming for, which would be much faster, but without falling behind in features. He suggested using the Python library Streamlit, which is an open source app framework that contributes to creating web apps for data science and is compatible with major Python libraries. With Streamlit, no callbacks are needed, since widgets are treated as variables and, additionally, data caching simplifies and speeds up computation pipelines.
-            <br><br>
-            With the help and advice of Miltiadis, we managed to build a software that made the creation of a biological perceptron much easier and automated for future research. 
-            <br><br>
-            {Miltos}
-            <br><br>
-            Video call with Miltiadis Stouras to talk about software tools
-            <br><br>
-            Meeting with Chariton Charitonidis, Software Engineer and Undergraduate Student at School of Electrical and Computer Engineering of the National Technical University of Athens
-            <br><br>
-            During our project, it was very important to get in touch with people who were knowledgeable  about Internet site interfaces and the needs of a potential wiki user. Chariton Charitonidis is a software engineer who has worked in big companies even as an undergraduate student, such as Amazon. With a background in CSS programming, he integrated our project by giving us precious advice and constant feedback on our wiki. In our meetings, we discussed how we could make our pages more interesting for the user, what would be the right structure for presenting a Bioinformatics project in a Synthetic Biology competition, and tips on how to do the aesthetic design of a website. He was also the person who suggested to us many features of HTML and CSS that we were not aware of and helped us adjust many components of the interface of our website and our application (such as GIFs). 
-            <br><br>
-            {Chariton}
-            <br><br>
-            Video call with Chariton Charitonidis to ask for advice on wiki construction
-            <br><br>
-            </p>
-        </div>
-        <div class="section-content final">
-            <h2>Nothing in science has any value to society if it is not communicated." Anne Roe - Evaluation and reflection of our outreach strategies</h2>
-            <p>
-            The goals of our overall iGEM project go far beyond the experimental design and the wet lab-dry lab execution of our idea. One aspect of our project that we considered equally important was education and science communication; for that reason, we sought guidance that would help us further develop and improve our skills regarding approaching the general public and raising awareness about Synthetic Biology.
-            <br><br>
-            To achieve the latter, we contacted Yiannis Sarakatsanis, a famous Greek actor and comedian who hosts a show on his YouTube channel -called “Ω sarakas LIVE”- where he addresses social, philosophical and scientific issues. He was very eager and happy to collaborate with us and support our cause not only by taking interviews from members of our team live on an episode of his show, but also by consulting us on science communication matters. He visited us in our lab and we discussed strategies to approach different audiences.
-            <br><br>
-            {Sarakas}
-            <br><br>
-            Video call with Yiannis Sarakatsanis to discuss our collaboration
-            <br><br>
-            Quoting the exact theatrical term he used (he is an actor after all), he told us that, in order to genuinely get through to our audience, we have to “convince the spectator”; in other words, we need to use language and context our audience is familiar with, so that they can identify/sympathize with our sayings. He urged us to be as descriptive as possible, to utilize verbal as well as non-verbal stimuli to convey our message and to include examples and metaphors when explaining topics of Synthetic Biology, especially ones integrating objects, beings and phenomena one encounters and hears about in their everyday lives. In addition, he explained to us that, when we speak in complex scientific terms, "the viewer loses confidence in themselves" (as he characteristically told us) and he emphasized that, when the viewer understands the initial information we are giving, they become more confident that they will understand the concept and will pay more attention to us as we proceed to more complex terms.
-            <br><br>
-            {Gallery of Sarakatsanis’ visit to lab}
-            <br><br>
-            Yiannis Sarakatsanis’ visit to our lab to talk about science communication strategies
-            <br><br>
-            Since we had three major Education and Science Communication events coming up after our meeting with Yiannis, we were very excited to apply all we had learnt as creatively as we could.
-            <br><br>
-            For the first event, the live interview on Yiannis Sarakatsanis’ show on his Youtube channel, we did not want to come across as stiff or condescending, so we used casual vocabulary and simple words, avoiding complex terminology. Given that Synthetic Biology constitutes an uncharted domain for the majority of Greek viewers, we presented our project, PERspectives, by describing basic principles of Biology and giving an interesting and easily understandable example of a potential future implementation that pertains to our device being deployed as a theranostic tool in cases of gut dysbiosis. People watching the live show responded very positively to our presence by leaving their comments and questions in the chat, which provided us with significant constructive feedback on addressing an audience that is composed of non-specialists.
-            <br><br>
-            {Sarakas live}
-            <br><br>
-            Backstage snapshot from our live interview on “Ω sarakas LIVE”
-            <br><br>
-            The second event was our participation in Researcher’s Night. This vibrant festival of research, technology and innovation attracts a large number of students, children and teenagers aged 4 to 18. In order to appeal to the interests and knowledge level of this particular age group, we had to tailor the content of our demonstrations and render it more stimulating, albeit even more straightforward and simple. We decided to substantially minimize the lecturing part (and give it an auxiliary role) and let more fun and experiential exhibits become the protagonists of our small tribute to Synthetic Biology. To include a few examples of our approach following the advice of Yiannis, we explained gel electrophoresis as a "race" between "mice" and "large dogs" that had to pass through "pet doors" to reach the end of the track. We also transformed teaching the Central Dogma of Biology into a game where children could play with our bacterium (made out of a fabric pencil case) and its mechanism of protein expression (made out of scrap fabric and laminated paper).
-            <br><br>
-            {Researcher’s Night}
-            <br><br>
-            Part of our Synthetic Biology exhibition at Researcher’s Night
-            <br><br>
-            For our third event, our visit to Anavryta Model Lyceum, we prepared a presentation for the students attending the event, who were all high school third-graders (teenagers aged 17 to 18) and are taking the nationwide university admission exams at the end of the year to be admitted to university departments related to the domains of health and natural sciences. In order to attract their attention, we made sure to center our Synthetic Biology presentation around topics that the studying material of the Third Grade of High School encompasses. Some of those include the lac operon, recombination of DNA with restriction enzymes and the cellular mechanisms of transcription and translation. Students participating in our lab also had the opportunity to get a more hands-on experience on the last two biological concepts through the BioBits Protein Structure and Function kit.
-            <br><br>
-            {Anavryta}
-            <br><br>
-            Introducing students to Synthetic Biology at Anavryta Model Lyceum
-            <br><br>
-            For more information about the events above, you can visit our Education and Communication tab.
-            </p>
-        </div>
-        </div>
+            <br>
+
+        </section>
     </div>
- 
-
-<section class="collapsible">
-    <input type="checkbox" id="collapsible-head">
-        <label for ="collapsible-head">References</label>    
-        <div class="collapsible-content">
-        <cite>
-            <a href="https://www.nature.com/articles/s41467-021-23336-0">
-                1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
-            </a>
-        </cite>
-        <cite>
-            <a href="https://2014.igem.org/Team:ETH_Zurich">
-                2. Team Zurich 2014
-            </a>
-        </cite>
-        </div>
-</section>
-</div>
-
-
-<script type= "text/javascript" src="../../athens/static/scripts/hp_jquery.min.js"></script>
-<script type= "text/javascript" src="../../athens/static/scripts/hp2_jquery.min.js"></script>
-    <script>
-    
-    $(".step").click( function() {
-    $(this).addClass("active").prevAll().addClass("active");
-    $(this).nextAll().removeClass("active");
-});
-
-$(".step01").click( function() {
-    $("#line-progress").css("width", "3%");
-    $(".discovery").addClass("active").siblings().removeClass("active");
-});
-
-$(".step02").click( function() {
-    $("#line-progress").css("width", "20%");
-    $(".strategy").addClass("active").siblings().removeClass("active");
-});
-
-$(".step03").click( function() {
-    $("#line-progress").css("width", "40%");
-    $(".creative").addClass("active").siblings().removeClass("active");
-});
-
-$(".step04").click( function() {
-    $("#line-progress").css("width", "60%");
-    $(".production").addClass("active").siblings().removeClass("active");
-});
-
-$(".step05").click( function() {
-    $("#line-progress").css("width", "80%");
-    $(".analysis").addClass("active").siblings().removeClass("active");
-});
-
-$(".step06").click( function() {
-    $("#line-progress").css("width", "100%");
-    $(".final").addClass("active").siblings().removeClass("active");
-});
-
-    
-</script>
-
+  </div>
+  
 <!-- Footer -->
 {% include 'footer.html' %}
+
+<!--Loader-->   
+{% include 'loader.html'%}  
 
 </html>
