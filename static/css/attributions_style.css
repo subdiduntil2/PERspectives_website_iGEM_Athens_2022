@@ -54,7 +54,7 @@ body{
 
 .container h1{
     font-size: 50pt;
-    color: #ef4b4c;
+    color: #FF9933;
     padding-bottom: 20px;
 }
 
@@ -67,6 +67,7 @@ body{
     font-size: 24pt;
     text-align: justify;
     padding-bottom: 20px;
+    list-style: none;
 }
 
 .cc{

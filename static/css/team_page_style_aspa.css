@@ -115,10 +115,15 @@ body{
     text-align: center;
 }
 
+.profile h6{
+    font-size: 40px;
+    font-style: 'Glacial Indifference Bold';
+}
+
 .profile p{
     font-size: 25px;
     margin-top: 20px;
-    text-align: justify;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1150px) {
