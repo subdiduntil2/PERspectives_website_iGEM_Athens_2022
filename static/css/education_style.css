@@ -726,10 +726,18 @@ body{
     font-size: 40px;
 } 
 
-.journal-img{
-    width: 50%;
+.journal-img-1{
+    width: 40%;
     border-radius: 50px;
-    translate: 50%;
+    padding: 2%;
+    /* translate: 50%; */
+}
+
+.journal-img-2{
+    width: 40%;
+    border-radius: 50px;
+    padding: 2%;
+    /* translate: 50%; */
 }
 
 .school_visit{
@@ -770,6 +778,72 @@ body{
     font-family: 'Glacial Indifference Bold';
     color: #61b872;
     font-size: 40px;
+}
+
+.container_fairy{
+    width: 650px;
+    height: 1000px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+}
+
+.container_fairy .wrapper_fairy{
+    width: 520px;
+    height: 900px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_fairy .wrapper-holder-fairy{
+    display: grid;
+    grid-template-columns: repeat(7, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_fairy #fairy-img-1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/14.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_fairy #fairy-img-2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/15.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_fairy #fairy-img-3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/16.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_fairy #fairy-img-4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/17.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_fairy .button-holder-fairy .button_fairy{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+
+.container_fairy .button-holder-fairy{
+    position: relative;
+    left: 30%;
+    bottom: 11.5%;
+}
+.button_fairy:hover{
+    background-color: #61b872;
 }
 
 .from_us{
