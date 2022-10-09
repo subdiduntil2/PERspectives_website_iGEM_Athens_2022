@@ -156,6 +156,43 @@ body{
     translate: 13%;
 }
 
+.fav-1-img{
+    width: 45%;
+    padding: 2%;
+    translate: 13%;
+    border-radius: 30px;
+}
+
+.fav-2-img{
+    width: 45%;
+    padding: 2%;
+    translate: 13%;
+    border-radius: 30px;
+}
+
+.tech-1-img{
+    width: 60%;
+    padding-top: 3%;
+    padding-left: 3%;
+    border-radius: 20px;
+    float: right;
+}
+
+.tech-2-img{
+    width: 60%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+    float: left;
+    border-radius: 30px;
+}
+
+.tech-3-img{
+    width: 45%;
+    padding-left: 3%;
+    border-radius: 20px;
+    float: right;
+}
+
 .mistakes-img{
     width: 80%;
     float: left;
@@ -227,6 +264,15 @@ body{
 }
 
 .collapsible-text p{
+    color: #e9e9eb;
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 22px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.collapsible-text ul li{
     color: #e9e9eb;
 	font-size: 25px;
 	font-weight: 300;

@@ -43,14 +43,14 @@ body{
     font-family: 'Glacial Indifference Bold';
 }
 
-.overview-hp{
+.overview-integrated{
     background-color: #050a30;
     color: #e9e9eb;
     font-size: 25px;
     padding: 4%;
 }
 
-.overview-hp h1{
+.overview-integrated h1{
     color: rgba(239, 75, 76, 0.8);
     text-align: center;
     font-size: 65px;
@@ -58,7 +58,7 @@ body{
     font-family: 'Glacial Indifference Bold';
 }
 
-.overview-hp p{
+.overview-integrated p{
     padding-left: 3%;
     padding-right: 3%;
     padding-bottom: 3%;
@@ -68,7 +68,7 @@ body{
 }
 
 
-.cc{
+.cc-integrated{
 width: 100%;
 height:100%;
 outline:none;

@@ -266,7 +266,7 @@ body{
     border: solid 5px #e9e9eb;
     font-size: 25px;
     font-family: 'Glacial Indifference Bold';
-    transition: .3s;
+    transition: all ease .3s;
   }
 
 .button a {
