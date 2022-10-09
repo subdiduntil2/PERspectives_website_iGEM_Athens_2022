@@ -136,14 +136,6 @@ background-color:#102a4e;
 }
 
 
-#cc-integrated{
-    display:none;
-}
-
-#cc-hp{
-    display:none;
-}
-
 .collapsible{
     padding-top:30px;
 }
@@ -157,7 +149,7 @@ background-color:#102a4e;
 .collapsible label {
     padding:20px 20px;
     position:relative;
-    z-index:1;
+    z-index:0;
     font-weight:600;
     padding:20px 20px;
     text-align: left;
@@ -229,7 +221,7 @@ background-color:#102a4e;
 	padding:0;
 	margin:0;
 	padding-top:19px;
-	z-index:9999;
+	z-index:3;
 	position:absolute;
 	width:100%;
 	margin-top:-40px
