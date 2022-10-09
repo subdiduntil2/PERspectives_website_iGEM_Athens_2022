@@ -1,34 +1,222 @@
-{% extends "layout.html" %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/team_page_style_aspa.css') }}" rel="stylesheet">
 
-{% block title %}Team{% endblock %}
-{% block lead %}On this page you can introduce your team members, instructors, and advisors.{% endblock %}
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
 
-{% block page_content %}
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
-<div class="row">
-  <div class="col-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Include pictures of your teammates, don't forget instructors and advisors!</li>
-      <li>You can add a small biography or a few words from each team member, to tell us what you like, and what motivated you to participate in iGEM.</li>
-      <li>Take team pictures! Show us your school, your lab and little bit of your city.</li>
-      <li>Remember that image galleries can help you showcase many pictures while saving space.</li>
-    </ul>
-    <div class="bd-callout bd-callout-info"><strong>Important:</strong> Your wiki pages will be archived at the end of the iGEM season and this content will remain online. Please keep this in mind as you post photos and personal information on this page.</div>
-  </div>
-  <div class="col-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:CU/Team">2019 CU</a></li>
-      <li><a href="https://2019.igem.org/Team:UANL/Team">2019 UANL</a></li>
-      <li><a href="https://2019.igem.org/Team:William_and_Mary/Team">2019 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:BOKU-Vienna/Team">2020 BOKU Vienna </a></li>
-      <li><a href="https://2020.igem.org/Team:CAU_China/Team_Member">2020 CAU China</a></li>
-      <li><a href="https://2020.igem.org/Team:Lethbridge/Members">2020 Lethbridge</a></li>
-    </ul>
-  </div>
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom to top button CSS-->
+    <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    
+    <title>Perspectives | Members</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/team-page/project-reveal-1920-1080-px-3.gif" width="100%">
+    <div class="heading"> Meet iGEM Athens 2022 </div>    
 </div>
 
-{% endblock %}
+<div class="container">
+    <div class="profiles">
+    <!---  Annie -->    
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/anny-retus.jpg" class="profile-img">
+            <h3 class="user-name">        
+            <span class="old">Annie</span>
+            <span class="new">Annie 🔥☕️</span> 
+            </h3>
+            <h5>
+            <span class="old">Wet Lab Member</span>
+            <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+            <p class="old"> 
+            School Biology department, National and Kapodistrian University of Athens<br><br>
+            Worked in: Wet Lab, Fundraising, Human Practices<br>
+            </p>
+            <p class="new"> 
+            Biology department, National and Kapodistrian University of Athens<br><br>
+            <span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span>, 
+            <span style="color: #ffc973; font-style: 'Glacial Indifference Bold';">Fundraising</span>, 
+            <span style="color: #ef4b4c; font-style: 'Glacial Indifference Bold';">Human Practices</span><br><br>
+            <span style="background: -webkit-linear-gradient(#8a72c1, #61b872,  #3aa9c5, #ffc973); background-clip: content-box; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fun fact</span> 
+            <br>She has an extremely contagious good mood and is the first to help you do something funny.<br>
+            </p>
+        </div>
+
+    <!---  Anthi -->
+    <div class="profile">
+        <img src="https://static.igem.wiki/teams/4294/wiki/team-page/anthi-retus.jpg" class="profile-img">
+        <h3 class="user-name">        
+        <span class="old">Anthi</span>
+        <span class="new">Anthi ✨📰</span> 
+        </h3>
+        <h5>
+        <span class="old">Wet Lab Member</span>
+        <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+    </div>
+
+    <!---  Aristotelis -->
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/aris-retus.jpg" class="profile-img">
+            <h3 class="user-name">
+            <span class="old">Aristotelis</span>
+            <span class="new">Aristotelis ⚡️🤫</span> 
+            </h3>
+            <h5>
+            <span class="old">Wet Lab Member</span>
+            <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+            <p class="old"> 
+            Medical School, National and Kapodistrian University of Athens <br><br>
+            Worked in: Wet Lab, Genetic Circuit and Parts Design, Improve a Part, Human Practises, Social Media<br>
+            </p>
+            <p class="new"> 
+            Medical School, National and Kapodistrian University of Athens <br><br>
+            <span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span>, 
+            <span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Genetic Circuit and Parts Design</span>, 
+            <span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Improve a Part</span>,
+            <span style="color: #ef4b4c; font-style: 'Glacial Indifference Bold';">Human Practices</span>,
+            <span style="color: #8a72c1; font-style: 'Glacial Indifference Bold';">Social Media</span><br><br>
+            <span style="background: -webkit-linear-gradient(#8a72c1, #61b872,  #3aa9c5, #ffc973); background-clip: content-box; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fun fact</span> 
+            <br>Swimming pool underwater lights make him feel uncomfortable for some reason.<br>
+            </p>
+        </div>
+
+</div>
+
+<div class="container">
+    <div class="profiles">
+    <!---  Aspa -->
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/aspa-retus.jpg" class="profile-img">
+            <h3 class="user-name">
+                <span class="old">Aspa</span>
+                <span class="new">Aspa 🍉🦄</span> 
+                </h3>
+                <h5>
+                <span class="old">Dry Lab Member</span>
+                <span class="new"><span style="color: #3aa9c5; font-style: 'Glacial Indifference Bold';">Dry Lab</span> member</span></h5>
+                <p class="old"> 
+                    Medical School, National and Kapodistrian University of Athens <br>
+                    Department of Informatics, National and Kapodistrian University of Athens <br><br>
+                    Worked in: Dry Lab, Human Practices, Social Media<br>
+                    </p>
+                    <p class="new"> 
+                    Medical School, National and Kapodistrian University of Athens <br>
+                    Department of Informatics, National and Kapodistrian University of Athens <br><br>
+                    <span style="color: #3aa9c5; font-style: 'Glacial Indifference Bold';">Dry Lab</span>, 
+                    <span style="color: #ef4b4c; font-style: 'Glacial Indifference Bold';">Human Practices</span>,
+                    <span style="color: #8a72c1; font-style: 'Glacial Indifference Bold';">Social Media</span><br><br>
+                    <span style="background: -webkit-linear-gradient(#8a72c1, #61b872,  #3aa9c5, #ffc973); background-clip: content-box; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fun fact</span> 
+                    <br>She can't resist making funny faces in a photo.<br>
+                </p>            
+                </div>
+
+
+    <!---  Manos -->
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/manos-retus.jpg" class="profile-img">
+            <h3 class="user-name">
+                <span class="old">Manos</span>
+                <span class="new">Manos 🎉💻</span> 
+                </h3>
+                <h5>
+                <span class="old">Dry Lab Member</span>
+                <span class="new"><span style="color: #3aa9c5; font-style: 'Glacial Indifference Bold';">Dry Lab</span> member</span></h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+            </div>
+
+    <!---  Marianna -->    
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/marianna-retus.jpg" class="profile-img">
+            <h3 class="user-name">
+                <span class="old">Marianna</span>
+                <span class="new">Marianna 💎🧪</span> 
+                </h3>
+                <h5>
+                <span class="old">Wet & Dry Lab Member</span>
+                <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet</span> & <span style="color: #3aa9c5; font-style: 'Glacial Indifference Bold';">Dry Lab</span> member</span></h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+            </div>
+</div>
+
+<div class="container">
+    <div class="profiles">
+    <!---  Nikol -->    
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/nikol-retus.jpg" class="profile-img">
+            <h3 class="user-name">
+                <span class="old">Nicole</span>
+                <span class="new">Nicole 🌸🐱 </span> 
+                </h3>
+                <h5>
+                <span class="old">Wet Lab Member</span>
+                <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+        </div>
+
+    <!---  Pantelis -->
+        <div class="profile">
+            <img src="https://static.igem.wiki/teams/4294/wiki/team-page/pantelis-retus.jpg" class="profile-img">
+            <h3 class="user-name">
+                <span class="old">Pantelis</span>
+                <span class="new">Paantelis 🪐🏕️🦠 </span> 
+                </h3>
+                <h5>
+                <span class="old">Wet Lab Member</span>
+                <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+                <p class="old"> 
+                Department of Pharmacy, National and Kapodistrian University of Athens<br><br>
+                Worked in:  Wet lab, Design, Fundraising, and Human Practices<br>
+                </p>
+                <p class="new"> 
+                Department of Pharmacy, National and Kapodistrian University of Athens<br><br>
+                <span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span>, 
+                <span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Design</span>,
+                <span style="color: #ffc973; font-style: 'Glacial Indifference Bold';">Fundraising</span>,
+                <span style="color: #ef4b4c; font-style: 'Glacial Indifference Bold';">Human Practices</span><br><br>
+                <span style="background: -webkit-linear-gradient(#8a72c1, #61b872,  #3aa9c5, #ffc973); background-clip: content-box; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fun fact</span> 
+                <br>Rumor has it that Pantelis has his own factory of hand fans.<br>
+                </p> 
+            </div>
+
+
+    <!---  Sofia -->
+    <div class="profile">
+        <img src="https://static.igem.wiki/teams/4294/wiki/team-page/sofia-retus.jpg" class="profile-img">
+        <h3 class="user-name">
+            <span class="old">Sofia</span>
+            <span class="new">Sofia 🧬🎲💍 </span> 
+            </h3>
+            <h5>
+            <span class="old">Wet Lab Member</span>
+            <span class="new"><span style="color: #61b872; font-style: 'Glacial Indifference Bold';">Wet Lab</span> member</span></h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laborum dolorum dicta ipsa repellat numquam necessitatibus distinctio excepturi alias debitis reprehenderit ullam nam officia molestiae, provident quas sed minus. Quae.</p>
+        </div>
+</div>
+
+</body>
+
+<!-- Footer -->
+{% include 'footer.html' %}
+
+</html>
