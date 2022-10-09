@@ -178,7 +178,7 @@ background-color:#102a4e;
     max-height:0px;
     padding-bottom:25px;
     overflow:hidden;
-    top:-100%;
+    /* top:-100%; */
     opacity:0;
     transition: max-height 0.5s ease-out;
     transition: all 0.5s ease;
@@ -190,7 +190,7 @@ background-color:#102a4e;
 }
 
 .collapsible input:checked ~ .collapsible-content{
-    max-height:300px;
+    max-height:3000px;
     padding-bottom:5px;
     background-color:#102a4e;
     opacity:1;
