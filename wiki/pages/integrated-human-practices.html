@@ -7,7 +7,7 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
     
     <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename = 'css/human_practices_style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/integrated_human_practices_style.css') }}" rel="stylesheet">
 
     <!-- Loader -->
     <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
@@ -65,10 +65,10 @@
 
 <div class="buttons">
     <div class="button">
-        <a href="https://2022.igem.wiki/athens/human-practices">Human Practices</a>
+        <a onclick="show('cc-hp-2')">Human Practices</a>
     </div>
     <div class="button">
-        <a href="https://2022.igem.wiki/athens/integrated-human-practices"">Integrated HP</a>
+        <a onclick="show('cc-integrated')">Integrated HP</a>
     </div>
 </div>
 

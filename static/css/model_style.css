@@ -217,6 +217,12 @@ background-color:#102a4e;
     color:var(--yellow);
 }
 
+.button:hover{
+    background: url(https://static.igem.wiki/teams/4294/wiki/model-page-images/dry-notebook-header.gif);
+    transform: translate(0, -10px);
+    box-shadow: 5px 5px  #3aa9c5;
+}
+
 
 #cc-receivers{
     display:none;

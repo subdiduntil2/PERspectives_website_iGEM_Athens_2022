@@ -287,7 +287,7 @@
 }
 
 .box-hp:hover{
-    background: url(https://static.igem.wiki/teams/4294/wiki/human-practices/hp-bg.gif) rgba(239, 75, 76, 0.5);
+    background: url(https://static.igem.wiki/teams/4294/wiki/human-practices/hp-bg.gif);
     background-size: cover;
     background-repeat: repeat-y;
     transform: translate(0, -10px);
