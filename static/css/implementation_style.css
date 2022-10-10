@@ -157,47 +157,35 @@ background-color:#102a4e;
     visibility: hidden !important;
   }
 
-  .buttons{
-    align-items:flex-end;
-    margin-left: 0px;
-    margin-right: 0em;
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    background-color:#102a4e;
+
+.introduction{
+    text-align: justify;
 }
 
-.button {
-    width: 20%;
-    text-align: center;
-    cursor: pointer;
-    background-color: #050a30;
-    border-radius: 10px;
-  }
-
-.button a {
-    color: #e9e9eb;
-    font-size: 1.375em;
-    cursor: pointer;
-    display: block;
-    padding: 1em 0;
-    transition: all 0.3s;  
+.imple-img-1{
+    width: 49%;
+    background: #e9e9eb;
+    border-radius: 50px;
 }
 
-.button a:hover{
-    color:var(--yellow)
+.imple-img-2{
+    width: 49%;
+    background: #e9e9eb;
+    border-radius: 50px;
 }
 
-
-#cc-receivers{
-    display:none;
+.imple-img-4{
+    width: 100%;
+    background: #e9e9eb;
+    border-radius: 50px;
 }
 
-#cc-senders-2{
-    display:none;
-}
+.biocomputing{
+    text-align: justify;
+    margin-bottom: 100px;
+} 
 
-.collapsible{
+.collapsible_in{
     padding-top:30px;
 }
 
@@ -206,7 +194,86 @@ background-color:#102a4e;
     display:flex;
 }
 
+.collapsible_in{
+    max-width: 1200px;
+    overflow: hidden;
+    font-weight: 500;
+}
 
+.collapsible_in input{
+    display: none;
+}
+
+.collapsible_in label{
+    font-size: 30px;
+    font-family: 'Glacial Indifference Bold';
+	color: #e9e9eb;
+	text-transform: capitalize;
+	font-weight: 500;
+    position: relative;
+    background: #050a30;
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.collapsible_in label:after{
+    content: '';
+    position: absolute;
+    right: 15px;
+    left: 15px;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    transition: all 0.3s ease;
+}
+
+.collapsible_in input:checked + label:after{
+    transform: rotate(90deg);
+}
+
+.collapsible-in-text{
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 15px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3 ease;
+}
+
+.collapsible_in input:checked ~ .collapsible-in-text{
+    max-height: 40000px;
+    padding: 15px;
+    background: #050a30;
+    opacity: 1;
+    top: 0;
+}
+
+.collapsible-in-text p{
+    color: #e9e9eb;
+	font-size: 25px;
+    text-align: justify;
+    padding: 1%;
+
+
+}
+
+.collapsible-in-text ul li{
+    color: #e9e9eb;
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 22px;
+    text-align: justify;
+
+}
+
+
+
+/* Refs */
 .collapsible label {
     padding:20px 20px;
     position:relative;
@@ -266,7 +333,7 @@ background-color:#102a4e;
 }
 
 .collapsible input:checked ~ .collapsible-content{
-    max-height:300px;
+    max-height:30000px;
     padding-bottom:5px;
     background-color:#102a4e;
     opacity:1;
@@ -278,49 +345,3 @@ background-color:#102a4e;
      color:#e9e9eb;
      display:block;
 }
-
-.equations{
-    font-size: 20px;
-}
-
-
-/* Table */
-
-.content-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 20px !important;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 1px var(--light-blue);
-  }
-  
-  .content-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .content-table th,
-  .content-table td {
-    padding: 12px 15px;
-  }
-  
-  .content-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  .content-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
-  
-  .content-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-  }
-  
-  .content-table tbody tr.active-row {
-    font-weight: bold;
-    color: #102a4e;
-  }
