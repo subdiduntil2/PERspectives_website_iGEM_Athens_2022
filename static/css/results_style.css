@@ -19,6 +19,8 @@ body{
     font-family: 'Glacial Indifference';
 }
 
+
+
 .page_header{
     padding-top: 70px;
     position: relative;
@@ -250,6 +252,12 @@ body{
     font-size: 45px;
 }
 
+.weights h6{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Italics';
+}
+
 .weights-img{
     width: 80%;
     margin-right: 2%;
@@ -283,44 +291,57 @@ body{
     border-radius: 20px;  
 }
 
-
-.overview-section-integrated{
-    background-color: #050a30;
-    color: #ef4b4c;
-    font-size: 35px;
-    font-family: 'Glacial Indifference Bold';
-    padding: 5%;
-    width: 100%;
+.img6{
+    width: 30%;  
+    border-radius: 20px;  
 }
 
-.overview-integrated{
-    background-color: #050a30;
+.rbs{
+    text-align: justify;
+    padding-right: 4%;
+    padding-bottom: 5%;
+}  
+    
+.rbs h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.rbs h2{
+    color: #61b872;
+    font-size: 45px;
+}
+
+.rbs h6{
     color: #e9e9eb;
     font-size: 25px;
-    padding: 3%;
-    border-radius: 50px;
-}
-
-.overview-integrated h1{
-    color: rgba(239, 75, 76, 0.8);
-    text-align: left;
-    font-size: 40px;
-    padding-top: 10px;
-    padding-left: 40px;
-    font-family: 'Glacial Indifference Bold';
-}
-
-.overview-integrated p{
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 3%;
-    padding-top: 1%;
-    text-align: justify;
-    font-size: 25px;
+    font-family: 'Glacial Indifference Italics';
 }
 
 
-.cc-integrated{
+
+.img7{
+    width: 45%;  
+    border-radius: 20px;  
+}
+.img8{
+    width: 45%;  
+    border-radius: 20px;  
+}
+
+.img9a{
+    width: 45%;  
+    border-radius: 20px;  
+}
+
+.img9b{
+    width: 45%;  
+    border-radius: 20px;  
+}
+
+.cc-receivers{
     width: 100%;
     height:100%;
     outline:none;
@@ -334,6 +355,100 @@ body{
     margin-left: auto;
     background-color:#102a4e;
 }
+
+.res-sec{
+    text-align: justify;
+    padding-right: 4%;
+}  
+    
+.res-sec h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.res-sec h2{
+    color: #61b872;
+    font-size: 45px;
+}
+
+.res-sec h6{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Italics';
+}
+
+.img12{
+    width: 50%;  
+    border-radius: 20px;  
+}
+
+.img13{
+    width: 50%;  
+    border-radius: 20px;  
+}
+.img14{
+    width: 50%;  
+    border-radius: 20px;  
+}
+.img15{
+    width: 50%;  
+    border-radius: 20px;  
+}
+.img16{
+    width: 50%;  
+    border-radius: 20px;  
+}
+.img17{
+    width: 50%;  
+    border-radius: 20px;  
+}
+
+
+
+.overview-section-receivers{
+    background-color: #050a30;
+    color: #61b872;
+    font-size: 35px;
+    font-family: 'Glacial Indifference Bold';
+    padding: 5%;
+    width: 100%;
+}
+
+.overview-receivers{
+    background-color: #050a30;
+    color: #e9e9eb;
+    font-size: 25px;
+    padding: 3%;
+    border-radius: 50px;
+}
+
+.overview-receivers h1{
+    color: #61b872;
+    text-align: left;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-left: 40px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+.overview-receivers p{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.overview-receivers it{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Italics';
+}
+
+
 
 
 .collapsible{
