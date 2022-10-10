@@ -1,0 +1,86 @@
+@import url(fonts.css);
+
+:root {
+    --dark-blue: #050a30;
+    --light-blue: #3aa9c5;
+    --color-white: #e9e9eb;
+    --yellow: #ffc973;
+    --red: #ef4b4c;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #050a30;
+    color: #e9e9eb;
+    font-family: 'Glacial Indifference';
+}
+
+.page_header{
+    padding-top: 70px;
+    position: relative;
+    text-align: center;
+    color: #050a30;
+}
+
+.img_header{
+    filter: blur(4px);
+}
+
+.heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 100px;
+    color: #102a4e;
+    background-color:rgba(58, 169, 197, 0.7);
+    width: 100%;
+    height: 130px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+.cc{
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:#102a4e;
+    text-align: center;
+}
+
+.text-box{
+    font-size: 25px;
+    text-align: justify;
+    padding-bottom: 5%;
+}
+
+.pdf-holder{
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 1200px){
+    .heading{
+        transform: translate(-50%, -20%);
+        font-size: 35px;
+        height: 60px;
+    }
+
+    .left-side{
+        display: none; 
+    }
+    
+    .right-side{
+        width: 100%;
+        font-size: 22px;
+    }
+
+}

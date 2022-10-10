@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/wet_notebook_style.css') }}" rel="stylesheet">
+
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>PERspectives | Wet Lab Notebook</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/wet-lab/wet-bg-darker.gif" width="100%">
+    <div class="heading">Wet Lab Notebook</div>    
+</div>
+
+<div class="cc" id="cc-parts">
+    <div class="text-box">
+        <p>
+        In our Wet Lab Notebook, we summarize the steps that were followed in order to implement our project. Our work is 
+        presented weekly and major decisions are presented. You preview our notebook below and dowload it 
+        <a href="https://static.igem.wiki/teams/4294/wiki/dry-notebook/dry-lab-book-igem-athens-2022.pdf">here</a> in pdf format.
+        </p>
+    </div>
+
+    <div class="pdf-holder">
+         
+    <object data="https://static.igem.wiki/teams/4294/wiki/protocols/protocols-igem-athens-2022.pdf" 
+                width="50%" 
+                height="800px"> 
+        </object>
+    </div>
+</div>
+
+
+</body>
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}
+
+</html>
