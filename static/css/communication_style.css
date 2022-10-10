@@ -316,7 +316,7 @@ body{
 .container_unique .button-holder-unique{
     position: absolute;
     left: 47%;
-    bottom: 4%;
+    bottom: 2%;
 }
 .button_unique:hover{
     background-color: #61b872;
@@ -420,7 +420,7 @@ body{
 
 .container_socials .button-holder-socials{
     position: relative;
-    left: 30%;
+    left: 0%;
     bottom: 11.5%;
 }
 .button_socials:hover{
@@ -912,11 +912,21 @@ body{
 
 .container_fairy .button-holder-fairy{
     position: relative;
-    left: 30%;
+    left: 0%;
     bottom: 11.5%;
 }
 .button_fairy:hover{
     background-color: #61b872;
+}
+
+.epsa{
+    text-align: justify;
+}
+
+.epsa h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
 }
 
 .from_us{
@@ -925,7 +935,7 @@ body{
 
 .from_us h1{
     font-family: 'Glacial Indifference Bold';
-    color: #61b872;
+    color: #ef4b4c;
     font-size: 40px;
 }
 
@@ -935,7 +945,7 @@ body{
 
 .on_us h1{
     font-family: 'Glacial Indifference Bold';
-    color: #61b872;
+    color: #ef4b4c;
     font-size: 40px;
 }
 

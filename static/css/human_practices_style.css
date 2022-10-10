@@ -96,6 +96,7 @@ body{
     font-size: 35px;
     font-family: 'Glacial Indifference Bold';
     padding: 5%;
+    width: 100%;
 }
 
 .overview-hp{
@@ -292,6 +293,7 @@ body{
     font-size: 35px;
     font-family: 'Glacial Indifference Bold';
     padding: 5%;
+    width: 100%;
 }
 
 .overview-integrated{
@@ -346,56 +348,54 @@ body{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
 }
 
 .asteris-img{
     width: 40%;
     padding: 1%;
     border-radius: 30px;
-    translate: 30%;
 }
 
 .charis-1-img{
     width: 40%;
     padding: 1%;
     border-radius: 30px;
-    translate: 30%;
+
 }
 
 .ximing-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 .skretas-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 .kylilis-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 .barbara-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 .gournas-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 
@@ -403,56 +403,56 @@ body{
     width: 40%;
     padding: 1%;
     border-radius: 30px;
-    translate: 30%;
+
 }
 
 .char-des-2-img{
     width: 40%;
     padding: 1%;
     border-radius: 30px;
-    translate: 30%;
+
 }
 
 .miltos-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;   
+  
 }
 
 .chariton-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;  
+ 
 }
 
 .sarakas-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;   
+
 }
 
 .sarakas-live-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;   
+ 
 }
 
 .ren-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 .anavryta-img{
     width: 50%;
     padding: 1%;
     border-radius: 30px;
-    translate: 50%;
+
 }
 
 .container_debate{
@@ -826,6 +826,10 @@ body{
 
 
 @media screen and (max-width: 1200px){
+    .buttons{
+        display: none;
+    }
+
     .heading{
         transform: translate(-50%, -20%);
         font-size: 35px;

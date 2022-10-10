@@ -100,8 +100,9 @@
                     their lens helped us delve deeper into the values we want to invest in and represent through “PERspectives”.
                 </p>
             </div>
+            <center>
             <img class="roadmap-hp" id="roadmap" src="https://static.igem.wiki/teams/4294/wiki/human-practices/hp-silver/human-practices-agenda.jpg">
-
+            </center>
   <!-- Awareness & Sensitivity  -->
           <section class="awareness">
               <a id="awareness" class="anchorOffset"></a>
@@ -186,7 +187,9 @@
             <br><br>
             <h1>The serving of our values</h1>
             <br>
+
             <img class="values-hp" src="https://static.igem.wiki/teams/4294/wiki/human-practices/hp-silver/the-serving-of-our-values-graphic.jpg">
+
             <p>
             <h2>Inclusivity</h2> 
             <br>
@@ -329,7 +332,7 @@
         </p>
     </div>
 
-<div class="process-wrapper">
+    <div class="process-wrapper">
     <div id="progress-bar-container">
         <ul>
             <li class="step step01 active"><div class="step-inner">Project Ideation</div></li>
@@ -368,10 +371,11 @@
             with the feasibility of such an approach, we adapted our goals to designing such a system at a foundational level, to build a versatile 
             sensing tool that could be easily adapted for use to several domains.
             <br><br>   
-            
+            <center>
             <img class="papaloi-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/papaloi.png">
                 
             <h5 style="font-size:20px; text-align: center; text-align: center;">Video call meeting with Dr. Apostolos Papalois to evaluate our potential project ideas</h5>
+            </center>    
             </p>
         </div>
         
@@ -395,11 +399,13 @@
             <br>
             One of our first meetings during the period of our goal setting was with members of iGEM Greece 2017, the first iGEM team from Greece. They are all still actively involved in the field of synthetic biology and their project included the classification of colon cells as malignant or not by an E.coli delivered classification circuit incorporating miRNA interactions. We presented to them our initial ideas to create a coordinated tumor-invading bacterial population (see the<a href="https://2022.igem.wiki/athens/implementation">Implementation</a> tab for more) or a simpler biological perceptron that would classify inducer input patterns and shared our concerns about the time and resources available to accomplish such a goal. They supported the latter idea, because it seemed more feasible to construct a complete biocomputing circuit. More specifically, they made a crucial point. Promoters controlled by different inducible systems vary in strength and engineering sets of different inducible promoters would be out of reach. They suggested selecting one input and tune the weights via different RBS sequences, since they are more versatile parts. Proving that such a biological perceptron is functional and able to solve a simple task by manipulating the translation rates would add to previous work (the paper that was our main inspiration, see meetings with Prof. Daniel Ramez and Dr. Ximing Li below) and support the use of RBS variants as plug-and-play versatile devices to tune the inputs’ weights. 
             <br><br>
+            <center>
             <img class="asteris-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/asteris-and-athanasios.png">
             <img class="charis-1-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/charis-first.png">
             
             <h5 style="font-size:20px; text-align: center;">Video calls with Asterios, Athanasios and Charis to discuss our ideation and project execution
             </h5>
+            </center>
             <br><br>
             <br>
 
@@ -434,11 +440,12 @@
             <br>            
             After our meeting with Prof. Daniel, we wasted no time and reached Dr. Ximing Li. Similarly, we explained to her our ideation, goals and time limits. We mostly discussed the idea of building a biological perceptron for pattern recognition problems via manipulating the RBS. She provided us with valuable technical input, since our project is quite similar to her research and explained to us parts of her paper and genetic circuit design that were confusing. Moreover, she provided valuable advice on potential genetic circuit topologies to achieve a steep activation function and a switch-like response. More specifically, she referred to positive feedback loops like the one she used in her paper and transcriptional cascades. Last but not least, since mutagenesis and the generation of a complete RBS library were unrealistic goals for our time and budget, she recommended the RBS Calculator by Prof. Howard Salis’ Lab as a useful online tool to predict the suitable RBS sequences for our biological classifier.
             <br><br>
-            
+            <center>
             <img class="ximing-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/ximing-li.png">   
             <h5 style="font-size:20px; text-align: center;">
             Video call with Dr. Ximing Li to ask for advice regarding our biological perceptron
             </h5>
+            </center>
             <br><br>
            
             After several meetings, studying and the feedback mentioned, we decided that our final goals were to build a simple biological perceptron deploying RBS variants as the determining factors of the different weights and test circuit topologies that would imitate a perceptron’s activation function.
@@ -455,7 +462,7 @@
                     </li>
                 </ul>
 
-            <br><br>
+            <br>
             One of the occupations of the researchers in Prof. Howard Salis’ lab is the development of  biophysical models for genetic regulation and the experimental testing of their predictions in industrially and medically useful microorganisms [5]. However, what we were most interested in, was combining these models with optimization algorithms to automatically design synthetic DNA sequences with desired biological functions. So, when we needed an algorithm to create our own library of RBS, each with a determined translation initiation rate, his help was crucial as to how lab work could integrate what we had in mind. 
             <br><br>
             As Dr. Ximing Li had suggested, we utilized the RBS Calculator to calculate the rate of translation conferred by a particular RBS when followed by the gene of our choice.  Using this online software, we created a small library of RBS found in literature and at the iGEM Registry, separated in three discrete classes: the strong RBS, the medium RBS, and the weak RBS. Meanwhile, we realized the importance of this tool on our project and we also had some questions about it, so we decided to reach out to Prof. Howard Salis directly. 
@@ -490,12 +497,12 @@
             <br>
             A well-designed genetic circuit does not offer much without the right cells to express it, so we searched for an expert in bacterial protein expression systems. We decided to contact Dr. Skretas, who, alongside with a postdoc researcher from his lab, Dr. Dimitra Zarafeta, provided valuable insight into the most common E.coli strains used for protein production depending on the biochemical and biophysical properties of the protein to be expressed. Since we were also thinking about inserting two plasmids in our cells to tackle cross-talk issues, they pointed out key factors regarding plasmid compatibility to take into consideration in case we placed two vectors to coexist in a single cell. As we found this information particularly useful, we proceeded to integrate it in our final design.
             <br><br>
-            
+            <center>
             <img class="skretas-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/skretas.png">   
             <h5 style="font-size:20px; text-align: center;">
             Video call with Dr. Georgios Skretas to talk about potential E.coli chassis and vectors
             </h5>
-
+            </center>
             <br><br>
             
             <ul>
@@ -512,11 +519,12 @@
             Additionally, Dr. Kylilis highlighted that, if we wanted to incorporate more than one quorum sensing systems, for example to build a perceptron with a hidden layer or with two output nodes, we could use the LasR system on the grounds that it does not show significant cross-talk with the LuxR system in the concentrations of lactone for max induction of each one respectively. Even though we did not construct such a system, this advice was useful later, when we decided to theoretically design a biocontainment mechanism for our perceptron after interacting with the public during the debate we organized about biosafety.
             <br><br>
             
+            <center>
             <img class="kylilis-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/kylilis.png">   
             <h5 style="font-size:20px; text-align: center;">
                 Video call with Dr. Nicolas Kylilis to discuss quorum sensing mechanisms
             </h5>
-            
+            </center>
             <br><br>
 
             <ul>
@@ -534,12 +542,13 @@
             <br><br>
             The most important aspect of our meeting was her constructive criticism on our goals. To our surprise, she is the PI of Team Freiburg this year. Being familiar with the iGEM competition, she underlined the importance of keeping our project simple, precise and providing results that could be a valuable contribution to the iGEM community. Using more common induction systems and finding simpler ideas for the cross-talk issue would reduce experimental complexity and allow us to focus on troubleshooting and part characterisation. 
             <br><br>
-            
+
+            <center>
             <img class="barbara-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/barbara.png">   
             <h5 style="font-size:20px; text-align: center;">
                 Video call with Prof. Barbara Di Ventura to talk about optogenetics
             </h5>
-
+            </center>
             <br><br>
 
             <ul>
@@ -552,11 +561,12 @@
             While designing the suitable experimental setup to test our biological perceptron, we came in contact again with Dr. Gournas and his associate, George Kapetanakis. As they had previous experience with yeast communication systems, we asked them for advice regarding the characterization of microorganism interactions. They recommended a porous membrane compartmentalization system that would separate senders from receivers, allowing only the quorum sensing lactone to freely diffuse through the membrane. Such a setup would enable the evaluation of the system’s response in a more realistic setting where senders and receivers would be segregated, but able to exchange chemical signals (e.g. in a culture with a porous membrane or in a microfluidic device).
             <br><br>
             
+            <center>
             <img class="gournas-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/gournas.jpeg">   
             <h5 style="font-size:20px; text-align: center;">
             Meeting with Dr. Christos Gournas and PhD student, George Kapetanakis, to seek their advice on compartmentalization systems
             </h5>
-
+            </center>
             <br>
             <br>
 
@@ -567,16 +577,17 @@
             </ul>
 
             <br>
-            <br><br>
             As we were designing our genetic circuits, we were struggling with dilemmas regarding circuit topologies that were the most likely to work in our short time window. We scheduled a second meeting with Charilaos Giannitsis to review our designs. He examined our constructs and parts and provided feedback on the repressors’ and activators’ dynamics, repressive LuxR system, senders’ cross-talk ideas, our new promoter part and activation function modules. After the meeting, we were able to finalize our designs in the form that are presented in the Design section. His advice was to keep ourselves down to earth and incorporate factors that we would actually be able to tune and measure. For example, one potential circuit design to achieve a steep activation response from the receiver cells was a transcriptional cascade with a number of intermediate respressors. However, such systems need precise tuning of each repressor level, not to mention a supply with each repressors’ inducer; such a scheme was out of reach both financially and from a time perspective. Charis endorsed our step-by-step approach in achieving a steeper response and helped us rule out complex or more difficult-to-tune circuits.
             <br><br>
 
+            <center>
             <img class="char-des-1-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/charis-design.png">
             <img class="char-des-2-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/charis-design-2.png">
             
             <h5 style="font-size:20px; text-align: center;">
                 Second video call with Charilaos Giannitsis to discuss our design options
             </h5>
+            </center>
             <br><br>
             </p>
         </div>
@@ -589,7 +600,8 @@
             We thought that our Debate on Biosafety would be a great opportunity to present our project briefly to the public, since the participants came from different study fields. What we wanted was to hear the opinion of our audience and discuss potential concerns they had. 
             A significant portion of the participants stated that they were particularly excited we had designed our biological perceptron as a foundational tool, as this would enable our device to later evolve into a multifunctional system, while others expressed their clear preference towards a more applied approach and even gave us their own ideas for possible implementations on the spot.
             <br><br>
-
+            
+            <center>
             <div class="container_debate">
                 <div class="wrapper_debate">
                     <div class="wrapper-holder-debate">
@@ -605,12 +617,12 @@
 
                 </div>
             </div>
-
-            <h5 style="font-size:20px; text-align: left; padding-left: 2%;">
+            
+            <h5 style="font-size:20px;">
                 Participants in the Debate event talking about biosafety concerns related to our project
             </h5>
-
-            <br><br>
+            </center>
+            <br>
             However, this was not the only outcome of the Debate event. The main theme of the Debate was Biosafety. People were inspired by the topics we presented and made some good observations on how our project could become safer. They expressed their concerns on how to control the two bacterial populations of our system, the senders and the receivers. More specifically, they asked how we could be sure that the one or both populations will not multiply uncontrollably. After having heard their thoughts, we decided to do some research on this issue and design a kill switch. Our investigation led us to a previous iGEM team, Team Imperial College 2016 [9]. They created a system for co-cultures that does not allow one population to grow more than the other. As explained in our Safety section, we propose a differentiation of their system incorporating the genes of a toxin and an antitoxin for our first kill switch. We also designed a second kill switch system, based on a heat-sensitive RNA molecule containing an RNase E cleavage site to be used in case our biological perceptron is deployed as a theranostic tool in the future [10]; more information about our second kill switch scheme can be found in the Safety tab once again.
             <br><br>
             Overall, with the Debate event, not only did we educate our audience, but they also helped us ameliorate various sides of our project. This is proof that scientific projects are formed by the needs of the society they are developed in.
@@ -635,12 +647,13 @@
             With the help and advice of Miltiadis, we managed to build a software that made the creation of a biological perceptron much easier and automated for future research. 
             <br><br>
 
+            <center>
             <img class="miltos-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/miltos.png">   
             <h5 style="font-size:20px; text-align: center;">
             Video call with Miltiadis Stouras to talk about software tools
             </h5>           
-            
-            <br><br>
+            </center>
+            <br>
 
             <ul>
                 <li style="color: #3aa9c5;">
@@ -652,10 +665,12 @@
             During our project, it was very important to get in touch with people who were knowledgeable  about Internet site interfaces and the needs of a potential wiki user. Chariton Charitonidis is a software engineer who has worked in big companies even as an undergraduate student, such as Amazon. With a background in CSS programming, he integrated our project by giving us precious advice and constant feedback on our wiki. In our meetings, we discussed how we could make our pages more interesting for the user, what would be the right structure for presenting a Bioinformatics project in a Synthetic Biology competition, and tips on how to do the aesthetic design of a website. He was also the person who suggested to us many features of HTML and CSS that we were not aware of and helped us adjust many components of the interface of our website and our application (such as GIFs). 
             <br><br>
 
+            <center>
             <img class="chariton-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/chariton.png">   
             <h5 style="font-size:20px; text-align: center;">
             Video call with Chariton Charitonidis to ask for advice on wiki construction
-            </h5>           
+            </h5>   
+            </center>        
 
             <br><br>
             </p>
@@ -668,15 +683,18 @@
             To achieve the latter, we contacted Yiannis Sarakatsanis, a famous Greek actor and comedian who hosts a show on his YouTube channel -called “Ω sarakas LIVE”- where he addresses social, philosophical and scientific issues. He was very eager and happy to collaborate with us and support our cause not only by taking interviews from members of our team live on an episode of his show, but also by consulting us on science communication matters. He visited us in our lab and we discussed strategies to approach different audiences.
             <br><br>
 
+            <center>
             <img class="sarakas-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/sarakas.png">   
             <h5 style="font-size:20px; text-align: center;">
             Video call with Yiannis Sarakatsanis to discuss our collaboration
             </h5>
+            </center>
 
-            <br><br>
+            <br>
             Quoting the exact theatrical term he used (he is an actor after all), he told us that, in order to genuinely get through to our audience, we have to “convince the spectator”; in other words, we need to use language and context our audience is familiar with, so that they can identify/sympathize with our sayings. He urged us to be as descriptive as possible, to utilize verbal as well as non-verbal stimuli to convey our message and to include examples and metaphors when explaining topics of Synthetic Biology, especially ones integrating objects, beings and phenomena one encounters and hears about in their everyday lives. In addition, he explained to us that, when we speak in complex scientific terms, "the viewer loses confidence in themselves" (as he characteristically told us) and he emphasized that, when the viewer understands the initial information we are giving, they become more confident that they will understand the concept and will pay more attention to us as we proceed to more complex terms.
             <br><br>
             
+            <center>
             <div class="container_sarakas">
                 <div class="wrapper_sarakas">
                     <div class="wrapper-holder-sarakas">
@@ -697,40 +715,46 @@
                 </div>
             </div>
 
-            <h5 style="font-size:20px; text-align: left; padding-left: 3%;">
+            <h5 style="font-size:20px;">
                 Yiannis Sarakatsanis’ visit to our lab to talk about science communication strategies
             </h5>
-
-            <br><br>
+            </center>
+            <br>
             Since we had three major Education and Science Communication events coming up after our meeting with Yiannis, we were very excited to apply all we had learnt as creatively as we could.
             <br><br>
             For the first event, the live interview on Yiannis Sarakatsanis’ show on his Youtube channel, we did not want to come across as stiff or condescending, so we used casual vocabulary and simple words, avoiding complex terminology. Given that Synthetic Biology constitutes an uncharted domain for the majority of Greek viewers, we presented our project, PERspectives, by describing basic principles of Biology and giving an interesting and easily understandable example of a potential future implementation that pertains to our device being deployed as a theranostic tool in cases of gut dysbiosis. People watching the live show responded very positively to our presence by leaving their comments and questions in the chat, which provided us with significant constructive feedback on addressing an audience that is composed of non-specialists.
             <br><br>
 
+            <center>
             <img class="sarakas-live-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/sarakas-live.jpg">   
             <h5 style="font-size:20px; text-align: center;">
             Backstage snapshot from our live interview on “Ω sarakas LIVE”
             </h5>
-
-            <br><br>
+            </center>
+            
+            <br>
             The second event was our participation in Researcher’s Night. This vibrant festival of research, technology and innovation attracts a large number of students, children and teenagers aged 4 to 18. In order to appeal to the interests and knowledge level of this particular age group, we had to tailor the content of our demonstrations and render it more stimulating, albeit even more straightforward and simple. We decided to substantially minimize the lecturing part (and give it an auxiliary role) and let more fun and experiential exhibits become the protagonists of our small tribute to Synthetic Biology. To include a few examples of our approach following the advice of Yiannis, we explained gel electrophoresis as a "race" between "mice" and "large dogs" that had to pass through "pet doors" to reach the end of the track. We also transformed teaching the Central Dogma of Biology into a game where children could play with our bacterium (made out of a fabric pencil case) and its mechanism of protein expression (made out of scrap fabric and laminated paper).
             <br><br>
 
+            <center>
             <img class="ren-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/researcher-s-night.jpg">   
             <h5 style="font-size:20px; text-align: center;">
             Part of our Synthetic Biology exhibition at Researcher’s Night
             </h5>
-
-            <br><br>
+            </center>
+            
+            <br>
             For our third event, our visit to Anavryta Model Lyceum, we prepared a presentation for the students attending the event, who were all high school third-graders (teenagers aged 17 to 18) and are taking the nationwide university admission exams at the end of the year to be admitted to university departments related to the domains of health and natural sciences. In order to attract their attention, we made sure to center our Synthetic Biology presentation around topics that the studying material of the Third Grade of High School encompasses. Some of those include the lac operon, recombination of DNA with restriction enzymes and the cellular mechanisms of transcription and translation. Students participating in our lab also had the opportunity to get a more hands-on experience on the last two biological concepts through the BioBits Protein Structure and Function kit.
             <br><br>
 
+            <center>
             <img class="anavryta-img" src="https://static.igem.wiki/teams/4294/wiki/human-practices/anavryta.jpg">   
             <h5 style="font-size:20px; text-align: center;">
             Introducing students to Synthetic Biology at Anavryta Model Lyceum
             </h5>
-
-            <br><br>
+            </center>
+            
+            <br>
             For more information about the events above, you can visit our <a href="https://2022.igem.wiki/athens/communication">Education and Communication</a> tab.
             </p>
         </div>
@@ -805,12 +829,13 @@
             </a>
         </cite>
         </div>
-</section>
+    </section>
+    </div>
 </div>
 
 
-<script type= "text/javascript" src="../../athens/static/scripts/hp_jquery.min.js"></script>
-<script type= "text/javascript" src="../../athens/static/scripts/hp2_jquery.min.js"></script>
+<script type= "text/javascript" src="../static/scripts/hp_jquery.min.js"></script>
+<script type= "text/javascript" src="../static/scripts/hp2_jquery.min.js"></script>
     <script>
     
     $(".step").click( function() {

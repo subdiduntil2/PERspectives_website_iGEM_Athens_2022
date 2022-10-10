@@ -125,6 +125,7 @@ body{
 
 .biosafety-video-img{
     width: 50%;
+    float: right;
     padding-top: 5px;
     padding-left: 20px;
     border-radius: 30px;
@@ -135,38 +136,34 @@ body{
     padding-top: 5px;
     padding: 3%;
     border-radius: 30px;
-    translate: 10%;
 }
 
 .story-1-img{
-    width: 30%;
+    width: 32%;
     padding: 2%;
-    translate: 13%;
+
 }
 
 .story-2-img{
-    width: 30%;
+    width: 32%;
     padding: 2%;
-    translate: 13%;
+
 }
 
 .story-3-img{
-    width: 30%;
+    width: 32%;
     padding: 2%;
-    translate: 13%;
 }
 
 .fav-1-img{
     width: 45%;
     padding: 2%;
-    translate: 13%;
     border-radius: 30px;
 }
 
 .fav-2-img{
     width: 45%;
     padding: 2%;
-    translate: 13%;
     border-radius: 30px;
 }
 
@@ -282,7 +279,6 @@ body{
 }
 
 .container_tedx{
-    translate: 10%;
     position: relative;
     width: 580px;
     height: 720px;

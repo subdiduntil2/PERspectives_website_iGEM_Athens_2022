@@ -331,7 +331,6 @@
 }
 
 .box-hp:hover .hover-img-hp{
-    padding-top: 0%;
     display: initial;
     width: 200px;
     padding-top: 15%;
@@ -349,3 +348,7 @@
     font-family: 'Glacial Indifference Bold';
 }
 
+@media screen and (max-width: 1200px){
+
+
+}
