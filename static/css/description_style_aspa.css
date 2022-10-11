@@ -596,3 +596,238 @@ body{
      color:#e9e9eb;
      display:block;
 }
+
+@media(max-width: 600px) {
+    .cc{
+        padding-right: 0em;
+        padding-left: 0em;
+        padding-top: 0em;
+        padding-bottom: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .left-side {
+        opacity: 0;
+    }
+
+    .right-side{
+        padding-left: 0em;
+        width: 100%;
+    }
+
+    .bg-image-1{
+        padding-top: 1.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+
+    .container_1{
+        padding: 15px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+    
+    .container_1 h1{
+        font-size: 30px;
+    }
+    
+    .container_1 p{
+        font-size: 14px;
+    }
+
+    .bg-image-2{
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 1.5em;
+    }
+    
+    .container_2{
+        padding: 15px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    
+    .container_2 p{
+        font-size: 14px;
+    }
+    
+    .antidaneio_img{
+        float: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .bg-image-3{
+        padding-top: 5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+    
+    .container_3{
+        padding: 15px;
+        border-radius: 50px;
+        transform: translate(0%, -10%);
+    }
+    
+    .container_3 h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .container_3 p{
+        font-size: 14px;
+    }
+    
+    .perceptron_gif{
+        float: none;
+        width: 100%;
+        padding-top: 0em;
+        padding-bottom: 2em;
+    }
+
+    .bg-image-4{
+        padding-top: 0em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+    
+    .container_4{
+        padding: 15px;
+        border-radius: 50px;
+    }
+    
+    .container_4 h1{
+        font-size: 30px;
+    }
+    
+    .container_4 p{
+        font-size: 14px;
+    }
+    
+    .quorum_sensing_gif{
+        float: center;
+        width: 100%;
+    }
+
+    .bg-image-5{
+        padding-top: 1.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+    
+    
+    .container_5{
+        padding: 15px;
+    }
+    
+    .container_5 h1{
+        font-size: 30px;
+    }
+    
+    .container_5 p{
+        font-size: 14px;
+    }
+    
+    .project_img{
+        float: none;
+        width: 100%;
+        padding-top: 0em;
+        padding-bottom: 2em;
+    }
+
+    .button {
+        width: 45%;
+        font-size: 20px;
+      }
+
+    .button a:hover{
+        font-size: 25px;
+    }
+
+    .bg-image-6{
+        padding-top: 0;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+    
+    .container_6{
+        padding: 15px;
+    }
+    
+    .container_6 p{
+        font-size: 14px;
+    }
+    
+    .table_img{
+        float: none;
+        width: 100%;
+        padding-left: 0em;
+        padding-top: 1em;
+    }
+
+    .bg-image-7{
+        padding-top: 0;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+    
+    .container_7{
+        padding: 15px;
+    }
+    
+    .container_7 p{
+        font-size: 14px;
+    }
+    
+    .pattern_1_img{
+        width: 50%;
+    }
+
+    .bg-image-8{
+        padding-top: 0;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 0;
+    }
+    
+    .container_8{
+        padding: 15px;
+    }
+    
+    .container_8 p{
+        font-size: 14px;
+    }
+    .pattern_2_img{
+        width: 100%;
+        float: none;
+        padding: 25px;
+    }
+    
+    .bg-image-9{
+        padding-top: 0;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 5em;
+    }
+    
+    .container_9{
+        padding: 15px;
+    }
+    
+    .container_9 p{
+        font-size: 14px;
+    }
+    
+    .perspectives_img{
+        float: center;
+        padding: 0;
+        width: 100%;
+    }
+}

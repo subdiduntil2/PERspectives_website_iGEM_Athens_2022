@@ -159,3 +159,42 @@ body{
     visibility: hidden !important;
   }
 
+
+@media(max-width: 600px) {
+    .cc{
+        padding-top: 0px;
+    }
+
+    .heading {
+        font-size: 60px; 
+        height: 80px;
+    }
+
+    .left-side {
+        opacity: 0;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    .container{
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    .container h1{
+        font-size: 25pt;
+    }
+
+    .container p{
+        font-size: 10pt;
+        margin-bottom: 15%;
+    }
+
+    .container ul li{
+        font-size: 10pt;
+    }
+}
