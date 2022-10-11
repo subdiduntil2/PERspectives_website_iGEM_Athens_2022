@@ -165,7 +165,7 @@ header label{
   animation-fill-mode: both;
 } 
 
-@media(max-width:1300px){
+@media (max-width:1300px){
     header{
       width: 100%;
       padding: 20px;

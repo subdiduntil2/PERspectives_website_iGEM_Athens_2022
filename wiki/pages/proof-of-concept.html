@@ -7,7 +7,10 @@
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
     
     <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename = 'css/team_page_style_aspa.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename = 'css/proof_style.css') }}" rel="stylesheet">
+
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
 
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
@@ -17,7 +20,7 @@
 
      <!--Custom to top button CSS-->
      <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
-    <title>Perspectives | Members</title>
+    <title>PERspectives | Proof of Concept</title>
 </head>
 
 <body>
@@ -27,19 +30,272 @@
 <!--To top button-->
 {% include 'to_top_button.html'%}
 
+<!--Loader-->   
+{% include 'loader.html'%}
+/index
 <div class="page_header">
-    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/generic/under-construction.gif" width="100%"> 
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/contribution/project-bg.gif" width="100%">
+    <div class="heading">Proof of Concept</div>    
 </div>
 
+<div class="cc" id="cc-implementaion">
+  <div class="left-side">
+      <div class="index-bar">
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#intro">Overview</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#wet-lab">Wet Lab</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#dry-lab">Dry Lab</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#edu-hp">Education and Science Communication</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#references">References</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="right-side">
+
+<!-- Overview -->
+        <section class="introduction">
+            <a id="intro" class="anchorOffset"></a>
+            <div class="overview">
+                <h1>Overview</h1>
+                <p>
+                Every year, students from all over the world embark on a wonderful journey into the world of iGEM.  Along the way, they are asked to provide solutions to difficult problems, to become creative and to learn from their mistakes. 
+                <br><br>
+                As part of our own journey through the competition, we gathered valuable knowledge that we believe can be useful for the needs of the iGEM community and society.
+                <br><br>
+                Our contribution to the competition is at the level of wet lab, dry lab, and education and communication of science.
+                </p>
+            </div>
+        </section>
+
+<!-- Wet Lab -->
+        <section class="wet-lab">
+        <a id="wet-lab" class="anchorOffset"></a>
+        <h1><b>Wet Lab</b></h1>
+        <br><br>
+        <h2>Part Collections</h2>
+        <br>
+        <p>
+        For the purposes of our project, we synthesized Ribosome Binding Sites (RBS) in order to simulate different weights for our perceptron algorithm. We built them with the guidance of the RBS calculator, and we characterized them through our experiments.
+        <br><br>
+        You can find more about it in our <a href="https://2022.igem.wiki/athens/part-collection">Part Collection</a> tab.
+        </p>
+
+        <br><br>
+        <h2>New Basic Parts</h2>
+        <br>
+        <p>
+        We generate regulatory sequences, RBS sequences, coding sequences and spacer sequences for the purposes of our project, and we believe that they are a valuable contribution to the iGEM community.
+        <br><br>
+        You can find more about it in our <a href="https://2022.igem.wiki/athens/parts">Parts</a> tab.
+        </p>
+
+        <br><br>
+        <h2>New Composite Parts</h2>
+        <br>
+        <p>
+        Our New Composite Parts include senders and receivers circuits in order to help future iGEM teams to simulate a perceptron algorithm in their projects.
+        <br><br>
+        You can find more about it in our <a href="https://2022.igem.wiki/athens/parts">Parts</a> tab.
+        </p>
+
+        <br><br>
+        <h2>Improvement of a Part</h2>
+        <br>
+        <p>
+        The improved part is: <a href="http://parts.igem.org/Part:BBa_K4294559">BBa_K4294559</a>
+        The improvement is upon the part: <a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>            
+        <br><br>
+        You can find more about it in our <a href="https://2022.igem.wiki/athens/improve">Improve</a> tab.
+        </p>
+
+        <br><br>
+        <h2>mNeonGreen</h2>
+        <br>
+        <h3>Enriching the iGEM Registry of Standard biological parts with mNeonGreen information</h3>
+        <br>
+        <p>
+        Fluorescent proteins are particularly useful genetically encoded tags to visualise gene products and cellular compartments in living cells and organisms. In order to improve emitted signals and make them versatile tools, diverse fluorescent protein variants with different spectral and photophysical properties have been developed. The most famous among them is the Green Fluorescent Protein (GFP), from the jellyfish Aequorea victoria,  who revolutionised cell and developmental biology research. However, in 2013  Shaner and collaborators engineered the amphioxus Branchiostoma lanceolatum multimeric yellow fluorescence protein (LanYFP) to produce the monomeric mNeonGreen protein.   
+        <br><br>
+        mNeonGreen consists of 237 amino acids, which translates into 26.6 kDa molecular weight. She presents optimum absorbance at 506λ(nm) and optimum emission at 517λ(nm).
+        <br><br>
+        <img class="mneon-1" src="https://static.igem.wiki/teams/4294/wiki/contribution/mneon1.png">
+        <br><br>
+        mNeonGreen was reported as the brightest monomeric green or yellow fluorescent protein at the time. Actually, it is 1.5 to 3 times brighter than the most commonly used GFPs and YFPs.
+        <br><br>
+        mNeonGreen excitation and emission peaks are slightly shifted toward higher wavelengths as compared to classical GFPs, but remain compatible with standard “GFP” filter sets used for microscopy. Because mNeonGreen wavelengths lie between the green and yellow fluorescent protein wavelengths, it can be imaged either with standard green fluorescent protein filters or yellow fluorescent protein filters, with no or minimal reduction in emission readout, respectively.
+        <br><br>
+        mNeonGreen is evolutionarily distant from jellyfish-derived fluorescent proteins. At sequence level, mNeonGreen shares just 20-25% sequence identity with common GFP derivatives.
+        <br><br>
+        <img class="mneon-2" src="https://static.igem.wiki/teams/4294/wiki/contribution/mneon2.png">
+        <br><br>
+        It seems to be more stable and less sensitive to laser induced bleaching than EGFP. Therefore, mNeonGreen is particularly suitable for confocal and super resolution microscopy, especially when fusion proteins are investigated, which are expressed at low levels. It has already been expressed in multicellular organisms like C.elegans. 
+        </p>
+        </section>
+
+<!-- Dry Lab -->
+    <section class="dry-lab">
+        <a id="dry-lab" class="anchorOffset"></a>
+        <h1><b>Dry Lab</b></h1>
+        <br><br>
+        <h2>Model</h2>
+        <br>
+        <p>
+        Working in parallel with the wet lab team, the dry lab team managed to develop a model for PERspectives, providing a holistic approach in the project. You can find details about our project's model in the <a href="https://2022.igem.wiki/athens/model">Model</a> tab.
+        </p>
+    
+        <br><br>
+
+        <h2>Software</h2>
+        <br>
+        <p>
+        Moreover our dry lab, managed to generate a user-friendly browser application that implements the weight calculation, generation and RBS-mapping , i.e., the system preparation for running PERspectives, giving everybody the opportunity to reproduce our results, as well as perform their own experiments. You can find more about the software we have developed in the <a href="https://2022.igem.wiki/athens/software">Software</a> tab.
+        </p>
+        
+        <br><br>
+        <h2>Sali's Tutorial</h2>
+        <br>
+        <p>
+        Calculating the rate of translation and expression of a gene was a very large part of our project, as this is how we decided to simulate the perceptron’s weights in our biological system. We wanted to somehow be able to control at what rate the lux gene would be expressed and in what quantity the quorum sensing molecule would be produced. Speaking with Dr. Li, the author of the paper that was the initial inspiration for our project, we thought that the best way to achieve our goal was to predict and control the RBSs translation rate. 
+        <br><br>
+        We decided then to create a library of 166 RBSs and their translation rate, when followed by the luxI gene. In this endeavour, an algorithmic tool called ‘RBS calculator’ was of great help. This tool, created by Howard Salis and his team, allows you to calculate the rate of translation conferred by a particular RBS when followed by the gene of your choice. Our experience during the competition showed us the importance of a tool like this. Wanting to pass on our knowledge and experience to future iGEMers, we decided to make a small tutorial on how to use this tool.
+        <br><br>
+        You can download our tutorial in pdf format <a href="https://static.igem.wiki/teams/4294/wiki/contribution/rbs-calculator-tutorial.pdf">here</a>.
+        </p>
+        </section>
+
+        <section class="edu-hp">
+            <a id="edu-hp" class="anchorOffset"></a>
+            <h1><b>Education and Science Communication</b></h1>
+            <br><br>
+            <h2>Biological Fairy Tale</h2>
+            <br>
+            <p>
+            We wanted to include the youngest possible target group in our vision of science education and communication, to prove that biology can be accessible to everyone, to underline the importance of visualisation for a better understanding of scientific terms and to give to these young children a first idea of the magical universe of biology. 
+            <br><br>
+            You can download our biological fairy tale "The fascinating factory of Mister DNAkis" in 
+            <a href="https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/fairytail-for-children-english-version-compressed.pdf">english</a> 
+            and <a href="https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/fairytail-for-children-greek-version-compressed.pdf">here</a>.
+            </p>
+        
+            <br><br>
+    
+            <h2>3D Printing</h2>
+            <br>
+            <p>
+            For our participation in the Researcher’s Night event, we assembled a DIY gel electrophoresis experimental setup. Since we could not bring along the gel combs we use in the lab, as they had come in contact with ethidium bromide, we thought to 3D-print our own gel combs.
+            <br><br>
+            We began with measuring the size of our electrophoresis tank-to-be, a tip case lid of the following dimensions: length = 12.3cm, width = 8.8cm, height = 3.2cm. We proceeded with finding a preliminary blueprint online [1], which we then modified in Rhino (a designing software) to fit our tank.
+            <br><br>
+            <img class="d-printing-1" src="https://static.igem.wiki/teams/4294/wiki/contribution/3d-printing/comb-sketch.jpg">
+            <img class="d-printing-2" src="https://static.igem.wiki/teams/4294/wiki/contribution/3d-printing/comb-cad.png">
+            <h5>Adjusting an online design for a gel comb to suit our needs for Researcher’s Night</h5>
+            <br><br>
+            After having the final designs for our gel combs, we 3D-printed them and used them for our electrophoresis experiment, which is described in the <a href="https://2022.igem.wiki/athens/communication">Education and Science Communication</a>
+            <br><br>
+            <img class="d-printing-3" src="https://static.igem.wiki/teams/4294/wiki/contribution/3d-printing/3d-printed-comb-1.jpg">
+            <img class="d-printing-4" src="https://static.igem.wiki/teams/4294/wiki/contribution/3d-printing/3d-printed-comb-2.jpg">
+            <h5>Our 3D-printed gel combs</h5>
+            <br><br>
+            The .stl file for our 3D-printable gel combs is available <a href="https://static.igem.wiki/teams/4294/wiki/contribution/3d-printing/igem-athens-2022-gel-comb-2-0.stl">here</a> for anyone to download.
+            </p>
+            </section>
+
+            <!-- References Edu --> 
+                <section class="collapsible">
+                    <a id="references" class="anchorOffset"></a>
+                    <input type="checkbox" id="collapsible-head">
+                        <label for ="collapsible-head">References</label>    
+                        <div class="collapsible-content">
+                        <cite>
+                            <a href="https://www.fpbase.org/protein/mneongreen/">
+                                1. https://www.fpbase.org/protein/mneongreen/
+                            </a>
+                        </cite>
+                        <cite>
+                            <a href="https://blog.addgene.org/bright-monomeric-fluorescent-proteins-mneongreen-mtfp1-and-mwasabi?fbclid=IwAR2UhX3JCxp1zoCoDLGGCZU9DX3mZ-CN1vyYJAPFcAq3Jk7UiM0a-oop5pg">
+                                2. https://blog.addgene.org/bright-monomeric-fluorescent-proteins-mneongreen-mtfp1-and-mwasabi?fbclid=IwAR2UhX3JCxp1zoCoDLGGCZU9DX3mZ-CN1vyYJAPFcAq3Jk7UiM0a-oop5pg
+                            </a>
+                        </cite>
+                        <cite>
+                            <a href="https://www.ptglab.com/news/blog/mneongreen-vs-gfp/">
+                                3. https://www.ptglab.com/news/blog/mneongreen-vs-gfp/</a>
+                        </cite>
+                        <cite>
+                            <a href="https://doi.org/10.1534/g3.116.038133">
+                                    4. Hostettler, L., Grundy, L., Käser-Pébernard, S., Wicky, C., Schafer, W. R., & Glauser, D. A. (2017). The Bright Fluorescent Protein mNeonGreen Facilitates Protein Expression Analysis In Vivo. G3 (Bethesda, Md.), 7(2), 607–615. https://doi.org/10.1534/g3.116.038133
+                                </a>
+                            </cite>
+                          <cite>
+                              <a href="https://doi.org/10.1038/nmeth.2413">
+                                  5. Shaner, N., Lambert, G., Chammas, A. et al. A bright monomeric green fluorescent protein derived from Branchiostoma lanceolatum. Nat Methods 10, 407–409 (2013). https://doi.org/10.1038/nmeth.2413
+                              </a>
+                          </cite>
+                          <cite>
+                            <a href="https://doi.org/10.1021/acssynbio.0c00394">
+                                6. An Automated Model Test System for Systematic Development and Improvement of Gene Expression Models
+                                Alexander C. Reis and Howard M. Salis
+                                ACS Synthetic Biology 2020 9 (11), 3145-3156
+                                DOI: 10.1021/acssynbio.0c00394
+                            </a>
+                        </cite>
+                        <cite>
+                            <a href="https://doi.org/10.1021/acssynbio.0c00471">
+                                7. Systematic Quantification of Sequence and Structural Determinants Controlling mRNA stability in Bacterial Operons
+                                Daniel P. Cetnar and Howard M. Salis
+                                ACS Synthetic Biology 2021 10 (2), 318-332
+                                DOI: 10.1021/acssynbio.0c00471 
+                            </a>
+                        </cite>
+                        <cite>
+                          <a href="https://doi.org/10.1093/nar/gkx061">
+                              8. Amin Espah Borujeni, Daniel Cetnar, Iman Farasat, Ashlee Smith, Natasha Lundgren, Howard M. Salis, Precise quantification of translation inhibition by mRNA structures that overlap with the ribosomal footprint in N-terminal coding sequences, Nucleic Acids Research, Volume 45, Issue 9, 19 May 2017, Pages 5437–5448, https://doi.org/10.1093/nar/gkx061
+                          </a>
+                      </cite>
+                      <cite>
+                          <a href="https://doi.org/10.1021/jacs.6b01453">
+                              9. Translation Initiation is Controlled by RNA Folding Kinetics via a Ribosome Drafting Mechanism
+                              Amin Espah Borujeni and Howard M Salis
+                              Journal of the American Chemical Society 2016 138 (22), 7016-7023
+                              DOI: 10.1021/jacs.6b01453 
+                          </a>
+                      </cite>
+                      <cite>
+                          <a href="https://doi.org/10.1093/nar/gkt1139">
+                              10. Amin Espah Borujeni, Anirudh S. Channarasappa, Howard M. Salis, Translation rate is controlled by coupled trade-offs between site accessibility, selective RNA unfolding and sliding at upstream standby sites, Nucleic Acids Research, Volume 42, Issue 4, 1 February 2014, Pages 2646–2659, https://doi.org/10.1093/nar/gkt1139
+                          </a>
+                      </cite>
+                      <cite>
+                          <a href="https://doi.org/10.1038/nbt.1568">
+                              11. Salis, H., Mirsky, E. & Voigt, C. Automated design of synthetic ribosome binding sites to control protein expression. Nat Biotechnol 27, 946–950 (2009). https://doi.org/10.1038/nbt.1568
+                          </a>
+                      </cite>
+                        <cite>
+                            <a href="https://www.thingiverse.com/thing:2070514"> 12. https://www.thingiverse.com/thing:2070514 
+                                [Accessed in September 2022]</a>
+                        </cite>
+                    </div>
+                </section>
+            </div>
+            </div>
+
+
+</body>
 
 <!--Loader-->   
-<!-- {% include 'loader.html'%} -->
+{% include 'loader.html'%}
 
 <!-- Footer -->
 {% include 'footer.html' %}
 
-
-
-
-</body>
 </html>

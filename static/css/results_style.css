@@ -249,10 +249,10 @@ body{
 
 .weights h2{
     color: #61b872;
-    font-size: 45px;
+    font-size: 40px;
 }
 
-.weights h6{
+.weights i{
     color: #e9e9eb;
     font-size: 25px;
     font-family: 'Glacial Indifference Italics';
@@ -338,6 +338,30 @@ body{
 
 .img9b{
     width: 45%;  
+    border-radius: 20px;  
+}
+
+.img6-3-2{
+    width: 28%;  
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 20px;   
+}
+
+.img6-3-9{
+    width: 30.5%;  
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 20px;   
+}
+
+.img10{
+    width: 50%;  
+    border-radius: 20px;  
+}
+
+.img11{
+    width: 50%;  
     border-radius: 20px;  
 }
 
@@ -442,7 +466,7 @@ body{
     font-size: 25px;
 }
 
-.overview-receivers it{
+.overview-receivers i{
     color: #e9e9eb;
     font-size: 25px;
     font-family: 'Glacial Indifference Italics';
