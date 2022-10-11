@@ -38,29 +38,578 @@
     <div class="heading">Engineering Success</div>    
 </div>
 
-<div class="container">
-  <h1>Section 1</h1>
-  <h3>all you need to know</h3>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
+<div class="buttons">
+  <div class="button">
+      <a href="#senders">Senders</a>
+  </div>
+  <div class="button">
+      <a href="#receivers">Receivers</a>
+  </div>
 </div>
 
-<div class="container">
-  <h1>Section 2</h1>
-  <h3>all you need to know</h3>
-  <img class="eng_cycle" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/engineering-success-header-2.gif" width="50%">
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
+<!-- Summary -->
+
+<div class="overview-section-senders" id="summary" >
+  <h1>Engineering Success Summary</h1>
 </div>
 
-<div class="container">
-  <h1>Section 3</h1>
-  <h3>all you need to know</h3>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
+<div class="cc-summary">
+  <div class="left-side">
+      <div class="index-bar">
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#summary"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Summary</span></a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#symmary-rec">Receivers </a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#summary-sen">Senders</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#summary-new-parts">New Parts</a>
+              </li>
+              <li class="lateral-content">
+              <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+              </li>
+              <li class="lateral-content">
+                <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+              </li>
+              <li class="lateral-content">
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+            </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="right-side">
+
+<!-- Overview  -->
+          <div class="overview-summary">
+              <h1>Overview</h1>
+              <p>
+              Our team has gone through several engineering cycles in order to establish a reliable characterization circuit for the Senders cells and a steep biological activation function in the Receiver Cells.
+              <br><br>
+              An overview of our successful constructs and parts is presented. For a detailed analysis of our engineering cycles, please push the respective buttons.
+          
+              </p>
+          </div>
+
+          <!-- Receivers Summary  -->
+          <section class="symmary-rec">
+            <a id="symmary-rec" class="anchorOffset"></a>
+            <h1>Receivers </h1>
+            <br>
+            A circuit with a steeper response curve incorporating the LuxR and PhlF regulators was successfully engineered and tested. These circuits are described in detail in the “Design” tab.
+            <br><br>
+
+            <center>
+            <img class="fig-a" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-a.png">
+            <figcaption>
+            Figure A: Comparison of OL colE1 or., OL p15 or. and PFr colE1 or. at 240 min. The uninduced cells are represented by the concentration value 0.0000001 for the diagram purposes.  
+            </figcaption>
+            </center>
+            <br>           
+                
+          </section>
+
+          <!-- Senders Summary  -->
+          <section class="summary-sen">
+            <a id="summary-sen" class="anchorOffset"></a>
+            <h1>Senders </h1>
+            <br>
+            An efficient method for characterizing the relative strength of an RBS in the genetic context of LuxI synthase was built by fusing the first 36 nucleotides of the LuxI CDS with sfGFP.
+            <br><br>
+
+            <center>
+            <img class="fig-b" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-b.png">
+            <figcaption>
+            Figure B:
+            Illustration of the 36nt LuxI- sfGFP fusion reporter protein.
+            </figcaption>
+            </center>
+            <br>      
+                
+          </section>
+
+          <!-- New Parts Summary  -->
+          <section class="summary-new-parts">
+            <a id="summary-new-parts" class="anchorOffset"></a>
+            <h1>New Parts</h1>
+            <br>
+            Among our new registered parts, there are two parts that, to our knowledge, have not been reported before and would be a valuable contribution to the iGEM Community.
+            <br><br>
+            <b><a href="http://parts.igem.org/Part:BBa_K4294207"><b>BBa_K4294207</b></a> 36nt LuxI - sfGFP fusion</b>
+            <br>
+            To our knowledge, the fusion of the 36 first nucleotides of the  LuxI Coding Sequence with sfGFP has not been reported before. These fusions make the characterisation of relative translation levels of LuxI synthase easier. LuxI is part of a widely used quorum sensing system and improving its characterisation strategies is important. For more information regarding the results generated with this part, refer to the <a href="https://2022.igem.wiki/athens/results">Results
+            </a> pather or the <a href="https://2022.igem.wiki/athens/parts">Parts</a> registry page.
+            <br><br>
+
+            <b><a href="http://parts.igem.org/Part:BBa_K4294301"><b>BBa_K4294301</b></a> LuxR-Phlf controlled hybrid promoter</b>
+            <br>
+            This new promoter was used in our design attempts to create a genetic circuit with a steeper response curve. It contains a LuxR binding domain (lux box) upstream the -35 region and a Phlf operator in the core sequence that also overlaps with the -10 region. It is therefore positively regulated by LuxR and negatively by Phlf. For more information regarding the results generated with this part, refer to the Results tab or the part’s registry page.
+            <br><br> 
+            
+            <b>Important Notes:</b>
+            <br><br> 
+            1. For more information about the decision of the plasmid vectors, bacterial strains and the whole genetic circuit illustrations and Genbank files, please refer to the “Design” tab.
+            <br> 
+            2. For the protocols mentioned below, please refer to the “Protocols” tab.
+            <br> 
+            3. For more detailed information about the results mentioned below, please refer to the “Results” tab.
+            <br> 
+            4. For the mentioned agarose gel electrophoresis results, the 1kb plus ladder of New England Biolabs was used if not noted otherwise.
+            <br><br> 
+
+            <center>
+            <img class="es-fig-1" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-1.png">
+            <figcaption>
+            Figure 1: 1kb plus DNA ladder New England Biolabs (N3200L)
+            </figcaption>
+            </center>
+          </section>
+
+
+  </div>
 </div>
 
+<!-- Receivers  -->
 
-</body>
+
+<div class="overview-section-receivers" id="receivers">
+  <h1>Receivers</h1>
+</div>
+
+<div class="cc-receivers">
+  <div class="left-side">
+    <div class="index-bar">
+        <ul class="lateral-index">
+            <li class="lateral-content">
+                <a href="#summary"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Summary</span></a>
+            </li>
+            <li class="lateral-content">
+                <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+            </li>
+            <li class="lateral-content">
+              <a href="#steep-act">Activation Function</a>
+            </li>
+            <li class="lateral-content">
+              <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+            </li>
+            <li class="lateral-content">
+              <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+          </li>
+        </ul>
+    </div>
+  </div>
+  
+  <div class="right-side">
+<!-- Activation Function  -->
+        <section class="steep-act">
+          <a id="steep-act" class="anchorOffset"></a>
+          <h1>Engineering a Steep Activation Function</h1>
+          <br>
+          One important aspect of our project was to imitate the activation function of a perceptron algorithm using a genetic circuit with a steep response curve. We focused on transcriptional regulation for the construction of a switch-like response and followed a step-by-step approach.
+            <!-- 1st Cycle -->
+            <div class="collapsible_in">
+              <input type="checkbox" id="1st-cycle-steep-act">
+              <label for="1st-cycle-steep-act">1st Cycle</label>
+              <div class="collapsible-in-text">
+              <h1>Design</h1>
+              <p>
+              Our step-by-step approach begins with the characterization of the LuxR activation system in its simplest form, an open loop circuit. 
+              <br><br>
+              <b>Model guided design</b>
+              <br>
+              In terms of dry lab simulations, before our team began with the OL construct characterization in the lab, we performed some parametric simulations with emphasis on three different design parameters; the construct’s copy number and the RBS variants used in the open loop circuit, regarding the production rates of LuxR and mNeonGreen. For that purpose, our modeling team used the whole-cell model for the OL construct, which is more analytically described in the receiver’s <a href="https://2022.igem.wiki/athens/model">Model</a> page.             
+              <br>
+
+              <center>
+              <img class="fig-2" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-2.png">
+              <figcaption>
+              Figure 2: Parametric analysis for different Copy number values and RBS variants for the production of LuxR and mNeonGreen molecules. The abbreviations in the plot legends stand for: ‘30’=RBS BBa_B0030, ‘32’=RBS BBa_B0032, ‘34’=RBS_BBa_B0034, CN=Copy Number
+              </figcaption>
+              </center>
+              <br>   
+
+              From the graphs in figure 1, we can clearly observe the following
+              <br><br>
+              <ul>
+               <li>
+              Both the leakiness and final fluorescence values seem to be mainly dependent on the RBS of the mNeonGreen that would be used. So it would be wise to go with a moderate RBS variant in order to reduce the leakiness observed. As a result, we opted not to use the RBS BBa_B0030 to control the translation of LuxR.
+              </li>
+              <li>
+              On the other hand, the RBS for the production of the LuxR seems to be directly influencing the initiation point of our function; the stronger the RBS controlling LuxR translation, the lower AHL value needed to cause induction. We noticed that the RBS ‘30’ construct is shifted to the left of the x-axis in comparison to ‘32’ and ‘34’. We decided therefore to exclude the RBS ‘30’ as a potential sequence for the production of LuxR since it might lead to a system with a response to very low OC6 concentrations, which could lead to the activation of the receivers by any combination of senders. 
+              </li>
+              <li>
+              Finally the copy number is playing a hybrid role on our transfer functions, since it regulates not only the overall production values of mNeonGreen (including leakiness) but also leads to a minor increase in the AHL inducer concentration needed in order for the induction to start.
+              </li>
+              </ul>
+              <br><br>
+              From the analysis above, we decided to use the RBS BBa_0034 for both mNeonGreen and LuxR constructs and finalized our vector’s copy number choice with a preference towards the ColE1 origin of replication (medium CN). Both vectors will be tested to confirm the predictions. In that way, we’ve achieved a modest amount of leakiness, solid output fluorescence as well as a small shift of our graph towards the right axis. 
+              <br><br>
+              Unfortunately, due to the early stages of the 1st engineering cycle and a lack of experimental characterization data, a full simulation of our OL construct alongside the sender’s model as shown in the proof of concept and model pages was not implemented. Thus, that type of characterization would be still suboptimal for the entire system. However, later on, via our fitted sender’s and receiver’s models we were able to make a full simulation and show that a potential misfit of the transfer function would be overcome via a difference in the volumes of the sender’s and the receiver’s populations.
+
+              
+              </p>
+              
+
+              <h1>Build</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Test</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Learn</h1>
+              <br><br>
+              <p>
+              </p>
+            </div>
+            </div>
+
+            <!-- 2nd Cycle -->
+            <div class="collapsible_in">
+              <input type="checkbox" id="2nd-cycle-steep-act">
+              <label for="2nd-cycle-steep-act">2nd Cycle</label>
+              <div class="collapsible-in-text">
+              <h1>Design</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Build</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Test</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Learn</h1>
+              <br><br>
+              <p>
+              </p>
+            </div>
+            </div>
+
+              
+          </section>
+
+        
+    </div>
+  </div>
+
+
+<!-- Senders -->
+
+
+<div class="overview-section-senders" id="senders">
+  <h1>Senders</h1>
+</div>
+
+<div class="cc-senders">
+  <div class="left-side">
+    <div class="index-bar">
+        <ul class="lateral-index">
+            <li class="lateral-content">
+                <a href="#summary"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Summary</span></a>
+            </li>
+            <li class="lateral-content">
+                <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+            </li>
+            <li class="lateral-content">
+              <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+            </li>
+            <li class="lateral-content">
+              <a href="#circuit">Characterisation Circuit</a>
+            </li>
+            <li class="lateral-content">
+                <a href="#strategy">Characterisation Strategy</a>
+            </li>
+            <li class="lateral-content">
+              <a href="#constructs">Final Constructs</a>
+            </li>
+            <li class="lateral-content">
+              <a href="#crosstalk">Crosstalk Reduction</a>
+            </li>
+            <li class="lateral-content">
+              <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+          </li>
+        </ul>
+    </div>
+  </div>
+  
+  <div class="right-side">
+
+          <!-- Circuit  -->
+          <section class="circuit">
+          <a id="circuit" class="anchorOffset"></a>
+          <h1>Sender Characterization Circuit</h1>
+            
+            <!-- 1st Cycle -->
+            <div class="collapsible_in">
+              <input type="checkbox" id="1st-cycle-circuit">
+              <label for="1st-cycle-circuit">1st Cycle</label>
+              <div class="collapsible-in-text">
+              <h1>Design</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Build</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Test</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Learn</h1>
+              <br><br>
+              <p>
+              </p>
+            </div>
+            </div>
+
+            <!-- 2nd Cycle -->
+            <div class="collapsible_in">
+              <input type="checkbox" id="2nd-cycle-circuit">
+              <label for="2nd-cycle-circuit">2nd Cycle</label>
+              <div class="collapsible-in-text">
+              <h1>Design</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Build</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Test</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Learn</h1>
+              <br><br>
+              <p>
+              </p>
+            </div>
+            </div>
+
+            <!-- 3rd Cycle -->
+            <div class="collapsible_in">
+              <input type="checkbox" id="3rd-cycle-circuit">
+              <label for="3rd-cycle-circuit">3rd Cycle</label>
+              <div class="collapsible-in-text">
+              <h1>Design</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Build</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Test</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Learn</h1>
+              <br><br>
+              <p>
+              </p>
+            </div>
+            </div>
+              
+          </section>
+
+          <!-- Strtegy -->
+
+          <section class="strategy">
+          <a id="strategy" class="anchorOffset"></a>
+          <h1>Final Characterisation Strategy</h1>
+          
+          </section>
+
+          <!-- Contructs  -->
+          <section class="constructs">
+          <a id="constructs" class="anchorOffset"></a>
+          <h1>Final Senders’ constructs</h1>
+            
+            <!-- Constructs Cycle -->
+            <div class="collapsible_in">
+              <input type="checkbox" id="constructs-cycle-circuit">
+              <label for="constructs-cycle-circuit">Engineering Cycle</label>
+              <div class="collapsible-in-text">
+              <h1>Design</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Build</h1>
+              <br><br>
+              <p>
+              </p>
+
+              <h1>Test</h1>
+              <br><br>
+              <p>
+              </p>
+
+            </div>
+            </div>
+  
+          </section>
+
+          <!-- Crosstalk -->
+
+          <section class="crosstalk">
+          <a id="constructs" class="anchorOffset"></a>
+          <h1>Reduction of crosstalk</h1>
+            
+            <!-- crosstalk Cycle -->
+            <div class="collapsible_in">
+            <input type="checkbox" id="crosstalk-cycle-circuit">
+            <label for="crosstalk-cycle-circuit">Engineering Cycle</label>
+            <div class="collapsible-in-text">
+            <h1>Design</h1>
+            <br><br>
+            <p>
+            </p>
+
+            <h1>Build</h1>
+            <br><br>
+            <p>
+            </p>
+
+            <h1>Test</h1>
+            <br><br>
+            <p>
+            </p>
+
+            </div>
+            </div>
+          
+          </section>
+
+
+
+        <!-- Contructs  -->
+        <section class="constructs">
+        
+        </section>
+
+        <!-- Crosstalk -->
+
+        <section class="crosstalk">
+        
+        </section>
+
+
+      <!-- References -->
+
+      <section class="collapsible" id="references">
+        <input type="checkbox" id="collapsible-head">
+            <label for ="collapsible-head">References</label>    
+            <div class="collapsible-content">
+              <cite>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/31488843/">
+                    1.Huber M, Faure G, Laass S, Kolbe E, Seitz K, Wehrheim C, Wolf YI, Koonin EV, Soppa J. Translational coupling via termination-reinitiation in archaea and bacteria. Nat Commun. 2019 Sep 5;10(1):4006. doi: 10.1038/s41467-019-11999-9. PMID: 31488843; PMCID: PMC6728339.
+      
+                </a>
+            </cite>
+      <cite>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/19279094/">
+                    2. Hatta M, Kohlmeier CK, Hatta Y, Ozawa M, Kawaoka Y. Region required for protein expression from the stop-start pentanucleotide in the M gene of influenza B virus. J Virol. 2009 Jun;83(11):5939-42. doi: 10.1128/JVI.00180-09. Epub 2009 Mar 11. PMID: 19279094; PMCID: PMC2681956.
+      
+                </a>
+            </cite>
+      <cite>
+                <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0020096">
+                    3. Price MN, Arkin AP, Alm EJ. The life-cycle of operons. PLoS Genet. 2006 Jun;2(6):e96. doi: 10.1371/journal.pgen.0020096. Epub 2006 Jun 23. Erratum in: PLoS Genet. 2006 Jul;2(7):e126. PMID: 16789824; PMCID: PMC1480536.
+                </a>
+            </cite>
+      
+      
+            <cite>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30843313/">
+                    4. Tutol, J., Kam, H., Dodani, S., Identification of mNeonGreen as a pH-Dependent, Turn-On Fluorescent Protein Sensor for Chloride. 2019 Jul 15;20(14):1759-1765. doi: 10.1002/cbic.201900147. Epub 2019 May 8. PMID: 30843313 PMCID: PMC6663633 DOI: 10.1002/cbic.201900147
+      
+      
+      
+                </a>
+            </cite>
+      
+            <cite>
+                <a href="https://www.nature.com/articles/s41576-021-00417-w">
+                    5.  Wright BW, Molloy MP, Jaschke PR. Overlapping genes in natural and engineered genomes. Nat Rev Genet. 2022 Mar;23(3):154-168. doi: 10.1038/s41576-021-00417-w. Epub 2021 Oct 5. PMID: 34611352; PMCID: PMC8490965.
+                </a>
+            </cite>
+      
+      
+      <cite>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/23474465/">
+                    6.   Mutalik VK, Guimaraes JC, Cambray G, Lam C, Christoffersen MJ, Mai QA, Tran AB, Paull M, Keasling JD, Arkin AP, Endy D. Precise and reliable gene expression via standard transcription and translation initiation elements. Nat Methods. 2013 Apr;10(4):354-60. doi: 10.1038/nmeth.2404. Epub 2013 Mar 10. PMID: 23474465.
+      
+                </a>
+            </cite>
+      
+      <cite>
+                <a href="https://2018.igem.org/Team:Tsinghua/Results)">
+                    7.  Team Tsinghua 2018
+      
+                </a>
+            </cite>
+      
+      <cite>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30478458/">
+                    8.   Meyer AJ, Segall-Shapiro TH, Glassey E, Zhang J, Voigt CA. Escherichia coli "Marionette" strains with 12 highly optimized small-molecule sensors. Nat Chem Biol. 2019 Feb;15(2):196-204. doi: 10.1038/s41589-018-0168-3. Epub 2018 Nov 26. PMID: 30478458.
+      
+                </a>
+            </cite>
+      <cite>
+      <a href="https://www.semanticscholar.org/paper/Primerize%E2%80%902D%3A-automated-primer-design-for-RNA-Tian-Das/acbbd0e1161646b1216143b6f304936cbe6fa78a">
+                    9. Siqi Tian, Rhiju Das, Primerize-2D: automated primer design for RNA multidimensional chemical mapping, Bioinformatics, Volume 33, Issue 9, 1 May 2017, Pages 1405–1406
+                </a>
+            </cite>
+      
+      
+      
+      
+      <cite>
+                <a href="https://academic.oup.com/nar/article/43/W1/W522/2467987">
+                    10. Siqi Tian, Joseph D. Yesselman, Pablo Cordero, Rhiju Das, Primerize: automated primer assembly for transcribing non-coding RNA domains, Nucleic Acids Research, Volume 43, Issue W1, 1 July 2015, Pages W522–W526
+      
+      
+                </a>
+            </cite>
+      
+      
+            </div>
+        </section>
+        </div>
+      </div>
+
+
+
+
 
 <!-- Footer -->
 {% include 'footer.html' %}
+
+<!--Loader-->   
+{% include 'loader.html'%}  
 
 </html>
