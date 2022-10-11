@@ -635,6 +635,20 @@ body{
     border-radius: 10px;
 }
 
+.fig-3{
+    width: 30%;
+    border-radius: 10px;
+}
+
+.fig-5{
+    width: 35%;
+    border-radius: 10px;
+}
+
+.fig-6{
+    width: 30%;
+    border-radius: 10px;
+}
 
 .overview-section-receivers{
     background-color: #050a30;
@@ -749,12 +763,11 @@ body{
     color: #e9e9eb;
 	font-size: 25px;
     text-align: justify;
-    padding: 2%;
 }
 
 .collapsible-in-text h1{
     font-family: 'Glacial Indifference Bold';
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .collapsible-in-text b{
@@ -769,11 +782,8 @@ body{
 
 .collapsible-in-text ul li{
     color: #e9e9eb;
-	font-size: 24px;
+	font-size: 25px;
 }
-
-
-
 
 .collapsible{
     padding-top:30px;

@@ -249,24 +249,85 @@
               From the analysis above, we decided to use the RBS BBa_0034 for both mNeonGreen and LuxR constructs and finalized our vector’s copy number choice with a preference towards the ColE1 origin of replication (medium CN). Both vectors will be tested to confirm the predictions. In that way, we’ve achieved a modest amount of leakiness, solid output fluorescence as well as a small shift of our graph towards the right axis. 
               <br><br>
               Unfortunately, due to the early stages of the 1st engineering cycle and a lack of experimental characterization data, a full simulation of our OL construct alongside the sender’s model as shown in the proof of concept and model pages was not implemented. Thus, that type of characterization would be still suboptimal for the entire system. However, later on, via our fitted sender’s and receiver’s models we were able to make a full simulation and show that a potential misfit of the transfer function would be overcome via a difference in the volumes of the sender’s and the receiver’s populations.
-
-              
-              </p>
-              
-
-              <h1>Build</h1>
               <br><br>
-              <p>
-              </p>
+                         
+              <h1>Build</h1>
+              <br>
+                <ul>
+                <li>
+                We performed a Golden Gate Assembly with BsmBI restriction enzyme for each plasmid vector
+                </li>
+                    <ul>
+                    <li>  
+                    As vectors we used the BBa_K4294092 pTU2-A-RFP (colE1 origin) and the BBa_K4294093 pTU2-A-RFP (p15A origin). 
+                    </li>
+                    <li>
+                    The parts used as inserts were the BBa_K4294806 (TU pLux Output for OL, PF, PFc) and the BBa_K4294808 (TU constitutive LuxR for OL)
+                    </li>
+                    </ul>
+                <li>
+                Transformation on <it>E. coli</it> DH5a at LB - Agar plates containing chloramphenicol. 
+                </li>
+                <li>
+                Screening of colonies (white colonies contain the vector with the insert, red colonies the initial vector.
+                </li>
+                <li>
+                Overnight liquid cultures from grown white colonies.
+                </li>
+                <li>
+                Plasmid Miniprep.
+                </li>
+                Diagnostic Digest and PCR amplification (primers flanking the insert: Biobrick Prefix Forward Primer BBa_K4294021, pTU2 Reverse Primer  BBa_K4294032) for both Open Loop constructs.
+                <li>
+                Agarose gel electrophoresis.
+                <br>
+                Expected zones:
+               
+                  <ul>
+                    <li>
+                      Open-loop (pTU2-A-RFP colE1 origin) cut with BsaI & HindIII: 3 zones at 2027bp + 1092bp + 853bp
+                    </li>
+                    <li>
+                      Open-loop (pTU2-A-RFP p15a origin) from PCR: 1 zone at 2045bp
+                    </li>
+                  </ul>
+                </li>
+                </ul>  
+              <br>
+
+              <center>
+                <img class="fig-3" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-3.png">
+                <figcaption>
+                  Figure 3: Agarose Gel Electrophoresis<br>
+                  L: Ladder 1kb plus<br>
+                  1: Open-loop (pTU2-A-RFP colE1 origin) from the 2nd colony uncut<br>
+                  2: Open-loop (pTU2-A-RFP colE1 origin) from the 1st colony cut with BsaI & HindIII<br>
+                  3: Open-loop (pTU2-A-RFP colE1 origin) from the 2nd colony<br>
+                  4: Open-loop (pTU2-A-RFP p15a origin) from PCR<br>
+                  a: Agarose gel 1%<br>
+                  b: Agarose gel 1%<br>
+                  <br><br>
+                  Figure 3 shows that our diagnostic digest and PCR on the receiver’s open-loop constructs resulted in the expected bands.
+                </figcaption>
+                </center>
+                <br>              
+              
+              <center>
+              <img class="fig-4" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-4.png">
+              <figcaption>
+                Figure 4:  Induction of OL constructs with different OC6 concentrations and in different timepoints. Comparison between p15A (a) origin and ColE1(b).
+              </figcaption>
+              </center>
+              <br>
 
               <h1>Test</h1>
+              <br>
+              To test the aforementioned constructs, <it>E. coli</it> BL21 cells were transformed with the open loop constructs and were induced with a range of concentrations of Acyl Homoserine-Lactone (OC6). Cells were incubated in a shaking incubator and successive measurements of absorbance at 600nm and fluorescence were taken using the plate reader FlexStation® 3 for a time period of 4h. The results showed an increase in the RFU/OD600nm ratio and a sigmoidal response curve for both constructs.
               <br><br>
-              <p>
-              </p>
 
               <h1>Learn</h1>
-              <br><br>
-              <p>
+              <br>
+              These experiments prove that the ColE1 origin of replication is more appropriate for our system and, therefore, we use the medium copy number (ColE1 ori) pTU2 vector to engineer the rest of the constructs. A higher copy number provides a higher dynamic range with a minimal tradeoff regarding its leakiness. These first measurements were also important to detect the range of concentrations in which the system is inducible and update our models’ parameters.
               </p>
             </div>
             </div>
@@ -277,23 +338,239 @@
               <label for="2nd-cycle-steep-act">2nd Cycle</label>
               <div class="collapsible-in-text">
               <h1>Design</h1>
-              <br><br>
+              <br>
               <p>
-              </p>
+              With the goal to build an ultrasensitive, switch-like response, and inspired by previous related work, two circuit designs in two variations regarding the basal LuxR expression were chosen. A LuxR transcriptional Positive Feedback loop (PF and PFc) and a circuit that incorporates an extra repressor (PhlF) that is regulated by LuxR (PFR, PFcR) resulting in a coherent feedforward loop with an embedded LuxR transcriptional Positive Feedback.
+              <br><br>
+              <b>Dry Lab Prediction</b>
+              In terms of design simulations, we were able to perform a simulation of the PFR construct in parallel with the characterisation of OL constructs by the wet lab, valuable for the circuit design finalization, since a circuit incorporating such regulatory elements in the same topology has not, to our knowledge, been characterized. As analyzed in the receiver’s model section , we used some of the fitted parameters from the OpLo (OL) system and alongside the rest of the literature ones we received the following whole-cell transfer function:
 
+              <center>
+              <img class="fig-5" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-5.png">
+              <figcaption>
+              Figure 5: Theoretical model results for the PFR construct.
+              </figcaption>
+              </center>
+              <br>
+              
+              The received curve for the PFR system displays an increased steepness and it would be the receiver’s design with the most potential.
+              <br><br> 
+              On the other hand, the simulations displayed for the PF and PFc results weren’t the expected ones and lead to similar results as in the case for the OL system. It should be mentioned that, for all the simulations in the PFR we used the RBS construct BBa_0034 and a medium copy number origin of replication (ColE1), from the 1st engineering cycle.
+              <br><br> 
+              Even though every circuit would be experimentally tested, the above simulation would aid a potential redesign of a circuit in parallel with the experiments in case of no functional circuits predicted. 
+              <br><br> 
               <h1>Build</h1>
-              <br><br>
-              <p>
-              </p>
+              <br>
+              <ul>
+                <li>
+                  We performed 4 different Golden Gate Assemblies with BsmBI by using the vector BBa_K4294092 pTU2-A-RFP (colE1 origin) for all the constructs.                
+                </li>
+                    <ul>
+                    <li>  
+                      For the PF construct we used the parts:
+                    </li>
+                        <ul>
+                          <li>
+                            BBa_K4294806 (TU pLux Output for OL, PF, PFc)
+                          </li>
+                          <li>
+                            BBa_K4294809 (TU pLux LuxR PF, PF+ R) 
+                          </li>
+                        </ul>
+
+                    <li>  
+                    For the PFR construct we used the parts:
+                    </li>
+                        <ul>
+                          <li>
+                            BBa_K4294812 (TU Output for PF+ R, PFc+ R)
+                          </li>
+                          <li>
+                            BBa_K4294807 (TU pLuxr PhlF)
+                          </li>
+                          <li>
+                            BBa_K4294809 (TU pLux LuxR PF, PF+ R) 
+                          </li>
+                        </ul>
+
+                      <li>  
+                        For the PFc construct we used the parts:
+                      </li>
+                            <ul>
+                              <li>
+                                BBa_K4294806 (TU pLux Output for OL, PF, PFc)
+                              </li>
+                              <li>
+                                BBa_K4294810 (TU pLux LuxR PFc, PFc+ R)
+                              </li>
+                              <li>
+                                BBa_K4294811 (TU constitutive LuxR for PFc, PFc+R) 
+                              </li>
+                            </ul>
+                      <li>  
+                        For the PFc+R construct we used the parts:
+                      </li>
+                            <ul>
+                              <li>
+                                BBa_K4294812 (TU Output for PF+ R, PFc+ R)
+                              </li>
+                              <li>
+                                BBa_K4294807(TU pLuxr PhlF)
+                              </li>
+                              <li>
+                                BBa_K4294811 (TU constitutive LuxR for PFc, PFc+R)
+                              </li>
+                              <li>
+                                BBa_K4294810 (TU pLux LuxR PFc, PFc+ R)
+                              </li>
+                            </ul>
+
+
+                <li>
+                  Transformation on <it>E. coli<\it> DH5a at LB - Agar plates containing chloramphenicol. 
+                </li>
+                <li>
+                  Choose the white colonies (plasmids with insert) over the red colonies (no insert in plasmid).
+                </li>
+                <li>
+                  Overnight liquid cultures from grown white colonies
+                </li>
+                <li>
+                  Plasmid Miniprep.
+                </li>
+                Diagnostic Digest and PCR amplification with primers binding upstream and downstream of the insert region for the Positive Feedback construct (pTU2-A-RFP colE1 origin), for Positive Feedback with constitutive production of LuxR construct (pTU2-A-RFP colE1 origin), for Positive Feedback + Repressor with constitutive production of LuxR construct (pTU2-A-RFP colE1 origin) and for Positive Feedback +Repressor construct (pTU2-A-RFP colE1 origin).
+                <li>
+                  Agarose gel electrophoresis.
+                <br>
+                Expected zones:
+                </li>
+                  <ul>
+                    <li>
+                      Positive Feedback construct  (pTU2-A-RFP colE1 origin) cut with BsaI: 2 zones at 2027bp + 1958bp.
+                    </li>
+                    <li>
+                      Positive Feedback with constitutive production of LuxR construct (pTU2-A-RFP colE1 origin) cut with BsaI: 2 zones at 2959bp + 2027 bp.
+                    </li>
+                    <li>
+                      Positive Feedback construct  (pTU2-A-RFP colE1 origin) cut with  BsaI and HindIII: 3 zones at 847 bp & 111 bp & 2027 bp.
+                    </li>
+                  </ul>
+                </ul>  
+              <br>
+              
+              <center>
+              <img class="fig-6" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-6.png">
+              <figcaption>
+                Figure 6: Agarose Gel Electrophoresis<br>
+                L: Ladder 1kb plus<br>
+                1: PF (pTU2-A-RFP colE1 origin) cut with BsaI<br>
+                2: PF (pTU2-A-RFP colE1 origin) cut with BsaI<br>
+                3: PFc (pTU2-A-RFP colE1 origin) cut with BsaI<br>
+                4: PFc (pTU2-A-RFP colE1 origin) cut with BsaI<br>
+                5: PF (pTU2-A-RFP colE1 origin) cut with BsaI and HindIII<br>
+                <br>
+                Figure 6 shows that our diagnostic digest on the receiver’s PF and PFc constructs resulted in the expected bands. The zone of 111 bp is very faint in lane 5 (PF (pTU2-A-RFP colE1 origin) cut with BsaI and HindIII) due to its small size.
+              </figcaption>
+              </center>
+              <br>
+
+              Regarding the PFR and PFc+R constructs:<br>
+                <br><br>
+                Expected zones:
+               
+                <ul>
+                  <li>
+                    Positive Feedback Repressive with constitutive production of LuxR construct  (pTU2-A-RFP colE1 origin) cut with BsaI: 2 zones at 3914bp + 2027bp.
+                  </li>
+                  <li>
+                    Positive Feedback Repressive construct (pTU2-A-RFP colE1 origin) cut with BsaI: 2 zones at 2913bp + 2027 bp.</ul>
+                  </li>
+                </ul>
+              
+              <center>
+              <img class="fig-7" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-7.png">
+              <figcaption>
+              Figure 7: Agarose gel electrophoresis<br> 
+              L: Ladder 1kb plus<br>
+              1: PFR(pTU2-A-RFP colE1 origin) cut with BsaI<br>
+              2: PFR(pTU2-A-RFP colE1 origin) cut with BsaI<br>
+              3: Control pTU2-A-RFP colE1 origin uncut<br>
+              4: Control pTU2-A-RFP colE1 origin cut with BsaI<br>
+              5: PFc +R (pTU2-A-RFP colE1 origin) cut with BsaI<br>
+              <br>
+              Figure 7 shows that our diagnostic digest on the receiver’s PFR and PFc+R constructs resulted in the expected bands.
+              </figcaption>
+              </center>
+              <br>
 
               <h1>Test</h1>
+              <br>
+              For the testing of the aforementioned constructs, we transformed<it>E. coli<\it> BL21 and induced them with a range of concentrations of Acyl Homoserine-Lactone OC6. Absorbance and Fluorescence Measurements were taken at specific time points using the plate reader FlexStation® 3 at a total time period of 4h. 
               <br><br>
-              <p>
-              </p>
+              For the PF construct the concentration range 0.062μΜ-0.000121094μΜ was used for induction.
+              <br><br>
+
+              <center>
+              <img class="fig-8" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-8.png">
+              <figcaption>
+              Figure 8: Induction of BL21 PF pTU2-RFP colE1 or. with the following OC6 concentrations (μΜ): 0.062, 0.031, 0.0155, 0.003875, 0.0019375, 0.00096875, 0.000484375, 0.000242188, 0.000121094. The uninduced cells are represented by the concentration value 0.00001 for diagram purposes. 
+              </figcaption>
+              </center>
+              <br>  
+
+              Regarding the PFc construct, the concentration range 10μΜ-0.0001μΜ was used for induction. Data presented in figure 9.
+              <br><br> 
+
+              <center>
+              <img class="fig-9" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-9.png">
+              <figcaption>
+                Figure 9: Induction of BL21 PFc pTU2-RFP colE1 or. with the following OC6 concentrations (μΜ): 10, 1, 0.1, 0.01, 0.001, 0.0001. The uninduced cells are represented by the concentration value 0.000001 for diagram purposes. 
+              </figcaption>
+              </center>
+              <br>
+
+              For the PFr construct the concentration range 100μΜ-0.00001024μΜ was used for induction. The results that are presented in figure 10. 
+              <br><br> 
+
+              <center>
+              <img class="fig-10" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-10.png">
+              <figcaption>
+                Figure 10: Induction of BL21 PFr pTU2-RFP colE1 or. with the following OC6 concentrations (μΜ):100, 20, 4, 0.16,    0.0064, 0.00128, 0.000256, 0.00001024. The uninduced cells are represented by the concentration value 0.000001 for diagram purposes. 
+              </figcaption>
+              </center>
+              <br>
+
+              For the PFc+R construct, the concentration range 10μΜ-0.0.00000512μΜ was used for induction. The results are presented in figure 11. 
+              <br><br> 
+
+              <center>
+              <img class="fig-11" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-11.png">
+              <figcaption>
+                Figure 11: Induction of BL21 PFc+R pTU2-RFP colE1 or. with the following OC6 concentrations (μΜ): 10, 2, 0.4, 0.08, 0.016, 0.0032, 0.00064, 0.000128, 0.0000256, 0.00000512. The uninduced cells are represented by the concentration value 0.0000001 for diagram purposes.
+              </figcaption>
+              </center>
+              <br>
 
               <h1>Learn</h1>
-              <br><br>
-              <p>
+              <br>
+              PF: According to the results that are presented in the figure 8 there is no significant increase in RFU/OD600nm ratio in comparison with other constructs. This circuit presents an uncommon response in comparison with similar circuits from the literature. 
+              <br><br> 
+              PFc: According to the results that are presented in figure 9. there is a slight increase in fluorescence expressed in arbitrary units, which could, by a rough approximation, resemble a sigmoidal response curve in the 0.1 to 1 μM of inducer but in general, seems more linear. The response curve does not fulfill our goals regarding steepness and dynamic range and this result is also considered unreliable due to its uncommon response in comparison with similar circuits from the literature. 
+              <br><br> 
+              PFR: This circuit is characterized by a response curve with low leakiness, high dynamic range and a steeper activation function. For the transition from Min to Max state a 100-fold increase in inducer’s concentration seems necessary. However, in the sigmoid part of the response curve, the slope of the curve is gradually increasing. This is an indicator that a repeat of these measurements with more OC6 concentrations within the Min to Max range will probably better reveal the increased steepness in a more narrow OC6 concentration range. Our model supports the hypothesis of this circuit’s steeper activation function (see Model section for more).
+              <br><br> 
+              PFcR: This circuit topology fails to be robustly induced. An approximal sigmoidal response curve is observed in the 0.0001μM to 0.001 μM inducer range, but the dynamic range is quite low. The only 10fold increase in OC6 concentration required for a response transition from Min to Max is an indicator of a switch-like response. However, on the grounds of this low Min to Max range, it is also probable that the higher response in 0.001 μM was an artifact.
+              <br><br> 
+              In conclusion, the PFR and PFcR circuit architectures may provide a steeper activation function to our biological perceptron. More specifically, PFR shows the most robust response and a further tuning of its components dynamics in a model driven approach could potentially improve its response. Potential solutions include PhlF tagging with a variety of degradation tags to estimate the ideal degradation rates, a LuxR repressible promoter of different strength and modifications of the LuxR dynamics (constitutive promoter strength in PFcR, RBS controlling its translation, potential tagging with degradation tags). 
+              <br> 
+
+              <center>
+              <img class="fig-12" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-12.png">
+              <figcaption>
+              Figure 12:Comparison of OL colE1 or., OL p15 or. and PFR colE1 or. at 240 min. The uninduced cells are represented by the concentration value 0.0000001 for the diagram purposes.  
+              </figcaption>
+              </center>
+              <br>
               </p>
             </div>
             </div>
