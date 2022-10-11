@@ -39,7 +39,6 @@
 <div class="cc" id="cc-implementaion">
   <div class="left-side">
       <div class="index-bar">
-          <h2><b>Index</b></h2>
           <ul class="lateral-index">
               <li class="lateral-content">
                   <a href="#intro">Introduction</a>
@@ -54,6 +53,9 @@
                 <a href="#biocomputing">Biocomputing</a>
               </li>
               <li class="lateral-content">
+                <a href="#conclusion">Conlcusions</a>
+              </li>
+              <li class="lateral-content">
                   <a href="#references">References</a>
               </li>
           </ul>
@@ -64,7 +66,8 @@
       <section class="introduction">
           <a id="intro" class="anchorOffset"></a>
           <br><br>
-          <h1><b>Introduction</b></h1>
+          <h1>Introduction</h1>
+          <br>
           <p> “PERspectives” can have a wide range of implementations, some of which are examined and proposed in this section. From medicine, to 
               environment and even energy consumption, it can be the foundation of groundbreaking advances in each of the aforementioned fields and 
               even more. Being a universal tool in the hands of future iGEM teams and researchers overall, PERspectives can provide enhanced genetic 
@@ -78,12 +81,14 @@
           <br>
           <img class="imple-img-1" src="https://static.igem.wiki/teams/4294/wiki/implementation/imple1.png">
           <img class="imple-img-2" src="https://static.igem.wiki/teams/4294/wiki/implementation/imple-2.png">
-          <h5 style="text-align: center;">Figure 1: Representation of the versatile nature of “PERspectives” to solve multiple problems</h5>
+          <h5 style="text-align: center;">Figure 1: Representation of the versatile nature of “PERspectives” to solve multiple problems.<br> (Created in Biorender.com)</h5>
       </section>
-      <section class="healh">
+
+      <section class="health">
         <a id="health" class="anchorOffset"></a>
         <br><br>
-        <h1><b>Health</b></h1>
+        <h1>Health</h1>
+        <br>
         <p> Our project’s  goal is to create a <span style="color: #3aa9c5;">universal tool</span> that will be able to solve real-time multifactorial problems. Our bacterial perceptron will have 
             special value in cases where the problem is too hard to reach, such a case is the human body. 
             <br><br>
@@ -94,36 +99,43 @@
             <input type="checkbox" id="Gut">
             <label for="Gut">Gut Disbalances + </label>
             <div class="collapsible-in-text">
-            <p>iGEM MSP-Maastricht organised one more year the iGEM Proceedings Journal 2022, an online Journal accessible to everyone 
-                interested in synthetic biology. We are honored to be a part of it.
-             <br><br>
-             Through this initiative, we had the opportunity to review the field of biocomputing by exploring realted papers and finally submitting 
-             "A Review On Extraordinary Biocomputing Applications". Through this work, we provide an overview of the most eye-catching software and 
-             hardware applications of biocomputing, from tunable oscillators to biological encryption systems. Our goal was to help researchers and welcome 
-             newcomers to the field of biocomputing.
-             <br><br>
-             The procedure consisted of three main steps:
-             </p>
-             <ul>
-                 <li>1. Submission Step: First, we had to write the review an submit it to the iGEM Maastricht organising committe in order to be peer reviewed.</li>
-                 <li>2. Peer-Review Step: Then, we had to peer-review the papers of three different teams. At this step, our paper was also peer-reviewed by three teams.</li>
-                 <li>3. Revisions Step: Finally, after receiving our reviews we had to integrate the revisions requested and submit our final improved paper.</li>
-             </ul>
-             <br><br>
-             <p>
-             This year's alteration lies in the fact that the three best articles, based on the pper-review grading, were forwarded to researchers and journal editors working in the field of 
-             synthetic biology for review and feedback. The articles and the review from Dr. George Church, Dr, Michael Funk and Dr. Yevgeniya Nusinovich are 
-             included in iGEM MSP-Maastricht team’s Journal 2022.
-             <br><br>
-             You can find more about iGEM MSP-Maastricht team’s Journal <a href="https://mspvector.wordpress.com/journal/">here</a> 
-             and our final submission <a href="https://mspvector.files.wordpress.com/2022/10/msp-vector_2022.pdf?force_download=true">here</a>
+            <p>The human body is cohabited by microorganisms, this symbiosis is frequently referred to as the microbiome. The most studied microbiome 
+                is the one of the human gut, known as the gut microbiome[1].  Up to 1000 different bacterial species are found in the human gut. Each 
+                one of these species is essential for the function of the human gut, as it contributes to processes such as food digestion and 
+                immunity. In case the balance between the different species gets distracted, this is called dysbiosis, and multiple diseases appear. 
+                Gut disbalances are linked to diseases such as inflammatory bowel diseases (IBD), irritable bowel syndrome (IBS), diabetes, obesity, 
+                cancer, and cardiovascular and central nervous system disorders. [2]. According to the World Health Organization (WHO), probiotics are 
+                “live strains of strictly selected microorganisms which, when administered in adequate amounts, confer a health benefit 
+                on the host”. [3,4]. In order to help with the treatment of gut disbalances we plan to design a bacterial perceptron that will have as 
+                inputs miRNAs or gDNAs detected in the human gut, the levels of which have been linked to gut disbalances in individuals with the 
+                disease. Regarding the gDNAs, B.subtitlis has the natural competence ability of B. subtilis to detect unique DNA sequences present in 
+                the environment, we plan to use this ability in order to program B.subtilis to detect different species in the human gut[5]. B. 
+                subtilis can uptake environmental DNA and integrate it using specific sequences in each genome homologous recombination. 
+                (Dubnau, D. Genetic competence in Bacillus subtilis. Microbiological Reviews (1991)). The sequence length and similarity affect the 
+                recombination efficiency. By engineering these two factors in the genome of B.subtilis for different  strains found in the human 
+                gut we will be able to incorporate the weights and control the expression of the quorum sensing molecule, in an analogous way that the 
+                different Ribosome Binding Sites control the expression of the quorum sensing molecule in our system. If the quorum sensing molecule
+                concentration passes a certain threshold, the production of a certain substance that helps with gut disbalances will be produced. 
+                This substance could be reuterin which has been proven to restore the microbiome balance. [6,7,8]. Regarding the miRNAs approach, 
+                there are multiple databases that connect levels of miRNAs to a specific gut disbalance disorder [9]. After bioinformatic processing 
+                we will be able to classify these miRNAs by importance and frequency in the population and program the weights of our living 
+                therapeutic by adjusting the complementarity of our miRNA to a specific locus, in this case, our weights will be engineered based on
+                miRNA interference [10,11].
+
+                <center>
+                <img class="imple-img-gut" src="https://static.igem.wiki/teams/4294/wiki/implementation/gut-img.png">
+                <h5 style="text-align: center;">Figure 2: B. Subtilis finds different microorganisms in the gut microbiome environment and because of its 
+                    natural competence intakes their g.DNA. This leads to Homologous Recombination and production of a OC6 or other quorum sensing molecule 
+                    that will activate the receivers to produce reuterin.<br> (Created in Biorender.com)
+                </h5>
+                </center>
              </p>
          </div>
 
 
          <div class="collapsible_in">
             <input type="checkbox" id="theranostic">
-            <label for="theranostic">Cancer - Targeted drug delivery - Theranostic systems</label>
+            <label for="theranostic">Cancer - Targeted drug delivery - Theranostic systems +</label>
             <div class="collapsible-in-text">
             <p>Non-pathogenic bacteria have been proposed and even tested in clinical trials as a potential drug delivery system. The iGEM Competition has even dedicated a project track named “Living Therapeutics”, including projects aiming to utilise a living organism as a drug delivery system. Living therapeutics are without a doubt a popular research field and the engineered  genetic circuits are constantly evolving.
                 <br><br>
@@ -141,19 +153,21 @@
             <br><br>
             Beyond this example, such neural-like inspired biological systems would revolutionize therapies on the grounds that many diseases are multifactorial and many times difficult to be distinguished from one another. Incorporating weighted processing of inputs would lead to efficient theranostic systems promising more effective therapies and less side effects.
             <br><br>
+            <center>
             <img class="imple-img-4" src="https://static.igem.wiki/teams/4294/wiki/implementation/imple-4.png">
             <h5 style="text-align: center;">Figure 3: Tumor-invading bacterial perceptron system. Sender populations (blue bacteria) sense inputs from 
                 their surroundings and respond by producing a different or either by producing or not producing quorum sensing molecules (concentric 
                 circles indicate the different signaling state in different tumor microenvironments). Receiver populations respond to these signals by 
                 either producing an ICI (black bacteria) or a proinflammatory agent (red bacteria).<br> (Created in Biorender.com)
             </h5>
+            </center>
             </p>
          </div>
 
 
          <div class="collapsible_in">
             <input type="checkbox" id="bacviral">
-            <label for="bacviral">Bacterial or Viral Infection - Classification</label>
+            <label for="bacviral">Bacterial or Viral Infection - Classification +</label>
             <div class="collapsible-in-text">
             <p>The most common problem in acute infections is identifying the cause. The similarity of the symptoms between viral and bacterial 
                 infections makes it difficult for health personnel to identify the optimal treatment in urgent situations. This is an issue because it
@@ -172,7 +186,7 @@
 
          <div class="collapsible_in">
             <input type="checkbox" id="diabetic">
-            <label for="diabetic">Prevention of Diabetic Ketoacidosis</label>
+            <label for="diabetic">Prevention of Diabetic Ketoacidosis +</label>
             <div class="collapsible-in-text">
             <p>Poor control of type one diabetes often leads to diabetic ketoacidosis that is a danger to human health. Diabetic ketoacidosis is 
                 characterized by pH lower than 7.35, high blood sugar levels and low insulin levels. Following the lead of David Ausländer [29] who 
@@ -185,7 +199,7 @@
 
          <div class="collapsible_in">
             <input type="checkbox" id="pharma">
-            <label for="pharma">Pharmaceutical Industry - RnD</label>
+            <label for="pharma">Pharmaceutical Industry - RnD +</label>
             <div class="collapsible-in-text">
             <p>
             As it’s known, developing new, efficient, and safe drugs is extremely time-consuming, expensive, and can take even 12 years on average.  [30] 
@@ -217,7 +231,7 @@
 
          <div class="collapsible_in">
             <input type="checkbox" id="ptherapy">
-            <label for="ptherapy">Personalized Pharmacotherapy</label>
+            <label for="ptherapy">Personalized Pharmacotherapy +</label>
             <div class="collapsible-in-text">
             <p>
                 According to CDC: “Pharmacogenomics is an important example of the field of precision medicine, which aims to tailor medical treatment to each person or to a group of people” [43]. By pharmacogenomics, scientists reduce the likelihood of adverse drug reactions and optimise therapeutic efficacy [44]. As an example, in cancer research, several in vitro investigations describe altered patterns of miRNA expression in cells resistant to anticancer drugs. For instance, in a study by Berkers et al., they analysed miRNA expression in clear cell renal carcinoma tissue samples from patients who received sunitinib. The results showed a significant decrease in the expression of miR-141 in patients with progressive disease (that indicates maybe a high weight of that miRNA for a perceptron algorithm). Also, a subset of other miRNAs, differentially regulated between the patients who responded to sunitinib treatment versus the non-responders, included miR-520g, miR-155, miR-526b (all upregulated) and miR-144 and miR-376b (both downregulated) (that indicates maybe a medium or low weight of those miRNAs for a perceptron algorithm).
@@ -249,11 +263,11 @@
       <section class="environment">
           <a id="environment" class="anchorOffset"></a>
           <br><br>
-          <h1><b>Environment</b></h1>
+          <h1>Environment</h1>
 
           <div class="collapsible_in">
             <input type="checkbox" id="water">
-            <label for="water">Water Quality</label>
+            <label for="water">Water Quality +</label>
             <div class="collapsible-in-text">
                 <p>
                 Inspired by the project S-POP [47], we propose a future implementation in order to make the future goals of S-POP become possible, by 
@@ -268,7 +282,7 @@
 
             <div class="collapsible_in">
                 <input type="checkbox" id="soil">
-                <label for="soil">Health of soil for classification of samples</label>
+                <label for="soil">Health of soil for classification of samples + </label>
                 <div class="collapsible-in-text">
                     <p>
                     Another implementation of our project could be in the field of evaluating soil health. Soil health is very important in means of 
@@ -335,6 +349,24 @@
                 </p>
             </div>
       </section> 
+
+      <section class="introduction">
+        <a id="conclusion" class="anchorOffset"></a>
+        <h1> Conclusions </h1>
+        <br>
+        <p> Concluding, there is a vast field for implementation for our project. In our opinion the first steps that should be taken in order for 
+            some of these applications to come true are:
+            <br>
+            <br>
+
+            1. Introducing more different inputs and more layers to the system. <br>
+            2. Introducing other intermediate molecules to reduce cross-talk in case of living therapeutics. <br>
+            3. Introducing the system to yeast cells using the pheromone system of communication. [63] <br>
+            4. Introducing the system to human cell lines using the tryptophan synthase for communication. [63] <br>
+            5. Incorporating the kill switch and the negative weights as mentioned in the safety section of the implementations. <br>
+            </p>
+            <br><br>
+        </section>
 
       <section class="collapsible">
           <a id="references" class="anchorOffset"></a>

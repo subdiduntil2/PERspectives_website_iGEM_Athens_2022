@@ -6,31 +6,25 @@
     --color-white: #e9e9eb;
     --yellow: #ffc973;
     --red: #ef4b4c;
+    --green: #;
   }
   
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body{
+    background-color: #050a30;
+    color: #e9e9eb;
     font-family: 'Glacial Indifference';
 }
-
-iframe{
-    display:none;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-/*Aspa*/
 
 .page_header{
     padding-top: 70px;
     position: relative;
     text-align: center;
-    background-color: #050a30;
-
+    color: #050a30;
 }
 
 .img_header{
@@ -41,70 +35,92 @@ html{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -30%);
     font-size: 100px;
-    color: var(--color-white);
-    background-color:rgba(58, 169, 197, 0.6);
+    color: #e9e9eb;
+    background-color:rgba(16, 42, 78, 0.7);
     width: 100%;
     height: 130px;
     font-family: 'Glacial Indifference Bold';
 }
 
+.container{
+    padding-top: 50px;
+    color: #e9e9eb;
+    background-color: #102a4e;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
 
-.cc{
-width: 100%;
-height:100%;
-outline:none;
-padding-right: 10em;
-padding-left: 10em;
-display:flex;
-flex-wrap: wrap;
-padding-top:3em;
-padding-bottom:3em;
-margin-right: auto;
-margin-left: auto;
-background-color:#102a4e;
+.container h1{
+    font-size: 50pt;
+    color: #ef4b4c;
+}
+
+.container{
+    padding-top: 50px;
+    color: #e9e9eb;
+    background-color: #102a4e;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
 }
 
 
-.senders{
-    margin-left: 20em;
-    margin-right: 2em;
-    font-size:30px;
+.cc{
+    width: 100%;
+    height:100%;
+    outline:none;
+    padding-right: 0em;
+    padding-left: 2em;
+    display:flex;
+    flex-wrap: wrap;
+    padding-top:3em;
+    padding-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:#102a4e;
 }
 
 .left-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 0px;
-    padding-left: 0.2em;
-    width:30%;
-    font-size:30px;
+    padding-right: 1em;
+    padding-left: 0em;
+    width: 20%;
+    font-size:25px;
+    justify-items: center;
 }
 
+.left-side h2{
+    text-align: center;
+}
 
 .right-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 0px;
-    padding-left: 0em;
-    width:70%;
-    font-size:30px;
+    padding-right: 1em;
+    padding-left: 1em;
+    width:80%;
+    align-content: center;
+    font-size: 25px;
 }
 
 .index-bar{
     position: -webkit-sticky;
     position: sticky;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
     margin-top: 1em;
     top:150px;
     bottom:200px;
+    width: 70%;
 }
 
 .lateral-index{
     background-color: var(--dark-blue);
     transition: all 0.2s ease;
-    list-style-type: disc;
+    list-style-type: none;
     display:inline-block;
     border-radius: 0.4em !important;
     margin-left: 0;
@@ -133,22 +149,6 @@ background-color:#102a4e;
     color: var(--yellow);
   }
 
-/* this the after effect with the yellow line */
-
-.index-bar ul li a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background-color: #ffc973;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-  }
-    
-.index-bar ul li a:hover::after {
-    width: 0%;
-    }
-
 
 .anchorOffset {
     display: block !important;
@@ -158,8 +158,108 @@ background-color:#102a4e;
   }
 
 
+
 .introduction{
     text-align: justify;
+    padding-top: 5%;
+}
+
+.introduction h1{
+    text-align: justify;
+    font-size: 45px;
+    font-family: 'Glacial Indifference Bold';
+    font-weight: 200;
+    color: aliceblue;
+}
+
+.introduction p{
+    font-size: 25px;
+}
+
+.introduction i{
+    font-family: 'Glacial Indifference Italics';
+}
+
+.health{
+    text-align: justify;
+}
+
+.health h1{
+    text-align: justify;
+    font-size: 45px;
+    font-family: 'Glacial Indifference Bold';
+    font-weight: 200;
+    color: #3aa9c5;
+}
+
+.health p{
+    font-size: 25px;
+}
+
+.health i{
+    font-family: 'Glacial Indifference Italics';
+}
+
+.environment{
+    text-align: justify;
+    padding-bottom: 5%;
+}
+
+.environment h1{
+    text-align: justify;
+    font-size: 45px;
+    font-family: 'Glacial Indifference Bold';
+    font-weight: 200;
+    color: #61b872;
+}
+
+.environment p{
+    font-size: 25px;
+}
+
+.environment i{
+    font-family: 'Glacial Indifference Italics';
+}
+
+.biocomputing{
+    text-align: justify;
+}
+
+.biocomputing h1{
+    text-align: justify;
+    font-size: 45px;
+    font-family: 'Glacial Indifference Bold';
+    font-weight: 200;
+    color: #ffc973;
+}
+
+.biocomputing p{
+    font-size: 25px;
+}
+
+.biocomputing i{
+    font-family: 'Glacial Indifference Italics';
+}
+
+.conclusion{
+    text-align: justify;
+    padding-top: 5%;
+}
+
+.conclusion h1{
+    text-align: justify;
+    font-size: 45px;
+    font-family: 'Glacial Indifference Bold';
+    font-weight: 200;
+    color: aliceblue;
+}
+
+.conclusion p{
+    font-size: 25px;
+}
+
+.conclusion i{
+    font-family: 'Glacial Indifference Italics';
 }
 
 .imple-img-1{
@@ -175,15 +275,16 @@ background-color:#102a4e;
 }
 
 .imple-img-4{
-    width: 100%;
+    width: 90%;
     background: #e9e9eb;
     border-radius: 50px;
 }
 
-.biocomputing{
-    text-align: justify;
-    margin-bottom: 100px;
-} 
+.imple-img-gut{
+    width: 50%;
+    background: #e9e9eb;
+    border-radius: 50px;
+}
 
 .collapsible_in{
     padding-top:30px;
@@ -339,4 +440,22 @@ background-color:#102a4e;
      padding: 10px 10px;
      color:#e9e9eb;
      display:block;
+}
+
+@media screen and (max-width: 1200px){
+    .heading{
+        transform: translate(-50%, -20%);
+        font-size: 35px;
+        height: 60px;
+    }
+
+    .left-side{
+        display: none; 
+    }
+    
+    .right-side{
+        width: 100%;
+        font-size: 22px;
+    }
+
 }
