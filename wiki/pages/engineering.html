@@ -505,7 +505,7 @@
 
               <h1>Test</h1>
               <br>
-              For the testing of the aforementioned constructs, we transformed<it>E. coli<\it> BL21 and induced them with a range of concentrations of Acyl Homoserine-Lactone OC6. Absorbance and Fluorescence Measurements were taken at specific time points using the plate reader FlexStation® 3 at a total time period of 4h. 
+              For the testing of the aforementioned constructs, we transformed<it>E. coli</it> BL21 and induced them with a range of concentrations of Acyl Homoserine-Lactone OC6. Absorbance and Fluorescence Measurements were taken at specific time points using the plate reader FlexStation® 3 at a total time period of 4h. 
               <br><br>
               For the PF construct the concentration range 0.062μΜ-0.000121094μΜ was used for induction.
               <br><br>
@@ -519,7 +519,7 @@
               <br>  
 
               Regarding the PFc construct, the concentration range 10μΜ-0.0001μΜ was used for induction. Data presented in figure 9.
-              <br><br> 
+              <br><br>
 
               <center>
               <img class="fig-9" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-9.png">
@@ -541,7 +541,7 @@
               <br>
 
               For the PFc+R construct, the concentration range 10μΜ-0.0.00000512μΜ was used for induction. The results are presented in figure 11. 
-              <br><br> 
+              <br><br>
 
               <center>
               <img class="fig-11" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-11.png">
@@ -562,7 +562,7 @@
               PFcR: This circuit topology fails to be robustly induced. An approximal sigmoidal response curve is observed in the 0.0001μM to 0.001 μM inducer range, but the dynamic range is quite low. The only 10fold increase in OC6 concentration required for a response transition from Min to Max is an indicator of a switch-like response. However, on the grounds of this low Min to Max range, it is also probable that the higher response in 0.001 μM was an artifact.
               <br><br> 
               In conclusion, the PFR and PFcR circuit architectures may provide a steeper activation function to our biological perceptron. More specifically, PFR shows the most robust response and a further tuning of its components dynamics in a model driven approach could potentially improve its response. Potential solutions include PhlF tagging with a variety of degradation tags to estimate the ideal degradation rates, a LuxR repressible promoter of different strength and modifications of the LuxR dynamics (constitutive promoter strength in PFcR, RBS controlling its translation, potential tagging with degradation tags). 
-              <br> 
+              <br> <br> 
 
               <center>
               <img class="fig-12" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-12.png">
@@ -628,30 +628,269 @@
           <section class="circuit">
           <a id="circuit" class="anchorOffset"></a>
           <h1>Sender Characterization Circuit</h1>
-            
+          <br>
+          Our project involves the use of  Ribosome Binding Sites to obtain a translation rate gradient of the Acyl-homoserine-lactone synthase, (<i>luxI</i> gene). This translation rate corresponds to the different weights of the activation of each sender subpopulation. 
+          <br><br>
+          We should figure out a way to measure the translation rate that each RBS variant provides. For that purpose, we added a C-terminal hexahistidine tag (6*His tag) to the LuxI synthase, suitable for protein isolation and quantification using affinity chromatography or anti-histidine antibodies for Western Blotting. However, the cost and time needed to perform such quantifications is a considerable issue of the aforementioned methods and, therefore, we decided to characterise our parts using fluorescent proteins.   
+
             <!-- 1st Cycle -->
             <div class="collapsible_in">
               <input type="checkbox" id="1st-cycle-circuit">
               <label for="1st-cycle-circuit">1st Cycle</label>
               <div class="collapsible-in-text">
               <h1>Design</h1>
-              <br><br>
+              <br>
               <p>
-              </p>
+              The goal of the sender characterisation circuit was the characterisation of the different translation rates of the LuxI synthase provided by our Ribosome Binding Site collection. Our first design incorporated a bicistronic module including the <it> luxI </it> coding sequence followed by the mNeonGreen coding sequence. The two coding sequences are separated by the stop-start pentanucleotide TAATG, resulting in the translation coupling of Acyl-homoserine-lactone synthase and mNeonGreen. Relative fluorescent units would be an indirect indicator of Acyl-homoserine-lactone synthase production levels and RBS strength[1,2,3].
+              <br><br>
+
+              <center>
+              <img class="fig-13" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-13.png">
+              <figcaption>
+              Figure 13: First characterization circuit overview. The translational coupling of the LuxI CDS with the mNeonGreen CDS via a stop-start pentanucleotide.
+              </figcaption>
+              </center>
+              <br> 
 
               <h1>Build</h1>
+              <br>
+              <b>Level 1 constructs:</b>
               <br><br>
-              <p>
-              </p>
+              <ul>
+                <li>
+                  We performed Golden Gate Assemblies with BsaI using for every construct :
+                </li>
+                    <ul>
+                    <li>  
+                      As vector we used the  BBa_K4294091 (pTU1-A-lacΖ).
+                    </li>
+                    <li>
+                      As inserts we used the parts: BBa_K3424010 (TetR promoter), BBa_K4294210 (LuxI and mNeonGreen coding sequences separated by the stop-start pentanucleotide "TAATG"), BBa_B0015 (Double Terminator).
+                    </li>
+                    <li>
+                      And an RBS that was different for each construct. The RBSs was BBa_K4294004 (S4), BBa_K4294005 (S5), BBa_K4294010 (S10), BBa_K4294011 (S11), BBa_K4294012 (S12), BBa_K4294013 (S13), BBa_J428034 (BCD1),BBa_K4294102 (BCD2), BBa_K2680561 (BCD8), BBa_K2680529 (BCD12), BBa_K4294114 (BCD14).
+                    </li>
+                    </ul>
+                <li>
+                  Transformation of the recombinant plasmid on <it>E. coli</it> DH5a at LB - Agrar - Ampicillin plates whith IPTG and x-Gal for Blue-White screening.
+                  </li>
+                <li>
+                  Selection of the white colonies (plasmids with insert) over the blue colonies (no insert in plasmid).
+                </li>
+                <li>
+                  Overnight liquid cultures from grown white colonies.
+                </li>
+                <li>
+                Plasmid Miniprep.
+                </li>
+                <li>
+                Diagnostic Digest for all of the aforementioned level 1 constructs.
+                </li>
+                <li>
+                Agarose gel electrophoresis.
+                <br>
+                Expected zones:
+               
+                  <ul>
+                    <li>
+                      Constructs with S4,S5,S10,S11,S13 (pTU1-A-lacZ) cut with NotI &PstI: 2 zones at 2061bp + 1682bp.
+                    </li>
+                    <li>
+                      Constructs with  S12 RBS (pTU1-A-lacZ) cut with NotI &PstI: 2 zones at 2061bp + 1681bp.
+                    </li>
+                    <li>
+                      Constructs with BCD1, BCD8, BCD12 (pTU1-A-lacZ) cut with NotI &PstI: 2 zones at 2061bp + 1737bp.
+                    </li>
+                    <li>
+                      Constructs with BCD2, BCD14 (pTU1-A-lacZ) cut with NotI & PstI: 2 zones at 2061bp + 1741bp.
+                    </li>
+                  </ul>
+                </li>
+              </ul>  
+              <br>
 
+              <center>
+                <img class="fig-14" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-14.png">
+                <figcaption>
+                  Figure 14:<br>
+                  L: Ladder 1kb plus<br>
+                  1: BCD2 level 1 cut with NotI & PstI<br>
+                  2: BCD14 level 1 cut with NotI & PstI<br>
+                  3: S4 level 1 cut with NotI & PstI<br>
+                  4: S5 level 1cut with NotI & PstI<br>
+                  5: S10 level 1 cut with NotI & PstI<br>
+                  6: S11 level 1 cut with NotI & PstI<br>
+                  7: S12 level 1 cut with NotI & PstI<br>
+                  8: S13 level 1 cut with NotI & PstI<br>
+                  9: Control - BCD2 level 1 uncut<br>
+                  10: Control - S4 level 1 uncut<br>
+                  11: Control pTU1 uncut<br>
+                  12: BCD1 level 1 cut with NotI & PstI<br> 
+                  13: BCD8 level 1 cut with NotI & PstI<br>
+                  14: BCD12 level 1 cut with NotI & PstI<br>
+                  15: Control - BCD1 level 1 uncut<br>
+                  16: Control - BCD1 level 1 cut with BsaI<br>
+                  17: Control - pTU1-A-lacz uncut<br>
+                  18: Control - pTU1-A-lacz cut with BsaI<br>
+                  19: Control - pTU1-A-lacz cut with NotI & PstI<br>
+                  a: Agarose gel 1,2%<br>
+                  b: Agarose gel 1,2%<br>
+                  <br><br>
+                </figcaption>
+                </center>
+                <br>  
+                Figure 14 shows that our diagnostic digest on the sender’s constructs resulted in the expected bands. The diagnostic digest and the electrophoresis for the samples with faint bands were repeated to ensure they are correct.
+                <br><br>   
+
+                <b>Level 2 constructs:
+                </b>
+                <ul>
+                  <li>
+                    We performed Golden Gate Assemblies with BsmBI using for every construct:
+                  </li>
+                      <ul>
+                      <li>  
+                        As vector we used  BBa_K4294093 (pTU2-A-RFP (p15A origin)).
+                      </li>
+                      <li>
+                        As inserts we used :The composite part BBa_K4294780 (TetR TU).
+                      </li>
+                      <li>
+                        And the composite parts that resulted from level 1 Golden Gate Assembly and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 the BBa_K4294981, for S5 level 2 the BBa_K4294982, for S10 level 2 the BBa_K4294983, for S11 level 2 the BBa_K4294984, for S12 level 2 the BBa_K4294985, for S13 level 2 the BBa_K4294986, for BCD1 Level 2 the BBa_K4294987, for BCD2 level 2 the BBa_K4294988, for BCD8 level 2 the BBa_K4294989, for BCD12 level 2 the BBa_K4294990 and for BCD14 level 2 the BBa_K4294991.
+                      </li>
+                      </ul>
+                  <li>
+                    Transformation of the recombinant plasmids on <it>E. coli</it> DH5a at LB - Chloramphenicol plates.
+                    </li>
+                  <li>
+                    Selection of the white colonies (plasmids with insert) over the red colonies (no insert in plasmid).
+                  </li>
+                  <li>
+                    Overnight liquid cultures from grown white colonies.
+                  </li>
+                  <li>
+                  Plasmid Miniprep.
+                  </li>
+                  Diagnostic Digest and PCR amplification for all of the constructs.
+                  <li>
+                  Agarose gel electrophoresis.
+                  <br>
+                  Expected zones:
+                 
+                    <ul>
+                      <li>
+                        Constructs with S4,S5,S10,S11,S13  - pTU2-A-RFP (p15a origin)
+                        cut with BsaI: 2 zones at 2474bp + 2173bp.
+                                              </li>
+                      <li>
+                        Constructs with  S12 RBS  - (pTU2-A-RFP (p15a origin) cut with BsaI: 2 zones at 2474bp + 2172bp.
+
+                      </li>
+                      <li>
+                        Constructs with BCD1, BCD8, BCD12  - pTU2-A-RFP (p15a origin)
+                        cut with BsaI:  2 zones at 2474bp + 2228bp.
+                                              </li>
+                      <li>
+                        Constructs with BCD2, BCD14 -  pTU2-A-RFP (p15a origin)
+                        cut with BsaI: 2 zones at 2474bp + 2232bp.
+                                              </li>
+                    </ul>
+                  </li>
+                   
+                <br>
+  
+                <center>
+                  <img class="fig-14" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-14.png">
+                  <figcaption>
+                    Figure 15:<br>
+                    L: Ladder 1kb plus<br>
+                    1: S4 level 2 cut with BsaI<br>
+                    2: S5 level 2 cut with BsaI<br>
+                    3: S10 level 2 cut with BsaI<br>
+                    4: S11 level 2 cut with BsaI<br>
+                    5: S12 level 2 cut with BsaI<br>
+                    6: S13 level 2 cut with BsaI<br>
+                    7: Control - S13 uncut<br>
+                    8: Control - S5 cut with BsmBI<br>
+                    9: Control - pTU2-A-RFP (p15a origin) uncut<br>
+                    10: Control - pTU2-A-RFP (p15a origin) cut with BsaI<br>
+                    11: Control S4 uncut <br>
+                    12: Control S4 cut with HindIII<br>
+                    13: BCD1 cut with BsaI<br>
+                    14: BCD2 cut with BsaI<br>
+                    15: BCD8 cut with BsaI<br>
+                    16: BCD12 cut with BsaI<br>
+                    17: BCD14 11: cut with BsaI<br>
+                    18: Control - BCD1 uncut<br>
+                    19: Control pTU2-A-RFP cut with BsaI<br>
+                  </figcaption>
+                  </center>
+                  <br>  
+                  Figure 15 shows that our diagnostic digest on the level 2 sender’s constructs resulted in the expected bands. The diagnostic digest and the electrophoresis for the samples with faint bands were repeated to ensure they are correct. 
+                  <br><br>   
+                  <li>
+                    Transformation of <it>E. coli</it> BL21with the miniprep of level 2 recombinant plasmid on plates containing chloramphenicol.
+                  </li>
+                </ul> 
+                <br>
               <h1>Test</h1>
+              <br>
+              For the testing of the aforementioned Level 2 constructs, we selected white <it>E. coli</it> BL21 colonies (plasmid with insert), and no red colonies (plasmid without insert), from Petri dishes and we made overnight liquid cultures. The next day, we diluted them 1:30, and then when they reached OD: 0,3-0,6 we induced them with multiple concentrations of inducer Anhydrotetracycline hydrochloride- aTc. Cells were incubated in a shaking incubator for 4 hours. At different time points within the 4 hours, a sample of each culture was centrifuged, washed and resuspended in PBS.200 μL of each sample was transferred into a 96-well plate (black with clear bottom). By using the plate reader FlexStation® 3 (Molecular Devices), absorption (OD600nm) and the fluorescence measurements were taken. Τhe ratio of RFU/ OD600nm did not increase significantly over time. Measurements of mNeonGreen protein fluorescence were performed with excitation and emission filters set at 476nm and 547nm respectively, as recommended by the plate reader manufacturer for fluorescent proteins with significant overlap regarding their emission and excitation wavelengths. According to the fluorescent protein database, mNeonGreen shows maximum excitation at 506nm and emission at 517nm.
               <br><br>
-              <p>
-              </p>
+              A potential malfunction of our circuit would lie in the overlap of transcriptional units in our bicistronic design (LuxI CDS - TAATG stop/start pentanucleotide - mNeonGreen CDS). To rule out a suspected TetR induction system malfunction (which was also latter revealed during our troubleshooting), we transformed DH5a-z1 cells (they produce TetR constitutively encoded in their genome) with our pTU1 Level 1 recombinant plasmids, which only contain the Ptet regulated transcriptional. Fluorescence did not increase in this way either, pointing towards not functional characterization circuit. (Figure 16)
+              <br><br>
 
-              <h1>Learn</h1>
+              <center>
+              <img class="fig-16" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-16.png">
+              <figcaption>
+                Figure 16: Testing senders DH5a-z1 pTU1- luxI mNeonGreen with multiple aTc concentrations (2.16μΜ,0.4μΜ,0.09μΜ). This induction resulted in a very low fluorescence signal, a maximum of 340 RFU (ratio) 20h post-induction.
+              </figcaption>
+              </center>
+              <br> 
+
+              It is also important to mention that according to Tutol et al. (2019) chloride has an effect on mNeonGreen folding . We therefore tried changing the buffer that we resuspended the pellets for measurement to rule out this, quite improbable, scenario. The results were consistent with every buffer as indicated in Figure 17 [4].
               <br><br>
-              <p>
+
+              <center>
+              <img class="fig-17" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-17.png">
+              <figcaption>
+                Figure 17:Testing the effect of chloride in the resuspension buffer on mNeonGreen Fluorescence. No significant effect of the buffers was observed indicating to the absent expression of mNeonGreen.
+              </figcaption>
+              </center>
+              <br>
+
+              After that, we also assessed the production of LuxI and mNeonGreen with SDS-PAGE analysis and in-gel fluorescence of cell lysates in two cell types BL21(DE3) (level2 construct) and DH5a-z1 (level 1 construct) after a 3h induction with aTc, centrifugation and sonication of the cells. The in-gel fluorescence did not produce any results except for the positive control (OL ColE1 - induced). That was the confirming sign that the bicistronic design wasn't working. The SDS-PAGE confirmed that our constructs did not work in BL21 cells but worked in a leaky way in DH5a-z1. This was the first sign that made us realize there was probably a problem with the chosen promoter for the TetR repressor gene as well, since LuxI was not produced in neither the induced nor the uninduced BL21 cells containing the plasmid-encoded TetR repressor.
+              <br><br>
+
+              <center>
+                <img class="fig-18" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-18.png">
+                <figcaption>
+                  Figure 18: SDS-PAGE: OL ColEI for positive control for mNeonGreen. S4- DH5a-z1 produces luxI but not mNeon Green both at induced and uninduced states. S4-BL21 is not producing luxI or mNeonGreen with or without induction.
+                </figcaption>
+                </center>
+                <br>
+
+              Last but not least, in an attempt to fully comprehend the multiple issues and troubleshoot, we tested the potential expression of LuxI by the LuxI-mNeonGreen CDS overlap construct by observing the effect of the supernatant of induced (after a 3h induction with aTc) BL21 sender cells with the LuxI-mNeonGreen CDS overlap on the output of receiver BL21 cells transformed with the OL-ColE1 construct. This experiment proved that the LuxI TU is functional and OC6 is produced to activate the receivers. Receiver’s induction was nevertheless relatively low (Figure 19) (only a 4fold increase in contrast with , correlating with the results of SDS-PAGE, judging by the RFU for mNeonGreen produced by the receivers when induced externally with pure OC6) and made us realize the problem is also located in the bicistronic design with mNeonGreen.
+              <br><br>
+
+              <center>
+                <img class="fig-19" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-19.png">
+                <figcaption>
+                  Figure 19: We tested the effect of the supernatant of BL21 luxI-mNeonGreen for S4 RBS after 3h induction with aTc on the Receivers construct OL-ColE1 (BL21). This experiment proved that the LuxI TU is functional and can produce OC6 to activate the receivers. 
+                </figcaption>
+                </center>
+                <br>
+
+
+                Please refer to the <a href="https://2022.igem.wiki/athens/results">Results</a> page in order to see more details on the aforementioned experiments.
+                <br><br>
+              <h1>Learn</h1>
+              <br>
+
+              Our first characterization design was proven to be unable to function. Possible changes that could be made are different stop-start codons, such as ATGA or TGATG [1] , and the introduction of an intragenic Shine Dalgarno sequence at the end of the LuxI coding sequence[5]. However, such changes are quite complex from a design and a modelling aspect. Therefore, we came up with a simpler solution as described in the 2nd Cycle.
+              <br><br>
+              Furthermore, a strong suspicion that the TetR induction system was not functioning properly arose during the 1st cycle’s experiments.
+              
               </p>
             </div>
             </div>
@@ -662,22 +901,267 @@
               <label for="2nd-cycle-circuit">2nd Cycle</label>
               <div class="collapsible-in-text">
               <h1>Design</h1>
-              <br><br>
+              <br>
               <p>
-              </p>
+              Ribosome binding sites are quite variable parts and their behaviour is strongly influenced by the upstream and downstream genetic context. For example, a binding interaction with the first nucleotides of the coding sequence might trap the RBS inside a stem-loop, hindering Ribosome binding and translation initiation. This means that characterizing our synthetic RBS collection simply by using a fluorescent protein’s CDS would not be the right approach, since the genetic context in such characterisation would be different from the genetic context of the LuxI coding region. 
+              <br><br>
+              In the research paper by Mutalik et. al [6], bicistronic-like translation initiation elements (the BCDs, that we have also included in our parts) were evaluated for their performance variability regarding the genetic context at the 5’UTR:CDS junction. Different genetic contexts were introduced by assembling a test panel of 14 chimeric reporter genes of interest (GOIs) by fusing the first 36 nucleotides from the coding sequences of several transcription factors or enzymes in-frame to the second codon of a gene encoding GFP or RFP. These 36 nucleotides are considered sufficient to imitate the genetic context of the CDS of origin and at the same time do not alter the function of the sfGFP, making these constructs a reliable way to characterise RBS performance in different genetic contexts.
+              <br><br>
+              We deployed this strategy by creating a new fusion. The 36 first nucleotides of the LuxI synthase were fused with the sfGFP coding sequence, creating a new characterisation part. 
+              <br><br> 
+
+              <center>
+              <img class="fig-20" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-20.png">
+              <figcaption>
+                Figure 20:
+                Illustration of the 36nt LuxI- sfGFP fusion reporter protein.
+              </figcaption>
+              </center>
+              <br>
 
               <h1>Build</h1>
+              <br>
+              To construct the 36nt LuxI- sfGFP CDS, the CDS of sfGFP was ordered as a gBlock from IDT. Primers (BBa_K4294082, BBa_K4294083) were used to add overhangs to the sfGFP CDS containing BsaI cut sites. The 5’ overhang would be 5’-CAAA-3’ to attach with the 36nt LuxI Double Stranded Oligo and the 3’ overhang would be 5’-GCTT-3’ to attach with the Terminator.
               <br><br>
-              <p>
-              </p>
+              The small 36nt double stranded oligo was constructed via primer annealing and extension following the protocol recommended from the iGEM registry (Knight:Annealing and primer extension with Taq polymerase). Primers BBa_K4294061 and BBa_K4294062 were used to construct the final oligo. The oligo includes BsaI cut sites on both sites. The 5’ overhang would be 5’ AATG 3’ to attach with the RBS and the 3’ overhang would be 5’CAAA3’ to attach with the sfGFP CDS.
+              <br><br>
+
+              <b>Level 1 constructs:</b>
+              <br><br>
+              <ul>
+                <li>
+                  We performed Golden Gate Assemblies with BsaI using for every construct :
+                </li>
+                    <ul>
+                    <li>  
+                      The vector BBa_K4294091 (pTU1-A-lacZ).
+                    </li>
+                    <li>
+                      The parts BBa_K3424010 (TetR promoter), BBa_K4294210 (LuxI codon optimised for E. Coli (+6His Tag)), BBa_K4294207 (36nt LuxI - sfGFP), BBa_B0015 (Double Terminator).
+                    </li>
+                    <li>
+                      An RBS that was different for each construct. The RBSs was BBa_K4294004 (S4), BBa_K4294005 (S5), BBa_K4294010 (S10), BBa_K4294011 (S11), BBa_K4294012 (S12), BBa_K4294013 (S13), BBa_J428034 (BCD1),BBa_K4294102 (BCD2), BBa_K2680561 (BCD8), BBa_K2680529 (BCD12), BBa_K4294114 (BCD14).
+                    </li>
+                    </ul>
+                <li>
+                  Transformation of the recombinant plasmid on <it>E. coli</it> DH5a at LB - Ampicillin plates with IPTG and xGal for Blue-White screening.
+                  </li>
+                <li>
+                  Selection of the white colonies (plasmids with insert) over the blue colonies (no insert in plasmid).
+                  <center>
+                    <img class="fig-21" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-21.png">
+                    <figcaption>
+                      Figure 21: Agar plate with Ampicillin, X-Gal and IPTG for blue-white screening with transformed <it>E. Coli <\it> DH5a colonies with BCD8 level 1 luxI36nt-sfGFP construct on pTU1-A-lacZ. We observe it under UV light.
+                    </figcaption>
+                    </center>
+                </li>
+                <li>
+                  Overnight liquid cultures from grown white colonies from bacteria transformed with BCD2, BCD8, BCD14, S11, S5, and S13 level 1 constructs.
+                </li>
+                <li>
+                  Plasmid Miniprep from the above liquid cultures.
+                </li>
+                <li>
+                  Standard PCR and Colony PCR with Taq polymerase for all of the constructs by using the primers:<br>
+                  BBa_K4294031 (pTU1 Reverse).<br>
+                  BBa_K4294021 (Biobrick Prefix Forward).<br>                
+                </li>
+                <li>
+                Agarose gel electrophoresis.
+                <br>
+                Expected zones:
+               
+                  <ul>
+                    <li>
+                      PCR products from constructs with S4,S5,S10,S11,S13 RBS (pTU1-A-lacZ): 1 band at 1134bp.
+                    </li>
+                    <li>
+                      PCR products from constructs with  S12 RBS (pTU1-A-lacZ): 1 band at 1133bp.
+                    </li>
+                    <li>
+                      PCR products from constructs with BCD1, BCD8, and BCD12 RBS (pTU1-A-lacZ): 1 band at 1189bp.
+                    </li>
+                    <li>
+                      PCR products from constructs with BCD2, BCD14 RBS: 1 band at 1193bp.
+                    </li>
+                  </ul>
+                </li>
+              </ul>  
+              <br>
+
+              <center>
+                <img class="fig-22" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-22.png">
+                <figcaption>
+                  Figure 22:<br>
+                  L: Ladder 1kb plus<br>
+                  1: pTU1-A-lacz amplified by standard PCR<br>
+                  2: BCD2 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  3: BCD8 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  4: BCD8 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  5: BCD14 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  6: BCD2 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  7: S11 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  8: S4 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  9: S5 36nt 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  10: S5 36nt 36nt LuxI-sfGFP construct amplified by standard PCR<br>
+                  11: S13 36nt LuxI- sfGFP construct amplified by standard PCR<br>
+                  12: Control - Negative<br>                       
+                </figcaption>
+                </center>
+                <br>  
+
+              From the solid culture of S12, BCD8, S5, BCD12 and S10 we applied colony PCR.
+              <br>  <br> 
+
+              <center>
+                <img class="fig-23" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-23.png">
+                <figcaption>
+                  Figure 23:<br>
+                  L: Ladder 1kb plus<br>
+                  1: S12 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  2: S12 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  3: S12 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  4: BCD8 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  5: BCD8 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  6: BCD8 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  7: S5 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  8: S5 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  9: S5 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  10: BCD12 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  11: BCD12 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  12: S10 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  13: S10 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  14: S10 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  15: Control - Negative <br>            
+                </figcaption>
+                </center>
+                <br>  
+                As shown in Figures 22 and 23, our colony PCR on the level 1 sender’s constructs resulted in the expected bands for some colonies, that we subsequently picked to start liquid cultures and isolate their plasmids (miniprep).
+                <br><br>   
+                <li>
+                  So, we did plasmid minipreps using all the bacteria strains that contained the desired constructs and we continued with the construction of level 2 plasmids.
+                </li>
+              <br><br>
+              
+            
+            </ul> 
+                <b>Level 2 constructs:
+                </b>
+                <ul>
+                  <li>
+                    We performed Golden Gate Assemblies with BsmBI restriction enzyme, for every construct we used:
+                  </li>
+                      <ul>
+                      <li>  
+                        The vector BBa_K4294093 (pTU2-A-RFP (p15A origin)).
+                      </li>
+                      <li>
+                        The composite part BBa_K4294780 (TetR TU).
+                      </li>
+                      <li>
+                        The composite parts that resulted from level 1 Golden Gate Assembly and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 we used the BBa_K4294754, for S5 level 2 we used the BBa_K4294755, for S10 level 2 we used the BBa_K4294760, for S11 level 2 we used the BBa_K4294761, for S12 level 2 we used the BBa_K4294762, for S13 level 2 we used the BBa_K4294763, for BCD1 Level 2  we used the BBa_K4294771, for BCD2 level 2 we used the BBa_K4294772, for BCD8 level 2 we used the BBa_K4294773, for BCD12 level 2 we used the BBa_K4294774 and for BCD14 level 2 we used the BBa_K4294775.
+                      </li>
+                      </ul>
+                  <li>
+                    Transformation of the recombinant plasmids on <i> E. coli </i> DH5a at LB - Chloramphenicol plates.                    
+                    <center>
+                      <img class="fig-24a" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-24a.png">
+                      <img class="fig-24b" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-24b.png">
+                      <figcaption>
+                        (a)Agar plate with Chloramphenicol. We can observe transformed <it> E. coli </it>DH5a colonies with BCD1 level 2 LuxI36nt-sfGFP construct on pTU2-A-RFP.<br>
+                          (b) Agar plate with Chloramphenicol. We can observe transformed <it>E. Coli </it> DH5a colonies with BCD2 level 2 LuxI36nt-sfGFP construct on pTU2-A-RFP under UV light.
+                      </figcaption>
+                      </center>
+                  </li>
+
+                  <li>
+                    Selection of the white colonies (plasmids with insert) over the red colonies (no insert in plasmid).
+                  </li>
+                  Colony PCR amplification for all of the constructs by using the primers:<br>
+                  BBa_K4294032 (pTU2 Reverse).<br>
+                  BBa_K4294021 (Biobrick Prefix Forward).<br>       
+                  <li>
+                  Agarose gel electrophoresis.
+                  <br>
+                  Expected zones:
+                 
+                    <ul>
+                      <li>
+                        PCR products from constructs with S4,S5,S10,S11,S13 RBS (pTU2-A-RFP) 1 band at 2042bp.
+                      </li>
+                      <li>
+                        PCR products from constructs with  S12 RBS (pTU2-A-RFP) 1 band at 2041bp.                        
+                      </li>
+                      <li>
+                        PCR products from constructs with BCD1, BCD8, BCD12 RBS (pTU2-A-RFP) 1 band at 2097bp.
+                      </li>
+                      <li>
+                        PCR products from constructs with BCD2, BCD14 RBS (pTU2-A-RFP) 1 band at 2101bp.
+                      </li>
+                    </ul>
+                  </li>
+                   
+                <br>
+  
+                <center>
+                  <img class="fig-25" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-25.png">
+                  <figcaption>
+                    Figure 25:<br>
+                    L: Ladder 1kb plus<br>
+                    1: BCD8 level 2 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                    2: BCD2 level 2 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                    3: S12 level 2 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                    4: BCD1 level 2 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                    5: S10 level 2 36nt LuxI-sfGFP construct amplified by colony PCR<br>
+                  </figcaption>
+                  </center>
+                  <br>  
+
+                </li>
+                  As shown in Figures above, our electrophoresis on PCR products for the level 2 senders’ constructs resulted in the expected bands.  
+                  <br><br>   
+                  <li>
+                    Performed plasmid minipreps from all the aforementioned level 2 senders’ constructs.
+                  </li>
+                  <li>
+                    Transform  <it>E. Coli </it>  BL21 with the recombinant level 2 plasmids from the minipreps on plates containing chloramphenicol.
+                  </li>
+                </ul> 
+                <br><br>
+
+                We were happy to observe our BL21 colonies on agar plates to be fluorescent, indicating the production of a functional fluorescent protein.
+                <br><br>
+                <center>
+                  <img class="fig-26" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-26.png">
+                  <figcaption>
+                    Figure 26: Agar plate with Chloramphenicol in which they grew transformed E. coli BL21 colonies with BCD2 level 2 construct on pTU2-A-RFP (p15a origin).
+                  </figcaption>
+                  </center>
+                  <br>
 
               <h1>Test</h1>
+              <br>
+              For the testing of the aforementioned Level 2 constructs, we selected white <i>E. coli </i> BL21 colonies (plasmid with insert), and no red colonies (plasmid without insert), from Petri dishes and we made overnight liquid cultures. The next day, we diluted them 1:30, and then when they reached OD: 0,3-0,6 we induced them with multiple concentrations of inducer Anydrotetracycline - aTc. Then, we transferred 200 μL of each concentration of inducer with the liquid culture from each construct into a 96-well plate (black with clear bottom) and incubated them in a shaking incubator for 4 hours (180rpm,37oC). By using the plate reader FlexStation® 3, we measured the absorption and the fluorescence of the cells. The RFU/OD600nm ratio did not increase. Measurements for sfGFP protein were performed with an excitation wavelength 485nm and emission wavelength 510nm according to the fluorescence protein database. 
               <br><br>
-              <p>
-              </p>
+
+              Τhen, we hypothesized that the BL21 that we had at our disposal might not be the appropriate strain for our constructs to be expressed. For this reason, we induced DH5a cells with the level 2 constructs of 36ntLuxI-sfGFP. However, this did not produce any positive results (Figure 27).
+              <br><br>
+
+              As a result, we concluded that the green fluorescent colour (Figure 26) of the colonies is due to the leakiness of the pTet promoter or negligible repression by TetR due to unsuitable dynamics or a loss of function error in its coding sequence.
+              <br><br>
+
+              <center>
+                <img class="fig-27" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-27.png">
+                <figcaption>
+                  Figure 27: Induction experiment of BL21 luxI 36nt -sfGFP. Example for BCD2. The cells produced a stable amount of fluorescence expressed in RFU that did not change after induction.
+                </figcaption>
+                </center>
+                <br>
 
               <h1>Learn</h1>
-              <br><br>
+              <br>
+              The results pointed out that the 36ntluxI-sfGFP fusion is fluorescent and can be measured, but there is an issue regarding the TetR induction system. One possible aspect is that TetR is excessively produced (it is placed downstream of the medium strength Anderson constitutive promoter J23105). Indeed, repressors’ dosage can alter the response to the inducer and even hinder it completely, as was described by team Tsinghua 2018 for the LacI repressor [7] . We had a last solution in mind; to change the promoter responsible for the constitutive TetR production.
+
               <p>
               </p>
             </div>
@@ -689,23 +1173,20 @@
               <label for="3rd-cycle-circuit">3rd Cycle</label>
               <div class="collapsible-in-text">
               <h1>Design</h1>
-              <br><br>
+              <br>
               <p>
-              </p>
+              The paper on the <it>E. coli</it> Marionette Strains [8], provides a detailed characterisation and directed evolution optimisation of many common induction systems. Marionette strains originate from BL21 strains. Therefore, we decided to deploy their system for TetR production in our BL21 cells, since it was already tested and proven functional. TetR is under the control of the constitutive PlacI promoter and a synthetic RBS. 
+
 
               <h1>Build</h1>
-              <br><br>
-              <p>
-              </p>
+              <br>
 
               <h1>Test</h1>
-              <br><br>
-              <p>
-              </p>
+              <br>
 
               <h1>Learn</h1>
-              <br><br>
-              <p>
+              <br>
+
               </p>
             </div>
             </div>
@@ -717,13 +1198,43 @@
           <section class="strategy">
           <a id="strategy" class="anchorOffset"></a>
           <h1>Final Characterisation Strategy</h1>
-          
+          <br>
+          Level 1 pTU1 plasmids encoding the 36nt LuxI- sfGFP fusion were used to characterize the relative strengths of our RBS library. In order to achieve that, we transformed <it>E. coli</it>  DH5a-Z1 cells and grew them in LB- Agar- Ampicillin plates.
+          <br><br>
+          <center>
+            <img class="fig-34a" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-34a.png">
+            <img class="fig-34b" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-34b.png">
+            <figcaption>
+              Figure 34: 
+              (a) Agar plates with Ampicillin in which they grew transformed <it>E. coli<\it> DH5a-z1 colonies with BCD8 level 1 LuxI36nt-sfGFP construct on pTU1-A-lacZ <br>
+              (b)Agar plates with Ampicillin in which they grew transformed <it>E. coli<\it> DH5a-z1 colonies with BCD2 level 1 LuxI36nt-sfGFP construct on pTU1-A-lacZ under UV light.
+            </figcaption>
+            </center>
+            <br>
+
+            The induction of DH5a-Z1 with aTc was successful and we were able to characterize our RBS variants (Figure 35). The potential variability regarding the copy number of pTU1 seems not to shadow the differences in RBS strength. A higher copy number leads to greater noise due to a more extensive deviation of the copy number at a given time and was a major consideration when designing the circuits. Since our Level 2 constructs could not function, this characterization was the only possible way. An extra transformation step for both the senders and the receivers, which would introduce an empty vector offering resistance to chloramphenicol and ampicillin respectively, would be necessary whether an experiment involving mixing the two populations was conducted. 
+            <br><br>
+
+            For the testing of the aforementioned constructs, white <it>E. coli</it> DH5a-z1 colonies (plasmid with insert), and no blue colonies (plasmid without insert), were selected from Petri dishes and inoculated in liquid cultures. The next day, we diluted them 1:30 in LB medium with Ampicillin, and when OD reached 0.3-0.6, they were induced with multiple concentrations of aTc (ranging from 5.12 * 10^-6μΜ to 2μΜ). Measurements of OD and fluorescence were taken for a total time period of 4h. The RFU/OD600nm ratio was increasing and formed a sigmoidal response curve in its steady-state, proving our characterization approach successful. Measurements for sfGFP fluorescence were performed with excitation and emission filters set at 485 nm and 510 nm respectively.
+
+            <center>
+              <img class="fig-35" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-35.png">
+              <figcaption>
+              Figure 35: Comparison of all 11 RBS  as characterized by our measurements. Please refer to the results tab for more information.
+             </figcaption>
+              </center>
+
           </section>
 
           <!-- Contructs  -->
           <section class="constructs">
           <a id="constructs" class="anchorOffset"></a>
-          <h1>Final Senders’ constructs</h1>
+          <h1>Final Senders' Constructs</h1>
+          <br>
+          After a long way to determine a functional characterization strategy, the selected RBS variants were characterized in the pTU1 plasmid vector in <it>E.coli</it> DH5a-z1 cells. 
+          <br><br>
+          It was time to test our system for its initial goal; that is input pattern recognition. We had already constructed Level 1 TUs containing only the LuxI CDS (LuxI-only TU) with each different RBS variant so as to be used in this step. Level 2 plasmids with the LuxI only TU and the original TetR repressor system in pTU2 plasmids were constructed as well in a similar way to the Level 2 characterization circuits. The only difference was the Level 1 CDS being the LuxI-only-TU. However, since these constructs were malfunctioning during our characterization experiments, there is not an actual point to describe them in detail.
+          <br><br>          
             
             <!-- Constructs Cycle -->
             <div class="collapsible_in">
@@ -731,18 +1242,109 @@
               <label for="constructs-cycle-circuit">Engineering Cycle</label>
               <div class="collapsible-in-text">
               <h1>Design</h1>
-              <br><br>
+              <br>
               <p>
-              </p>
-
+              For the senders’ basic circuit we designed 11 different sender populations, each one with a different RBS variant defining the translation rate of LuxI, namely with a different weight in determining the final systems’ output. The goal was to determine the right combination of senders populations that would perform the desired computation task. 
+              <br>
               <h1>Build</h1>
+              <br>
+
+              <b>Level 1 constructs:</b>
               <br><br>
-              <p>
-              </p>
+              <ul>
+                <li>
+                  We performed Golden Gate Assemblies with BsaI restriction enzyme, for every construct with the LuxI TU we used:
+                </li>
+                    <ul>
+                    <li>  
+                    The vector BBa_K4294091 (pTU1-A-lacZ).
+                    </li>
+                    <li>
+                    The parts BBa_K3424010 (TetR promoter), BBa_K4294210 (LuxI codon optimised for <it>E. coli<\it> (+6His Tag)), BBa_B0015 (Double Terminator).
+                    </li>
+                    <li>
+                    An RBS that was different for each construct. The RBSs was BBa_K4294004 (S4), BBa_K4294005 (S5), BBa_K4294010 (S10), BBa_K4294011 (S11), BBa_K4294012 (S12), BBa_K4294013 (S13), BBa_J428034 (BCD1),BBa_K4294102 (BCD2), BBa_K2680561 (BCD8), BBa_K2680529 (BCD12), BBa_K4294114 (BCD14).
+                    </li>
+                    </ul>
+                <li>
+                  Transformation of the recombinant plasmid on <it>E. coli</it> DH5a at LB - Agar - Ampicillin plates whith IPTG 0.1M and x-Gal 2% for Blue-White screening.
+                  <center>
+                    <img class="fig-36" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-368.png">
+                    <figcaption>
+                      Figure 36: Agar plate with Ampicillin, X-Gal and IPTG for blue-white screening with transformed <it>E. coli<\it> DH5a colonies with BCD8 level 1 LuxI TU construct on pTU1-A-lacZ. 
+                    </figcaption>
+                    </center>
+                  </li>
+                <li>
+                  Selection of the white colonies (plasmids with insert) over the blue colonies (no insert in plasmid).
+                </li>
+                <li>
+                  Overnight liquid cultures from grown white colonies.
+                </li>
+                <li>
+                  Plasmid Minipreps.
+                </li>
+                <li>
+                  Diagnostic Digest for all constructs.
+                </li>
+                <li>
+                Agarose gel electrophoresis.
+                <br>
+                Expected zones:
+               
+                  <ul>
+                    <li>
+                      Constructs with S4,S5,S10,S11,S13 (pTU1-A-lacz) cut with NotI &PstI: 2 zones at 2045bp + 919bp.
+
+                    </li>
+                    <li>
+                      Constructs with  S12 RBS (pTU1-A-lacz) cut with NotI &PstI: 2 zones at 2045bp + 918bp.
+                    </li>
+                    <li>
+                      Constructs with BCD1, BCD8, BCD12 (pTU1-A-lacz) cut with NotI &PstI: 2 zones at 2045bp + 974bp
+                    </li>
+                    <li>
+                      Constructs with BCD2, BCD14 (pTU1-A-lacΖ) cut with NotI & PstI: 2 zones at 2045bp + 978bp.
+                    </li>
+                  </ul>
+                </li>
+              </ul>  
+              <br>
+
+              <center>
+                <img class="fig-39" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-39.png">
+                <figcaption>
+                  Figure 37:<br>
+
+                  L: Ladder 1kb plus<br>
+                  1: BCD2 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  2: BCD14 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  3: BCD1 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  4: BCD8 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  5: BCD12 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  6: S4 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  7: S5 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  8: S10 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  9: S11 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  10: S12 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  11: S13 (pTU1-A-lacZ) cut with NotI & PstI<br>
+                  12: Control - pTU1-A-lacZ uncut<br>
+                  13: Control - pTU1-A-lacZ cut<br>
+                  14: Control - BCD8 (pTU1-A-lacZ) uncut<br>
+                  15: Control - S13 (pTU1-A-lacZ) uncut<br>
+                                      
+                </figcaption>
+                </center>
+                <br>  
+
+                As shown in Figure 37, our diagnostic digest on the level 1 sender’s constructs resulted in the expected bands (in the 1st, the 2nd and the 7th samples the zone at 978bp and 919bp respectively has very low brightness. However, we observe that there is a high concentration of uncut recombinant plasmid in the samples.              
+                <br><br>
+
+
 
               <h1>Test</h1>
-              <br><br>
-              <p>
+              <br>
+              Figure 33 (“Final Characterization Circuit - Learn) represents the first trial of a Sender - Receiver interaction. More information regarding such experiments can be found in the <a href="https://2022.igem.wiki/athens/results">Results</a> and <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a> pages.
               </p>
 
             </div>
@@ -753,7 +1355,7 @@
           <!-- Crosstalk -->
 
           <section class="crosstalk">
-          <a id="constructs" class="anchorOffset"></a>
+          <a id="crosstalk" class="anchorOffset"></a>
           <h1>Reduction of crosstalk</h1>
             
             <!-- crosstalk Cycle -->
@@ -762,18 +1364,96 @@
             <label for="crosstalk-cycle-circuit">Engineering Cycle</label>
             <div class="collapsible-in-text">
             <h1>Design</h1>
-            <br><br>
+            <br>
             <p>
-            </p>
+            After deciding that the input patterns would be generated by one chemical inducer, a problem that emerged was keeping the supposedly “0” senders in the pattern uninduced. Even with washes before the senders are mixed, residual aTc might result in unwanted activation of a sender subpopulation and mess up the initial pattern. We decided to incorporate TetX, a tetracycline inactivation enzyme that breaks down aTc, in our cross-talk tackling strategy. As mentioned in the Design section, this construct was designed with pTKEI-Dest as its backbone, because its ori (incompatibility group A) would not interfere with the replication of the senders’ final construct (incompatibility group B). pTKEI would be co-transformed in the senders we wished to keep uninduced in the specific pattern.
 
             <h1>Build</h1>
-            <br><br>
-            <p>
-            </p>
+            <br>
+            <b>Level 1 constructs:</b>
+              <br><br>
+              <ul>
+                <li>
+                  We performed Golden Gate Assembly with BsmBI using the:
+                </li>
+                    <ul>
+                    <li>  
+                      BBa_K4294094 (pTKEI - Dest vector).
+                    </li>
+                    <li>
+                      BBa_K4294790 (TetX TU).
+                    </li>
+                    </ul>
+                <li>
+                  Transformation of the recombinant plasmid on <it>E. coli</it> DH5a at LB - Kanamycin plates whit IPTG and xGal for Blue-White screening.
+                </li>
+                <li>
+                  Selection of the white colonies (plasmids with insert) over the blue colonies (no insert in plasmid).
+                  <center>
+                    <img class="fig-38" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-38.png">
+                    <figcaption>
+                      Figure 38: Agar plates with Kanamycin in which they grew transformed E. coli DH5a colonies with pTKEI-Dest TetX construct.
+                    </figcaption>
+                    </center>
+                </li>
+                <li>
+                  Overnight liquid cultures from grown white colonies.
+                </li>
+                <li>
+                  Plasmid Minipreps.
+                </li>
+                <li>
+                  Diagnostic Digest of the recombinant plasmid.         
+                </li>
+                <li>
+                Agarose gel electrophoresis.
+                <br>
+                Expected zones:
+               
+                  <ul>
+                    <li>
+                      TetX (pTKEI - Dest) cut with PstI: 2 zones (3718bp + 1526bp).
+                    </li>
+                  </ul>
+                </li>
+              </ul>  
+              <br>
+
+              <center>
+                <img class="fig-39" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-39.png">
+                <figcaption>
+                  Figure 39:<br>
+                  L: Ladder 1kb plus<br>
+                  1: Control - pTKEI uncut<br>
+                  2: Control - pTKEI cut with PstI<br>
+                  3: pTKEI - TetX cut with PstI<br>                     
+                </figcaption>
+                </center>
+                <br>  
+
+              Figure 39 shows that our diagnostic digest on the pTKEI - TetX construct resulted in the expected bands.
+              <br><br>
+            
 
             <h1>Test</h1>
+            <br>
+
+            Unfortunately, due to a lack of time, we did not manage to test it. However, to test the construct we had to:
             <br><br>
-            <p>
+            1. Transform the already transformed senders bacteria (with the pTU2-A-RFP recombinant plasmid containing the fluorescent marker for characterization), by making the competent again to accept the new plasmid.<br>
+
+            2. Cultivate them in LB - Agar plates containing Kanamycin and Chloramphenicol.<br>
+
+            3. Make induction of our senders with the inducer aTc and at some point adjust IPTG in order to activate the TetX transcription.<br>
+
+            4. After that, a decrease in RFU/ absorption ratio is to be expected.<br>
+            <br>
+            <br>
+            Due to lack of time, we only reached step 2 of this workflow and did not have time to test the induction of these cells, but the transformation was successful. <br>
+            
+
+
+
             </p>
 
             </div>
@@ -781,18 +1461,6 @@
           
           </section>
 
-
-
-        <!-- Contructs  -->
-        <section class="constructs">
-        
-        </section>
-
-        <!-- Crosstalk -->
-
-        <section class="crosstalk">
-        
-        </section>
 
 
       <!-- References -->
