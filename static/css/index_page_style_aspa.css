@@ -74,12 +74,13 @@
     width: 100%;
     background-position: center;
     background-color: #102a4e;
-    text-align: center;
+    text-align: center; 
     font-size: 35px;
+    /* This padding meshes up the footer */
     padding-top: 100px;
-    padding-left: 100px;
+    /*padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 100px; */
     position: relative;
 }
 
@@ -348,7 +349,609 @@
     font-family: 'Glacial Indifference Bold';
 }
 
-@media screen and (max-width: 1200px){
+@media(max-width: 1500px){
+    
+    .text-box-what{
+        border-radius: 32px;
+    }
 
+    .text-box-what p {
+        font-size: 32px;
+    }
 
+    .text-box-aim p{
+        font-size: 32px;
+    }
+
+    .container{
+        padding: 5%;
+    }
+
+    .box-wet{
+        width: 350px;
+        height: 350px;
+        border-radius: 70px;
+        margin: 1% auto;
+    }
+    
+    .box-wet:hover{
+        box-shadow: 5px 5px #61b872;
+    }
+    
+    .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-wet:hover .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#61b872;
+    }
+    
+    .box-wet:hover .hover-img-wet{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-wet h1{
+        font-size: 30px;
+    }
+    
+    .box-wet:hover h1{
+        font-size: 35px;
+    }
+    
+    .box-dry{
+        width: 350px;
+        height: 350px;
+        border-radius: 70px;
+        margin: 1% auto;
+    }
+    
+    .box-dry:hover{
+        box-shadow: 5px 5px  #3aa9c5;
+    }
+    
+    .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-dry:hover .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#3aa9c5;
+    }
+    
+    .triple_logos_dry .non-hover-img-dry{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-dry:hover .hover-img-dry{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-dry h1{
+        font-size: 30px;
+    }
+    
+    .box-dry:hover h1{
+        font-size: 35px;
+    }
+
+    .box-hp{
+        width: 350px;
+        height: 350px;
+        border-radius: 70px;
+        margin: 1% auto;
+    }
+    
+    .box-hp:hover{
+        box-shadow: 5px 5px  #ef4b4c;
+    }
+    
+    .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-hp:hover .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#ef4b4c;
+    }
+    
+    .triple_logos_hp .non-hover-img-hp{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-hp:hover .hover-img-hp{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-hp h1{
+        font-size: 28px;
+    }
+    
+    .box-hp:hover h1{
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 1200px){
+    
+    .text-box-what{
+        border-radius: 20px;
+    }
+
+    .text-box-what p {
+        font-size: 25px;
+    }
+
+    .text-box-what p span {
+        font-size: 25px;
+    }
+
+    .text-box-aim p{
+        font-size: 25px;
+    }
+
+    .container{
+        padding: 5%;
+    }
+
+    .box-wet{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 3% auto;
+    }
+    
+    .box-wet:hover{
+        box-shadow: 5px 5px #61b872;
+    }
+    
+    .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-wet:hover .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#61b872;
+    }
+    
+    .box-wet:hover .hover-img-wet{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-wet h1{
+        font-size: 30px;
+    }
+    
+    .box-wet:hover h1{
+        font-size: 35px;
+    }
+    
+    .box-dry{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 3% auto;
+    }
+    
+    .box-dry:hover{
+        box-shadow: 5px 5px  #3aa9c5;
+    }
+    
+    .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-dry:hover .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#3aa9c5;
+    }
+    
+    .triple_logos_dry .non-hover-img-dry{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-dry:hover .hover-img-dry{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-dry h1{
+        font-size: 30px;
+    }
+    
+    .box-dry:hover h1{
+        font-size: 35px;
+    }
+
+    .box-hp{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 3% auto;
+    }
+    
+    .box-hp:hover{
+        box-shadow: 5px 5px  #ef4b4c;
+    }
+    
+    .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-hp:hover .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#ef4b4c;
+    }
+    
+    .triple_logos_hp .non-hover-img-hp{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-hp:hover .hover-img-hp{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-hp h1{
+        font-size: 28px;
+    }
+    
+    .box-hp:hover h1{
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 1000px){
+
+    .what-section{
+        padding-top: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 100px;
+    }
+    
+    .text-box-what{
+        border-radius: 20px;
+    }
+
+    .text-box-what p {
+        font-size: 20px;
+    }
+
+    .text-box-what p span {
+        font-size: 20px;
+    }
+
+    .text-box-aim{
+        border-radius: 40px;
+    }
+
+    .text-box-aim p{
+        font-size: 14px;
+    }
+
+    .aim-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .container{
+        padding: 5%;
+    }
+
+    .box-wet{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 3% auto;
+    }
+    
+    .box-wet:hover{
+        box-shadow: 5px 5px #61b872;
+    }
+    
+    .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-wet:hover .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#61b872;
+    }
+    
+    .box-wet:hover .hover-img-wet{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-wet h1{
+        font-size: 30px;
+    }
+    
+    .box-wet:hover h1{
+        font-size: 35px;
+    }
+    
+    .box-dry{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 3% auto;
+    }
+    
+    .box-dry:hover{
+        box-shadow: 5px 5px  #3aa9c5;
+    }
+    
+    .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-dry:hover .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#3aa9c5;
+    }
+    
+    .triple_logos_dry .non-hover-img-dry{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-dry:hover .hover-img-dry{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-dry h1{
+        font-size: 30px;
+    }
+    
+    .box-dry:hover h1{
+        font-size: 35px;
+    }
+
+    .box-hp{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 3% auto;
+    }
+    
+    .box-hp:hover{
+        box-shadow: 5px 5px  #ef4b4c;
+    }
+    
+    .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-hp:hover .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#ef4b4c;
+    }
+    
+    .triple_logos_hp .non-hover-img-hp{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-hp:hover .hover-img-hp{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-hp h1{
+        font-size: 28px;
+    }
+    
+    .box-hp:hover h1{
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 600px){
+    
+    .what-section{
+        padding-top: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+    }
+
+    .text-box-what{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .text-box-what p {
+        font-size: 14px;
+    }
+
+    .text-box-what p span {
+        font-size: 14px;
+    }
+
+    .what-img{
+        width: 100%;
+        float: none;
+    }
+
+    .aim-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .text-box-aim{
+        border-radius: 20px;
+    }
+
+    .text-box-aim p{
+        font-size: 9px;
+    }
+
+    .box-wet{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 10% auto;
+    }
+    
+    .box-wet:hover{
+        box-shadow: 5px 5px #61b872;
+    }
+    
+    .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-wet:hover .triple_logos_wet{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#61b872;
+    }
+    
+    .box-wet:hover .hover-img-wet{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-wet h1{
+        font-size: 30px;
+    }
+    
+    .box-wet:hover h1{
+        font-size: 35px;
+    }
+    
+
+    .box-dry{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 10% auto;
+    }
+    
+    .box-dry:hover{
+        box-shadow: 5px 5px  #3aa9c5;
+    }
+    
+    .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-dry:hover .triple_logos_dry{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#3aa9c5;
+    }
+    
+    .triple_logos_dry .non-hover-img-dry{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-dry:hover .hover-img-dry{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-dry h1{
+        font-size: 30px;
+    }
+    
+    .box-dry:hover h1{
+        font-size: 35px;
+    }
+
+    .box-hp{
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+        margin: 10% auto;
+    }
+    
+    .box-hp:hover{
+        box-shadow: 5px 5px  #ef4b4c;
+    }
+    
+    .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 15% auto;
+    }
+    
+    .box-hp:hover .triple_logos_hp{
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 0 35px#ef4b4c;
+    }
+    
+    .triple_logos_hp .non-hover-img-hp{
+        width: 100px;
+        padding-top: 1%;
+    }
+    
+    .box-hp:hover .hover-img-hp{
+        width: 200px;
+        padding-top: 15%;
+    }
+    
+    .box-hp h1{
+        font-size: 28px;
+    }
+    
+    .box-hp:hover h1{
+        font-size: 32px;
+    }
 }

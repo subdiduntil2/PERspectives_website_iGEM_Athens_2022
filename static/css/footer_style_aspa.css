@@ -159,3 +159,14 @@
         justify-content: center;
     }
 }
+
+@media(max-width: 800px){
+    .footer{
+        width: 100%;
+        padding: 0px;
+    }
+
+    .footer .social_media ul li{
+        padding: 5px 10px;
+    }
+}
