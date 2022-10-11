@@ -83,32 +83,406 @@
                 </center>
             </div>
         </section>
-
+        <br><br>
 <!-- general_info -->
         <section class="general_info">
         <a id="general_info" class="anchorOffset"></a>
         <h1>General Design Information</h1>
         <br><br>
+        <p>
 
         <h2>Golden Gate Assembly</h2>
         <br>
 
+        We considered several assembly approaches to build our constructs. We finally opted for Golden Gate Assembly, as it comprises a fast and easy method to assemble different DNA parts in a single plasmid, while offering modularity and high efficiency. The fact that we found out that the 2022 iGEM DNA Distribution kit would contain Golden Gate Assembly-compatible parts further encouraged this decision of ours, since it provided a safety net in case the parts designed by us did not function as expected.
+        <br><br>
+        Our Golden Gate Assembly-based parts can be divided into two major categories: level 1 and level 2 constructs. 
+        <br><br>
+        Building level 1 plasmids deploys the BsaI recognition and restriction sites of the acceptor vector (pTU1-A-lacZ in our case) to combine separate DNA sequences (promoter, RBS, CDS, terminator) into a functional transcriptional unit. In case the level 1 acceptor vector is designated to later become a part for level 2 assembly (as in our project), the BsaI recognition sites facing “inwards” enable the insertion of a new composite sequence between them, leaving the external BsmBI cut sites unaffected and available for a level 2 assembly, where the level 1 destination vector is converted into a part-carrying backbone for the next level of the building procedure. We also used said BsmBI recognition and restriction sequences as cut sites in diagnostic digests during our efforts to validate our constructs.
+        <br><br>
+        Level 2 constructs deploy BsmBI recognition and restriction sites to combine discrete transcriptional units in a single plasmid. The plasmid we utilized as a level 2 destination vector in our project was pTU2-A-RFP (p15A ori) for the final senders’ constructs. Similarly to BsmBI sites present in level 1 plasmids, in level 2 vectors, where BsmBI sequences face “inwards”, the “external” BsaI sequences can be used as cut sites to be targeted in diagnostic digests for validation purposes.
+        <br><br>
+        Besides containing BsmBI recognition and restriction sites, which, are traditionally utilized for level 2 assemblies, pTU2-A-RFP (colE1 ori) and pTKEI-Dest were treated as level 1 acceptor vectors during the building process, since they were used to integrate entire transcriptional units as separate DNA parts.
+        <br><br>
+        <b>Receivers’ Circuits</b>
+        <br><br>
+        For the construction of the Receivers’ Circuits Golden Gate Assembly with BsmBI was performed. The overhangs and the parts are summated in the following table.
+        <br><br>
+
+        <center>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Overhang Code And Sequence</th>
+              <th>TUs</th>
+              <th>Part Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A: ATCT</td>
+              <td>A-TU_pLux_Output_(OL,PF,PFc)-C</td>
+              <td>BBa_K4294806</td>
+            </tr>
+            <tr class="active-row">
+              <td>B: TTAG</td>
+              <td>A-TU_pLuxr_PhlF_(PF+R,PFc+R)-E</td>
+              <td>BBa_K4294807</td>
+            </tr>
+            <tr>
+              <td>C: GTCA</td>
+              <td>C-TU_const_LuxR_(OL)-B</td>
+              <td>BBa_K4294808</td>
+            </tr>
+            
+            <tr class="active-row">
+              <td>D: GCAA</td>
+              <td>C-TU_pLux_LuxR_(PF,PF+R)-B</td>
+              <td>BBa_K4294809</td>
+            </tr>
+            
+            <tr>
+              <td>E: CGTA</td>
+              <td>C-TU_pLux_LuxR_(PFc,PFc+R)-D</td>
+              <td>BBa_K4294810</td>
+            </tr>
+            
+            <tr class="active-row">
+              <td></td>
+              <td>D-TU_const_LuxR_(PFc,PFc+R)-B</td>
+              <td>BBa_K4294811</td>
+            </tr>
+
+              <tr>
+              <td></td>
+              <td>E-TU_Output_(PF+R,PFc+R)-C</td>
+              <td>BBa_K4294812</td>
+            </tr>
+        
+            
+          </tbody>
+        </table>
+        <figcaption>
+        Table 1.
+        Overhangs for Level 2 Golden Gate assembly regarding the Receivers’ Circuits. TUs were ordered as gene fragments from Twist and submitted as 
+        such to the iGEM registry. The part code is, therefore, included to facilitate registry search. For the parts in the following tables, please 
+        refer to the <a href="https://2022.igem.wiki/athens/parts">Parts</a> page.        
+        </figcaption>
+        </center>
+
+        <br><br>
+        <b>Senders' Circuits</b>
+        <br><br>
+        Senders’ Level 1 TUs were assembled using Golden Gate Assembly with BsaI.
+
+        <center>
+        <table class="content-table">
+            <thead>
+              <tr>
+                <th>Overhang </th>
+                <th>Junction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CTAT</td>
+                <td>pTU1 vector - Promoter</td>
+              </tr>
+              <tr class="active-row">
+                <td>TACT</td>
+                <td>Promoter - RBS</td>
+              </tr>
+              <tr>
+                <td>AATG</td>
+                <td>RBS - CDS</td>
+              </tr>
+              
+              <tr class="active-row">
+                <td>GCTT</td>
+                <td>CDS - Terminator</td>
+              </tr>
+              
+              <tr>
+                <td>TGTT</td>
+                <td>Terminator - pTU1 vector</td>
+              </tr>
+              
+              <tr class="active-row">
+                <td>CAAA</td>
+                <td>36nt LuxI oligo - CDS (sfGFP)</td>
+              </tr>
+              
+              <tr>
+                <td>AATG</td>
+                <td>RBS - 36nt LuxI oligo </td>
+              </tr>
+            </tbody>
+        </table>
+        <figcaption>
+          Table 2. Senders’ Level 2 TUs were assembled using Golden Gate Assembly with BsmBI.           
+        </figcaption>
+        </center>
+
+
+        <center>
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>Overhang </th>
+                <th>Junction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ATCT</td>
+                <td>pTU2 vector - TU from pTU1</td>
+              </tr>
+              <tr class="active-row">
+                <td>TGCC</td>
+                <td>TU from pTU1 - TetR TU</td>
+              </tr>
+              <tr>
+                <td>TTAG</td>
+                <td>TetR TU - pTU2 vector</td>
+              </tr>
+              
+              <tr class="active-row">
+                <td>TGCC</td>
+                <td>TU from pTU1 - [PlacI-tet1]</td>
+              </tr>
+              
+              <tr>
+                <td>TATG</td>
+                <td>[PlacI-tet1] - TetR+Terminator from plasmid</td>
+              </tr>
+            </tbody>
+        </table>
+
+        <figcaption>
+          Table 3. Overhangs for Level 2 Golden Gate assembly regarding the Senders’ Circuits. The boxes in blue contain overhangs used in our
+           senders’ redesigned circuits with a variation in TetR constitutive expression promoter and RBS (PlacI and tet1 RBS instead of J23106 and
+            B0034 RBS), which are described in more detail in the <a href="https://2022.igem.wiki/athens/engineering">Engineering Sucess</a> page.
+        </figcaption>
+        </center>
+
         <h2>Plasmid Vectors</h2>
         <br>
+        After we had decided that we would build our plasmids using Golden Gate Assembly, we had to select the vectors that would “host” the regulatory and coding sequences our circuits would consist of. 
+        <br><br>
+        Firstly, we established certain criteria the vectors we would choose had to fulfill:
+        <br><br>
+        <ul>
+          <li>
+            They would have to be Golden Gate level 1- and level 2-compatible, which means that they should have no more than two recognition and restriction sites of the desired type IIS enzyme at the right position and with the right orientation (recognition sites facing “inwards”).
+          </li>
+          <li>
+            They would have to be no larger than 4.5kbp in size, so that our final constructs (plasmid backbone plus 2 to 2.5kbp from inserted parts) could be chemically  transformed into our cells.
+          </li>
+          <li>
+            They would have to be for use in bacterial cells.
+          </li>
+          <li>
+            Vectors that would be used at different levels of cloning and for different purposes should have different antibiotics resistance genes for efficient colony selection.
+          </li>
+          <li>
+            Since we wanted to experiment with different ways of tuning our system’s protein expression dynamics, the vector that would eventually become the backbone for our senders and receivers’ main constructs should be available in versions with different copy numbers (preferably low and medium).
+          </li>
+          <li>
+            As we eventually decided to co-transform two plasmids in our senders to tackle the cross-talk issue, the two vectors we would choose for 
+            those constructs would have to be compatible regarding their origin of replication; in other words, the origin of replication of the one 
+            should not occupy the machinery responsible for the replication of the other. Information about plasmid incompatibility in terms of origin of 
+            replication can be found in the following table (Table 4):
+
+            <center>
+              <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>Origin of replication (ori)</th>
+                    <th>Incompatibility group</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>pMB1</td>
+                    <td>A</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>pBR322</td>
+                    <td>A</td>
+                  </tr>
+                  <tr>
+                    <td>colE1</td>
+                    <td>A</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>R6K</td>
+                    <td>C</td>
+                  </tr>
+                  <tr>
+                    <td>p15A</td>
+                    <td>B</td>
+                  </tr>
+                  </tr>
+                  <tr>
+                    <td>pSC101</td>
+                    <td>C</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>pUC</td>
+                    <td>A</td>
+                  </tr>
+                </tbody>
+            </table>
+            </center>
+            <br>
+            For two plasmids to coexist in the same cell, they have to belong to different incompatibility groups (e.g. A and C, B and A) [1].
+            <br><br>
+          </li>
+          <li>
+            Ideally, the vectors we would choose should also have a marker (e.g. a visual index) to facilitate the selection of the right colonies after the assembly of the constructs via Golden Gate and the subsequent transformation.
+          </li>
+        </ul>
+        <br><br>
+        We began browsing Addgene’s [2] vast plasmid catalogue to find bacterial backbones that would fulfil the prerequisites mentioned above. Our research yielded four vectors that we eventually deployed in our project design; three of the four vectors are derived from the EcoFlex kit [3].
+        <br><br>
+        We used each vector for a different purpose as analyzed below:
+        <br><br>
+        <ul>
+
+        <li>
+        pTU1-A-lacZ [3]: We utilized pTU1-A-lacZ as our level 1 (as hinted by the “1” in its name)-Golden Gate acceptor vector for assembling the LuxI expressing transcriptional units with the different RBS in our senders. This vector has an ampicillin (Amp) resistance gene and is a high copy plasmid; it is also approximately 2.5kbp in size. Since it would not be present in the senders to be induced, we did not have to select a version with a particular origin of replication (taking into consideration possible interactions with other plasmids transformed in the same cell or how copy number would affect expression dynamics). pTU1-A-lacZ contains the gene coding for LacZ, which allowed us to select recombined constructs through blue-white screening on agar plates spread with x-gal and IPTG (blue colonies: transformed with the undesired parental plasmid, white colonies: transformed with a recombinant plasmid). Another trait worth mentioning of pTU1-A-lacZ is that it is optimized to be used as a part-carrying vector should the transcriptional unit it contains be utilized as a fragment in level 2 assembly, as it also includes two BsmBI cut sites “outside” its level 1 restriction positions. The “A” in the vector’s name indicates that the transcriptional unit assembled inside this particular plasmid will be placed upstream of other transcriptional units (assembled in pTU1-A-lacZ “B”, “C”, etc. counterparts) should it be included in a level 2-Golden Gate assembly. This detail was given particular attention, as many of our constructs contain repressor genes that are constitutively expressed. We designed our constructs placing the constitutively expressed genes downstream of all inducibly expressed CDS, to reduce leakiness from our constitutively translated transcriptional units.
+        <br><br>
+        
+        <center>
+        <img class="img1" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+        <figcaption>Figure 1. pTU1-A-lacZ vector (created with SnapGene) </figcaption>
+        </center>
+        <br>
+        </li>
+
+        <li>
+        pTU2-A-RFP (colE1 ori) [3]: We used pTU2-A-RFP (colE1 ori) as a level 2 (as indicated by the “2” in its name)-Golden Gate acceptor vector for assembling all different versions of the mNeonGreen/LuxR expression system in receivers: Open Loop (OL or OpLo), Positive Feedback (PF), Positive Feedback with a constitutive promoter (PFc), Positive Feedback with a Repressor (PF+R) and Positive Feedback with a Repressor and a constitutive promoter (PFc+R). This vector has a chloramphenicol (Cm) resistance gene and is a medium copy plasmid; it is approximately 3kbp in size. We selected a medium-copy plasmid for the expression of our system in receiver cells, as such a plasmid would allow the production of our visual output (mNeonGreen) while maintaining it at the levels receivers are actually activated by OC6 molecules; namely, without having a potentially high-copy vector counterbalance the different amount of AHL molecules receivers are stimulated by. This medium-copy backbone would not stress out cells carrying it either.  Another reason we chose this particular vector was its marker; pTU2-A-RFP (colE1 ori) contains an RFP gene, enabling screening of colonies expressing recombinant plasmids without the need to use additional reagents (magenta colonies: transformed with the undesired parental plasmid, white colonies: transformed with a recombinant plasmid). 
+        <br><br>
+
+        <center>
+        <img class="img2" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+        <figcaption>
+          Figure 2.
+          pTU2-A-RFP (colE1 ori) vector (created with SnapGene) 
+        </figcaption>
+        </center>
+        <br>
+        </li>
+
+        <li>
+          pTU2-A-RFP (p15A ori) [3]: This is the low-copy version of pTU2-A-RFP (colE1 ori) due to the substitution of colE1 ori with the p15A origin of replication. We used pTU2-A-RFP (p15A ori) as a level 2-Golden Gate acceptor vector too for building the LuxI/TetR expression system in sender cells, alongside with the LuxI-mNeonGreen/TetR (later LuxI-sfGFP/TetR as seen in our Engineering Success tab) expression system for our RBS library characterization in the same cells. We chose a low-copy number plasmid for the expression of our system in senders, because we wanted the strength of each RBS to be reflected in the expression levels of LuxI/OC6 and not be compensated by the (potentially high) replication rate of the construct carrying it. We also utilized said vector to assemble one of the receivers’ circuits too, the OL expression system, to discover how protein expression rates might depend on plasmid copy number. Since it is identical with pTU2-A-RFP (colE1 ori) in its entire sequence except for the origin of replication, this vector also has a Cm resistance gene and measures approximately 3kbp in size. Like pTU2-A-RFP (colE1 ori), pTU2-A-RFP (p15A ori) is an RFP-dropout plasmid backbone.  
+          <br><br>
+  
+          <center>
+          <img class="img3" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+          <figcaption>
+            Figure 3.
+        pTU2-A-RFP (p15A ori) vector (created with SnapGene)
+          </figcaption>
+          </center>
+          <br>
+          </li>
+
+
+          <li>
+            pTKEI-Dest [4]: We utilized pTKEI-Dest as the acceptor vector of the construct we built to tackle the cross-talk issue among discrete senders’ subpopulations (more information about the cross-talk challenge in the Cross-talk section below). It includes a kanamycin (Kan) resistance gene and measures approximately 4.5kbp in length. It is a high-copy plasmid embodying the pBR322 origin of replication. Since this vector would have to be co-transformed with the plasmid “hosting” the final construct for senders, namely pTU2-A-RFP (p15A ori), it was specifically selected because of its origin of replication; p15A is classified as an incompatibility group B ori, therefore the second plasmid senders could carry would have to belong to either incompatibility group A or C. Taking into account the criteria agreed upon above alongside with this prerequisite, our search led us to the pTKEI-Dest vector, which, based on its ori, is categorized in incompatibility group A. As in pTU1-A-lacZ, pTKEI-Dest encompasses a lacZa gene, allowing for blue-white screening in agar plates containing x-gal and IPTG.  
+            <br><br>
+    
+            <center>
+            <img class="img4" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+            <figcaption>
+              Figure 4.
+              pTKEI-Dest vector (created with SnapGene)
+            </figcaption>
+            </center>
+            <br>
+            </li>
 
         <h2>Bacterial Strains</h2>
         <br>
 
+        <b>Bacterial Strains</b>
+        <br><br>
+        The following bacterial strains were used in our project:
+        <br><br>
+        <b>DH5a:</b> <br>
+        They are defined by three mutations: recA1, endA1,lacZΔM15. This storage strain is appropriate for transformation and cloning because of the aforementioned mutations.
+        <br><br>
+        <b>BL21 (DE3):</b><br>
+        BL21 is a high level expression strain that is used for induction experiments and expression of heterologous proteins. That is why we considered this strain appropriate for our project.
+        <br><br>
+        <b>DH5a-Z1:s</b><br>
+        DH5a-Z1 strain has the TetR repressor encoded in its genome. We chose to use this strain in our engineering cycles after our experimental data indicated that the TetR expression system in our Level 2 constructs probably did not provide the right repression dynamics.
+        <br><br>
+
         <h2>Visual output</h2>
         <br>
 
+        We chose a visual output for our system due to its ease of detection and wide range of available options. After a lot of reflection on integrating less utilized natural visual responses of bacterial cells to quorum sensing stimuli, such as bioluminescence (which can be measured with a luminometer) or biofilm formation (which can be observed and measured by staining bacterial cultures with Congo red [5], crystal violet [6], or safranin [7] dyes), we decided to proceed with the well-characterized method of fluorescent proteins. 
+        <br><br>
+        GFP (eGFP or sfGFP) was the most obvious choice; however, we were urged to consider more recently-developed fluorescent proteins. Charilaos Giannitsis, a member of iGEM Greece 2017, suggested that we use mNeonGreen [8], a fluorescent protein that presents more optimal properties compared to GFP. mNeonGreen specs are presented in the following table in comparison with the corresponding properties of eGFP [9], [10]:
+        <br><br>
+
+        <center>
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>eGFP</th>
+                <th>mNeonGreen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Quantum yield</td>
+                <td>0.6</td>
+                <td>0.8</td>
+              </tr>
+              <tr class="active-row">
+                <td>Brightness</td>
+                <td>33.54</td>
+                <td>92.8</td>
+              </tr>
+              <tr>
+                 <td>Maturation (min)</td>
+                <td>25</td>
+                <td>10</td>
+              </tr>
+              <tr class="active-row">
+                <td>Lifetime (ns)</td>
+                <td>2.6</td>
+                <td>3.1</td>
+              </tr>
+              <tr>
+                 <td>Photostability (t1/2)</td>
+                <td>50.1</td>
+                <td>158.0</td>
+              </tbody>
+        </table>
+        <figcaption>
+          Table 5.
+        Comparison of eGFP vs mNeonGreen properties.
+        </center>
+        <br><br>
+
+        Since our experiments required a fluorescent protein that efficiently emits the light it absorbs (measured by quantum yield), is particularly bright (indicated by brightness), has a high turnover rate (shown by maturation and lifetime), as we planned to measure receivers’ fluorescence every 30 minutes to produce our curves, resists to photobleaching (hinted by photostability) and is certified as monomeric, we proceeded with integrating mNeonGreen in our constructs. An extra asset of mNeonGreen is that, although having been recognized as a better-performing fluorescent protein than eGFP, its fluorescence can still be measured with standard GFP filters (excitation peak: 488nm, emission peak: 511nm [9], [10]); this way, anyone with a standard fluorometer that measures GFP and its variants can replicate our experiments or use our receiver constructs in their own experimental setup.
+        <br><br>
+        For the RBS strength characterization, superfolder GFP (sfGFP) was utilized in fusion with the first 36 nucleotides of LuxI during our engineering cycle as well.
+        <br><br>
+
         <h2>The intermediate signal in our biological perceptron - LuxI/LuxR quorum sensing system</h2>
         <br>
-        
-        <p>
-        
-        <h3></h3>
-        <br>
+        In our biological Perceptron the input pattern is converted, in a weighted manner, into an intermediate signal by the senders and the sum of this intermediate dictates the final behavior of the receivers. 
+        <br><br>
+        Quorum sensing (QS) systems were an obvious choice, since there are plenty of QS systems well characterized and commonly used in synthetic 
+        circuits. Our deployed QS system is the LuxI/LuxR system (for more information about our final choice, please refer to 
+        the <a href="https://2022.igem.wiki/athens/human-practices">Integrated Human practices</a> page). LuxI synthase catalyzes the production of 3-oxohexanoyl-homoserine lactone (OC6 for short), which belongs to a family of QS molecules called N-Acetyl-Homoserin-Lactones (AHLs). Activated Senders express LuxI and the produced OC6 molecules diffuse outside of the senders and into the receivers. Inside the receivers OC6 molecules bind to LuxR, a transcriptional regulator that forms its functional dimer after binding with OC6, which activates the Plux promoter and, therefore, the  downstream gene [11].
+        <br><br>   
         
         </p>
 
