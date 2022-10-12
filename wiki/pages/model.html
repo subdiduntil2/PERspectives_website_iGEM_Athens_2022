@@ -25,7 +25,7 @@
     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
 
     <!--MathJax Import-->
-    <script type= "text/javascript" src="../../athens/static/scripts/mathjax/tex-chtml.js"></script>
+    <script type= "text/javascript" src="../static/scripts/mathjax/tex-chtml.js"></script>
     
     <title>Perspectives | Model</title>
 </head>
@@ -60,339 +60,1865 @@
     </p>
 </div>
 
-
-<div class="buttons">
+<div class="buttons-1">
     <div class="button">
-        <a onclick="show('cc-senders-2')">Senders</a>
+        <a href="#senders">Senders</a>
     </div>
     <div class="button">
-        <a onclick="show('cc-receivers')">Receivers</a>
+        <a href="#receivers">Receivers</a>
+    </div>
+</div>
+<div class="buttons-2">
+    <div class="button">
+        <a href="#stability">Stability Analysis</a>
+    </div>
+    <div class="button">
+        <a href="#pattern">Pattern Recognition</a>
+    </div>
+    <div class="button">
+        <a href="#diffusion">Diffusion</a>
     </div>
 </div>
 
+    <!-- Senders -->  
 
-
-<div class="cc" id="cc-senders">
+    <div class="overview-section" id="senders">
+        <h1>Senders System Explained</h1>
+        <br><br>
+      </div>
+      
+    <div class="cc">
     <div class="left-side">
         <div class="index-bar">
-            <h2><b>Index</b></h2>
             <ul class="lateral-index">
                 <li class="lateral-content">
-                    <a href="#intro">Introduction.S</a>
+                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#results">Results.S</a>
+                    <a href="#weights-s">Weights Simulation</a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#discussion">Discussion.S</a>
+                    <a href="#biochem-s">Biochemical Reactions</a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#references">References.S</a>
+                    <a href="#kinetic-s">Kinetic Model</a>
                 </li>
+                <li class="lateral-content">
+                    <a href="#results-s">Results</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+            </li>
             </ul>
         </div>
     </div>
     
     <div class="right-side">
-        <section class="introduction">
-            <a id="intro" class="anchorOffset"></a>
+    
+            <!-- Intor  -->
+            <section class="inside-section">
+            <a id="weights-s" class="anchorOffset"></a>
+            <br>
+            <h1>aTc promoter</h1>
+            The purpose of our team is to create 3x1 patterns of E.coli ‘Senders’ subpopulations that express the LuxI gene at a different rate.
+            <br> 
+            To achieve this, we designed a regulatory system based on the pTet promoter. If there is no aTc in the system, the promoter is repressed by the TetR regulator. If aTc is present in the system, then it binds with the TetR, creating a complex that is pumped out of the cell, allowing the mRNA of the following gene to be produced. For the production of the TetR our team used a constitutive promoter from the iGEM Registry.
             <br><br>
-            <h1><b>Senders System: Explained</b></h1>
+            <h1>Simulating the weights of the neural network with RBSs
+            </h1>
+            <br>
+
+            Our goal was to find a way to simulate the weights of a perceptron algorithm with a biological analogue. In cooperation with the wet lab members, it was decided that the weights of the neural network would be simulated with RBSs that assign different translation rates. In order to accomplish this task, the Salis Lab "RBS Calculator" Tool was used. This tool allows the user to see the translation rate of an RBS, but also taking into account the following gene, since it is known that the translation rate of an RBS depends on it. There are two ways to use the RBS Calculator: <br><br>
+            1. Upload a RNA sequence (The RBS and the gene) and receive as a result the translation rate of this RBS when followed by this specific gene.<br> 
+            2. Demand a specific translation rate of a specific gene and receive as a result RBS sequences that will provide it.<br><br>
+
+            Our team used the first way to calculate the translation rate of the RBS Libraries:
+            <br><br> 
+            1. Anderson RBS Library from iGEM Registry<br> 
+            2. RBS Library used in 'Precise and reliable gene expression via standard transcription and translation initiation elements' paper’.
+            <br> <br> 
+            The need for creating new synthetic RBS sequences that would fit exactly to the design of our project emerged. So the dry lab members enriched the library they had built with the already existing RBSs with new synthetic ones. The sequences of the new RBSs where found by using again Salis Lab ‘RBS Calculator’ tool, but these time by requesting a specific translation rate and receiving the synthetic sequence by the tool.  Once the library with all the 166 RBSs was ready and all the translation rates were calculated, the RBSs were divided into three classes:
+            <br> <br> 
+            1. The strong intensity RBSs, with translation rate more than 90000 au<br> 
+            2. The medium intensity RBSs, with translation rate around 25000-40000 au<br> 
+            3. The weak intensity RBSs, with translation rate less than 15000 au<br> <br> 
+            Practically, therefore, a library of RBSs emerged from which the strong ones would simulate a high weight, those with a moderate translation rate a moderate weight while the weak RBSs simulate the low weights for the perceptron.<br> <br> 
+            Finally, the RBSs that were going to be tested in the lab were:<br> <br> 
+
+
+            <center>
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Translation Initiation Rate (au)</th>
+                        <th>Strength</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>S4</td>
+                        <td>85298.9</td>
+                        <td>Strong</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>S5</td>
+                        <td>78686.2</td>
+                        <td>Strong</td>
+                      </tr>
+                      <tr>
+                        <td>S10</td>
+                        <td>31126.5</td>
+                        <td>Medium</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>S11</td>
+                        <td>30580.8</td>
+                        <td>Medium</td>
+                      </tr>
+                      <tr>
+                        <td>S12</td>
+                        <td>11058.3</td>
+                        <td>Weak</td>
+                      </tr>
+                      </tr>
+                      <tr class="active-row">
+                        <td>S13</td>
+                        <td>10752.1</td>
+                        <td>Weak</td>
+                      </tr>
+                      <tr >
+                        <td>BCD1</td>
+                        <td>9455.2</td>
+                        <td>Weak</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>BSD2</td>
+                        <td>287840.97</td>
+                        <td>Very Strong</td>
+                      </tr>
+                      <tr >
+                        <td>BCD8</td>
+                        <td>2190.04</td>
+                        <td>Weak</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>BSD12</td>
+                        <td>12782.75</td>
+                        <td>Weak</td>
+                      </tr>
+                       </tr>
+                      <tr>
+                        <td>BCD14</td>
+                        <td>22019.63</td>
+                        <td>Weak</td>
+                      </tr>
+                    
+                      
+                    </tbody>
+                </table>
+        
+            <figcaption>
+                Table 1: RBSs for experimental use
+            </figcaption>
+            </center>
             <br><br>
-            <h2>aTc promoter</h2>
+
+            <h1>Using Quorum Sensing to stimulate the weighted sum of the neural network</h1>
             <br>
-            <p> aTc promoter:
-                The purpose of our team is to create 3x1 patterns of E.coli ‘Senders’ subpopulations that express the LuxI gene at a different rate. <br>
-                To achieve this, we designed a regulatory system based on the aTc promoter. If there is no aTc in the system, the promoter is repressed by the TetR 
-                regulator. If aTc is present in the system, then it binds with the TetR, creating a complex that is pumped out of the cell, allowing the mRNA of the 
-                following gene to be produced. A simple explanation of the operation of the aTc is presented in the picture below:
-                </p>
+            n order to be able to simulate the weighted sum in the perceptron, we took advantage of the natural way bacteria communicate, the quorum sensing mechanism. So our ‘Senders’ subpopulation must be able to express the LuxI gene. The expression of that gene was regulated by the aTc promoter mentioned above. In this way, if we wanted to stimulate a small weight, we would use the aTc promoter followed by the LuxI gene with a low intensity RBS. And we would do the same thing respectively to simulate a medium or high perceptron weight. In this way every subpopulation of the senders would produce a specific amount of AHL which is determined by the RBS we used. By combining them together, we would have achieved the simulation of the weighted sum of the perceptron by adding up the total amount of lactone produced by each subpopulation. 
+            <br><br>
+            Senders’ Circuit Overview. TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested, please refer to Engineering Success) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription. Senders’ Circuit Overview. TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested, please refer to Engineering Success) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription.
+        
+            <br><br>
+
+            <center>
+            <img class="s-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-1.png">
+            <figcaption>
+                Figure 1: Senders’ Circuit Overview. 
+            </section>
+            
+            
+            <section class="inside-section">
+                <a id="biochem-s" class="anchorOffset"></a>
+                <br>
+    
+                <h1>Biochemical Reactions</h1>
+                <br>
+                For the kinetic modelling of the sender's system, we had to convert all the above design into biochemical equations, each of which will be characterized by its own rate of consumption or production of the chemical species. The resulting equations are:
+                <br><br>
+                1. ∅ → TetR <br>
+                2. TC + TetR→TetRTC<br>
+                3. TetRTC + Ptetoff  ↔ Pteton<br>
+                4. Pteton → Pteton + mRNALuxI<br>
+                5. TetR + TetO → Ptetoff<br>
+                6. mRN ALuxI → LuxI <br>
+                7. TC→ ∅<br>
+                8. TetRTC → ∅<br>
+                9. mRNALuxI → ∅<br>
+                
+
+                <br><br>
+                Equation (1) describes the production of TetR by the constitutive promoter. Equation (2) describes the formation of the TetR+aTc comlex when aTc is present in the system and this formation leads to equation (3) describing the activation of the Ptet promoter.  Equations (4) and (6) describe the translation of the gene and finally the production of the LuxI enzyme. Equation (5) represents the deactivation of the Ptet promoter when aTc has been consumed. Finally, equations (7),(8) and (9) represent the degradation of the main chemical species of a aTc, the complex TetR+aTc and the mRNA respectively [1].
+                <br><br>
+                Once the LuxI gene has been expressed, the enzymatic reaction of the formation of the quorum sensing molecule (AHL) is taking place. The reaction is considered to be of a first order kinetic since the substrate of the enzyme reaction is produced naturally and abundantly within the cell. 
+
+
+            </section> 
+
+            <section class="inside-section">
+                <a id="kinetic-s" class="anchorOffset"></a>
+                <br>
+    
+                <h1>Kinetic Model</h1>
+                <br>
+                To develop the kinetic model, our team worked on two levels. At first, the differential equations for the production of chemical species inside a single cell were developed. Then we scaled-up our approach by studying the production of the lactone as a whole from each subpopulation, as well as its diffusion in the system until it reaches the receivers. 
+                <br><br>
+            
+                <b>Single cell model</b>
+                <br><br>
+                Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation of the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
+                <br><br>
+
+
+                At this point it would be useful to mention the different assumption made for the single cell kinetic model:
+                <br><br>
+                1. We assume that the expression of a gene can be fully characterised by a Hill Equation.<br>
+                2. We assume that the production of the AHL by the LuxI enzyme is a first order kinetic reaction, so the ODE describing this reaction is formed respectively.<br><br>
+
+                <br><br>
+                Equations (1),(2) and (3) describe the change of the concentration of TetR, the complex TetR+aTc and the LuxI enzyme respectively. Equation (4) is the representation of the first order enzymatic reaction that expresses the change of the concentration of the lactone that is the quorum sensing molecule. The total amount of this lactone simulates the weighted sum of the artificial neural network. 
+                <br><br>
+
+                Initially, the kinetic constants for the one-cell model were found in the literature as we needed to analyze the system and have an indicative value for the amount of lactone produced over time and to choose whether the plasmids we would medium or high copy. We followed very specific criteria for the choice of kinetic constants. We always checked if the experiments in the research works from which we were inspired used the same microorganisms as us and the same experimental conditions as those that we would develop our system. By keeping the desired amount of AHL produced constant, we ran our Python scripts and concluded that the copy number of the plasmid used at the Senders’ system should be low. You can find the python scripts <a href="">here</a>.
+
+                The the matrix below consists of the initial values of our kinetic constants found in literature:
+                <br><br>
+                <center>
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <th>Kinetic Constant</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                        <th>Source</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>CN</td>
+                        <td>Plasmid Copy Number (Senders)</td>
+                        <td>10(Low)</td>
+                        <td>Wet Lab Construct Used</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>n</td>
+                        <td>LuxI Hill Coefficient (in aTc-TetR system)</td>
+                        <td>3</td>
+                        <td><a href="https://2016.igem.org/Team:HSiTAIWAN/Model"> Team:HSiTAIWAN 2016 </a></td>
+                      </tr>
+                      <tr>
+                        <td>d_comlex</td>
+                        <td>Degradation rate of aTcTetR</td>
+                        <td>0.025(1/min)</td>
+                        <td><a href="https://ieeexplore.ieee.org/document/8263882"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_mRNATetR</td>
+                        <td>Degradation Rate of mRNA TetR</td>
+                        <td>ln(2)/30 = 0.023(1/sec)</td>
+                        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC328697/"> Literature </a></td>
+                      </tr>
+                      <tr >
+                        <td>dTetR</td>
+                        <td>Degradation Rate of TetR</td>
+                        <td>0.631 [1/sec]</td>
+                        <td><a href="https://www.sciencedirect.com/science/article/pii/S0092867411006660"> Literature </a></td>
+                      </tr>
+                      </tr>
+                      <tr class="active-row" >
+                        <td>d_AHL</td>
+                        <td>Degradation Rate of AHL</td>
+                        <td>0.01 min-1</td>
+                        <td><a href="https://www.nature.com/articles/nature03461"> Literature </a></td>
+                      </tr>
+                      <tr >
+                        <td>d_mRNALuxI</td>
+                        <td>Degradation Rate of Luxi Mrna</td>
+                        <td>0.347 (1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_LuxI</td>
+                        <td>Degradation Rate of LuxI protein</td>
+                        <td>0.00167(1/min)</td>
+                        <td><a href="https://2010.igem.org/Team:MIT_tmodel"> Team MIT 2010 </a></td>
+                      </tr>
+                      <tr >
+                        <td>d_aTc</td>
+                        <td>Degradation Rate of aTc</td>
+                        <td>ln(2)/20 (1hours)</td>
+                        <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3940292/#:~:text=ATc%20is%20degraded%20in%20all,hours%20(see%20Table%201)."> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>KA</td>
+                        <td>Synthesis Rate of AHL by LuxI</td>
+                        <td>0.04(1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                       
+                      <tr >
+                        <td>k-1_aTcTetR</td>
+                        <td>Dissociation Rate of aTcTetR</td>
+                        <td>4.2*10^-4(1/min)</td>
+                        <td><a href="https://ieeexplore.ieee.org/document/8263882"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>k_aTcTetR</td>
+                        <td>Synthesis Rate of aTcTetR</td>
+                        <td>k-1/Kd</td>
+                        <td></td>
+                      </tr>
+                      <tr >
+                        <td>Kd_pTet</td>
+                        <td>Dissociation constant of tetR with the pTet Promoter</td>
+                        <td>50 nM</td>
+                        <td><a href="https://2016.igem.org/Team:HSiTAIWAN/Model"> Team:HSiTAIWAN 2016 </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>Kd_aTcTetR</td>
+                        <td>Dissociation constant of aTC with the tetR molecule</td>
+                        <td>15 nM</td>
+                        <td><a href="https://2016.igem.org/Team:HSiTAIWAN/Model"> Team:HSiTAIWAN 2016 </a></td>
+                      </tr>
+                      
+                      <tr >
+                        <td>p_pTet</td>
+                        <td>Transcription Rate of ptet promoter </td>
+                        <td>25.3*10^(-3) [1/sec]</td>
+                        <td>Calculated using "Salis Lab" Calculator</td>
+                      </tr>
+                      
+                      <tr class="active-row">
+                        <td>p_J23105</td>
+                        <td>Transcription Rate of J23105 promoter</td>
+                        <td>30*10^(-3) [1/sec]</td>
+                        <td><a href="http://parts.igem.org/Part:BBa_J23105"> Registry </a></td>
+                      </tr>
+                      <tr >
+                        <td>k_luxi</td>
+                        <td>Translation Rate of LuxI</td>
+                        <td>Taken from our RBS Library</td>
+                        <td>Calculated using "Salis Lab" Calculator</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>k_tetr</td>
+                        <td>Translation Rate of TetR</td>
+                        <td>11*10^(-3)[1/sec]</td>
+                        <td>Calculated using "Salis0.129*10 Lab" Calculator</td>
+                      </tr>
+                      <tr>
+                        <td>Nmin</td>
+                        <td>Initial value of E.coli</td>
+                        <td>0.129*10^(7)</td>
+                        <td>Calculated from lab data about OD</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>Nmax</td>
+                        <td>Maximum value of E.coli</td>
+                        <td>2.14*10^(7)</td>
+                        <td>Calculated from lab data about OD</td>
+                      </tr>
+                      <tr >
+                        <td>Vbead</td>
+                        <td>Volume of culture</td>
+                        <td>200 μL</td>
+                        <td>From Wet Lab Setup</td>
+                      </tr>
+                    
+                      
+                    </tbody>
+                </table>
+              
+                    <figcaption>
+                        Table 2: Kinetic constants obtained from literature. 
+                    </figcaption>
+            
+                </center> 
+                <br><br>
+                In terms of the non-literature values, those are obtained by the In Silico Tool of Salislab, which offered a proportional scale of strength for our promoter and rbs constructs. In order to convert them to time-scale parameters.
+                <br><br>
+                For Translation Rates: The maximum possible translation rate offered by salislab is around 250000 a.u. which corresponds to the maximum elongation rate, i.e 18 aminoacids/sec. Knowing that each amino acid has 3nucleotides, the following time-scale formula emerges:
+                <br><br>
+                k_gene=(4.14 proteins/mRNA/second)*[TIR_salis/250000]
+                <br><br>
+
+                For Transcription Rates: In a similar manner, the maximum transcription elongation rate in E.Coli is 90nts/sec  and the RNA polymerase II footprint was found to be 40 nucleotides [4]. Finding out that the maximum transcription rate of Salislab is 100000 a.u. ,we have the formula: 
+                <br><br>
+                    p_gene=(90/40)*(TIR_salis/100000), or
+                    <br><br>
+                    p_gene=2.25*(TIR_salis/100000)
+                    <br><br>
+                The formulas were used  in order to receive the time-scale values of our constructs
+                <br><br>
+                <b>Whole cell model</b>
+                <br><br> 
+
+                Then, wanting to have a complete picture of our overall system at the level of bacterial populations, we upgraded our model for multiple cells. The scale-up had to include the study of phenomena such as the growth of the bacterial population and how this affects the amount of lactone produced as well as the diffusion of the lactone in and out of the cells. Assumptions made for the whole cell kinetic model:
+                <br><br>
+                1. We assume that the expression of a gene can be fully characterised by a Hill Equation <br> 
+                2. We assume that the production of the AHL by the LuxI enzyme is a first order kinetic reaction, so the ODE describing this reaction is formed respectively<br>
+                3. We assume that the diffusion of the lactone outside the cells is characterized by the same Fick’s constant as the diffusion of the lactone inside the cells<br>
+                4. We assume that the growth of the bacterial population is occurs logarithmically<br><br> 
+
+
+                The production and consumption rates of each chemical can be represented by the following added differential equations:
+                <br><br>
+
+
+
+                Equation (1) is a representation of how the number of cells is growing with time. Equations (2) and (3) explain how the concentration of the aTc inducer is changing inside and outside of a cell due to diffusion, and similarly equations (8) and (9) describe the diffusion phenomena for AHL-OC6. 
+
+            </section> 
+
+            <section class="inside-section">
+                <a id="results-s" class="anchorOffset"></a>
+                <br>
+    
+                <h1>Results</h1>
+                <br>
+
+                As mentioned above, the initial purpose of our kinetic model-both the single cell and the whole cell versions-was to get a respectable understanding of our system and its various parts not only in the time domain as well as for different aTc inputs, even with a limited amount of experimental data. That should be implemented both for the single-cell and for the whole cell models, before model fit to the experimental data would be executed. 
+                <br><br>
+
+                <h2>Time-scale</h2>
+                <br>
+                In time domain, our kinetic model for the BCD2 RBS variant showed the following results (at full induction aTc=10**(-4) M )
+
+
+                <br><br>
+                
+                <h2>For the single-cell model
+                </h2>
+                <br>
+                <center>
+                <img class="s-2" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-2.png">
+                <figcaption>
+                    Figure 2: Change in concentration of chemical species after solving the ODs for the single-cell model                 
+                </figcaption>
+                </center>
+                <br>
+
+                <h2>For the whole-cell model
+                </h2>
+                <br>
+                <center>
+                <img class="s-3" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-3.png">
+                <figcaption>
+                    Figure 3: Change in concentration of chemical species after solving the ODs for the whole-cell model 
+                </figcaption>
+                </center>
+                <br>
+
+                From the graphs above, we can clearly comprehend the following:<br><br>
+                1. The concentration of external and internal aTc follows similar values, due to a significant decrease of volume from the external volume of the bead (at 200μL) to the Vecoli (at around 1000pL). This was also experimentally validated by [5] where a maximum 10-fold gap between extracellular and intracellular aTc was observed (see Supplementary Table 10).<br>
+                2. The diffusion of aTc is immediate leading to an instant reduction of the TetR Repressor. However, at around the 3h mark the entire aTc concentration tends to zero, which subsequently brings back the TetR repressor and diminishes the amount of AHL produced.<br>
+                3. In the whole cell model, we observe a decrease of the internal AHL molecules due to the fast diffusion phenomena throughout the E.coli membrane (described by the D_AHL constant). The entire AHL amount of the cell culture is estimated at 5*10**(11) molecules (for a 200μL Bead).<br><br>
+
+                In terms of the transfer function of the senders, we observed a clear difference between the single-cell and the whole cell models:
+                <br><br>
+
+                <center>
+                <img class="s-4" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-4.png">
+                <figcaption>
+                    Figure 4: Ρepresentation of the transfer function for single-cell and whole-cell model (RBS: BCD2) 
+                </figcaption>
+                </center>
+                <br><br>
+                As we can clearly observe, the lack of diffusion phenomena in the first modelling approach lead to a false estimate of the aTc value required for full induction of the senders population. As a result, our team decided to keep the whole cell model for parameter fitting and simulations, since it would correlate better with the complex conditions of our lab experiments.
+                <br><br>
+                <h2>Lab Data Comparison and Model Fit
+                </h2>
+                <br><br>
+                At first, a straight-comparison of our literature whole-cell model with the lab induction data was required in order to view differences and fault estimates.
+                <br><br>
+
+                <center>
+                <img class="s-5" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-5.png">
+                <figcaption>
+                    Figure 5: Comparison of the theoretical model with the experimental data (RBS: BCD2)
+                </figcaption>
+                </center>
+                <br><br> 
+
+                It is obvious that despite its ability to predict the experimental value of LuxI measured at full induction, our model lacked the capability to accurately predict the initiation of induction. Due to that fact, a model fitting method-via error minimization-was required in order to obtain the correct model parameters. In particular, we used the Python library lmfit and the routine minimize() with the integrated Nelder-Mead Algorithm in order to perform our parameter optimization.
+                <br><br> 
+                In terms of the Nelder-Mead Algorithm, it is a numerical method used to find the minimum or maximum of an objective function in a multidimensional space. It is a direct search method (based on function comparison) and is often applied to nonlinear optimization problems for which derivatives may not be known. 
+                <br><br> 
+
+                <center>
+                    <img class="s-6" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-6.png">
+                    <figcaption>
+                        Figure 6:A simple flow-chart of the Nelder-Mead algorithm [6]
+                                    </figcaption>
+                    </center>
+                    <br><br> 
+                    On the table below, we show the parameters opted to be fitted to our experimental data as well as the fitting results for the BCD 2 RBS:
+                    <br><br>
+                    <center>
+                    <table class="content-table">
+                        <thead>
+                          <tr>
+                            <th>Symbol</th>
+                            <th>Meaning</th>
+                            <th>Literature Value</th>
+                            <th>Source</th>
+                            <th>Fitted Value</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>mi</td>
+                            <td>Senders Dilution Rate</td>
+                            <td>0.019 [1/min]</td>
+                            <td><a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=111284&ver=1&trm=cell+growth+rate+coli&org="> Harvard Bionumbers </a></td>
+                            <td>0.032 [1/min]</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>a_tetr</td>
+                            <td>Production Rate of TetR </td>
+                            <td>k_tetr*p_ptet=1.18[1/min]</td>
+                            <td>Calculated with "SalisLab" Calculator</td>
+                            <td>10.22</td>
+                          </tr>
+                          <tr>
+                            <td>b_ptet</td>
+                            <td>Leakiness of Ptet promoter</td>
+                            <td>0 (%)</td>
+                            <td>assumed</td>
+                            <td>20(%)</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>a_luxi</td>
+                            <td>Production Rate of LuxI (for BCD2) </td>
+                            <td>k_luxi*p_luxi=312[1/min]</td>
+                            <td>Calculated with "SalisLab" Calculator</td>
+                            <td>128</td>
+                          </tr>
+                           <tr>
+                            <td>n</td>
+                            <td> LuxI Hill Coefficient</td>
+                            <td>3</td>
+                            <td><a href="https://2016.igem.org/Team:HSiTAIWAN/Model"> Team:HSiTAIWAN 2016 </a></td>
+                            <td>2</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>kd_ptet</td>
+                            <td>Dissociation Constant of TetR with the ptet promoter </td>
+                            <td>50nM</td>
+                            <td><a href="https://2016.igem.org/Team:HSiTAIWAN/Model"> Team:HSiTAIWAN 2016 </a></td>
+                            <td>2.5nM</td>
+                          </tr>
+                          
+              
+                          
+                        </tbody>
+                    </table>
+                    <figcaption>
+                        Table 3: Fitted values for kinetic constants
+                    </figcaption>
+                    </center>
+                    <br><br>
+
+                <center>
+                <img class="s-7" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-7.png">
+                <figcaption>
+                    Model fitting for senders constants for RBS BCD2.
+                </figcaption>
+                </center>
+                <br><br> 
+                The parameters chosen above where quite obviously the main reason for the difference between the experimental and the theoretical model results; The dissociation constant is a crucial value for our system since it determines the input aTc on which the induction will begin and on our case the literature value was a bit too high for our own system. On the other hand, salislab-despite its paramount value as a bioinformatics tool-mainly offer proportional values so the production rates it offered were almost certainly to be a bit inaccurate. Endly, the binding affinity has to do with the steepness of the plotted curve and is also a variable dependent on the experimental setup and measurements. The whole-cell fitted model of the senders will be used in the <a href="#pattern">pattern recognition</a> section (link) where the communication of the senders and the receivers cultures will be simulated.
+            
+                
+            </section> 
+    
+    
+        </div>
+    </div>
+
+
+    <!-- Receivers -->  
+
+    <div class="overview-section" id="receivers">
+        <h1>Receivers System Explained</h1>
+        <br><br>
+        <p>
+        The receiver's population simulates the “activation function” of the perceptron algorithm. So it was really important for us to create constructs in a way that we would secure a steep activation of the production of the final fluorescent protein, mNeon Green. We had to design plasmids that would give the receiver's cells the ability to express our protein very strongly only if the amount of lactone they receive from the senders exceeds a certain threshold. We decided to test two different constructs in order to check which one will present the best response.  
+        </p>
+      </div>
+      
+    <div class="cc">
+    <div class="left-side">
+        <div class="index-bar">
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#oplo">Constructs</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#biochem">Biochemical Reactions</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#kinetic-r">Kinetic Model</a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#results-r">Results</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="right-side">
+    
+            <!-- Oplo  -->
+            <section class="inside-section">
+            <a id="oplo" class="anchorOffset"></a>
             <br>
-        </section>
-        <section class="main" >
-            <a id="results" class="anchorOffset"></a>
+            <h1>Receivers' Constructs</h1>
+            <b>Construct no.1: Open Loop (OpLo)</b>
+            The open loop construct is the simplest. It consists of a Plux promoter followed by the luxR gene and a Plux promoter followed by the mNeonGreen gene. Basically, this is a system where LuxR feeds the Plux promoter to express both itself and the fluorescent protein. Thus, when a specific threshold of OC6 is exceeded, the production of the LuxR increases sharply, which implies a very fast production of mNHonGreen. So this way it succeeds the steep activation. 
+            <br><br>
+
+            <center>
+            <img class="r-1a" src="https://static.igem.wiki/teams/4294/wiki/design-not/r-2a.png">
+            <img class="r-1b" src="https://static.igem.wiki/teams/4294/wiki/design-not/r-2b.png">
+            <figcaption>
+            Figure 1: Representation of Open Loop construct.
+
+            </figcaption>
+            </center>
             <br>
-            <h2>Senders Results</h2>
+
+            <b>Construct no.2: PFR Loop</b>
+            The PFR construct aims to increase the steepness of our activation function via the following process; The LuxR promoter is a leaky one and thus its leakiness provides a baseline production of LuxR that after the addition of OC6 will activate the production of more LuxR and thus LuxR-AHL. The LuxR-AHL dimer produced will then induce the production of mNeonGreen (as in the OpLo case) and it will simultaneously repress the production of phlf, via a LuxR repressible promoter. The phlf is responsible for the repression of the mneongreen construct, so its repression will - alongside the induction by LuxR-AHL-will lead to a simultaneous increase in the output concentration. The simultaneous control of mneongreen by the LuxR-AHL dimer and the phlf repressor is accomplished via a pLux-phlo hybrid promoter. This produces a steeper activation function than the Open Loop circuit, as we will see in the results section. 
+            <br><br>
+
+            <center>
+            <img class="r-2a" src="https://static.igem.wiki/teams/4294/wiki/design-not/7a.png">
+            <img class="r-2b" src="https://static.igem.wiki/teams/4294/wiki/design-not/7b.png">
+            <figcaption>
+            Figure 2: Representation of PFR Loop construct.
+            </section>
+            
+            
+            <section class="inside-section">
+                <a id="biochem" class="anchorOffset"></a>
+                <br>
+    
+                <h1>Biochemical Reactions</h1>
+                <br>
+                For the kinetic modelling of the receivers system, we had to convert all the above designs into biochemical equations, each of which will be characterized by its own rate of consumption or production of the chemical species. The resulting equations are:
+                <br><br>
+                 1. ∅ →LuxRreg<br>
+                 2. LuxAHL + LuxRreg ↔LuxRcomplex<br>
+                 3. LuxRcomlex + LuxRcomplex ↔ DLuxR<br>
+                4. DLuxR + P LuxRof f ↔P LuxRon<br>
+                5. P LuxRon → P LuxRon +mRNAmNeon<br>
+                6. mRNAmN eon→mN eon<br>
+                7. LuxAHL→ ∅<br>
+                8. LuxRreg→ ∅<br>
+                9. LuxRcomplex→ ∅<br>
+                10. DRLux→ ∅<br>
+                11. mRN AmN eon→ ∅<br>
+                12. mN eon→ ∅<br>
+
+                <br><br>
+                Equation (1) describes the production of the LuxR regulator. Equation (2) describes the formation of the AHL and the regulator complex when aTc is present in the system and this formation leads to equation (3) describing the formation of a dimer. This dimer leads to the activation of the LuxR promoter in equation (4).  Equations (5) and (6) describe the translation of the gene and finally the production of the LuxI enzyme. Finally, equations (7),(8),(9),(10),(11) and (12) represent the degradation of the main chemical species.
+
+            </section> 
+
+            <section class="inside-section">
+                <a id="kinetic-r" class="anchorOffset"></a>
+                <br>
+    
+                <h1>Kinetic Model</h1>
+                <br>
+                To develop the kinetic model of the receivers, our team worked on two levels just like we did at the senders’ kinetic model. At first, the differential equations for the production of chemical species inside a single cell were developed. Then we scaled-up our approach by studying the production of the fluorescent protein from the whole receivers population. The difference is found in the fact that for this model our team analyzed and also tested three constructs experimentally. The purpose of this effort was to see which of the three systems we had designed would work best as an activation function of a perceptron and would have the sharpest response. So practically, we have created one single-cell and one whole-cell model for each construct.
+                <br><br>
+                
+                <h2>Construct no.1: Open Loop</h2> 
+                <br><br>
+                <b>Single cell model</b>
+                <br><br>
+                Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
+                <br><br>
+
+
+                At this point it would be useful to mention the different assumption made for the single cell kinetic model:
+                <br><br>
+                1. We assume that the expression of a gene can be fully characterised by a Hill Equation. <br> 
+                2. The LuxR-AHL dimerization is described via a second-order kinetic reaction, so the ODE describing this reaction is formed respectively. <br>
+                The degradation rate of AHL inside and outside the membrane remains the same. <br>
+                <3. br><br>
+                Equation (1) represents the change of concentration of the AHL, in order to complete the induction inside the cell. Equation (2) describes the change of the concentration of the LuxR from the lactone reaching the receiver's cell. Equations (3) and (4) describe the change of the concentration of the monomer complex and the dimer, practically leading to the activation of the promoter. Equation (5) is the representation of the production of the fluorescent protein, the mNeon Green.
+                <br><br>
+
+                <b>Whole cell model</b>
+                <br><br>
+                Then, wanting to have a complete picture of our overall system at the level of bacterial populations, we upgraded our model for multiple cells. The scale-up had to include the study of phenomena such as the growth of the bacterial population and how this affects the amount of lactone produced as well as the diffusion of the lactone in and out of the cells. assumption made for the whole cell kinetic model:
+                <br><br>
+                1. We assume that the expression of a gene can be fully characterised by a Hill Equation.  <br>
+                2. We assume that the diffusion of the lactone outside the cells is characterized by the same Fick’s constant as the diffusion of the lactone inside the cells.<br>
+                3. We assume that the growth of the bacterial population is occurs logarithmically.
+                <br><br>
+
+                The production and consumption rates of each chemical can be represented by the following added differential equations:
+                <br><br>
+
+
+                Equation (1) is a representation of how the number of cells is growing with time. Equations (2) and (3) explain how the concentration of the lactone AHL is changing inside and outside of a cell due to diffusion. 
+                <br><br>
+
+                <h2>Construct no.2: PFR Loop</h2>
+                <br><br>
+                In a similar manner we can take a look at the single and whole cell model of the PFR construct:
+                <br><br>
+
+
+
+                Equations (1) through (4) remain the same as in the Open Loop System and describe the creation of the dimer from LuxR and AHL. Equation (5) has to do with the repression of the phlf via the LuxR-AHL dimer. Equation (6) describes the induction of mneongreen via the hybrid promoter. The hybrid promoter has been modelled as a multiplication of two separate hill equations, one for the induction of the pLux promoter and one for the phlo-box,where phlf is being hitched in order to cause the repression of mneon.
+                <br><br>
+
+                <b>Whole-cell model:</b>
+                <br><br>
+                The diffusion phenomena of the OC6 through the cell membrane have been described via the equations (1)-(3) and they are exactly the same as in the open loop.
+                <br><br>
+
+                The the matrix below consists of the initial values of our kinetic constants found in literature:
+                <br><br>
+
+                <center>
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <th>Kinetic Constant</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                        <th>Source</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>CN</td>
+                        <td>Plasmid Copy Number (Receivers)</td>
+                        <td>17(Medium)</td>
+                        <td>Wet Lab Constructs</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>n</td>
+                        <td>Hill Coefficient</td>
+                        <td>1.5</td>
+                        <td>Estimated (before fit)</td>
+                      </tr>
+                      <tr>
+                        <td>k1</td>
+                        <td>Synthesis Rate of LuxRAHL</td>
+                        <td>k-1/kd1</td>
+                        <td></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>k2</td>
+                        <td>Synthesis Rate of LuxRAHL2</td>
+                        <td>k-2/kd2</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>k-1</td>
+                        <td>Dissociation Rate of Monomer (LuxR-AHL)</td>
+                        <td>10(1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                        <tr class="active-row">
+                            <td>Dissociation Rate of of dimer (LuxR-AHL)2</td>
+                        <td>1(1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      <tr>
+                        <td>kd2</td>
+                        <td>Dissociation Constant of Dimer (LuxR-AHL)2</td>
+                        <td>20 Nm</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>kd1</td>
+                        <td>Dissociation Constant of Monomer (LuxR-AHL)</td>
+                        <td>100 nM</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      <tr>
+                        <td>kdlux</td>
+                        <td>Dissociation constant of (LuxR-AHL)2 to the plux promoter</td>
+                        <td>200nM</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_RA2</td>
+                        <td>Degradation Rate of LuxRAHL2</td>
+                        <td>0.017(1/min)</td>
+                        <td><a href="https://2018.igem.org/Team:Valencia_UPV/Model"> Team Valencia 2018 </a></td>
+                      </tr>
+                       
+                      <tr>
+                        <td>d_RA</td>
+                        <td>Degradation Rate of LuxRAHL</td>
+                        <td>0.156(1/min)</td>
+                        <td><a href="https://2018.igem.org/Team:Valencia_UPV/Model"> Team Valencia 2018</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_Mng</td>
+                        <td>Degradation Rate of Mng</td>
+                        <td>0.010(1/min)</td>
+                        <td><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs42003-020-01375-5/MediaObjects/42003_2020_1375_MOESM1_ESM.pdf"> Literature</td>
+                      </tr>
+                      <tr>
+                        <td>d_mRNAmNGt</td>
+                        <td>Degradation Rate of Mrna_Mng</td>
+                        <td>0.039(1/min)</td>
+                        <td><a href="https://www.nature.com/articles/s42003-020-01375-5#MOESM1"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_LuxR </td>
+                        <td>Degradation Rate of LuxR</td>
+                        <td>0.002(1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      
+                      <tr>
+                        <td>d_mRNALuxR</td>
+                        <td>Degradation Rate of LuxR Mrna </td>
+                        <td>0.347(1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      
+                      <tr class="active-row">
+                        <td>&beta;_Lux</td>
+                        <td>Basal Expression of pLux Promoter (as min/max)</td>
+                        <td>4.8%=(1043/21290)</td>
+                        <td><a href="http://parts.igem.org/Part:BBa_R0062:Experience"> Registry </a></td>
+                      </tr>
+                      <tr>
+                        <td>D_AHL</td>
+                        <td>Diffusion Rate of External AHL through the membrane</td>
+                        <td>10(1/min)</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>V_Ecoli</td>
+                        <td>E.Coli Cell Volume</td>
+                        <td>1&mu; (m**3)=10**(-15) L</td>
+                        <td><a href="http://book.bionumbers.org/how-big-is-an-e-coli-cell-and-what-is-its-mass/"> Literature </a></td>
+                      </tr>
+                      <tr>
+                        <td>&mu;</td>
+                        <td>dilution rate</td>
+                        <td>0.019(1/min)</td>
+                        <td><a href="http://book.bionumbers.org/how-big-is-an-e-coli-cell-and-what-is-its-mass/"> Literature </a></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>Transc_Plux</td>
+                        <td>Transcription Rate of LuxR promoter</td>
+                        <td>0.79/60(1/sec)</td>
+                        <td><a href="https://2018.igem.org/Team:Valencia_UPV/Model"> Team Valencia 2018 </a></td>
+                      </tr>
+                      <tr>
+                        <td>Vbead</td>
+                        <td>Volume of culture</td>
+                        <td>200 &mu;L</td>
+                        <td>From Wet Lab Setup</td>
+                      </tr>
+                      
+                      <tr class="active-row">
+                        <td>Nmin</td>
+                        <td>Minimum  value of cells in Bead</td>
+                        <td>0.29*10**(7)</td>
+                        <td>From OD experimental Data</td>
+                      </tr>
+                      <tr>
+                        <td>Nmax</td>
+                        <td>Maximum value of cells in Bead</td>
+                        <td>2.142*10^(7)</td>
+                        <td>From OD experimental Data</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_AHL</td>
+                        <td>Degradation Rate of AHL</td>
+                        <td> 0.01 min^-1</td>
+                        <td><a href="A synthetic multicellular system for programmed pattern formation"> Literature </a></td>
+                      </tr>
+                      
+                      <tr>
+                        <td>p_J23105</td>
+                        <td>Transcription Rate of  constitutive promoter for LuxR</td>
+                        <td>58*10^(-3) (1/sec)</td>
+                        <td><a href="http://parts.igem.org/Part:BBa_J23105 "> Registry </a></td>
+                      </tr>
+                      
+                      <tr class="active-row">
+                        <td>p_Lux</td>
+                        <td>Transcription Rate of LuxR Promoter for mneongreen</td>
+                        <td> 0.79(1/min)</td>
+                        <td>"Salis Lab" Calculator</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>k_luxr</td>
+                        <td>Translation Rate of LuxR (RBS BBa_B0034)</td>
+                        <td> 18*10^(-3) (1/sec)</td>
+                        <td>"Salis Lab" Calculator</td>
+                      </tr>
+                      
+                      <tr class="active-row">
+                        <td>k_mneongreen</td>
+                        <td>Translation Rate of mneongreen(RBS BBa_B0034)</td>
+                        <td>27*10^(-3) (1/sec)</td>
+                        <td>"Salis Lab" Calculator</td>
+                      </tr>
+                    
+                      
+                    </tbody>
+                </table>
+                <figcaption>
+                    Table 1: Kinetic constants found in literature for the Open Loop construct 
+                </figcaption>
+                </center>
+                <br><br>
+
+                <center>
+                    <table class="content-table">
+                        <thead>
+                          <tr>
+                             <th>Kinetic Constant</th>
+                            <th>Description</th>
+                            <th>Value</th>
+                            <th>Source</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>p_lux</td>
+                            <td>Transcription Rate of LuxR promoter for LuxR</td>
+                            <td>155*60*10^(-3) (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          </tr>
+                          <tr class="active-row">
+                            <td>k_luxr</td>
+                            <td>Translation Rate of LuxR (RBS BBa_B0034)</td>
+                            <td>27*10^(-3) (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          <tr>
+                            <td>p_lux_repr</td>
+                            <td>Transcription Rate of LuxR_Repressible promoter for phlf</td>
+                            <td>3.69*10^(-3) (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          
+                          <tr class="active-row">
+                            <td>k_phlf</td>
+                            <td>Translation Rate of Phlf (RBS BBa_B0034)</td>
+                            <td>4*10^(-3) (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          
+                          <tr>
+                            <td>p_hybrid</td>
+                            <td>Transcription Rate of Hybrid Promoter for mneongreen</td>
+                            <td>10*10^(-3) (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          
+                           <tr class="active-row">
+                            <td>k_mng</td>
+                            <td>Translation Rate of mneongreen (RBS BBa_B0034)</td>
+                            <td>18.3*10^(-3) (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          
+                           <tr>
+                            <td>d_mrnaphlf</td>
+                            <td>Degradation Rate of mrna phlf</td>
+                            <td>0.02 (1/sec)</td>
+                            <td>"Salis Lab" Calculator</td>
+                          </tr>
+                          
+                          <tr class="active-row">
+                            <td>d_mrnaphlf</td>
+                            <td>Degradation Rate of mrna phlf</td>
+                            <td>0.02 (1/sec)</td>
+                            <td><a href="https://2021.igem.org/Team:SUSTech_Shenzhen/Model"> Team SUSTech_Shenzhen 2021</td>
+                          </tr>
+                          
+                          <tr>
+                           <td>d_phlf</td>
+                            <td>Degradation Rate of phlf</td>
+                            <td>0.042(1/min)</td>
+                            <td><a href="https://2017.igem.org/Team:Hong_Kong_HKUST/Model/TimeControl"> Team Hong_Kong_HKUST 2017</td>
+                          </tr>
+                          
+                           <tr class="active-row">
+                             <td>Kd_phlf</td>
+                            <td>Dissociation Constant for the phlf repressible promoter</td>
+                            <td>2*10^(-7) nM</td>
+                            <td><a href="https://2017.igem.org/Team:Hong_Kong_HKUST/Model/TimeControl"> Team Hong_Kong_HKUST 2017</td>
+                          </tr>
+                          
+                        
+                         
+                        </tbody>
+                    </table>
+                    <figcaption>
+                        Table 2 : Additional  kinetic constants found in literature for the PF Loop construct 
+                    </figcaption>
+            
+                </center> 
+            </section> 
+
+            <section class="inside-section">
+                <a id="results-r" class="anchorOffset"></a>
+                <br>
+    
+                <h1>Results</h1>
+                <br>
+
+                As in the senders model, our team decided to make a direct comparison of our theoretical single and whole cell models, both in time-scale and for different induction concentrations of AHL and for both constructs. However, in this section, we are going to present only a part of our results, since the full analysis and codes, with their respective results, are available on gitlab, <a href="">here</a>.
+                <br><br>
+
+                <h2>Time-scale</h2>
+                <br><br>
+                We are going to show the time-scale results of our whole-cell PFR model at full induction of 10^(-6) M OC6 and make a short explanation.
+                <br><br>
+                <center>
+                <img class="r-model" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-model.png">
+                <figcaption>
+                Figure 2: Change in concentration of chemical species after solving the ODs
+                </figcaption>
+                </center>
+                <br>
+
+                From the graphs above we can clearly notice that, as in the case of aTc, the diffusion of AHL through the membrane is rapid, and it leads to a similar concentration of internal and external AHL [8]. This leads to the creation of the dimer inducer within the 100 minutes, which not only induces the production of mneongreen but also reduces the repressor phlf. That is until the 600 minute mark where-since there is no AHL inside the cell-the dimer starts significantly decreasing, thus stopping the repression of phlf. The increase of phlf and reduction of dimer mean that the produced fluorescence starts dropping (around the 600 minute mark).
+                <br><br>
+                Similar results were shown by the rest single-and-whole cell models of OpLo and PFR
+                <br><br>
+                <h2>Transfer Function of OpLo</h2>
+                At first we should represent the literature transfer function both for the single and the whole cell models.
+                <br><br>
+
+                <center>
+                <img class="r-3" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-3.png">
+                <figcaption>
+                    Figure 3: Ρepresentation of the transfer function for single-cell and whole-cell model                </figcaption>
+                </center>
+                <br>
+
+                As in the sender’s model, the whole-cell description of our system gives more consistent results and is closer to the experimental data, since the induction in that case starts for lower concentrations of AHL. A similar difference was observed in the  PFR single-and-whole cell models as well.
+                <br><br>
+
+                <h2>Comparison to data and Model Fit of OpLo
+                </h2>
+                <br><br>
+                At first, we aimed to compare our theoretical whole-cell model to the experimental data, as done in the senders’ case. Viewing the results below, we assume that-despite its approximately valid representation of our system-our literature model lacks the accuracy needed in order to be used as it is for the pattern recognition task later on. Thus we again decided to perform model fit via the lmfit library of Python.
+                <br><br>
+
+                <center>
+                <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-4.png">
+                <figcaption>
+                    Figure 4: Comparison of the theoretical model with the experimental data for the Open Loop construct                 
+                </figcaption>
+                </center>
+                <br>
+
+                <center>
+                <table class="content-table">
+                    <thead>
+                      <tr>
+                        <th>Symbol</th>
+                        <th>Meaning</th>
+                        <th>Initial Value</th>
+                        <th>Source</th>
+                        <th>Fitted Value</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>n</td>
+                        <td>Hill coefficient for OpLo</td>
+                        <td>1.5</td>
+                        <td>estimated</td>
+                        <td>0.5</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>b_plux</td>
+                        <td>Leakiness of pLux promoter</td>
+                        <td>4.9%</td>
+                        <td><a href="http://parts.igem.org/Part:BBa_R0062:Experience"> Registry-BBa_R0062 </td>
+                        <td>10%</td>
+                      </tr>
+                      <tr>
+                        <td>a_luxr</td>
+                        <td>Production Rate of LuxR</td>
+                        <td>p_J23105*k_luxr=5.68</td>
+                        <td>SalisLab</td>
+                        <td>49.78</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>a_mng</td>
+                        <td>Production Rate of mneongreen</td>
+                        <td>p_plux*k_mng=0.85</td>
+                        <td>Salis Lab</td>
+                        <td>0.44</td>
+                      </tr>
+                      <tr>
+                        <td>kd_lux</td>
+                        <td>Dissociation Constant of LuxR Promoter</td>
+                        <td>200nM</td>
+                        <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
+                        <td>10nM</td>
+                      </tr>
+                      </tr>
+                      <tr class="active-row">
+                        <td>d_mng</td>
+                        <td>Degradation Rate of mneongreen</td>
+                        <td>0.01(1/min)</td>
+                        <td><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs42003-020-01375-5/MediaObjects/42003_2020_1375_MOESM1_ESM.pdf"> Literature </a></td>
+                        <td>0.023(1/min)</td>
+                      </tr>
+                      <tr >
+                        <td>d_mrna_mng</td>
+                        <td>Degradation Rate of mrna mneongreen</td>
+                        <td>0.039(1/min)</td>
+                        <td><a href="https://www.nature.com/articles/s42003-020-01375-5#MOESM1"> Literature </a></td>
+                        <td>0.019(1/min)</td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>mi</td>
+                        <td>Dilution Rate</td>
+                        <td>0.019(1/min)</td>
+                        <td><a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=111284&ver=1&trm=cell+growth+rate+coli&org="> Literature </a></td>
+                        <td>0.0028(1/min)</td>
+                      </tr>
+                    
+                      
+                    </tbody>
+                </table>
+                <figcaption>
+
+                    Table 3: Fitted values for Open Loop construct 
+               </figcaption>
+                </center>
+                <br><br>
+                And the fitted model for OpLo is presented below:
+                <br><br>
+
+                <center>
+                <img class="r-5" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-5.png">
+                <figcaption>
+                    Figure 5: Model fitting for Open Loop construct                 </figcaption>
+                </center>
+                <br>
+                The model fit process gave us some important variables that could not be accurately estimated otherwise and include the curve steepness, the production rates of LuxR and mneongreen as well as the dissociation constant of the PLux Promoter. Some of those values will be used for the characterization of the PFR construct below.
+                <br><br>
+                <h2> PFR: Transfer Function and model fit
+                </h2>
+
+                <br><br>
+                Using the fitted values of d_mng,d_mrnamng, kd_lux and b_plux that would remain unchanged for the PFR and with the rest of the values from literature, we extracted the same comparison of theoretical and and experimental transfer functions:
+                <br><br>
+
+                <center>
+                <img class="r-6" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-6.png">
+                <figcaption>
+                    Figure 6: Comparison of the theoretical model with the experimental data for the PF loop construct
+                </figcaption>
+                </center>
+                <br><br>
+
+                As we can clearly observe, the OpLo results used for the characterization of PFR resulted in a much more accurate prediction of the later construct. However, there are still some inaccuracies, in terms of the curve steepness,the leakiness of the hybrid promoter and the characterization of the phlf molecule. After fit, we obtained a more accurate reconstruction of the experimental data via our model:
+                <br><br>
+
+                <center>
+                <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-7.png">
+                <figcaption>
+                    Figure 7: Model fitting for PF Loop construct
+                </figcaption>
+                </center>
+                <br><br>
+
+                <center>
+                    <table class="content-table">
+                        <thead>
+                          <tr>
+                            <th>Symbol</th>
+                            <th>Meaning</th>
+                            <th>Initial Value</th>
+                            <th>Source</th>
+                            <th>Fitted Value</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>a1</td>
+                            <td>Production Rate of LuxR</td>
+                            <td>k_luxr*p_lux=15</td>
+                            <td>Salis Lab</td>
+                            <td>5.67</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>a2</td>
+                            <td>Production Rate of Phlf</td>
+                            <td>k_phlf*p_lux_repr=0.053</td>
+                            <td>Salis Lab</td>
+                            <td>0.1</td>
+                          </tr>
+                          <tr>
+                            <td>a3</td>
+                            <td>Production Rate of mneongreen</td>
+                            <td>p_hybrid*k_mng=0.6588</td>
+                            <td>Salis Lab</td>
+                            <td>0.62</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>n</td>
+                            <td>Hill Coefficient for PFR</td>
+                            <td>2</td>
+                            <td>Estimated</td>
+                            <td>2.31</td>
+                          </tr>
+                          <tr>
+                            <td>b_phlf</td>
+                            <td>Leakiness of phlf promoter</td>
+                            <td>10%</td>
+                            <td>Estimated</td>
+                            <td>0.36</td>
+                          </tr>
+                          </tr>
+                          <tr class="active-row">
+                            <td>kd_phlf</td>
+                            <td>Dissociation Constant of phlf with phlf promoter</td>
+                            <td>2*10^(-7))</td>
+                            <td><a href="https://2017.igem.org/Team:Hong_Kong_HKUST/Model/TimeControl"> Team Hong_Kong_HKUST 2017 </a></td>
+                            <td>7.95*10^(-7)</td>
+                          </tr>
+                          <tr >
+                            <td>d_phlf</td>
+                            <td>Degradation rate of phlf</td>
+                            <td>0.042(1/min)</td>
+                            <td><a href="https://2017.igem.org/Team:Hong_Kong_HKUST/Model/TimeControl"> Team Hong_Kong_HKUST 2017 </a></td>
+                            <td>0.03</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>d_mrna_phlf</td>
+                            <td>Degradation rate of mrna_phld</td>
+                            <td>1.2(1/min)</td>
+                            <td><a href="https://2021.igem.org/Team:SUSTech_Shenzhen/Model"> Team SUSTech_Shenzhen 2021 </a></td>
+                            <td>0.06</td>
+                          </tr>
+                        
+                          
+                        </tbody>
+                    </table>
+            
+
+                <figcaption>
+
+                Table 4: Fitted values for PF Loop construct                
+                </figcaption>
+                </center>
+                <br><br>
+                Now that our team has successfully characterized both transfer function circuits, we aim to directly compare them while simulating a pattern recognition task and view which implementation is more accurate in terms of expected and actual output concentrations.
+
+            </section> 
+    
+    
+        </div>
+    </div>
+
+
+    <!-- Stability Analysis -->  
+
+    <div class="overview-section" id="stability">
+        <h1>Stability Analysis</h1>
+      </div>
+      
+    <div class="cc">
+    <div class="left-side">
+        <div class="index-bar">
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#overview-stability">Overview</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="right-side">
+    
+            <!-- Stability Analysis  -->
+            <section class="inside-section">
+            <a id="overview-stability" class="anchorOffset"></a>
             <br>
-            <p> Senders model results, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-            <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/senders-img.png">
-            <br>
-            <p> Senders model commentary, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. </p>
-            <br>
+            As it has been analysed in the implementations section (link), our team is inspired to utilize its biological perceptron for recognizing complex patterns in a variety of different circumstances, leading to the creation of a novel “thinking” biosensor of E.Coli consortia. However, it is of paramount importance to gain in-depth knowledge about more complex aspects of our system, apart from the concentration analysis that our main model offers. One such aspect are the diffusion phenomena through the cell membrane, that try to demonstrate the change of AHL concentration as the molecules get from the senders to the receivers consortia and the various effects on both populations.On the other hand, the stability analysis that will follow offers context on a different issue regarding our biosensor; the frequency that it could receive new input values for classification!
+            <br><br>
+
+            And here comes some fundamental theory from control systems. At first we should validate that our system is stable and will lead to a steady state concentration of output fluorescence. For that purpose and for the entire analysis, our initial model equations have been simplified to just to equations, one for the senders and one for the receivers, as shown below:
+            <br><br>
+            
+            equations
+            <br><br>
+            , where our three sender’s subpopulations are being modelled as one, which produces the summation of the subpopulations OC6. This OC6 value, shown as x1 here, will be used as induction input to the receiver’s population, whose fluorescence is shown as the x2 variable. Endly, both equations are using Hill functions to model the induction. 
+            <br><br>
+            However, in order to properly study the system's frequency behaviour, we should first perform a linearization method which will bring our system to the state-space. After performing such a task, we receive the following linearized control model:
+            <br><br>
+            
+            equations
+            <br><br>
+            Where,                A=[a11,a12][a21,a22]
+
+            <br><br>
+            
             <div class="equations">
+            <p>
+                \(B =[b1, b2]\)
+            </p>
+            </div>
+        
+
+            <div class="equations">
+            <p>
+
+            \( C =[0, 1] and D=0 \) 
+
+            </p>
+            </div>
+        
+
+            <div class="equations">
+            <p>
+            \(a_{1} = \frac{df1}{dx1}=-d1 \)
+
+            </p>
+            </div>
+
+
+            <div class="equations">
+            <p>
+
+            \(a_{12} = \frac{df1}{dx2}= 0 \)
+            </p>
+            </div>
+   
+            
+            <div class="equations">
+            <p> 
+            \(b2 = \frac{df2}{du}= 0 \)
+            </p>
+            </div>
+        
+            
+            <br><br>
+
+            It should be assumed that the initial value of u and x1, i.e. u(t0) and x1(t0) should be different to zero, in order to have non-zero values and thus a meaningful analysis. Considering from our diffusion analysis (link) that the diffusion is a rapid procedure that begins around the 6second mark, it would be safe to assume that we would achieve non zero values for t0>1minute.
+            <br><br>
+
+            In terms of the stability of our system, it is common truth [9] that a stable system has all of its eigenvalues negative, which is true in our case since the λI-A=0 equation brings the following solutions:
+            <br><br>
+
+            <div class="equations">
+                <p>\(a_{1}=-d_{1}\)</p> and <p>\(λ_{2}=-d_{2}\)</p>
+                <br>
+                <br>
                 <p>\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</p>
                 <p>\( {d_{mNeonGreen} \over dt } = a_{max}*{[Dimer]^n \over {[Dimer]^n + K_{d}^n}}-d_{mng}*[mng]\)</p>
                 <p>\(ax^2+bx+c=0\)</p>
+
             </div>
+            
+
+            ,which are negative, assuming positive degradation rates of aTc and AHL. 
+            <br><br>
+            Moving on, we would like to quantify how often we could update the input states of our perceptron without leading to any instabilities (i.e. problematic output). And there also comes control theory to offer us a useful tool, the Bode plots and the meaning of phase margin. In particular, phase margin is a metric that corresponds to the difference between the phase lag of our system at a given frequency minus the value of -180degrees, a value crucial for our system since phase values below -180degrees lead to unstable systems. In simpler terms, the higher the phase margin for a certain frequency the better for our system. 
+            <br><br>
+            Furthermore, it is a common ground that, when designing electronic systems and amplifiers, we set a minimum value of phase margin (usually using the frequency where we have unity gain), and use a variety of theoretical and practical methods in order to accomplish that. More information on the electrical side offers the 6th chapter of the book [10]. However, in our case it is just enough to set as maximum frequency f_max the frequency where a minimum amount of phase margin is accomplished, which will be set at 35 degrees and corresponds to a phase lag of -145degrees. Our system should not receive input values at frequencies that reduce the phase margin below that threshold.
+            <br><br>
+            
+            Initially, in order to receive the bode plots of our system, we should convert the state-space system to a transfer function H(s), which was accomplished via matlab's module ss2tf(). We received:
+            <br><br>
+            
+            <div class="equations">
+                <p>
+                \(H(s)= \frac{n1*n2*K_{1}^{n1}*K_{2}^{n2}*a_{rec}*a_{send}*x1(t0)^{n1}*u(t0)^{n1-1}}{x1(t0)*(s+d1)*(s+d2)} = \frac{A}{x1(t0)*(s+d1)*(s+d2)}\)
+                </p>
+            </div>
+
+            <br><br>
+            where A and x1(t0) are constant values, for known t0 initial time of analysis. 
+            
+            Parameter table for stability analysis constants (same as in the parameters tables for the model’s page
+
+            <center>
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>K1</td>
+                    <td>50nM</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>K2</td>
+                    <td>200nM</td>
+                  </tr>
+                  <tr>
+                    <td>n1</td>
+                    <td>2</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>n2</td>
+                    <td>1.5</td>
+                  </tr>
+                  <tr>
+                    <td>d1</td>
+                    <td>0.01 [1/min]</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>d2</td>
+                    <td>0.01 [1/min]</td>
+                  </tr>
+                  <tr>
+                    <td>x1(t0)</td>
+                    <td>2*10^(-9)</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>u(t0)</td>
+                    <td>10^(-6)</td>
+                  </tr>
+                  <tr>
+                    <td>a_rec</td>
+                    <td>0.85</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>a_send</td>
+                    <td>312</td>
+                  </tr>
+                </tbody>
+            </table>
+            <figcaption>
+                Table 1. Parameter Tables for stability analysis transfer function with the OpLo construct parameters. The parameters used refer to the BCD2 literature construct.
+            </figcaption>
+            </center>
+
+            <br><br>
+            Since the gain A/x1(t0) of our system is not the main purpose of it, it won't be our main concern going forward. On the other hand, we have to take a closer look at the denominator of the transfer function, and the values d1,d2  which are the poles of the system. Generally speaking, a pole leads to a decrease of the phase lag of our system by 90 degrees. So in our case the two poles of d1 and d2 will eventually lead to an unstable system after a certain frequency, which we would like to be the highest possible. The problem of decrease in the phase value is more serious in the case of two poles which are close to each other, since this leads to a more rapid decrease of our system’s phase lag, almost instantly to -180 degrees.
+            <br><br>
+            Unfortunately for our system, we noticed that d1=d2=0.01 [1/min] as it has been documented in the parameters of the model’s page (link). As a result, the phase bode plot of our initial system lead to a steep decrease in phase lag and thus in instability.
+            <br><br>
+
+            <center>
+            <img class="sa-1" src="https://static.igem.wiki/teams/4294/wiki/model/sa-figure-1.png">
+            <figcaption>
+            Figure 1 Bode plots for the initial transfer function (with d1=d2)
+            </figcaption>
+            </center>
             <br>
-        </section>
-        <table class="content-table">
-            <thead>
-              <tr>
-                <th>Symbol</th>
-                <th>Name</th>
-                <th>Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>d1</td>
-                <td>Degradation rate 1</td>
-                <td>100(1/min)</td>
-              </tr>
-              <tr class="active-row">
-                <td>d2</td>
-                <td>Degradation rate 2</td>
-                <td>10(1/min)</td>
-              </tr>
-              <tr>
-                <td>d3</td>
-                <td>Degradation rate 3</td>
-                <td>11(1/min)</td>
-              </tr>
-            </tbody>
-        </table>
-        <section class="discussion">
-            <a id="discussion" class="anchorOffset"></a>
+            Furthermore, the wanted phase margin of 35degrees is accomplished with an operating period of 210 minutes meaning that our sensor should receive novel inputs every 210 minutes.
+            <br><br>
+
+            However, in the case where we would like to increase the operating frequency, we would have to increase at-least by 10-fold the one of the two poles. In that case, the instability of the system is dependent only by the new,larger pole. So, we propose the addition of a degradation tag which would increase the degradation rate of mneongreen on the receivers. A proposed degradation tag (ssRa) could be received from the paper [12].
+            <br><br>
+            
+            As a result, the new bode plots are the following:
+            <br><br>
+            <center>
+            <img class="sa-2" src="https://static.igem.wiki/teams/4294/wiki/model/sa-figure-2.png">
+            <figcaption>
+            Figure 2. Bode plots for a 10-fold increase of d2, leading to d2=10*d1
+            </figcaption>
+            </center>
             <br>
-            <h2>Senders Future Plans</h2>
+
+            , and we also received a phase margin of 35degrees for an operating period of 38minutes, a significant increase in allowed input frequency.
+            <br><br>
+            
+
+            However, the above modelling effort comes with its assumptions. First and foremost the use of only two equations for the entire system would probably lead to quantitative inaccuracies about the exact frequency and phase values in each case. On the other hand, introducing a ‘pole splitting’ method doesn't come without its consequences, the main being an overall decrease in output value, which can be witnessed on the bode plots above. That is especially true in electronic components such as amplifiers which need to reach high gain values at the highest frequencies possible. In our case, it might not be of high significance, but it is possible that a 100-fold in degradation rates would lead to a stable system, where however the maximum fluorescence would be limited to < 1000 a.u. 
+            <br><br>
+            
+            So in order to effectively use such a modelling scheme to practice, a more analytical approach should be implemented. In our case, a lack of time meant that our team could never really use the biological perceptron technology as a real-time device, so such modelling wouldn’t be useful for further characterization of our current system. So the efforts of our dry lab modelling were mainly on the characterization of the sub-constructs and the effective prediction of the perceptron’s results for the optimization of the experimental situations (link for proof) However, the importance of introducing control theory principles and techniques of comprehending the frequency response of a design genetic system should not be understated. Based on our knowledge, only a few teams [13, 14] have used any type of control theory principles to their modelling efforts. 
+            <br><br>
+            
+            </section>
+    </div>
+    </div>
+
+
+    <!-- Pattern Recognition -->  
+
+    <div class="overview-section" id="pattern">
+        <h1>Pattern Recognition</h1>
+      </div>
+      
+    <div class="cc">
+    <div class="left-side">
+        <div class="index-bar">
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#overview-pattern">Overview</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="right-side">
+    
+            <!-- Overview  -->
+            <section class="diffusion-section">
+            <a id="overview-pattern" class="anchorOffset"></a>
             <br>
-            <p> Senders future plans, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            The biological sensor our team aims to create, is intending to analyze complex stimuli. The system we propose was therefore originally designed to recognize 3x1 bits patterns. These patterns are created by on-off bits. We consider “on” a subpopulation of senders that is induced with aTc and “off” a senders subpopulation that is not induced with aTc, and as a result there will be no lactone production regardless of the RBS. The possible patterns are: 
+            <br><br>
+            
+
+            <center>
+            <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-1.png">
+            <figcaption>
+                Figure 1: On-Off patterns. On is equivalent to an induced subpopulation of senders, Off equivalent to an uninduced subpopulation of senders
+            </figcaption>
+            </center>
             <br>
-        </section> 
-        <section class="collapsible">
+
+            The 166 RBSs that make up the library we have created were divided into three families according to the rate of translation they show when followed by the LuxI gene. The RBSs that have high translation initiation rate are called the “Strong (S)” RBSs, the ones with medium translation initiation rate are called the “Medium (M)” RBSs and the ones with low translation initiation rate are called “Weak (W)”. So by creating different combinations of RBS triads we expect different amount of lactone produced.
+    
+            <br>
+            </section>
+    </div>
+    </div>
+  
+  
+  <!-- Diffusion -->
+  
+    <div class="overview-section" id="diffusion">
+    <h1>Diffusion</h1>
+    </div>
+
+    <div class="cc">
+    <div class="left-side">
+        <div class="index-bar">
+            <ul class="lateral-index">
+                <li class="lateral-content">
+                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                </li>
+                <li class="lateral-content">
+                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                </li>
+                <li class="lateral-content">
+                <a href="#comsol">COMSOL</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#analysis">Analylsis</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#results-comsol">Results</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-side">
+
+            <!-- Overview  -->
+            <section class="inside-section">
+            <a id="overview-diffusion" class="anchorOffset"></a>
+            <h1>Overview</h1>
+            <br>
+            So far in the model we have analyzed the change of chemical species in the subpopulations of senders and in the population of receivers separately. In our project this year, however, we did not intend on a simple mixing of the two populations in a common container. Our purpose was that the cells of the senders and the receivers did not mix but only the chemical species, and mainly the lactone molecule, "travelled" from one population to another. For this reason, the team decided to use 6-well plates which had a geometry that allowed us to separate the two populations with a membrane.
+            <br><br>
+            More specifically, each well consists of two concentric disks, the inner and the outer. In the outer ring the populations of the senders were placed, while in the inner disk the population of the receivers. As mentioned above, the populations were separated by a membrane that has pores with a size of 0.4 nm, so it only allows chemicals to pass through it and not cells. The one with the suffix geometry was ordered by the company SPL Life Science [1]. 
+            <br><br>
+            So while we were able to model the change in the concentrations of the chemical species in each culture separately using differential equations, we had to think of an alternative way to approach the mechanism of diffusion across this membrane. We thought that this particular membrane can constitute and be expressed as "resistance" to the lactone molecule as it passes from the senders to the receivers. And so one way we could schematically show this was by using the COMSOL software, which is suitable for analyzes of mass transfer phenomena.           
+            </section>
+
+            <!-- COMSOL  -->
+            <section class="inside-section">
+                <a id="comsol" class="anchorOffset"></a>
+                <h1>Creation of Our “Geometry” Using COMSOL</h1>
+                <br>
+                For this specific analysis we used the COMSOL software and more specifically version 5.2. Initially, it was chosen to perform a two-dimensional and time dependent analysis with “Transport of Diluted Species” as a selected Physics. We created the geometry of each well using concentric disks with the corresponding dimensions, one for the outer ring (where the sender's populations would be), one for the membrane and one for the inner disk (where the receiver's population would be). We added “water” as the material of the outer ring and the inner disk and added a blank material for the membrane. For this material we tried to determine as many of the basic properties as we could since we did not have much data available for the membrane except those written on the technical data sheet of the product (density, permeability etc). So basically our basic geometry for the analysis was:
+                <br><br>
+
+                <center>
+                <img class="dif-1" src="https://static.igem.wiki/teams/4294/wiki/model/image-1.png">
+                <figcaption>
+                Figure 1: Basic geometry
+                </figcaption>
+                </center>
+                <br>
+            </section>
+
+            <!-- Analysis  -->
+            <section class="inside-section">
+                <a id="analysis" class="anchorOffset"></a>
+                <h1>The Analysis</h1>
+                <br>
+                At first we had to import the data concerning the production of the lactone by the senders in the outer ring. We solved our ODEs for the time frame of 1000 min and the data we collected were imported in COMSOL as an interpolation:
+                <br><br>
+
+                <center>
+                <img class="dif-2" src="https://static.igem.wiki/teams/4294/wiki/model/image-2.png">
+                <figcaption>
+                Figure 2: Data collected for ODEs for the production of the lactone by the senders
+                </figcaption>
+                </center>
+                <br>
+
+                Τhen we fitted these data using matlab and obtained a time polynomial equation for the change in the concentration of lactone produced by the senders. So in this way, we imported the software how to change the lactone in the outer ring. Our substance of focus was of course the lactone and that’s why she was the only diluted molecule we analyzed and is added as a “c” consentration. As for the inner ring, we again determined through the differential equations of our kinetic model and thus introduced the lactone consumption rate as a “Reaction” to the inner disc. Our “Mesh” had an appearance that looks like this:
+                <br><br>
+
+                <center>
+                <img class="dif-3" src="https://static.igem.wiki/teams/4294/wiki/model/image-3.png">
+                <figcaption>
+                Figure 3: The Mesh
+                </figcaption>
+                </center>
+                <br>
+                As is evident near the membrane the lactone will find greater resistance to pass than in the aqueous medium of the disks. The time dependent analysis took place for the first 1000 min with a step of 1 min. 
+                <br>
+            </section>
+
+            <!-- Results  -->
+            <section class="inside-section">
+                <a id="results-comsol" class="anchorOffset"></a>
+                <h1>Results</h1>
+                <br>
+                The results of this analysis were not as accurate as we expected, and the phenomenon was taking place much faster than we believed, but in general followed the pattern we had in mind. This may be due to the fact that we did not have the necessary data to fully characterize the membrane, or to the fact that no member of our team was fully familiar with the software. Precisely for this reason, we present some indicative qualitative results of our analysis with the aim of showing how we expect the change in concentration and movement of the lactone spatially in our system. The concentration of lactone in each disk at different time points of the analysis is shown schematically and annotated.
+                <br><br>
+
+                <center>
+                <img class="dif-4" src="https://static.igem.wiki/teams/4294/wiki/model/image-4.png">
+                <figcaption>
+                Figure 4: indicative results
+                </figcaption>
+                </center>
+                <br>
+
+                As can be seen from the image, at 6 seconds the production of lactone has started from the  centre (we consider moment 0 the moment when the lactone production begins) and has started to diffuse to the outer ring. Afterwards, the senders begin to produce a large amount of lactone, but it has difficulty getting through the membrane, while at the same time the amount that manages to actually go through the membrane is consumed by the cells of the receivers located in the inner disc.  As the phenomenon progresses, more and more of the lactone produced by the sender penetrates the membrane for the first 450 minutes, where its production rate reaches its maximum. Afterwards, a decrease in the amount of lactone in the outside is observed. This probably happens because the rate of its production by the senders decreases, and it diffuses to the inside of the membrane as it continues to be consumed there. A reasonable question that arose at this point is why the lactone would still  be able to diffuse the interior. After communicating with Dr. Kavousanakis, we were informed that this happens because it is consumed in the internal disc, and we can consider the membrane as a resistance whose value is proportional to the difference in the lactone concentration inside and outside the membrane. 
+                <br><br>
+                In the future, we would like to import all our ODEs in COMSOL so that we don’t lose any useful information because of the fitting. We would also like to find a way to add a flux at the interface of the senders and the receivers to simulate the membrane as an actual “resistance”. We believe that in this way we could have much more reliable results, but due to the lack of time and knowledge we implemented a simpler system. 
+
+                <br>
+            </section>
+
+
+
+        <!-- References -->
+
+        <section class="collapsible" id="references">
             <input type="checkbox" id="collapsible-head">
                 <label for ="collapsible-head">References</label>    
                 <div class="collapsible-content">
                 <cite>
-                    <a href="https://www.nature.com/articles/s41467-021-23336-0">
-                        1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
-                    </a>
+                <a href="https://2016.igem.org/Team:HSiTAIWAN/Model#">
+                1. Team HSiTAIWAN 2016 
+
+                </a>
                 </cite>
                 <cite>
-                    <a href="https://2014.igem.org/Team:ETH_Zurich">
-                        2. Team Zurich 2014
-                    </a>
+                <a href="https://2018.igem.org/Team:Valencia_UPV">
+                2. Team Valencia UPV 2018 
+
+                </a>
                 </cite>
-            </div>
-        </section>
-    </div>
-</div>
-
-<div class="cc" id="cc-receivers">
-    <div class="left-side">
-        <div class="index-bar">
-            <h2><b>Index</b></h2>
-            <ul class="lateral-index">
-                <li class="lateral-content">
-                    <a class="inner-link" href="#intro">Introduction.R</a>
-                </li>
-                <li class="lateral-content">
-                    <a class="inner-link" href="#results">Results.R</a>
-                </li>
-                <li class="lateral-content">
-                    <a class="inner-link" href="#discussion">Discussion.R</a>
-                </li>
-                <li class="lateral-content">
-                    <a class="inner-link" href="#references">References.R</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="right-side">
-        <section class="introduction">
-            <a id="intro" class="anchorOffset"></a>
-            <br><br>
-            <h1><b>Receivers Model</b></h1>
-            <br><br>
-            <h2>Receivers Prep</h2>
-            <br>
-            <p> Receivers model intro, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-        </section>
-        <section class="main" >
-            <a id="results" class="anchorOffset"></a>
-            <br>
-            <h2>Receivers Results</h2>
-            <br>
-            <p> Receivers model results, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-            <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/receivers-img.png">
-            <br>
-            <div class="equations">
-                <p>\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</p>
-                <p>\( {d_{mNeonGreen} \over dt } = a_{max}*{[Dimer]^n \over {[Dimer]^n + K_{d}^n}}-d_{mng}*[mng]\)</p>
-                <p>\(ax^2+bx+c=0\)</p>
-            </div>
-            <br>
-            <p> Receivers model commentary, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. </p>
-            <br>
-        </section>
-        <section class="discussion">
-            <a id="discussion" class="anchorOffset"></a>
-            <br>
-            <h2>Receivers Future Plans</h2>
-            <br>
-            <p> Receivers future plans, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-        </section>
-        <section class="collapsible">
-        <a id="references" class="anchorOffset"></a>
-            <input type="checkbox" id="collapsible-head">
-        <label for ="collapsible-head">References</label>
-        <div class="collapsible-content">
-            <cite>
-                <a href="https://www.nature.com/articles/s41467-021-23336-0">
-                    1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
-                </a>
-            </cite>
-            <cite>
+                <cite>
                 <a href="https://2014.igem.org/Team:ETH_Zurich">
-                    2. Team Zurich 2014
+                3. Team Zurich 2014
                 </a>
-            </cite>
-        </div>
-    </section> 
-    </div>
-</div>
+                </cite>
 
-<div class="cc" id="cc-senders-2" >
-    <div class="left-side">
-        <div class="index-bar">
-            <h2><b>Index</b></h2>
-            <ul class="lateral-index">
-                <li class="lateral-content">
-                    <a class="inner-link" href="#intro">Introduction.S</a>
-                </li>
-                <li class="lateral-content">
-                    <a class="inner-link" href="#results">Results.S</a>
-                </li>
-                <li class="lateral-content">
-                    <a class="inner-link" href="#discussion">Discussion.S</a>
-                </li>
-                <li class="lateral-content">
-                    <a class="inner-link" href="#references">References.S</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="right-side">
-        <section class="introduction">
-            <a id="intro" class="anchorOffset"></a>
-            <br><br>
-            <h1><b>Senders Model</b></h1>
-            <br><br>
-            <h2>Senders Prep</h2>
-            <br>
-            <p> Senders model intro, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-        </section>
-        <section class="main" >
-            <a id="results" class="anchorOffset"></a>
-            <br>
-            <h2>Senders Results</h2>
-            <br>
-            <p> Senders model results, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-            <img src="https://static.igem.wiki/teams/4294/wiki/model-page-images/senders-img.png">
-            <br>
-            <p> Senders model commentary, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. </p>
-            <br>
-        </section>
-        <section class="discussion">
-            <a id="discussion" class="anchorOffset"></a>
-            <br>
-            <h2>Senders Future Plans</h2>
-            <br>
-            <p> Senders future plans, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-        </section> 
-        <section class="collapsible">
-        <a id="references" class="anchorOffset"></a>
-            <input type="checkbox" id="collapsible-head">
-        <label for ="collapsible-head">References</label>
-        <div class="collapsible-content">
-            <cite>
-                <a href="https://www.nature.com/articles/s41467-021-23336-0">
-                    1. Li, X., Rizik, L., Kravchik, V. et al. Synthetic neural-like computing in microbial consortia for pattern recognition. Nat Commun 12, 3139 (2021). https://doi.org/10.1038/s41467-021-23336-0
+
+                <cite>
+                <a href="https://bionumbers.hms.harvard.edu/bionumber.aspx?id=107873&ver=6&trm=rna+polymerase+footprint&org=">
+                4. Harvard Bionumbers https://bionumbers.hms.harvard.edu/bionumber.aspx?id=107873&ver=6&trm=rna+polymerase+footprint&org= [Accessed: 24/7/2022]
+
                 </a>
-            </cite>
-            <cite>
-                <a href="https://2014.igem.org/Team:ETH_Zurich">
-                    2. Team Zurich 2014
+                </cite>
+
+                <cite>
+                <a href="https://www.nature.com/articles/s41589-018-0168-3">
+                5.   Meyer, A.,  Shapiro, T.,  Glassey, E., Zhang ,J.,  Voigt, C. (2018).  Escherichia coli “Marionette” strains with 12 highly optimized small-molecule sensors
+                . Nature Chemical Biology volume 15, 196–204. https://doi.org/10.1038/nmeth.2404
                 </a>
-            </cite>
-        </div>
-    </section>
-</div>
-</div>
+                </cite>
 
-<script>
-    function show(param_div_id) {
-    document.getElementById('cc-senders').innerHTML = document.getElementById(param_div_id).innerHTML;
-  }
-</script>
 
+                <cite>
+                <a href="https://www.researchgate.net/publication/234136052_Parameter_Estimation_of_Nonlinear_Muskingum_Models_Using_Nelder-Mead_Simplex_Algorithm">
+                6.   Barati, Z. (2011).  Parameter Estimation of Nonlinear Muskingum Models Using Nelder-Mead Simplex Algorithm. Journal of Hydrologic Engineering 16(11):946-954
+                . DOI: 10.1061/(ASCE)HE.1943-5584.0000379
+
+                </a>
+                </cite>
+
+                <cite>
+                <a href="https://ieeexplore.ieee.org/document/8263882">
+                7.   A. W. K. Harris, C. L. Kelly, H. Steel and A. Papachristodoulou, "The autorepressor: A case study of the importance of model selection," 2017 IEEE 56th Annual Conference on Decision and Control (CDC), 2017, pp. 1622-1627, doi: 10.1109/CDC.2017.8263882.
+
+                </a>
+                </cite>
+
+                <cite>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30478458/">
+                8.Meyer AJ, Segall-Shapiro TH, Glassey E, Zhang J, Voigt CA. Escherichia coli "Marionette" strains with 12 highly optimized small-molecule sensors. Nat Chem Biol. 2019 Feb;15(2):196-204. doi: 10.1038/s41589-018-0168-3. Epub 2018 Nov 26. PMID: 30478458.
+                </a>
+                </cite>
+
+
+
+
+                <cite>
+                <a href="https://www.informit.com/articles/article.aspx?p=32090&seqNum=2">
+                9. Process Control: Understanding Dynamic Behavior [Accessed 9/10/22]
+
+
+                </a>
+                </cite>
+
+                <cite>
+                <a href="https://xdevs.com/doc/_Books/OpAmp/analysis%20and%20design%20of%20analog%20integrated%20circuits.pdf">
+                10.Analysis and design of analog integrated circuits [Accessed 9/10/22]
+
+
+                </a>
+                </cite>
+
+                <cite>
+                <a href="https://elifesciences.org/articles/61496?fbclid=IwAR0jMnBNxzr-WGdkRgTQIi5QvP75HUwU4Pd3f6lHaKh_i17LtzcYswxk6uM">
+                11.Structural basis of ClpXP recognition and unfolding of ssrA-tagged substrates
+                [Accessed 9/10/22]
+
+
+                </a>
+                </cite>
+
+                <cite>
+                <a href="https://elifesciences.org/articles/61496?fbclid=IwAR0jMnBNxzr-WGdkRgTQIi5QvP75HUwU4Pd3f6lHaKh_i17LtzcYswxk6uM">
+                12.Structural basis of ClpXP recognition and unfolding of ssrA-tagged substrates
+                [Accessed 9/10/22]
+
+
+                </a>
+                </cite>
+
+                <cite>
+                <a href="https://2018.igem.org/Team:Fudan-CHINA/Model">
+                13. Team Fudan-CHINA 2018
+                </a>
+                </cite>
+
+
+                <cite>
+                <a href="https://2016.igem.org/Team:Hong_Kong_HKUST/Modelling_Stability_Analysis">
+                13. Team Hong_Kong_HKUS 2016
+                </a>
+                </cite>
 
         
-</body>
-
-<!-- Footer -->
-{% include 'footer.html' %}
-
-<!-- Footer -->
-{% include 'loader.html' %}
-
-</html>
+        
+                </div>
+            </section>
+            </div>
+    </div>
+  
+  
+  
+  <!-- Footer -->
+  {% include 'footer.html' %}
+  
+  <!--Loader-->   
+  {% include 'loader.html'%}  
+  
+  </html>
+  
