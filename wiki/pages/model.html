@@ -25,7 +25,7 @@
     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
 
     <!--MathJax Import-->
-    <script type= "text/javascript" src="../../athens/static/scripts/mathjax/tex-chtml.js"></script>
+    <script type= "text/javascript" src="../static/scripts/mathjax/tex-chtml.js"></script>
     
     <title>Perspectives | Model</title>
 </head>
@@ -46,9 +46,10 @@
 <div class="overview-model">
     <h1>Overview</h1>
     <p>
-        Alongside with our wet lab work, computational modelling of our PERspectives system has been proven to be crucial in order to establish a workflow for future 
-        applications. Our model is divided into two separate parts, the modelling of the senders and the modelling of the receivers. 
+        Alongside with our wet lab work, computational modelling of the PERspectives system has been proven to be crucial in order to accelerate and improve the wet lab tasks, aiming to achieve significant and reproducible results. Moreover, by setting the basis of the computational aspect of PERspectives, we further establish a potential workflow for future applications both on our and relevant fields.
         <br><br>
+        Our computational approach was based on <span style="color: #3aa9c5;">modelling the senders and the recievers</span> populations, seprately. Morevor, we also attempted to approach our system holistically 
+
         The aim of the model is to predict the change in concentrations of key chemical substances, the rate of gene expression and to evaluate the regulatory capacity 
         of our system. Also, based on the experimental work carried out by the wet lab, we determined some kinetic constants to create a customised kinetic model for 
         our system. But we did not limit ourselves to just creating a kinetic model. For our system it is also important to observe the effect of lactone diffusion as 
@@ -290,7 +291,17 @@
                 <br><br>
                 Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation of the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
                 <br><br>
+                <div>
+                  <p>
+                \(\frac{AHL_{int}}{dt} = k_{-1} [Mon] + -k_{1}[AHL_{int}][LuxR] -d_{AHLint}\)
+                  </p>
+                </div>
 
+                <div>
+                  <p>
+                \( \frac{LuxR}{dt} = \frac{p_{J23105}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} + k{-1}[Mon]- k{1}[LuxR]*[AHL_{int}]-d{LuxR}[LuxR]\)
+                  </p>
+                </div>
 
                 At this point it would be useful to mention the different assumption made for the single cell kinetic model:
                 <br><br>

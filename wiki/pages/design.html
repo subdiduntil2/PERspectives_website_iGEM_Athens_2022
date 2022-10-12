@@ -355,7 +355,9 @@
         
         <center>
         <img class="img1" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
-        <figcaption>Figure 1. pTU1-A-lacZ vector (created with SnapGene) </figcaption>
+        <figcaption>Figure 1.
+          pTU1-A-lacZ vector (created with SnapGene)
+          </figcaption>
         </center>
         <br>
         </li>
@@ -365,10 +367,11 @@
         <br><br>
 
         <center>
-        <img class="img2" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+        <img class="img2" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu2-a-rfp-cole1-ori-map.png">
         <figcaption>
           Figure 2.
-          pTU2-A-RFP (colE1 ori) vector (created with SnapGene) 
+        pTU2-A-RFP (colE1 ori) vector (created with SnapGene)
+
         </figcaption>
         </center>
         <br>
@@ -379,7 +382,7 @@
           <br><br>
   
           <center>
-          <img class="img3" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+          <img class="img3" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu2-a-rfp-p15a-ori-map.png">
           <figcaption>
             Figure 3.
         pTU2-A-RFP (p15A ori) vector (created with SnapGene)
@@ -394,7 +397,7 @@
             <br><br>
     
             <center>
-            <img class="img4" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptu1-a-lacz-map.png">
+            <img class="img4" src="https://static.igem.wiki/teams/4294/wiki/design-not/ptkei-dest-map.png">
             <figcaption>
               Figure 4.
               pTKEI-Dest vector (created with SnapGene)
@@ -1076,12 +1079,47 @@ Results from the RBS calculator regarding the translation initiation rate of the
               This led us to the design of the part BBa_K4294301, a hybrid promoter which includes a LuxR activator binding domain (luxbox) upstream the -35 hexamer and a PhlF operator (phlO) that spans from the core sequence and the -10 hexamer to the proximal promoter sequence.
               <br><br>
               <center>
-                <img class="r-5" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f5a.png">
-                <img class="r-5" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f5b.png">  
+                <img class="r-6" src="https://static.igem.wiki/teams/4294/wiki/design-not/6-2.png">
                 <figcaption> Figure 6.
                   Plux-phlO hybrid promoter.                                      
                 </figcaption>
                 </center> 
+                <br><br>
+                PhlF is under the transcriptional control of a LuxR repressible promoter (Plux_rep, BBa_J107103). However, in this promoter the LuxR binding domain is not placed upstream of the -35 hexamer, but inside the core sequence between the -35 and -10 regions. Due to this localization change, the effect of the active LuxR dimers is reversed; instead of activating the production of PhlF, they repress it [37]
+                <br><br>
+                Even though LuxR and PhlF do not bind cooperatively to their respective binding sites, their dynamics are indirectly connected. PhlF was chosen since it is an effective repressor with a low association constant K, indicating its ability to form functional dimers in lower concentrations (according to the Ecoli Marionette strains characterization [19]). Therefore, in “intermediate” OC6 concentrations, it could possibly still reinforce repression to the output irrespective of its lower production rate (due to the effect of LuxR on the Plux_rep promoter) and the activation effect of LuxR to the output’s promoter. LuxR establishes a positive feedback loop to propagate its effect and both positive feedback topologies (with and without constitutive LuxR expression) were designed and tested. A very efficient ssrA [38] degradation tag (NDENYALAA) was added to PhlF to ensure its rapid degradation after maximum repression of the phlF gene by LuxR and to avoid PhlF concentrations that might lead to a complete circuit block in every inducer concentration. The degradation tag was empirically selected and further analysis of different degradation tags will be needed for a potential optimization of the circuit’s response.
+                <br><br>
+                Note: These circuit architectures are referred to as Positive Feedback + Repressor (PF+R) and Positive Feedback with constitutive LuxR expression + Repressor (PFc+R) in other pages as well.
+                <br><br>
+                <center>
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7a.png">
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7b.png">  
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7c.png">
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7d.png">  
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7e.png">
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7f.png">  
+                  <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7g.png">
+                  <figcaption> Figure 7.
+                    a. Flow chart of PFR (Positive Feedback + Repressor) and PFcR (Positive Feedback with constitutive LuxR production + Repressor) circuits. This topology resembles the one of a coherent feedforward loop with an added positive involving the first step.
+                    b. PFR genetic circuit overview. The output is controlled by the hybrid promoter BBa_K4294301, which is activated by LuxR and repressed by PhlF. LuxR is placed downstream of the Plux promoter, establishing a positive feedback after induction with OC6 as previously described. LuxR also binds to a Plux repressible promoter (BBa_J107103), which controls the production of PhlF, blocking PhlF expression after induction with OC6. Every coding sequence is placed downstream a BBa_B0034 RBS. PhlF has a high efficiency NDENYALAA degradation tag.
+                    c. PFR circuit at its “OFF” state (“0”)
+                    d. PFR circuit at its “ON” state (“1”)
+                    e. PFcR genetic circuit overview. This circuit is similar to the PFR circuit, but with an added constitutive expression of LuxR, which provides a higher basal LuxR concentration in the cell.
+                    f. PFcR at is “OFF” state (‘“0”)
+                    g. PFcR at its “ON” state (“1”)                
+                                           
+                  </figcaption>
+                  </center>
+                  <br><br>
+                <center>
+                  <img class="r-8" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f8a.png">
+                  <img class="r-8" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f8b.png">  
+                  <figcaption> Figure 8.
+                    PFR circuit in the pTU2 (ColE1) plasmid vector. 
+                    PFcR circuit in the pTU2 (ColE1) plasmid vector. 
+                  </figcaption>
+                  </center>  
+                  After induction with OC6, PFR circuit response showed a significant difference in steepness in comparison with the original open loop circuit. For more information, please refer to the <a href="https://2022.igem.wiki/athens/model">Results</a> page and the <a href="https://2022.igem.wiki/athens/model">Model</a> page for the circuit’s model parameters.
 
           </p>
   
