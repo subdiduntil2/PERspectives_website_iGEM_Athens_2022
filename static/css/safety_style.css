@@ -277,6 +277,11 @@ html{
     border-radius: 50px;
 }
 
+.kill_img{
+    width: 45%;
+    border-radius: 20px;
+}
+
 .what_img{
     width: 30%;
     float: left;
