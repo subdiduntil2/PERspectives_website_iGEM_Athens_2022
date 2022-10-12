@@ -1,24 +1,597 @@
-{% extends "layout.html" %}
-  
-{% block title %}Improvement of an Existing Part{% endblock %}
-{% block lead %}Describe the improvements your team made of an existing part.{% endblock %}
-
-{% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Gold Medal Criterion #2</h4>
-      <p>Make a new Part that improves the function of an existing Part. This improvement must be distinct from your work for Bronze and Silver medals.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
-    </div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://static.igem.wiki/teams/4294/wiki/favicon-white.png"/>
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
     
-    <div class="bd-callout bd-callout-warning">
-      <h4>Note</h4>
-      <p>You must document your improvement on both the existing and new Parts' Main Pages on the <a href="http://parts.igem.org">Registry</a> for your team to be eligible for this criteria.</p>
-    </div>
-  </div>
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename = 'css/improve_style.css') }}" rel="stylesheet">
+
+    <!-- Loader -->
+    <script type= "text/javascript" src="../../athens/static/scripts/jquery.min.js"></script>
+
+    <!--Custom menu CSS-->
+    <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
+
+    <!--Custom footer CSS-->
+    <link href="{{url_for('static',filename='css/footer_style_aspa.css')}}" rel="stylesheet">
+
+     <!--Custom to top button CSS-->
+     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
+    <title>PERspectives | Proof of Concept</title>
+</head>
+
+<body>
+<!-- Navigation -->
+{% include 'menu_custom.html' %}
+
+<!--To top button-->
+{% include 'to_top_button.html'%}
+
+<!--Loader-->   
+{% include 'loader.html'%}
+/index
+<div class="page_header">
+    <img class="img_header" src="https://static.igem.wiki/teams/4294/wiki/contribution/project-bg.gif" width="100%">
+    <div class="heading">Improve A Part</div>    
 </div>
 
-{% endblock %}
+<div class="cc" id="cc-implementaion">
+  <div class="left-side">
+      <div class="index-bar">
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#intro">Overview</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#background">Background</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#ML">Machine Learning</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#results">Wet Lab Validation</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#conclusions">Conclusions</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#references">References</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="right-side">
+
+<!-- Overview -->
+        <section class="introduction">
+            <a id="intro" class="anchorOffset"></a>
+            <div class="overview">
+                <h1>Overview</h1>
+                <p>
+                The goal of our project was to create functional communication between the two populations, the senders and the receivers. By the term 
+                functional, we mean that when the receivers are activated by different combinations of senders (induced and uninduced) 
+                (populations with different RBS variants) produce different activation patterns. In this way, when our project is
+                 <a href="https://2022.igem.wiki/athens/implementation">implemented</a> on 
+                real-world problems, it will be able to detect different inputs, assign different weights to them and only activate the
+                 receivers' population when a specific threshold is surpassed by a specific combination of receivers. 
+                <br><br>
+                In order to prove that our system is functional and meets the goal set by our team in the beginning of our project ideation, we 
+                performed simulations using python programming Language, Simulink and Comsol as well as wet lab experiments.
+                </p>
+            </div>
+        </section>
+
+<!-- background -->
+        <section class="background">
+        <a id="background" class="anchorOffset"></a>
+        <h1><b>Background</b></h1>
+        <br><br>
+        <!--<h2>Building and Performing Simulations</h2> -->
+        <p>
+          It is quite obvious that our project revolves around the Ribosome Binding Site (RBS) sequence characteristics. 
+          As it is often stated in the rest wiki pages, Ribosome Binding Sites are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an
+          are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an important role in defining their performance, the neighboring genetic context, namely 
+          their eighboring sequences, influence their function. For example, a complementary with the RBS sequence at the start of the Coding Sequence or at a transcribed operator 
+          might trap the RBS in a stem-loop, inhibiting ribosome binding and, therefore, protein expression [1].
+          In general, stable mRNA structures at the RBS are limiting the translation initiation rate. The same RBS might function considerably different across genetic contexts. 
+          This makes RBS characterizations often unreliable and since the RBS strength at initiating translation must be evaluated in every new designed circuit, 
+          RBS parts must be improved in terms of their context dependency to become true versatile, plug-and-play devices.
+        </p>
+        <br><br>
+        <p>
+          Many different approaches have been developed to combat this issue. Regarding the Promoter:5’UTR junction context, 
+          a few examples include self-cleaving ribozymes, which provide a standard genetic context at the 5’ end and can insulate the RBS from the Promoter’s context [2]
+          and unstructured 5’ tails acting as ribosome “standby sites”, which facilitate translation initiation by pre-bound to the mRNA ribosomes at the short frames of 
+          time in which the stable mRNA structure is transiently unfolded [3]. Regarding the 5’UTR: CDS junction, the often-mentioned bicistronic design (BCD) 
+          by Mutalik et. [4] al provides an efficient way to combat variability in protein expression.
+        </p>
+        <br><br>
+        <p>
+          Prokaryotic RBS parts are often registered as sequences mostly consisting of a Shine Dalgarno sequence (the complementary sequence to the ribosomal rRNA).
+          However, all of the above indicates that their nearby genetic context also needs to be defined.iGEM RBS parts are distributed with an extra 5’ biobrick and 3’ biobrick scar which influence 
+          their function and probability of interaction with nearby sequences. 
+        </p>
+        <br><br>
+        <p>
+          In a recent research paper by Duan et. al [5],  general design criteria to improve programmability and minimize context dependence of RBS were proposed.
+          The translation of multiple genes under the same RBS was quantitatively characterized to evaluate the context dependence of each RBS variant in E. coli.
+          Among other parameters of RBS function that were evaluated, their results showed that an AC-rich spacer region (−7 to −1) between the SD sequence
+          and the start codon was associated with low context dependence. Based on the aforementioned research we developed a version of the commonly used 
+          BBa_B0034 RBS part with an altered spacer sequence between the RBS and the ATG start codon.
+        </p>
+        <br>
+
+
+        <!--<center>
+        <table class="content-table" id="tb1">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Meaning</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nmin_receivers</td>
+                <td>Minimum Receivers Population(0hrs)</td>
+                <td>3.2*10^(7)</td>
+              </tr>
+              <tr class="active-row">
+                <td>Nmax_receivers</td>
+                <td>Maximum Receivers Population(4hrs)</td>
+                <td>10.4*10^(7)</td>
+              </tr>
+              <tr>
+                <td>V_bead</td>
+                <td>Volume of Population</td>
+                <td>200μL</td>
+             
+            </tbody>
+        </table>
+        <figcaption>Table 1. Estimated parameters regarding minimum and maximum cell populations</figcaption>
+        </center>
+
+        <br>
+        <p>
+        Due to a lack of experimental ODs for the senders' population, we assumed that the sender’s population cells at 0hrs and 4hrs would follow the ratio 
+        of the senders and the receivers population volumes. For instance, for a ratio of 1/10, the sender’s population parameters were set to be 
+        Nmin=0.32*10^(7) cells and Nmax=10.4*10^(7) cells.
+        <br><br>
+        Via the modelling approach described above as well as in the model section, we simulated our test dataset for different ratios of senders/receivers:
+        </p>
+        <br><br>
+
+        <center>
+        <img class="img1a" id="img1" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/pasted-image-0.png">
+        <img class="img1b" id="img1" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/311251954-1690780304627538-1532327254272859516-n.png">
+        <img class="img1c" id="img1" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/pasted-image-0-1.png">
+        <img class="img1d" id="img1" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/310122047-834286480899436-1427354096670232968-n.png">
+        <figcaption>Figure 1. Model simulation results for different ratios of senders and receivers populations for the PRF Construct a, b, c, d.
+        </figcaption>
+        </center>
+        <br>
+
+        <center>
+        <img class="img1a" id="img2" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/pasted-image-0-2.png">
+        <img class="img1b" id="img2" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/pasted-image-0-3.png">
+        <img class="img1c" id="img2" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/pasted-image-0-4.png">
+        <img class="img1d" id="img2" src="https://static.igem.wiki/teams/4294/wiki/proof-of-consept/pasted-image-0-5.png">
+        <figcaption>Figure 2. Model simulation results for different ratios of senders and receivers populations for the OpLo Construct a, b, c, d.
+        </figcaption>
+        </center>
+        <br>
+
+        <p>
+        From the results above both for the OpLo and the PFR systems, it is assumed that a decrease from the 1/1 populations ratio is needed, due to the 
+        suboptimal tuning of the senders and the receivers constructs, which leads to almost maximum output fluorescence even in the case when one 
+        medium RBS is activated. However, a decrease in the rate of 1/10 could potentially lead to a hit in the patterns labelled as one, since the 
+        amount of AHL produced by the senders populations would not be enough to effectively induce the increased receivers population. In conclusion, 
+        the optimal ratio would be that of 1/7 for our experimental setup. 
+        </p>
+
+        </section> -->
+
+<!-- Wet Lab -->
+    <section class="ML">
+        <a id="ML" class="anchorOffset"></a>
+        <h1><b>In Silico Analysis</b></h1>
+        <br><br>
+        <h2>Unsupervised Machine Learning</h2>
+        <br>
+        <p>
+        The goal to reduce the variability of the RBS BBa_B0034 via redesigning the spacer region would mean that our team should locate spacer mutants
+        for which we could have quantitative results regarding their context dependency. That is no easy task and would normally require a large amount of 
+        experimental measurements with different spacer variants and genes of interest in order to create a large dataset. Of course, during the iGEM short time window, 
+        such a procedure would be impossible in parallel with the rest of the project experiments. As a result, our team decided to use an already tested-in-lab  
+        dataset and the different features of its input sequences in order to determine the context dependency of our novel RBS sequences.
+        </p>  
+        <br><br>
+        <p>
+        The dataset was provided in the research paper by Duan et. al.[5] In particular, they used a mutant RBS library with GFP and RFP fluorescent proteins
+        and characterized each mutant based on the difference in fluorescence.In this way, they created a labeled dataset of RBS sequences in which RBS variants with similar values of 
+        GFP and RFP fluorescence (lower than 20% difference) would be characterized as low context dependent (LCD) and the others would be labeled as high context dependent (HCD).
+        </p>  
+        <br><br>
+        <p>
+          Simultaneously they also performed a feature analysis in order to determine the exact factors that play a more significant role in the context dependency of their algorithm 
+          and put an emphasis on the nucleotide sequence not only of the entire RBS sequence,but also of the RBS - Start Codon spacer region in particular, as well as characteristics of the secondary structure, 
+          such as MFE, and the binding affinity between RBS and 16S rRNA.After correlation analysis, they concluded to a 27-long vector of RBS characteristics which showed important statistical correlation regarding 
+          protein translation rates (via the Mann-Whitney Test [6]).
+        </p>  
+        <br><br>
+        <p>
+          In the above workflow, they created a dataset that was unbalanced, meaning that the more context independent sequences were significantly fewer than the ones showing higher context independency (1:8 ratio). 
+          That type of dataset is a prime candidate for unsupervised learning models, which are capable of detecting outlier candidates. That is due to the fact that the given training model is already unbalanced, 
+          meaning that it is tuned to only detect normal cases. In the situation where the model is presented with a novel anomaly case (an LCD RBS in our case), it will create an anomaly score leading to the detection of it. 
+        </p>  
+        <br><br>
+        <p>    
+       In terms of our workflow, we used the already characterized dataset provided by  Duan et. al [5] and trained it for many different unsupervised learning algorithms via the pycaret library [7] . 
+       The only main difference is the binding affinity metric which we noticed that it couldn’t be replicated by any metric we tested on the Vienna RNA package. So, instead we used the pf_fold() function 
+       and in particular the ensemble energy variable it gives as an output which is proportional to the binding affinity metric used in the paper[8]. This was done not only for our own testing sequences but also 
+       for the original dataset ones. 
+
+        </p>  
+        <br><br>
+        <center>
+        <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f1.png">
+        <figcaption>Figure 1. Different Outlier Detection algorithms offered via the pycaret package
+        </figcaption>
+        </center>
+        <br>
+
+        <p>    
+          The anomaly detection module of pycaret ranks trained and tested sequences based on an anomaly metric from 0 to 1, with the anomaly LCD values being closer to an anomaly score of 1. 
+          The 4 learning models used for our analysis via the pycaret library are briefly presented below.
+        </p>  
+        <br><br>
+        <h2>1. Principal Component Analysis (PCA)</h2>
+        <br>
+        <p>    
+          PCA is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, 
+          and enabling the visualization of multidimensional data [9]. Formally, PCA is a statistical technique for reducing the dimensionality of a dataset. 
+        </p>  
+        <br><br>
+        <center>
+          <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f2.png">
+          <figcaption>Figure 2. Brief explanation of PCA  Algorithm [10].
+          </figcaption>
+          </center>
+          <br>
+          <p>    
+            In terms of using it in unsupervised learning, PCA can detect outlier inputs via calculating the euclidean distance between the novel input vector and the reduced space of the dataset provided by PCA. 
+            A high distance means a high reconstruction error and thus an anomaly score closer to one.
+          </p>  
+          <br><br>
+          <center>
+          <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f3.png">
+          <figcaption>Figure 3. Example of using PCA analysis for 2 points; one close to the reduced space and one away from it. The reconstruction error is represented by dotted lines 
+            between the new and the reconstructed points
+          </figcaption>
+          </center>
+           <br><br>
+           <h2>2. One Class Support Vector Machine (One-class SVM) </h2>
+           <br>
+           <p>    
+            One-class SVM is a special case of SVMs, which are normally supervised learning models with associated learning algorithms that analyze data for classification and regression analysis. 
+            In brief, SVM maps training examples to points in space so as to maximize the width of the gap between the various categories. New examples are then mapped into that same space and 
+            predicted to belong to a category based on which side of the gap they fall. The kernel separating the different labels could be either linear or non-linear, as shown below.
+          </p>  
+          <br>
+
+          <center>
+            <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f4.png">
+            <figcaption>Figure 4. Example of linear hyperplane produced by SVM in order to distinct classes 1 and 2 [11].
+            </figcaption>
+            </center>
+          <br>
+          <p>    
+            As for one-class SVM, it is a variance of the original SVM algorithm which has as a target to find the hyperplane is as close to the original dataset points as possible [12]. 
+            As a result, when a novel point is presented that is away from the hyperplane, then one-class SVM detects it as an anomaly
+          </p>  
+          <br><br>
+          <h2>3. K-nearest neighbors (knn)</h2>
+           <br>
+           <p>    
+            The knn algorithm is a supervised learning classifier, which uses proximity to make classifications or predictions about the grouping of an individual data point The algorithm 
+            computes the euclidean distance of a novel point in order to compute its k-nearest neighbors and then use the neighbors labels in order to determine the new points’ label.
+          </p>  
+          <br>
+          
+          <center>
+            <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f5.png">
+            <figcaption>Figure 5. Classification example using knn for a novel point [13]. 
+            </figcaption>
+            </center>
+          <br><br>
+          <h2>4. Isolation Forest Algorithm (IForest)</h2>
+          <br>
+          <p>    
+            Isolation forest or IForest is an anomaly detection algorithm that uses isolation (how far a data point is to the rest of the data), rather than modeling the normal points Isolation forests are based on decision trees; 
+            randomly sub-sampled data is processed in a tree structure based on randomly selected features. he samples that travel deeper into the tree are less likely to be anomalies as they require more cuts to isolate them. Similarly,
+             the samples which end up in shorter branches indicate anomalies as it was easier for the tree to separate them from other observations [14].
+          </p>  
+          <br>
+          <center>
+            <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f6.png">
+            <figcaption>Figure 6. Visual Representation of iForest for anomaly detection [14].
+            </figcaption>
+            </center>
+          <br><br>
+          <p>    
+            After selecting the algorithms described above, then we trained the initial dataset for each one of those algorithms and saved the models that were produced on the .pkl files.
+          Simultaneously we created our own muted spacer sequences on the RBS_BBa0034 variants-100 with a spacer length 5 and 100 more with a spacer length 6- and tested the 4 different trained models in order to 
+           rank the novel RBS variants in terms of “anomaly”. Then kept the top 20 variants from each model, i.e. the 20 sequences with the highest anomaly scores and then kept the variables that were present on all 4 “top 20” variant lists.
+          </p>  
+          <br>
+          <p>    
+            The resulted sequences from the in silico analysis are presented on table 1
+          </p>
+          <br>
+          <center>
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Sequence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>RBS_22_spacer_5_vol_5</td>
+                <td>AGAGGAGAA<b>AGCCCC</b>A</td>
+              </tr>
+              <tr class="active-row">
+                <td>2</td>
+                <td>RBS_22_spacer_5_vol_96</td>
+                <td>AGAGGAGAAA<b>CCTCC</b>A</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>RBS_22_spacer_6_vol_29</td>
+                <td>GAGGAGAAA<b>CATCCC</b>A</td>
+              </tr>
+              
+              
+              <tr class="active-row">
+                <td>4</td>
+                <td>RBS_22_spacer_6_vol_47</td>
+                <td>GAGGAGAAA<b>CCCGCA</b>A</td>
+              </tr>
+              
+              <tr>
+                <td>5</td>
+                <td>RBS_22_spacer_6_vol_59</td>
+                <td>GAGGAGAAA<b>CCCTCC</b>A</td>
+              </tr>
+              
+              
+            </tbody>
+        </table>
+        <figcaption>Table 1. Final RBS BBa_B0034 originated parts with mutant spacers, after the intersection of all 4 ML models. With bold, 
+          we highlight the 5 and 6 nucleotides long spacer regions that were randomly generated (via the random_seq_generator.ipynb script).</figcaption>
+      </center>
+      <br><br>
+      <p>    
+        Due to a lack of time for testing all 5 sequences, the wet lab team initially arbitrarily decided on testing 3 variants. Since all variants have the same AC content and one T or C in the spacer region, 
+        the T containing variants were selected on the grounds that an AT hydrogen bond with a neighboring sequence would offer less thermodynamic stability than a stronger GC bond. Hence, we were led to choose RBS 
+        variants with index values <b>2</b>, <b>3</b> and <b>5</b> on table 1 for experimental validation of our in silico analysis. In the end, due to time and wet lab engineering constraints, only the RBS variant with index value with index 5 (V59) 
+        was tested in comparison with the original BBa_B0034 RBS. 
+      </p>
+      <br>
+      <p>    
+        For a better view of the generated scripts and analysis, please refer to our improve-a-part repository on <a href="https://gitlab.igem.org/2022/software-tools/athens/-/tree/main/Improve-A-Part">gitlab</a>
+      </p>
+      <br>
+
+
+    <!--Results-->
+    <section class="results">
+      <a id="results" class="anchorOffset"></a>
+      <h1><b>Wet Lab Validation</b></h1>
+      <br>
+      <p>
+        The following RBS variants were selected from the in silico analysis (Table 2.)
+        </p>
+      <br>
+    <center>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>RBS Name</th>
+            <th>5' Scar</th>
+            <th>BBa_B0034 part sequence</th>
+            <th>RBS - Start Codon Spacer</th>
+            <th>Part Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>V59</td>
+            <td>tactagag</td>
+            <td>aaagaggagaaa</td>
+            <td>ccctcca</td>
+            <td>BBa_K4294559</td>
+          </tr>
+          <tr class="active-row">
+             <td>V96</td>
+            <td>tactagag</td>
+            <td>aaagaggagaaa</td>
+            <td>cctcca</td>
+            <td>BBa_K4294596</td>
+          </tr>
+          <tr>
+            <td>V29</td>
+            <td>tactagag</td>
+            <td>aaagaggagaaa</td>
+            <td>catccca</td>
+            <td>BBa_K4294626</td>
+          </tr>
+        </tbody>
+    </table>
+    <figcaption>Table 2. The selected RBS sequences. The original RBS BBa_B0034 is also added.</figcaption>
+  </center>
+  <br><br>
+  <p>
+   To verify the reduction in context dependence of the improved RBS spacer variants, different genetic contexts were introduced by fusions of the fluorescent protein sfGFP 
+   with the first 36 nucleotides of the proteins Pencillin acylase (PA), Phosphomevalonate Kinase (PMK) and AraC. The sequences of the PA and PMK 36nt fragments were derived from Duan et. al [5]paper data 
+   and the sequence of the sfGFP and AraC CDS from Mutalik et. al [4] paper data. sfGFP retains its function when it is fused with poorly folded peptides[16] and is therefore a reliable reporter for examining the 
+   effect of the genetic context on translation rate. The following characterization parts were generated (Table 3.)
+    </p>
+  <br>
+  <table class="content-table">
+    <thead>
+      <tr>
+        <th>Reporter</th>
+        <th>Part Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>36nt PA - sfGFP fusion Protein</td>
+        <td>BBa_K4294203</td>
+      </tr>
+      <tr class="active-row">
+         <td>36nt PMK -sfGFP fusion Protein</td>
+        <td>BBa_K4294204</td>
+      </tr>
+      <tr>
+        <td>36nt AraC - sfGFP fusion Protein</td>
+        <td>BBa_K4294205</td>
+      </tr>
+      
+    </tbody>
+</table>
+      <figcaption>Table 3. sfGFP fusions with the first 36 nucleotides of other coding sequences.</figcaption>
+      </center>
+      <br><br>
+      <p>
+        The above parts together with the CDS of the sfGFP (BBa_K429420) create four genetic contexts in which the original BBA_B0034 RBS and the V59 RBS BBa_K4294559 variant was tested. 
+        Unfortunately the 36ntPMK - sfGFP fusion did not produce any fluorescence in both groups and therefore the context dependency was evaluated in three genetic contexts.
+         </p>
+       <br>
+       <h2>Overview of the experimental procedure</h2>
+       <br><br>
+       <p>
+        As it is explained in more detail in the attached pdf file below, only the V59 BBa_K4294559 RBS was finally tested in comparison with BBa_B0034. The V59 RBS part and the 36nt Double Stranded Oligo parts were constructed via primer 
+        annealing and extension. BsaI cut sites were introduced to facilitate the assembly of the characterization constructs following the Golden Gate Assembly Protocol for BsaI. The plasmid vector was the pTU1-A-lacZ 
+        plasmid that was widely used in our project. The original RBS BBa_B0034 was isolated by the iGEM 2022 distribution kit plate 1 and compatible for the chosen assembly method. The transcription of the reporters was put 
+        under the control of the Ptet promoter and the final constructs were transformed into DH5a-z1 cells, which have a genome encoded TetR production. 
+        Induction of bacteria was performed with 0.5 μM aTc concentration for 3h. OD and Fluorescence measurements were taken using the Flexstation 3 (Molecular Devices) plate reader. 
+        The Fluorescence (in RFU)/OD600 ratio was calculated for each reporter construct, the average value and the standard sample deviation of the ratios of each construct for both RBS variants (original and v59) 
+        were calculated. Comparison of context dependence was evaluated via the calculation of the Coefficient of Variation of each group.
+         </p>
+       <br>
+       <p>
+        More information regarding the experimental procedures, construct validation, and the preliminary screening of the candidate variants using the RBS calculator are provided in this supplementary <a href="https://static.igem.wiki/teams/4294/wiki/dry-notebook/dry-lab-book-igem-athens-2022.pdf">pdf file</a>
+         </p>
+       <br>
+       <h2>Results</h2>
+       <br><br>
+       <p>
+        The following figures and table summarize the experimental data regarding the Fluorescence/OD measurements of each reporter under translational regulation of the original BBa_B0034 RBS and the V59 RBS BBa_K4294559.
+         </p>
+       <br>
+       <center>
+        <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f7.png">
+        <figcaption>Figure 7. Bar Plot of the Fluorescence/OD (in arbitrary units) ratios of the different reporters under the translational control of the BBa_B0034 RBS after 
+        a 3h induction with 0.5 μM of aTc. The 36nt PMK - sfGFP fusion was proven not to function in both RBS groups and was excluded from the CV calculation.
+        </figcaption>
+        </center>
+        <br>
+        <center>
+          <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f8.png">
+          <figcaption>Figure 8. Bar Plot of the Fluorescence / OD (in arbitrary units) ratios of the different reporters under the translational control of the V59 BBa_K4294559 RBS after a 3h induction with 0.5 μM of aTc. The 36nt PMK - sfGFP fusion was proven not to function in both RBS groups and was excluded from the CV calculation.
+          </figcaption>
+          </center>
+          <br>
+
+          <center>
+          <table class="content-table">
+            <thead>
+              <tr>
+                <th>B0034</th>
+                <th></th>
+                <th>v59</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Average</td>
+                <td>4507.915552</td>
+                <td>Average</td>
+                <td>1996.770252</td>
+              </tr>
+              <tr class="active-row">
+                <td>Standard Deviation</td>
+                 <td>1532.370964</td>
+                 <td>Standard Deviation</td>
+                <td>397.9864727</td>
+              </tr>
+              <tr>
+                <td>CV</td>
+                <td>0.3399289419</td>
+                <td>CV</td>
+                <td>0.1993151051</td>
+              </tr>
+            </tbody>
+        </table>
+        <figcaption>Table 4. Average, Standard Sample Deviation and CV values.</figcaption>
+      </center>
+      <br>
+      <p>
+        With the V59 RBS the Coefficient of Variance regarding the output signal is reduced by ~14%. The total output is also decreased; 
+        it is however in the same order of magnitude in comparison with the output of the BBa_B0034 regulated reporters. 
+         </p>
+       <br>
+      </section>
+ <!-- Conclusion  -->
+            <section class="introduction">
+                <a id="conclusions" class="anchorOffset"></a>
+                <div class="overview">
+                    <h1>Conclusions</h1>
+                    <p>
+                      The <a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a> RBS was improved regarding its context dependence by the alteration of the RBS - Start Codon spacer region and the creation of the V59  <a href="http://parts.igem.org/Part:BBa_K4294559">BBa_K4294559</a>. 
+                      An obvious caveat regarding our results is the limited sample of the tested genetic contexts. However, since the choice of the potential spacer regions was supported by the in silico analysis, 
+                      we believe that the V59 RBS  is indeed an attractive alternative of the BBa_B0034 RBS and we encourage future iGEM teams in further characterizing it in new genetic contexts alongside with the other
+                      RBS candidate sequences that were not tested by our team. The potential reported lower translation rate could be alleviated by transcriptional enhancers [17] leading to the reconstruction of existing 
+                      RBS parts that will achieve similar average translation rates in comparison with their respective original parts, but with a lower context dependence.
+                    </p>
+                </div>
+            </section>
+
+
+
+
+        <!-- References  --> 
+            <section class="collapsible">
+                <a id="references" class="anchorOffset"></a>
+                <input type="checkbox" id="collapsible-head">
+                    <label for ="collapsible-head">References</label>    
+                    <div class="collapsible-content">
+                        <cite>
+                            <a href="https://www.researchgate.net/post/How_to_calculate_bacterial_cells_ml_from_OD600_in_Rosetta_cells">
+                                1. https://www.researchgate.net/post/How_to_calculate_bacterial_cells_ml_from_OD600_in_Rosetta_cells [Accessed 1/10/22]
+                            </a>
+                        </cite>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+<!--Loader-->   
+{% include 'loader.html'%}
+
+<!-- Footer -->
+{% include 'footer.html' %}
+
+</html>
