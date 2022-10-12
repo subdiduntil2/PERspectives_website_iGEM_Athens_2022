@@ -2004,8 +2004,8 @@
     
     <div class="right-side">
     
-            <!-- Overview  -->
-            <section class="diffusion-section">
+           <!-- Overview  -->
+           <section class="diffusion-section">
             <a id="overview-pattern" class="anchorOffset"></a>
             <br>
             The biological sensor our team aims to create, is intending to analyze complex stimuli. The system we propose was therefore originally designed to recognize 3x1 bits patterns. These patterns are created by on-off bits. We consider “on” a subpopulation of senders that is induced with aTc and “off” a senders subpopulation that is not induced with aTc, and as a result there will be no lactone production regardless of the RBS. The possible patterns are: 
@@ -2023,6 +2023,265 @@
             The 166 RBSs that make up the library we have created were divided into three families according to the rate of translation they show when followed by the LuxI gene. The RBSs that have high translation initiation rate are called the “Strong (S)” RBSs, the ones with medium translation initiation rate are called the “Medium (M)” RBSs and the ones with low translation initiation rate are called “Weak (W)”. So by creating different combinations of RBS triads we expect different amount of lactone produced.
     
             <br>
+            <center>
+              <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-2.png">
+              <figcaption>
+                Figure 2: Patterns by combining subpopulations of senders with RBS of different strength
+              </figcaption>
+              </center>
+              <br><br>
+              <p>
+                Τhus combining RBSs with different strengths in populations that are induced or not, we create patterns that can be provided to the senders as inputs, which our system will be able to recognize. 
+                Theoretically, from each 3x1 bit pattern we expect a different amount of lactone production when all of the senders subpopulations are induced with aTc. Since the strength of each RBS is translated 
+                into an amount of lactone produced and finally the subpopulations of senders are mixed, the position of each bit does not matter but only what RBS each subpopulation has and if the population is induced or not.
+                 Furthermore, it is obvious that the maximum amount of the lactone will be produced in case no. 2 where the subpopulations of the senders all have very strong RBSs. 
+                 Respectively, the lower amount of the lactone is expected in case no. 4 where the subpopulations of the senders all have very weak RBSs. 
+              </p>
+              <br><br>
+              <p>
+                Our proposed implementation of the perceptron weights with the use of synthetic RBS sequences could become the template for the development of plug-and-play devices that enable the modification of the inputs'
+                 weights regarding the desired behaviour and application. We selected to use RBSs instead of promoters for the pattern recognition because of their versatility and it is quicker to and easier to predict the 
+                 translation initiation rate of an RBS instead of directly evolutionize a promoter to have the desired strength. Overall, such a multicellular system has various applications in many scientific fields, 
+                 from medicine to the environment and the thriving field of biocomputing. It could become the starting point for the development of “smart biosensors” or “smart drugs” and even perform complex computational 
+                 tasks using much less energy than the amount needed by a computer, aiming to solve one of the most popular problems nowadays, the high cost of computational performances
+              </p>
+              <br><br>
+              <h2>Use of our model to simulate a pattern recognition task</h2>
+              <br>
+              <p>
+                After the characterization of our model, we wanted to simulate both the senders and the receivers populations and the way they would interact with each other. In this way, not only would we get a validity 
+                of our characterizations, but also make a direct comparison of the OpLo and PFR receivers. But at first we need to set up the pattern to be recognized as well as the RBS’s to be used. 
+              </p>
+              <br>
+              <p>
+                For that purpose we decided to use only the sender’s constructs that were tested experimentally and accurately determine the a_luxi parameter of our model which depicts the strength of the AHL produced. 
+              </p>
+              <center>
+              <table class="content-table">
+                <thead>
+                  <tr>
+                    <th>RBS</th>
+                    <th>Value Wet</th>
+                    <th>Value Dry</th>
+                    <th>a_luxi_fitted</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BCD2</td>
+                    <td>43704</td>
+                    <td>43680</td>
+                    <td>128</td>
+                  </tr>
+                  <tr class="active-row">
+                    <td>BCD12</td>
+                    <td>16981</td>
+                    <td>16209</td>
+                    <td>47.5</td>
+                  </tr>
+                  <tr>
+                    <td>S11</td>
+                    <td>34943</td>
+                    <td>34125</td>
+                    <td>100</td>
+                  </tr>
+                  
+                  <tr class="active-row">
+                    <td>S13</td>
+                    <td>19903</td>
+                    <td>20475</td>
+                    <td>60</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>S4</td>
+                    <td>5926</td>
+                <td>5972</td>
+                <td>17.5</td>
+              </tr>
+              
+              <tr class="active-row">
+                <td>S5</td>
+                <td>597</td>
+                <td>597</td>
+                <td>1.75</td>
+              </tr>
+              
+               <tr>
+                <td>S10</td>
+                <td>17106</td>
+                <td>17062</td>
+                <td>50</td>
+              </tr>
+              
+              <tr class="active-row">
+                <td>S12</td>
+                <td>2887</td>
+                <td>2900</td>
+                <td>8.5</td>
+              </tr>
+              
+              <tr>
+                <td>BCD8</td>
+                <td>4050</td>
+                <td>4095</td>
+                <td>12</td>
+              </tr>
+              
+              <tr class="active-row">
+                <td>BCD14</td>
+                <td>23202</td>
+                <td>23205</td>
+                <td>68</td>
+              </tr>
+             
+            </tbody>
+        </table>
+        <figcaption>Table 1. Model fit on the different sender’s RBS according to the experimental data</figcaption>
+      </center>
+        <br>
+        <p>
+          Also, the pattern simulated is presented below:
+        </p>
+        <center>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Senders 1</th>
+              <th>Senders 2</th>
+              <th>Senders 3</th>
+              <th>Desired Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr class="active-row">
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            
+            <tr class="active-row">
+              <td>3</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            
+            <tr>
+              <td>4</td>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            
+            <tr class="active-row">
+              <td>5</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            
+             <tr>
+              <td>6</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            
+            <tr class="active-row">
+              <td>7</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>            
+          </tbody>
+      </table>
+      <figcaption>Table 2. Pattern to be simulated on our model</figcaption>
+    </center>
+    <br><br>
+    <p>Via training from our <a href="https://2022.igem.wiki/athens/software">software</a> for the pattern above, it was concluded that the sequences to be used should be the following:</p>
+    <br><br>
+    <center>
+      <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-3.png">
+      <figcaption>
+        Figure 3. Received weight values and RBS constructs for each of the senders populations (X1,X2,X3).
+      </center>
+     <br>
+     <p>
+      ,meaning that we should use 1 strong RBS and two medium to low ones. </p>
+      <br>
+      <p>
+Of course, for the sender's 1 population we decided to use our strongest RBS, BCD2 due to the fact that we want output = 1 whenever the sender’s population is induced. 
+As for the other 2 populations, we decided to use a medium RBS for each one, BCD12, since we would like to have no fluorescence when only each one of these sender’s population is induced (see index 1,2). 
+On the other hand, when both senders 1 and 2 are induced we expect that the strength of two medium RBS combined would lead to an OC6 production similar to that of BCD2 and thus lead to high fluorescence. 
+     </p>
+      <br>
+      <p>
+        It should be mentioned that we didn’t use synthetic 6 RBS-which was the result of the training on the application-for the simulation due to the lack of experimental data for that construct. 
+        However, the BCD12 RBS is also a relatively suitable candidate as a medium to low RBS, always in comparison to the strongest one, which is BCD2 (as shown in Table 1).
+      </p>
+      <br>
+      <h2>Simulation Results</h2>
+      <br>
+      <p>We performed a simulation of our system which can be found on the ‘proof_all.ipynb’ code on <a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/proof_all.ipynb">gitlab</a>. In particular, we used a 1/7 senders/receivers cell culture ratio since we observed that it was the ideal ratio for 
+        our pattern recognition task. The culture volume remained 200μL. For more details on that you can take a look at our model analysis on the<a href="https://2022.igem.wiki/athens/proof-of-concept"> proof of concept page </a>.
+      </p>
+      <br>
+      <p>
+        As we’ve seen on the characterization part of our model, the sender’s model takes as input the aTc concentration for induction and gives as output the molecules of external AHL.
+        On the other hand, the receiver’s model uses concentrations of input OC6-instead of molecules-in order to estimate the output mneongreen. So, for that specific task, we added a simple expression to the 
+        implementation code that converts molecules of OC6 to Molarity:
+      </p>
+      <br>
+      <center>
+        <p>
+        Molarity_AHL=Molecules_AHL/(NA*V_bead), where:
+        </p>
+      </center>
+      <br>
+      <p>
+      NA =6.023*10**(23) is avogadro’s number </p>
+     <p>V_bead=200μL, the total cell volume</p>
+     <br>
+     <p>
+      Other than that, we simulated the entire model system and received the following results:
+     </p>
+     <br>
+     <center>
+      <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-4.png">
+      <figcaption>
+        Figure 4. Direct Comparison of the OpLo and PFR receivers constructs.
+      </center>
+      <br>
+      <p>
+        From the results above, the significance of the steep activation function is displayed; for the high value patterns the AHL produced from BCD2 is enough to give us the wanted output 1. 
+        However, the analog nature of OpLo means that even the medium RBS alone can offer a fluorescence output similar to that of fully induced BCD2. On the other hand, such a concern doesn’t exist on the PFR construct, 
+        where the receivers are not activated only with the induction of one medium RBS. Moreover, we witness that in the pattern with index 2, 2 medium RBS’s are more than capable to induce the receiver’s population.
+      </p>
+    
+  
             </section>
     </div>
     </div>
