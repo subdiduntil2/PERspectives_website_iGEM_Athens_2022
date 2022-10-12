@@ -8,14 +8,10 @@
     
     <!-- Custom CSS -->
     <link href="{{ url_for('static', filename = 'css/software_style.css') }}" rel="stylesheet">
-<<<<<<< Updated upstream
-    
-=======
 
     <!--For loader JS script-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
->>>>>>> Stashed changes
     <!--Custom menu CSS-->
     <link href="{{url_for('static',filename='css/menu_style_aspa.css')}}" rel="stylesheet">
 
@@ -39,28 +35,460 @@
     <div class="heading">Software</div>    
 </div>
 
-<div class="container">
-  <h1>Software Application 1</h1>
-  <h3>all you need to know</h3>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
-</div>
+<div class="cc" id="cc-implementaion">
+  <div class="left-side">
+      <div class="index-bar">
+          <ul class="lateral-index">
+              <li class="lateral-content">
+                  <a href="#intro">Overview</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#interface">Interface</a>
+              </li>
+              <li class="lateral-content">
+                  <a href="#building">Building the app</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#examlpe">Use Case</a>
+              </li>
+              <li class="lateral-content">
+                <a href="#conclusions">Conclusions</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <div class="right-side">
+
+<!-- Overview -->
+        <section class="introduction">
+            <a id="intro" class="anchorOffset"></a>
+            <div class="overview">
+                <h1>Overview</h1>
+                <p>
+                  Our project “PERspectives” aims to implement the perceptron algorithm in vitro-via the senders and the receivers population- in order to perform pattern recognition tasks. Since we are referring to a basic machine learning algorithm, our project would not be fully implemented without a software application in order to perform the training and in silico design of the genetic circuit. Thus, we created the PERspectives app, which has the following purposes:
+                  <br><br>
+                  
+                  1. Implement the software training of the perceptron, offering some tuning parameters and some accuracy metrics as a result<br>
+                  2. Correspond each classes’ weight to the correct RBS, via our RBS library (link)<br>
+                  3. Allow advanced users to import their own RBS sequences as well as delete already existing ones (via the RBS name)<br>
+                  
+                </p>
+            </div>
+        </section>
+
+        <center>
+          <img class="img-1" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-6.png">
+          <figcaption>Figure 1. Input page when first running the application.py script.
+          </figcaption>
+        </center>
 
 
-<div class="container">
-  <h1><span style="color: #61b872;">Software Application 2</span></h1>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
-</div>
+<!-- Inteface -->
+    <section class="interface">
+        <a id="interface" class="anchorOffset"></a>
+        <h1>Interface</h1>
+
+        In terms of the interface, it is split in two sections; a left one where the user can offer the inputs, the training dataset as well as modify the RBS library and a right one, where the results of training and modification can be viewed. 
+        <br><br>
+
+        Furthermore, users can download sample datasets not only for training but also for importing novel RBS sequences via download buttons in the right section.
+        <br><br>
+
+        <center>
+          <img class="img-2" src="https://static.igem.wiki/teams/4294/wiki/model/software/figure-2.png">
+          <figcaption>Figure 2. Download buttons for sample datasets (training and RBSs)
+          </figcaption>
+        </center>
+
+        
+    </section> 
 
 
-<div class="container">
-  <h1><span style="color: #ffc973;">Software Application 3</span></h1>
-  <h3>all you need to know</h3>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde molestias incidunt impedit possimus, sit laborum omnis doloribus sint, dolores, quis quos excepturi aperiam eum dolor saepe ratione adipisci non consectetur.</p>
-</div>
+    <!--Building -->
+    <section class="building">
+      <a id="building" class="anchorOffset"></a>
+      <h1>Building the app</h1>
 
+      In terms of training the model, we tested it in 2 different datasets: one used in the pattern recognition section of our model and the breast cancer dataset used by the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html">sklearn</a> python package. Since we have already shown the usage of our software on the first dataset for extracting the correct RBS sequences per class, in this section we will use it for the latter one. 
+      <br><br>
+      After importing our dataset via the “Import Your Dataset” button on the right section, and using a learning rate of 0.03 for epochs we received a training accuracy of 89.3%.
+      <br><br>
+
+      <center>
+        <img class="img-31" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-7.png">
+        <img class="img-32" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-7.png">
+        <figcaption>Figure 3. Training Results for the sklearn breast cancer dataset.
+        </figcaption>
+      </center>
+      <br><br>
+    </section>
+
+    <!--Example -->
+    <section class="examlpe">
+      <a id="examlpe" class="anchorOffset"></a>
+      <h1>Our Use Case</h1>
+
+      However, in terms of our biological implementation of the perceptron, the application offers an RBS for each class from the RBS library which correctly corresponds to the weight value(%) received by the training of the perceptron. For our example above, the result received was the following:
+      
+      
+      <center>      
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>Weight Class</th>
+            <th>Weight Value</th>
+            <th>Sign</th>
+            <th>Translation Rate [a.u]</th>
+            <th>RBS_Name</th>
+            <th>RBS_Sequence</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td>mean radius</td>
+            <td>12.235467715472511</td>
+            <td>Negative</td>
+            <td>19580.10876</td>
+            <td>synthetic_RBS_20</td>
+            <td>GGGCCCAAGUUCACUUAAAAAGGAGAUCAACAAUG<br>AAAGCAAUUUUCGUACUGAAACAU<br>CUUAAUCAUGCUGCGGAGGGUUUCUA</td>
+          </tr>
+          <tr class="active-row">
+            <td>mean texture</td>
+            <td>13.559208074786707</td>
+            <td>Positive</td>
+            <td>30195.18</td>
+            <td>BCD6</td>
+            <td>UUGGCAACGGCUUAUGGGAGGGAUGACA</td>
+          </tr>
+          <tr>
+            <td>mean perimeter</td>
+            <td>11.116287961601783</td>
+            <td>Negative</td>
+            <td>13106.64212</td>
+            <td>synthetic_RBS_26</td>
+            <td>GGGCCCAAGUUCACUUAAAAAGGAGAUCAACAAUGAA<br>AGCAAUUUUCGUACUGAAA<br>CAUCUUAAUCAUGCUAUGGAGGUUUUCUA</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>mean area</td>
+            <td>12.573070309567562</td>
+            <td>Negative</td>
+            <td>39353.4991</td>
+            <td>synthetic_RBS_4</td>
+            <td>UUGGCAACGGGUUAUCGGAGGGAUGACA</td>
+          </tr>
+          
+          <tr>
+            <td>mean smoothness</td>
+            <td>15.98002809868399</td>
+            <td>Positive</td>
+            <td>73526.53956</td>
+            <td>synthetic_RBS_7</td>
+            <td>UUGGCAACGGCUUAUGGGAGGGAUGACA</td>
+          </tr>
+          
+           <tr class="active-row">
+            <td>mean compactness</td>
+            <td>1.9926475349802477</td>
+            <td>Positive</td>
+            <td>31126.53073</td>
+            <td>synthetic_RBS_14</td>
+            <td>UUGGCAACGGCUUAUGGGAGGGAUGACA</td>
+          </tr>
+          
+           <tr>
+            <td>mean concavity</td>
+            <td>2.3803258156223253</td>
+            <td>Positive</td>
+            <td>78686.23401</td>
+            <td>synthetic_RBS_6</td>
+            <td>GGGCCCAAGUUCACUUAAAAAGGAGAUCA<br>ACAAUGAAAGCAAUUUUCGUACUGAAACAU<br>CUUAAUCAUGCGCCGGAGGUUUUCUA</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>mean concave points</td>
+            <td>0.5270090142745103</td>
+            <td>Positive</td>
+            <td>106815.75</td>
+            <td>BCD12</td>
+            <td>GGGCCCAAGUUCACUUAAAAAGGAGAUC<br>AACAAUGAAAGCAAUUUUCGUACUGAAAC<br>AUCUUAAUCAUGCAUCGGACCGUUUCUA</td>
+          </tr>
+          
+          <tr>
+            <td>mean symmetry</td>
+            <td>17.35597929400305</td>
+            <td>Positive</td>
+            <td>78686.23401</td>
+            <td>synthetic_RBS_6</td>
+            <td>GGGCCCAAGUUCACUUAAAAAGGAGAUCAA<br>CAAUGAAAGCAAUUUUCGUACUGAAACAUCUU<br>AAUCAUGCGCCGGAGGUUUUCUA</td>
+          </tr>
+          
+           <tr class="active-row">
+            <td>mean fractal dimension</td>
+            <td>7.870227407285138</td>
+            <td>Positive</td>
+            <td>134925.9866</td>
+            <td>synthetic_RBS_13</td>
+            <td>UUGGCAACGGCUUAUGGGAGGUAUGUCA</td>
+          </tr>
+          
+           <tr>
+            <td>radius error</td>
+            <td>3.583395175979027</td>
+            <td>Negative</td>
+            <td>30195.18</td>
+            <td>BCD6</td>
+            <td>UUGGCAACGGCUUAUCGGAGGUAUGACA</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>texture error</td>
+            <td>5.996772332174852</td>
+            <td>Positive</td>
+            <td>31126.53073</td>
+            <td>synthetic_RBS_14</td>
+            <td>UUGGCAACGGGUUAUGGGACGUAUGACA</td>
+          </tr>
+          
+          <tr>
+            <td>perimeter error</td>
+            <td>5.655963608371979</td>
+            <td>Negative</td>
+            <td>26985.04</td>
+            <td>BCD8</td>
+            <td>UUGGCAACGGCUUAUGGGAGGGAUGCCA</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>area error</td>
+            <td>22.02322108639225</td>
+            <td>Negative</td>
+            <td>30195.18</td>
+            <td>BCD6</td>
+            <td>UUGGCAACGGCUUAUCGGAGGGATGACA</td>
+          </tr>
+          
+          <tr>
+            <td>smoothness error</td>
+            <td>22.103359834529517</td>
+            <td>Positive</td>
+            <td>39353.4991</td>
+            <td>synthetic_RBS_4</td>
+            <td>UUGGCAACGGCUUAUGGGAGGUAUGUCA</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>compactness error</td>
+            <td>19.125114259736407</td>
+            <td>Negative</td>
+            <td>4723.721793</td>
+            <td>synthetic_RBS_43</td>
+            <td>GGGCCCAAGUUCACUUAAAAAGGAGAUCAAC<br>AAUGAAAGCAAUUUUCGUACUGAAACAUCUUAAU<br>CAUGCUGCGGAGGGUUUCUA</td>
+          </tr>
+          
+          <tr>
+            <td>concavity error</td>
+            <td>27.345908734968848</td>
+            <td>Negative</td>
+            <td>5809.43</td>
+            <td>BCD20</td>
+            <td>UUGGCAACGGGUUAUCGGAGGGAUGACA</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>concave points error</td>
+            <td>44.075566057707576</td>
+            <td>Negative</td>
+            <td>1279.278805</td>
+            <td>synthetic_RBS_62</td>
+            <td>UUGGCAACGGCUUAUGGGAGGGAUGACA</td>
+          </tr>
+          
+           <tr>
+            <td>symmetry error</td>
+            <td>12.08302765909511</td>
+            <td>Positive</td>
+            <td>39353.4991</td>
+            <td>synthetic_RBS_4</td>
+            <td>UUGGCAACGGGUUAUCGGAGGGAUGUCA</td>
+          </tr>
+          
+         
+        </tbody>
+    </table>
+    <figcaption>
+      Table 1. Corresponding RBS to each weight class, after the training process of the PERceptron application for the breast cancer dataset.
+    </figcaption>
+  </center>
+
+  In terms of the RBS Library used, it should be mentioned that it has been modified from the initial Library offered by dry lab during the design process(link) of our project, due to the fact that we received some laboratory data for 11 of the Sender’s RBS, as they are presented in the table below:
+
+       
+      <br><br>
+    <center>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>RBS</th>
+            <th>Value Wet</th>
+            <th>Value Dry</th>
+            <th>a_luxi_fitted</th>
+            <th>Proportional Strength</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td>BCD2</td>
+            <td>43704</td>
+            <td>43680</td>
+            <td>128</td>
+            <td>287840</td>
+          </tr>
+          <tr class="active-row">
+            <td>S11</td>
+            <td>34943</td>
+            <td>34125</td>
+            <td>100</td>
+            <td>224875</td>
+          </tr>
+          <tr>
+            <td>BCD14</td>
+            <td>23202</td>
+            <td>23205</td>
+            <td>68</td>
+            <td>152915</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>S13</td>
+            <td>19903</td>
+            <td>20475</td>
+            <td>60</td>
+            <td>134925</td>
+          </tr>
+          
+          <tr>
+            <td>S10</td>
+            <td>17106</td>
+            <td>17062</td>
+            <td>50</td>
+            <td>112437</td>
+          </tr>
+          
+           <tr class="active-row">
+            <td>mean compactness</td>
+            <td>1.9926475349802477</td>
+            <td>Positive</td>
+            <td>31126.53073</td>
+            <td>synthetic_RBS_14</td>
+          </tr>
+          
+           <tr>
+            <td>BCD12</td>
+            <td>16981</td>
+            <td>16209</td>
+            <td>47.5</td>
+            <td>106815</td>
+          </tr>
+          
+          <tr class="active-row">
+            <td>S4</td>
+            <td>5926</td>
+            <td>5972</td>
+            <td>17.5</td>
+            <td>39353</td>
+          </tr>
+          
+          <tr>
+            <td>BCD8</td>
+            <td>4050</td>
+            <td>4095e</td>
+            <td>12</td>
+            <td>26985</td>
+          </tr>
+          
+           <tr class="active-row">
+            <td>S12</td>
+            <td>2887</td>
+            <td>2900</td>
+            <td>8.5</td>
+            <td>19114</td>
+          </tr>
+          
+           <tr>
+            <td>S5</td>
+            <td>597</td>
+            <td>597</td>
+            <td>1.75</td>
+            <td>3935</td>
+          </tr>
+          
+         
+         
+        </tbody>
+    </table>
+    <figcaption>
+      Table 2. Fitted RBS sequences (as presented in the Model section) and their proportional strengths, based on the strongest proportional value of 297840 offered by RBS BCD2
+    </figcaption>
+  </center>
+
+      <br><br>
+      So, since our RBS Library should be modified due to new experimental data, our team thought that a great idea would be the capability to modify the imported RBS, since future iGEM Teams might come with novel characterization data or even new RBS parts that they would like to use. As a result, the PERspective App offers advanced users with the capability to modify our own RBS Library via “delete” and “insert” options on the left-hand side of the application.
+      <br><br>
+
+      <center>
+        <img class="img-41" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-9.png">
+        <img class="img-42" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-10.png">
+        <figcaption>Figure 4. RBS Library displayed before and after insertion of novel RBS sequences. We can view on the top of the list the imported “rbs_sample_01” from the downloaded sample dataset, with TIR value of 300,000.
+        </figcaption>
+      </center>
+      <br><br>
+      <center>
+        <img class="img-51" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-11.png">
+        <img class="img-52" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-12.png">
+        <figcaption>Figure 5. Delete attempts when an RBS sequence is found or not found (based on it’s input name).
+        </figcaption>
+      </center>
+      <br><br>
+
+      <center>
+        <img class="img-61" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-13.png">
+        <img class="img-62" src="https://static.igem.wiki/teams/4294/wiki/model/software/pasted-image-0-14.png">
+        <figcaption>Figure 6. A significant drop in training accuracy is observed for large datasets, such as the sklearn breast cancer one.
+        </figcaption>
+      </center>
+      <br><br>
+      In order to run the application, visit our repository on gitlab.igem.org, <a href="">hrer</a>. You can find instructions on the requirements and how to run the application in the README.md file, included in the repository.
+      <br><br>
+    </section>
+      
+ <!-- Conclusion  -->
+            <section class="introduction">
+                <a id="conclusions" class="anchorOffset"></a>
+                <div class="overview">
+                    <h1>Conclusions</h1>
+                    <p>
+                      Regarding its value, we believe that the PERspectives Application has the potential to become a solid bioinformatics tool for future iGEM Teams due to its versatility as a simulation and design tool. As future goals, our team aims to create a more dynamic UI, probably moving from the Streamlit python implementation to a full-stack one, which will include a relational database in SQL, an API such as php and a website interface using HTML,CSS and JavaScript languages, for a more customized setup. 
+                      <br><br>
+                    In terms of the RBS Library, it would be of high importance the update of the initial RBS Library with translation rate sequences that have been validated from wet lab experiments on the sender’s constructs as well as minor modifications on the Perceptron algorithm in order to avoid bad parameter tuning, especially in the case of large datasets with more than 10 classes. That was especially displayed on the breast cancer dataset where a small change in the learning rate from 0.03 to 0.1 resulted in a major drop in training accuracy.
+                    </p>
+                </div>
+            </section>
+
+
+
+
+
+        </div>
+    </div>
 </body>
+
+<!--Loader-->   
+{% include 'loader.html'%}
 
 <!-- Footer -->
 {% include 'footer.html' %}
 
 </html>
+

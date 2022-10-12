@@ -415,8 +415,12 @@ html{
     color: #102a4e;
   }
 
-@media screen and (max-width: 1200px){
-    .buttons{
+@media (max-width: 1200px){
+    .buttons-1{
+        display: none;
+    }
+
+    .buttons-2{
         display: none;
     }
 
