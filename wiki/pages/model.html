@@ -25,7 +25,7 @@
     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
 
     <!--MathJax Import-->
-    <script type= "text/javascript" src="../static/scripts/mathjax/tex-chtml.js"></script>
+    <script type= "text/javascript" src="../../athens/static/scripts/mathjax/tex-chtml.js"></script>
     
     <title>Perspectives | Model</title>
 </head>
@@ -295,8 +295,35 @@
                 Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation of the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
                 <br><br>
 
-                
+                <div class="equations">
+                <p>
+                \(\frac{d[ATC_{int}]}{dt} = k_{-comlex}[complex]- k_{complex}[ATC_{int}][TetR] - d_{ATC}[ATC_{int}] \)
+                </p>
+                </div><br><br>
 
+                <div class="equations">
+                <p>
+                \(\frac{d[tetR]}{dt} = \frac{p_{J23105} * k_{tetr} * CN_{senders}}{d_{mRNATetR}} + k_{-complex} [complex] - k_{complex} [ATC_{int}] [TetR] - d_{TetR} [TetR] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations"> 
+                <p>
+                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex}[complex] - d_{complex}[complex]\)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL_{int}]}{dt} = k_{A} [LuxI] - d_{AHL} [AHL] \)
+                </p>
+                </div><br><br>
 
                 At this point it would be useful to mention the different assumption made for the single cell kinetic model:
                 <br><br>
@@ -307,7 +334,7 @@
                 Equations (1),(2) and (3) describe the change of the concentration of TetR, the complex TetR+aTc and the LuxI enzyme respectively. Equation (4) is the representation of the first order enzymatic reaction that expresses the change of the concentration of the lactone that is the quorum sensing molecule. The total amount of this lactone simulates the weighted sum of the artificial neural network. 
                 <br><br>
 
-                Initially, the kinetic constants for the one-cell model were found in the literature as we needed to analyze the system and have an indicative value for the amount of lactone produced over time and to choose whether the plasmids we would medium or high copy. We followed very specific criteria for the choice of kinetic constants. We always checked if the experiments in the research works from which we were inspired used the same microorganisms as us and the same experimental conditions as those that we would develop our system. By keeping the desired amount of AHL produced constant, we ran our Python scripts and concluded that the copy number of the plasmid used at the Senders’ system should be low. You can find the python scripts <a href="">here</a>.
+                Initially, the kinetic constants for the one-cell model were found in the literature as we needed to analyze the system and have an indicative value for the amount of lactone produced over time and to choose whether the plasmids we would medium or high copy. We followed very specific criteria for the choice of kinetic constants. We always checked if the experiments in the research works from which we were inspired used the same microorganisms as us and the same experimental conditions as those that we would develop our system. By keeping the desired amount of AHL produced constant, we ran our Python scripts and concluded that the copy number of the plasmid used at the Senders’ system should be low. You can find the python scripts <a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/senders_model_all.ipynb">here</a>.
 
                 The the matrix below consists of the initial values of our kinetic constants found in literature:
                 <br><br>
@@ -491,6 +518,74 @@
                 The production and consumption rates of each chemical can be represented by the following added differential equations:
                 <br><br>
 
+                <div class="equations">
+                <p>
+                \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \)
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[ATC_{ext}]}{dt} = D_{ATC} [N] ([ATC_{int}] - \frac{V_{E.Coli}}{V_{bead}} [ATC_{ext}]) - d_{ATC} [ATC_{ext}] \) 
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[ATC_{int}]}{dt} = D_{ATC} * (\frac{V_{E.Coli}}{V_{bead}} [ATC_{ext}]  - [ATC_{int}]) + k_(-complex)[comlex] -k_{complex} [ATC_{int}][TetR] -d_{ATC} [ATC_{int}] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[tetR]}{dt} = \frac{p_{J23105} * k_{tetr} * CN_{senders}}{d_{mRNATetR}} + k_{-complex} [complex] - k_{complex} [ATC_{int}] [TetR] - d_{TetR} [TetR] \)
+                </p>
+                </div><br><br>
+
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex} [complex] - d_{complex} [complex]\)  
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex} [complex] - d_{complex} [complex]\)
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_tet]^n} + [TetR]^n} - d_{LuxI} [LuxI] \)
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL]}{dt} =k_{A} [LuxI] - d_{AHL} [AHL] \)
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL_{int}}{dt} = k_{A} [LuxI] + D_{AHL} ( \frac{V_{E.Coli}}{V_{bead}} [AHL_{ext}]) - d_{AHL} [AHL_{ext}] \)
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL_{ext}}{dt} = D_{AHL} [N] ( [AHL_{int}] \frac{V_{E.Coli}}{V_{bead}} [AHL_{ext}]) - d_{AHL} [AHL_{ext}] \)
+                </p>
+                </div><br><br>
 
 
                 Equation (1) is a representation of how the number of cells is growing with time. Equations (2) and (3) explain how the concentration of the aTc inducer is changing inside and outside of a cell due to diffusion, and similarly equations (8) and (9) describe the diffusion phenomena for AHL-OC6. 
@@ -820,9 +915,6 @@
                 \(\frac{d_{mng}}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} * [\beta_{Lux}+(1-\beta_{Lux})*\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] -d_{mng}[mng] \)
                 </p>
                 </div><br><br>
-  
-
-
 
 
                 At this point it would be useful to mention the different assumption made for the single cell kinetic model:
@@ -898,7 +990,53 @@
                 In a similar manner we can take a look at the single and whole cell model of the PFR construct:
                 <br><br>
 
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL_{int}]}{dt} = k_{-1}[Mon] - k_{1} * [AHL_{int}][LuxR] - d_{AHL}[AHL_{int}] \)
+                </p>
+                </div><br><br>
 
+                <div class="equations">
+                <p>
+                \(\frac{d[LuxR]}{dt} = \frac{p_{Lux}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}}  * [(1-\beta_{Lux})+\beta_{Lux} *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}]  + k_{-1}[Mon]-k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[Mon]}{dt} = k_{2} [Mon]^2 - k_{-2}[Dimer] - k_{-1}[Mon]-2k_{2}[Mon]^2 -d_{Mon}[Mon] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[Dimer]}{dt} = k_{2} [Mon]^2 - k_{-2}[Dimer] - d_{Dimer}[Dimer]\)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[phlf]}{dt} = \frac{p_{Lux}*k_{phlf}*CN_{rec}}{d_{mRNAphlf}} * [\beta_{Lux} + (1-\beta_{Lux}) * \frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} ]- d_{phlf}[phlf]\)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(Hill_{Lux}= \beta_{Lux} + (1-\beta_{Lux}) *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n} \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(Hill_{phlf}= \beta_{phlf} + (1-\beta_{Lux}) *\frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[mng]}{dt} = \frac{p_{hybrid}*k_{mng}*CN_{rec}}{d_{mRNAmng}} *Hill_{Lux} * Hill_{phlf} - d_{mng} [mng]\)
+                </p>
+                </div><br><br>
 
                 Equations (1) through (4) remain the same as in the Open Loop System and describe the creation of the dimer from LuxR and AHL. Equation (5) has to do with the repression of the phlf via the LuxR-AHL dimer. Equation (6) describes the induction of mneongreen via the hybrid promoter. The hybrid promoter has been modelled as a multiplication of two separate hill equations, one for the induction of the pLux promoter and one for the phlo-box,where phlf is being hitched in order to cause the repression of mneon.
                 <br><br>
@@ -907,6 +1045,70 @@
                 <br><br>
                 The diffusion phenomena of the OC6 through the cell membrane have been described via the equations (1)-(3) and they are exactly the same as in the open loop.
                 <br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{dN}{dt} = \mu * [N] *(1-\frac{[N]}{[N_{max}]}) \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL_{ext}]}{dt} = D_{AHL} *[N] *( AHL_{int} - \frac{V_{eColi}}{V_{bead}} *AHL_{ext}) - d_{AHL}[AHL_{ext}]\)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}}*AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[LuxR]}{dt}= \frac{p_{Lux}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} [\beta_{Lux} + (1-\beta_{Lux}) *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR]\)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[Mon]}{dt} = k_{1}[LuxR][AHL_{int}] + 2 k_{-2}[Dimer] - k_{-1} [Mon] -2k_{2}[Mon]^2 - d_{Mon} [Mon] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[Dimer]}{dt} = k_{2} [Mon]^2 - k_{-2} [Dimer] \)
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(\frac{d[phlf]}{dt} = \frac{p_{Lux}*k_{phlf}*CN_{rec}}{d_{mRNAphlf}} * [\beta_{Lux} + (1-\beta_{Lux}) * \frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} ]- d_{phlf}[phlf]\) 
+                </p>
+                </div><br><br>
+
+                <div class="equations">
+                <p>
+                \(Hill_{Lux}= \beta_{Lux} + (1-\beta_{Lux}) *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n} \)
+                </p>
+                </div><br><br>
+
+
+
+                <div class="equations">
+                <p>
+                \(Hill_{phlf}= \beta_{phlf} + (1-\beta_{Lux}) *\frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} \)
+                </p>
+                </div><br><br>
+
+
+                <div class="equations">
+                <p>
+                \(\frac{d[mng]}{dt} = \frac{p_{hybrid}*k_{mng}*CN_{rec}}{d_{mRNAmng}} *Hill_{Lux} * Hill_{phlf} - d_{mng} [mng]\)
+                </p>
+                </div><br><br>
+                
 
                 The the matrix below consists of the initial values of our kinetic constants found in literature:
                 <br><br>
@@ -1502,56 +1704,125 @@
             And here comes some fundamental theory from control systems. At first we should validate that our system is stable and will lead to a steady state concentration of output fluorescence. For that purpose and for the entire analysis, our initial model equations have been simplified to just to equations, one for the senders and one for the receivers, as shown below:
             <br><br>
             
-            equations
+            <div class="equations">
+            <p>
+            \( a_{send} = a_{1} + a_{2} +a_{3}\)
+            </p>
+            </div><br><br>
+
+
+            <div class="equations">
+            <p>
+            \(\frac{d[x_{1}]}{dt} = f_{1}(t)= (a_{send}) * \frac{u^n1}{K_{1}^n1+u^n1} - d_{1}* x_{1}\)
+            </p>
+            </div><br><br>
+
+            <div class="equations">
+            <p>
+            \(\frac{d[x_{2}]}{dt} = f_{2}(t)= (a_{send}) * \frac{u^n2}{K_{1}^n2+u^n2} - d_{2}* x_{2}\)
+            </p>
+            </div>
+
             <br><br>
             , where our three sender’s subpopulations are being modelled as one, which produces the summation of the subpopulations OC6. This OC6 value, shown as x1 here, will be used as induction input to the receiver’s population, whose fluorescence is shown as the x2 variable. Endly, both equations are using Hill functions to model the induction. 
             <br><br>
             However, in order to properly study the system's frequency behaviour, we should first perform a linearization method which will bring our system to the state-space. After performing such a task, we receive the following linearized control model:
             <br><br>
-            
-            equations
-            <br><br>
-            Where,                A=[a11,a12][a21,a22]
-
-            <br><br>
-            
-            <div class="equations">
-            <p>
-                \(B =[b1, b2]\)
-            </p>
-            </div>
-        
 
             <div class="equations">
             <p>
-
-            \( C =[0, 1] and D=0 \) 
-
+            \( x_{dot}(t) = A * x(t) + B* u(t) \)
             </p>
             </div>
-        
 
             <div class="equations">
             <p>
-            \(a_{1} = \frac{df1}{dx1}=-d1 \)
-
+            \(y_{dot}(t) = C * x(t) +D * u(t)\)
             </p>
             </div>
+
+            <div class="equations">
+            <p>
+            \(x(t) = [x_{1}(t),x_{2}(t)]\)
+            </p>
+            </div>
+
+            <div class="equations">
+            <p>
+            \(u(t)=aTc\)
+            </p>
+            </div>
+
+            <div class="equations">
+            <p>
+            \(x_{1}(t)= AHL\)
+            </p>
+            </div>
+
+            <div class="equations">
+            <p>
+            \(x_{2}(t) = out\)
+            </p>
+            </div><br>
+
+            Where, A=[a11,a12][a21,a22] <br><br>
+
 
 
             <div class="equations">
             <p>
+            \(\frac{d[x_{2}]}{dt} = f_{2}(t)= (a_{send}) * \frac{u^n2}{K_{1}^n2+u^n2} - d_{2}* x_{2}\)
+            </p>
+            </div><br><br>
 
-            \(a_{12} = \frac{df1}{dx2}= 0 \)
-            </p>
-            </div>
-   
-            
+
+
             <div class="equations">
-            <p> 
-            \(b2 = \frac{df2}{du}= 0 \)
+            <p>
+            \(A = [a_{11}, a_{12}] [a_{11}, a_{22}]\)
+            </p>
+            </div><br><br>
+
+
+            <div class="equations">
+            <p>
+            \(B=[b_{1}],b_{2}]\)
+            </p>
+            </div><br><br>
+
+            <div class="equations">
+            <p>
+            \(a_{11}= \frac{df_{1}}{dx_{1}} = -d_{1} \)
+            </p>
+            </div><br><br>
+
+
+            <div class="equations">
+            <p>
+            \(b_{1}=\frac{df_{1}}{du}=a_{send} = \frac{a_{send}*n_{1}*K_{1}^{n_{1}} * u(t_{0})^{n_{1}-1}}{(u(t_{0})^n_{1} + K_{1}^{n_{1}})^2}\)
+            </p>
+            </div><br><br>
+
+
+            <div class="equations">
+            <p>
+            \(a_{21}=\frac{df_{2}}{dx_{1}}=a_{rec} = \frac{a_{rec}*n_{2}*K_{2}^{n_{2}} * x_{1}(t_{0})^{n_{2}-1}}{(x_{1}(t_{0})^{n_{2}} + K_{2}^{n_{2}})^2} \)            </p>
+            </div><br><br>
+
+
+            <div class="equations">
+            <p>
+            \(a_{22} = \frac{df_{2}}{dx_{2}}=-d_{2}\)
+            </p>
+            </div><br><br>
+
+
+            <div class="equations">
+            <p>
+            \(b_{2} = \frac{df_{2}}{du}=0\)
             </p>
             </div>
+
         
             
             <br><br>
@@ -1563,14 +1834,16 @@
             <br><br>
 
             <div class="equations">
-                <p>\(a_{1}=-d_{1}\)</p> and <p>\(λ_{2}=-d_{2}\)</p>
-                <br>
-                <br>
-                <p>\(x = {-b \pm \sqrt{b^2-4ac} \over 2a}\)</p>
-                <p>\( {d_{mNeonGreen} \over dt } = a_{max}*{[Dimer]^n \over {[Dimer]^n + K_{d}^n}}-d_{mng}*[mng]\)</p>
-                <p>\(ax^2+bx+c=0\)</p>
-
-            </div>
+                <p>
+                  λ_{1} = -d_{1}
+                </p>
+            </div><br>
+            and
+            <div class="equations">
+              <p>
+                λ_{2} = -d_{2}
+              </p>
+          </div><br>
             
 
             ,which are negative, assuming positive degradation rates of aTc and AHL. 
