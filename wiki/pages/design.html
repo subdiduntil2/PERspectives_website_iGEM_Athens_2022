@@ -951,6 +951,129 @@ Results from the RBS calculator regarding the translation initiation rate of the
           </section>
 
 
+          <!-- Receivers -->
+        <section class="receivers">
+          <a id="receivers" class="anchorOffset"></a>
+          <h1>The Biological Activation Function - The Receivers
+          </h1>
+          <br><br>
+          <p>
+
+            In a common perceptron, the input patterns are converted into a weighted sum which is then processed by an activation function. This is the point of the classification of the initial pattern into a specific class. If the weighted sum surpasses a set threshold, the “neuron” gets activated and gives an output “1”. Otherwise, the output is “0”.
+            <br><br>
+            In order to program the receiver cells to function similarly to the activation function, a circuit that imitates it is needed. Namely, a circuit that performs like an ON/OFF switch.
+            <br><br>
+            Often inspired by computer science data processing modules, synthetic genetic and metabolic circuits have been engineered to function like logic-gates, oscillators and more[27]. One of the main principles of Synthetic Biology is the use of characterized genetic elements, i.e. parts, that can be combined to perform complex and desired tasks. In the relatively simple context of a system that responds to the concentration of an input by an output expression, the relation of the output signal to inducer concentration forms a sigmoid curve if plotted on a Xy axis. These plots are the “response curves” and the mathematical equation that describes this response to the input is called a “transfer function”. Such systems often need the suitable tuning to function as expected and be suitable for combination with other systems and synthetic biologists have established various possible ways to tune a systems’ response curve in terms of dynamic range, leakiness, steepness and more[28]. Before the receivers’ genetic circuits are described, it is crucial to define in a nutshell some important terms:
+            <br><br>
+            1. <b>Dynamic Range:</b> The difference in output between the “OFF” and the saturated “ON” state.<br>
+            2. <b>Leakiness:</b> The output production in the “OFF” state. <br>
+            3. <b>Steepness:</b> A steep response curve is described by a large change in output within a narrow input concentration range; small changes in input result in large changes in output. Such switch-like biochemical circuits are often referred to as ultrasensitive or bistable.<br>
+            <br><br>
+            The perceptron’s activation function is a switch-like function that gives a positive (“1”) output if the weighted sum is surpassed. It becomes, therefore, clear that if the activation function is to be imitated in a biological system, an ultrasensitive circuit, i.e. with a steep activation function, that responds to the quorum sensing signal summation is needed.
+            <br><br>
+
+            <center>
+              <img class="s-f15" src="https://static.igem.wiki/teams/4294/wiki/design-not/design-page-gifs.gif">
+    
+              <figcaption> Figure 1.
+                Response curves with different steepness. The typical response curve of a simple inducer-output system is a sigmoid curve and its steepness depends on the intrinsic properties of its components (e.g. the repressor’s binding cooperativity). With specific circuit architectures, steeper, switch-like response curves can be engineered. Such circuits are described as “ultrasensitive” or “bistable”.
+                              
+                                            
+              </figcaption>
+              </center> 
+  
+          <h2>A step-by-step approach to achieve ultrasensitivity
+          </h2>
+          <br>
+          A number of possible ways at different levels of gene expression and protein function to build a bistable switch exist[28]. A well known example is the construction of the first toggle switch in E.coli; a circuit that responds in an ON/OFF fashion effectively[29]. Such bistable circuits are based on mutual inhibition relationships between transcriptional repressors in the circuit.  At the level of transcription, binding cooperativity of transcription factors and the number and topology of operators has been proven to correlate with a response steepness. Cooperative binding of multiple transcription factors to the same promoter or a biochemical process mimicking this effect may promote ultrasensitivity as well [28]. Moreover, circuit architectures with proven enhanced steepness are transcriptional positive feedbacks [30] and transcriptional cascades [31]. Further strategies include a sequestering molecule that binds a circuit component and prevents its effect. Sequestration has been achieved using sRNAs [32] that bind to mRNA, proteins that bind to transcription factors[33] or translation machinery components [34] and decoy DNA operators [35,36] that titrate the transcription factor away from the output promoter. The above approaches are often coupled in such a way that their respective effects generate a greater impact on the final response [34].
+
+          <br><br>
+          Irrespective of the existing literature, every circuit that is built requires testing and tuning. On the grounds of our narrow time window to perform extensive characterisation experiments, we followed a step-by-step approach regarding the receivers’ genetic circuits. Starting from a simple open loop circuit, which was necessary to obtain vital parameters of our parts (refer to <a href="https://2022.igem.wiki/athens/model">Model</a> section), two variations of a positive feedback and two variations of a coherent feed forward loop coupled with a positive feedback at its first step were built. Progressively introducing new components to our circuits enables troubleshooting and better interpretation of the results.
+          <br><br>
+
+          <h3>Open Loop Circuit (OL or OpLo)
+          </h3><br>
+          This is a circuit of the LuxR quorum sensing regulator at its simplest form. LuxR is constitutively expressed. When concentration of OC6 increases, it binds with LuxR, LuxR forms stable dimmers and binds to its binding site (lux box), upstream of the -35 region of the Plux promoter, activating the transcription of the downstream output.
+
+          <center>
+            <img class="r-2a" src="https://static.igem.wiki/teams/4294/wiki/design-not/r-2a.png">
+            <img class="r-2b" src="https://static.igem.wiki/teams/4294/wiki/design-not/r-2b.png">
+            <img class="r-2c" src="https://static.igem.wiki/teams/4294/wiki/design-not/r-2c.png">
+            <img class="r-2d" src="https://static.igem.wiki/teams/4294/wiki/design-not/r-2d.png">
+  
+            <figcaption> Figure 2.
+              Flowchart of the Open Loop circuit<br>
+              OL genetic circuit overview. LuxR is constitutively expressed under the control of the constitutive BBa_J23105 promoter and BBa_B0034 RBS. <br>Output (mNeonGreen) production is controlled by the Plux inducible promoter and BBa_B0034 RBS.<br>
+              OL at is “OFF” state (‘“0”)<br>
+              OL at its “ON” state (“1”)   <br>                
+            </figcaption>
+            </center> 
+
+          <br> <br> 
+          We constructed this circuit in both a medium (ColE1 origin of replication) and a low (p15a origin of replication) copy number pTU2 plasmid vector so as to choose the copy number that provides the most suitable dynamic range, leakiness and steepness. The medium copy number plasmid was chosen and used for the rest of the constructs (see <a href="https://2022.igem.wiki/athens/results">Results</a> section for more details) and the parameter estimation for our <a href="https://2022.igem.wiki/athens/model">Model</a>.
+
+          <center>
+            <img class="r-3a" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f3a.png">
+            <img class="r-3b" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f3b.png">  
+            <figcaption> Figure 3.
+             a. pTU2 (ColE1) vector with OL circuit. 
+             b. pTU2 (p15a) vector with the OL circuit.                        
+            </figcaption>
+            </center> 
+
+          <h3>Positive Feedback Circuit (PF and PFc).
+          </h3><br>
+          One already tested and widely utilized method to engineer a bistable circuit, are transcriptional Positive Feedbacks. In such circuits, an activator of an output induces its own production as well after induction with its respective ligand. A similar circuit was built by Li et. al [12] to achieve a steeper activation function of the CinR quorum sensing activator system. 
+          <br><br>
+          In our case, Plux was placed upstream of the LuxR coding sequence and the output coding sequence. Therefore, LuxR activates its own production after binding with OC6 and establishes a positive feedback.
+          <br><br>
+          Two possible topologies exist; LuxR being controlled only by the Plux promoter or providing an extra TU for constitutive LuxR production.
+          <br><br>
+          In the former circuit topology, Plux leakiness provides a low basal LuxR concentration in the cell. This concentration is sufficient for the LuxR dimer formation after induction with OC6. The activated LuxR dimers promote the expression more LuxR resulting in a positive feedback. 
+          <br><br>
+          The latter provides a higher basal LuxR concentration inside the cell. These circuits were both constructed and tested in order to find the most suitable regulator and circuit dynamics for our system.
+          <br><br>
+          Unfortunately neither topology resulted in the desired results. For more information and engineering considerations, please refer to Results and Engineering Success tabs respectively.
+          <br><br>
+
+          <center>
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4a.png">
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4b.png">  
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4c.png">
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4d.png"> 
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4e.png">
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4f.png"> 
+            <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4g.png">
+            <figcaption> Figure 4.
+              a.Flow chart of a Positive Feedback circuit<br>
+              b.Flowchart of a positive feedback circuit.<br>
+              c.PF (Positive Feedback) genetic circuit overview. LuxR is placed downstream of the promoter Plux inducible promoter and BBa_B0034 RBS. The d.leakiness of Plux promoter provides a basal LuxR concentration in the cell that will be activated by OC6 and promote the production of more LuxR and of the output, resulting in a positive feedback loop. Output (mNeonGreen) is placed downstream Plux promoter and BBa_B0034 RBS.<br>
+              
+              e.PF at is “OFF” state (‘“0”)
+              PF at its “ON” state (“1”)
+              Fc (Positive Feedback with constitutive LuxR production) genetic circuit overview. Two LuxR TU exist in this circuit. One expresses LuxR constitutively and provides a higher LuxR concentration in the cell. The other LuxR TU (with the Plux promoter) is responsible for the generation of the positive feedback after induction with OC6. Output (mNeonGreen) is placed downstream of the Plux promoter and BBa_B0034 RBS.<br>
+              f.PFc at its “OFF” state (“0”)<br>
+              g.PFc at its “ON” state (“1”)<br>
+                                     
+            </figcaption>
+            </center> 
+
+            <center>
+              <img class="r-5" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f5a.png">
+              <img class="r-5" src="https://static.igem.wiki/teams/4294/wiki/design-not/receivers-f5b.png">  
+              <figcaption> Figure 5.
+
+               a. PF circuit in the pTU2 (ColE1) plasmid vector. <br>
+               b. PFc circuit in the pTU2 (ColE1) plasmid vector. <br>
+                
+                                       
+              </figcaption>
+              </center> 
+          </p>
+  
+          </section>
+
+
             <!-- References --> 
                 <section class="collapsible">
                     <a id="references" class="anchorOffset"></a>

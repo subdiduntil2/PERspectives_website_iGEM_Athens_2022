@@ -380,6 +380,83 @@ body{
     border-radius: 20px; 
 }
 
+
+.receivers{
+    text-align: justify;
+    padding-right: 4%;
+}  
+    
+.receivers h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.receivers h2{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.receivers h3{
+    color: #61b872;
+    font-size: 35px;
+}
+
+.receivers i{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Italics';
+}
+
+.receivers b{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+.s-f15{
+    width: 100%;
+}
+
+.r-2a{
+    width: 48%;
+    border-radius: 20px;
+}
+.r-2b{
+    width: 48%;
+    border-radius: 20px;
+}
+.r-2c{
+    width: 48%;
+    border-radius: 20px;
+}
+.r-2d{
+    width: 48%;
+    border-radius: 20px;
+}
+
+
+.r-3a{
+    width: 48%;
+    border-radius: 20px;
+}
+.r-3b{
+    width: 48%;
+    border-radius: 20px;
+}
+
+.r-4{
+    width: 35%;
+    border-radius: 20px;
+}
+
+.r-5{
+    width: 45%;
+    border-radius: 20px;
+}
 /* Table */
 
 .content-table {
