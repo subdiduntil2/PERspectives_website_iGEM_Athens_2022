@@ -75,6 +75,8 @@ html{
 
 .attention-box{
     width: 70%;
+    background: #e9e9eb;
+    border: 5px solid;
 }
 
 .buttons-1{

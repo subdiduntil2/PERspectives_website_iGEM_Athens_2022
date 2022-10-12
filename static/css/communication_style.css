@@ -322,7 +322,6 @@ body{
     background-color: #61b872;
 }
 
-
 .biochem_day{
     text-align: justify;
 }
@@ -332,6 +331,62 @@ body{
     color: #61b872;
     font-size: 40px;
 } 
+
+
+.container_biochem{
+    width: 800px;
+    height: 650px;
+    border-radius: 80px;
+    border: 10px solid #050a30;
+    background: #e9e9e9;
+    position: relative;
+}
+
+.container_biochem .wrapper_biochem{
+    width: 700px;
+    height: 520px;
+    translate: 0% -5%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_biochem .wrapper-holder-biochem{
+    display: grid;
+    grid-template-columns: repeat(2, 100%);
+    height: 100%;
+    width: 100%;
+}
+.container_biochem #slider-img-bio-1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/biochem2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_biochem #slider-img-bio-2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/biochem-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+}
+
+.container_biochem .button-holder-biochem .button_biochem{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.button_biochem .button-holder-biochem{
+    position: absolute;
+    left: 47%;
+    bottom: 2%;
+}
+.button_biochem:hover{
+    background-color: #61b872;
+}
 
 .socials{
     text-align: justify;
@@ -841,6 +896,17 @@ body{
     font-family: 'Glacial Indifference Bold';
     color: #61b872;
     font-size: 40px;
+}
+
+.researchers_night h2{
+    font-family: 'Glacial Indifference';
+    color: #61b872;
+    font-size: 35px;
+}
+
+.researchers_night it{
+    font-family: 'Glacial Indifference Italics';
+    font-size: 25px;
 }
 
 .fairytale{
