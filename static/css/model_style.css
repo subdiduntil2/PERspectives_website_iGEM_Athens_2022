@@ -73,6 +73,10 @@ html{
     font-size: 30px;
 }
 
+.attention-box{
+    width: 70%;
+}
+
 .buttons-1{
     align-items:flex-end;
     margin-left: 0px;

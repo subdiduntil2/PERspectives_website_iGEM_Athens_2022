@@ -46,18 +46,13 @@
 <div class="overview-model">
     <h1>Overview</h1>
     <p>
-        Alongside with our wet lab work, computational modelling of the PERspectives system has been proven to be crucial in order to accelerate and improve the wet lab tasks, aiming to achieve significant and reproducible results. Moreover, by setting the basis of the computational aspect of PERspectives, we further establish a potential workflow for future applications both on our and relevant fields.
+        Computational modelling of "PERspectives" has been proven to be crucial in order to accelerate and improve the wet lab tasks, aiming to achieve significant and reproducible results. Moreover, by setting the basis of the computational aspect of PERspectives, we further establish a potential workflow for future applications both on our as well as on relevant fields.
         <br><br>
-        Our computational approach was based on <span style="color: #3aa9c5;">modelling the senders and the recievers</span> populations, seprately. Morevor, we also attempted to approach our system holistically 
-
-        The aim of the model is to predict the change in concentrations of key chemical substances, the rate of gene expression and to evaluate the regulatory capacity 
-        of our system. Also, based on the experimental work carried out by the wet lab, we determined some kinetic constants to create a customised kinetic model for 
-        our system. But we did not limit ourselves to just creating a kinetic model. For our system it is also important to observe the effect of lactone diffusion as 
-        well as the stability analysis.
+        Our computational approach was based on <span style="color: #3aa9c5;">modelling the senders and the recievers</span> populations seprately. The aim of the model is to predict the change in concentrations of key chemical substances, the rate of gene expression and to evaluate the regulatory capacity of our system. Also, based on the experimental work carried out by the wet lab, we determined some kinetic constants to create a customised kinetic model for our system. 
         <br><br>
-        In the following sections, we describe an outline of the aforementioned models and, most importantly, the thinking process we followed during their development. 
-        We hope they will serve as a helpful companion to anyone who wishes to use the PERspective system in the future, and, as everything else in iGEM, open to 
-        recommendations and improvements from the SynBio community.
+        But we did not limit ourselves to just creating a kinetic model. For our system it is also important to observe the effect of lactone <span style="color: #3aa9c5;">diffusion</span> as well as the <span style="color: #3aa9c5;">stability analysis</span>.
+        <br><br>
+        In the following sections, we describe an outline of the aforementioned models and, most importantly, the thinking process we followed during their development. We hope they will serve as a helpful companion to anyone who wishes to use "PERspectives" in the future. As everything else in iGEM, our work is open to recommendations and improvements from the SynBio community.
     </p>
 </div>
 
@@ -132,30 +127,38 @@
             <section class="inside-section">
             <a id="weights-s" class="anchorOffset"></a>
             <br>
-            <h1>aTc promoter</h1>
-            The purpose of our team is to create 3x1 patterns of E.coli ‘Senders’ subpopulations that express the LuxI gene at a different rate.
+            <h1>pTeT Promoter</h1>
+            The purpose of our team is to create 3x1 patterns of E.coli senders subpopulations that express the <it>LuxI</it> gene at a different, desirable rate.
             <br> 
-            To achieve this, we designed a regulatory system based on the pTet promoter. If there is no aTc in the system, the promoter is repressed by the TetR regulator. If aTc is present in the system, then it binds with the TetR, creating a complex that is pumped out of the cell, allowing the mRNA of the following gene to be produced. For the production of the TetR our team used a constitutive promoter from the iGEM Registry.
+            To achieve this, we designed a regulatory system based on the <span style="color: #61b872;">pTet promoter</span>. Given that there is no aTc in the system, the promoter is repressed by the TetR regulator. If aTc is present in the system, then it binds with the TetR, creating a complex, that is pumped out of the cell, allowing the mRNA of the following gene to be produced. For the production of the TetR our team used a <span style="color: #61b872;">constitutive promoter</span> from the iGEM Registry.
             <br><br>
             <h1>Simulating the weights of the neural network with RBSs
             </h1>
             <br>
+            <h2>RBS Library Generation</h2>
+            Our goal was to find a way to simulate the weights of a perceptron algorithm with a biological analogue. In cooperation with the wet lab members, it was decided that the weights of the neural network would be simulated with <span style="color: #61b872;">Ribosome Binding Sites (RBSs)</span> that assign different translation rates. In order to accomplish this task, the Salis Lab <a href="https://salislab.net/software/design_rbs_calculator">RBS Calculator Tool</a> was used. This tool allows the user to see the translation rate of an RBS, but also taking into account the following gene, since it is known that the translation rate of an RBS depends on it. There are two ways to use the RBS Calculator: <br><br>
+            1. <b>Upload an RNA sequence</b> (RBS + gene) and receive as a result the <b>translation rate</b> of this RBS when followed by this specific gene.<br> 
+            2.<b>Demand a specific translation rate</b> of a specific gene and receive as a result <b>RBS sequences</b> that will provide it.<br><br>
 
-            Our goal was to find a way to simulate the weights of a perceptron algorithm with a biological analogue. In cooperation with the wet lab members, it was decided that the weights of the neural network would be simulated with RBSs that assign different translation rates. In order to accomplish this task, the Salis Lab "RBS Calculator" Tool was used. This tool allows the user to see the translation rate of an RBS, but also taking into account the following gene, since it is known that the translation rate of an RBS depends on it. There are two ways to use the RBS Calculator: <br><br>
-            1. Upload a RNA sequence (The RBS and the gene) and receive as a result the translation rate of this RBS when followed by this specific gene.<br> 
-            2. Demand a specific translation rate of a specific gene and receive as a result RBS sequences that will provide it.<br><br>
+            You can find out more on how to use RBS Calculator by visiting the <a href="https://docs.denovodna.com/docs/rbs-calculator">documentation page of the tool</a>, or by reading our Tutorial that you can find <a href="https://static.igem.wiki/teams/4294/wiki/contribution/rbs-calculator-tutorial.pdf">here</a>.
 
-            Our team used the first way to calculate the translation rate of the RBS Libraries:
+            After studying on and consulting experts on the subject. (See <a href="https://2022.igem.wiki/athens/human-practices#integrated-hp">Integrated Human Practices</a>) Our team used the first way to calculate the translation rate of the following RBS Libraries:
             <br><br> 
             1. Anderson RBS Library from iGEM Registry<br> 
             2. RBS Library used in 'Precise and reliable gene expression via standard transcription and translation initiation elements' paper’.
             <br> <br> 
-            The need for creating new synthetic RBS sequences that would fit exactly to the design of our project emerged. So the dry lab members enriched the library they had built with the already existing RBSs with new synthetic ones. The sequences of the new RBSs where found by using again Salis Lab ‘RBS Calculator’ tool, but these time by requesting a specific translation rate and receiving the synthetic sequence by the tool.  Once the library with all the 166 RBSs was ready and all the translation rates were calculated, the RBSs were divided into three classes:
+            The need for creating new synthetic RBS sequences that would fit exactly to the design of our project emerged. So the dry lab members enriched the library that was built based on existing RBSs, with new synthetic ones. The sequences of the new RBSs where found by using again Salis Lab RBS Calculator tool, but these time by requesting a specific translation rate and receiving the synthetic sequence by the tool. 
+            <br><br>
+            Once the library with all the 166 RBSs was ready and all the translation rates were calculated, the RBSs were divided into three classes:
             <br> <br> 
-            1. The strong intensity RBSs, with translation rate more than 90000 au<br> 
-            2. The medium intensity RBSs, with translation rate around 25000-40000 au<br> 
-            3. The weak intensity RBSs, with translation rate less than 15000 au<br> <br> 
+            1. The <span style="color: #ef4b4c;">strong intensity RBSs</span> intensity RBSs, with translation rate <span style="color: #ef4b4c;">more than 90000 au</span>.<br> 
+            2. The <span style="color: #f38545f1;">medium intensity RBSs</span>, with translation rate around <span style="color: #f38545f1;">25000-40000 au</span>.<br> 
+            3. The <span style="color: #61b872">weak intensity RBSs</span>, with translation rate  <span style="color: #61b872">less than 15000 au</span>.<br> <br> 
             Practically, therefore, a library of RBSs emerged from which the strong ones would simulate a high weight, those with a moderate translation rate a moderate weight while the weak RBSs simulate the low weights for the perceptron.<br> <br> 
+
+            You can download our RBS Library <a href="https://static.igem.wiki/teams/4294/wiki/model/model/team-athens-rbs-library.csv">here</a>.<br><br>
+
+
             Finally, the RBSs that were going to be tested in the lab were:<br> <br> 
 
 
@@ -238,7 +241,7 @@
 
             <h1>Using Quorum Sensing to stimulate the weighted sum of the neural network</h1>
             <br>
-            n order to be able to simulate the weighted sum in the perceptron, we took advantage of the natural way bacteria communicate, the quorum sensing mechanism. So our ‘Senders’ subpopulation must be able to express the LuxI gene. The expression of that gene was regulated by the aTc promoter mentioned above. In this way, if we wanted to stimulate a small weight, we would use the aTc promoter followed by the LuxI gene with a low intensity RBS. And we would do the same thing respectively to simulate a medium or high perceptron weight. In this way every subpopulation of the senders would produce a specific amount of AHL which is determined by the RBS we used. By combining them together, we would have achieved the simulation of the weighted sum of the perceptron by adding up the total amount of lactone produced by each subpopulation. 
+            In order to be able to simulate the weighted sum in the perceptron, we took advantage of the natural way bacteria communicate, the quorum sensing mechanism. So our ‘Senders’ subpopulation must be able to express the LuxI gene. The expression of that gene was regulated by the aTc promoter mentioned above. In this way, if we wanted to stimulate a small weight, we would use the aTc promoter followed by the LuxI gene with a low intensity RBS. And we would do the same thing respectively to simulate a medium or high perceptron weight. In this way every subpopulation of the senders would produce a specific amount of AHL which is determined by the RBS we used. By combining them together, we would have achieved the simulation of the weighted sum of the perceptron by adding up the total amount of lactone produced by each subpopulation. 
             <br><br>
             Senders’ Circuit Overview. TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested, please refer to Engineering Success) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription. Senders’ Circuit Overview. TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested, please refer to Engineering Success) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription.
         
@@ -297,19 +300,19 @@
                   </p>
                 </div>
 
-<div class="equations">
+                <div class="equations">
                   <p>
                \(\frac{Dimer}{dt}= k_{2}[Mon]^2 - k_{-2}[Dimer]-d_{Dimer}[Dimer] \)
                   </p>
                 </div>
 
-<div class="equations">
+                <div class="equations">
                   <p>
               \(\frac{d_{mng}}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} * [\beta_{Lux}+(1-\beta_{Lux})*\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] -d_{mng}[mng] \)
                   </p>
                 </div>
 
-<div class="equations">
+                <div class="equations">
                   <p>
              \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \)
                   </p>
@@ -698,7 +701,7 @@
         <h1>Receivers System Explained</h1>
         <br><br>
         <p>
-        The receiver's population simulates the “activation function” of the perceptron algorithm. So it was really important for us to create constructs in a way that we would secure a steep activation of the production of the final fluorescent protein, mNeon Green. We had to design plasmids that would give the receiver's cells the ability to express our protein very strongly only if the amount of lactone they receive from the senders exceeds a certain threshold. We decided to test two different constructs in order to check which one will present the best response.  
+        The receivers population simulates the <span style="color: #ef4b4c">activation function</span> of the perceptron algorithm. So it was really important for us to create constructs in a way that we would secure a steep activation of the production of the final fluorescent protein, mNeon Green. We had to design plasmids that would give the receivers cells the ability to express our protein very strongly only if the amount of lactone they receive from the senders exceeds a certain threshold. We decided to test two different constructs in order to check which one will present the best response.  
         </p>
       </div>
       
@@ -746,9 +749,10 @@
             <section class="inside-section">
             <a id="oplo" class="anchorOffset"></a>
             <br>
-            <h1>Receivers' Constructs</h1>
+            <h1>Receivers' Constructs</h1><br>
             <b>Construct no.1: Open Loop (OpLo)</b>
-            The open loop construct is the simplest. It consists of a Plux promoter followed by the luxR gene and a Plux promoter followed by the mNeonGreen gene. Basically, this is a system where LuxR feeds the Plux promoter to express both itself and the fluorescent protein. Thus, when a specific threshold of OC6 is exceeded, the production of the LuxR increases sharply, which implies a very fast production of mNHonGreen. So this way it succeeds the steep activation. 
+            <br><br>
+            The open loop construct is the simplest. It consists of a Plux promoter followed by the luxR gene and a Plux promoter followed by the mNeonGreen gene. Basically, this is a system where LuxR feeds the Plux promoter to express both itself and the fluorescent protein. Thus, when a specific <span style="color: #ef4b4c">threshold of OC6</span> is exceeded, the production of the LuxR increases sharply, which implies a very fast production of mNeonGreen. In this way it succeeds the <span style="color: #ef4b4c">steep activation</span>. 
             <br><br>
 
             <center>
@@ -762,6 +766,7 @@
             <br>
 
             <b>Construct no.2: PFR Loop</b>
+            <br>
             The PFR construct aims to increase the steepness of our activation function via the following process; The LuxR promoter is a leaky one and thus its leakiness provides a baseline production of LuxR that after the addition of OC6 will activate the production of more LuxR and thus LuxR-AHL. The LuxR-AHL dimer produced will then induce the production of mNeonGreen (as in the OpLo case) and it will simultaneously repress the production of phlf, via a LuxR repressible promoter. The phlf is responsible for the repression of the mneongreen construct, so its repression will - alongside the induction by LuxR-AHL-will lead to a simultaneous increase in the output concentration. The simultaneous control of mneongreen by the LuxR-AHL dimer and the phlf repressor is accomplished via a pLux-phlo hybrid promoter. This produces a steeper activation function than the Open Loop circuit, as we will see in the results section. 
             <br><br>
 
@@ -815,6 +820,25 @@
                 Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
                 <br><br>
 
+                <div class="equations">
+                  <p>
+                \(\frac{Mon}{dt} = k{1}[LuxR][AHL_{int}] + 2k_{-2}[Dimer]-k_{-1}[Mon]-2k_{2}[Mon]^2 - d_{Mon}[Mon]\)
+                  </p>
+                </div>
+                <br>
+                <div class="equations">
+                <p>
+                \(\frac{Dimer}{dt}= k_{2}[Mon]^2 - k_{-2}[Dimer]-d_{Dimer}[Dimer] \)
+                </p>
+                </div>
+                <br>
+                <div class="equations">
+                <p>
+                \(\frac{d_{mng}}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} * [\beta_{Lux}+(1-\beta_{Lux})*\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] -d_{mng}[mng] \)
+                </p>
+                </div>
+                <br>
+
 
                 At this point it would be useful to mention the different assumption made for the single cell kinetic model:
                 <br><br>
@@ -836,6 +860,7 @@
 
                 The production and consumption rates of each chemical can be represented by the following added differential equations:
                 <br><br>
+
 
 
                 Equation (1) is a representation of how the number of cells is growing with time. Equations (2) and (3) explain how the concentration of the lactone AHL is changing inside and outside of a cell due to diffusion. 
