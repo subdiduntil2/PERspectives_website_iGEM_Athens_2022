@@ -254,6 +254,132 @@ body{
     border-radius: 20px;
 }
 
+
+.senders{
+    text-align: justify;
+    padding-right: 4%;
+}  
+    
+.senders h1{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.senders h2{
+    font-family: 'Glacial Indifference Bold';
+    color: #61b872;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.senders h3{
+    color: #61b872;
+    font-size: 35px;
+}
+
+.senders i{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Italics';
+}
+
+.senders b{
+    color: #e9e9eb;
+    font-size: 25px;
+    font-family: 'Glacial Indifference Bold';
+}
+
+.s-2a{
+    width: 50%;
+    border-radius: 20px;
+}
+.s-2b{
+    width: 50%;
+    border-radius: 20px;
+}
+.s-2c{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.s-f3{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.s-f4{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.s-f5{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.s-f6{
+    width: 0%;
+    border-radius: 20px;
+}
+
+.s-f71{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f72{
+    width: 50%;
+    border-radius: 20px; 
+}
+.s-f73{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f8{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f9{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f101{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f102{
+    width: 50%;
+    border-radius: 20px; 
+}
+.s-f103{
+    width: 50%;
+    border-radius: 20px; 
+}
+.s-f11{
+    width: 50%;
+    border-radius: 20px; 
+}
+.s-f12{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f13{
+    width: 50%;
+    border-radius: 20px; 
+}
+
+.s-f14{
+    width: 50%;
+    border-radius: 20px; 
+}
+
 /* Table */
 
 .content-table {
