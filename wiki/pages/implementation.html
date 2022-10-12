@@ -68,16 +68,7 @@
           <br><br>
           <h1>Introduction</h1>
           <br>
-          <p> “PERspectives” can have a wide range of implementations, some of which are examined and proposed in this section. From medicine, to 
-              environment and even energy consumption, it can be the foundation of groundbreaking advances in each of the aforementioned fields and 
-              even more. Being a universal tool in the hands of future iGEM teams and researchers overall, PERspectives can provide enhanced genetic 
-              stability, reliability and long-term functionality in a variety of projects. Our system uses a cell consortia format in order to create a 
-              novel biosensor that allows for multiple input recognition and activation according to their significance. The compartmentalization of work 
-              to multiple bacterial populations reduces the metabolic burden that each cell should carry. Additionally, by using the quorum sensing 
-              mechanism for communication of the bacterial populations, misinterpretation of the output resulting from cellular noise is reduced and this 
-              is the major advantage of “PERspectives” and the source of the various potential implementations. Our system can be versatile for different 
-              problems, since it can be used for different genes, as presented in Figure 1 below. Some of the applications that will be presented in the 
-              section below can be directly plugged into our system and some of them require further editing as described in each case.</p>
+          <p> “PERspectives” can have a wide range of implementations, some of which are examined and proposed in this section. From medicine, to the environment and even energy consumption, it can be the foundation of groundbreaking advances in each of the aforementioned fields and even more. As a universal tool used by  future iGEM teams and generally researchers, PERspectives can provide enhanced genetic stability, reliability and long-term functionality in a variety of projects. Our system utilizes a cell consortia format in order to create a novel biosensor that allows multiple inputs recognition and activation according to their significance. The work compartmentalization to multiple bacterial populations reduces the metabolic burden that each cell would carry. Additionally, by using the quorum sensing mechanism for communication among bacterial populations, misinterpretation of the output resulting from cellular noise is reduced. The reduction of biological noise is the major advantage of “PERspectives”, in combination with its various potential implementations. Our system can be versatile to different problems, since it can be used for different genes, as presented in Figure 1. Some of the applications that will be presented in the section below can be directly plugged into our system and some of them require further editing as described in each case.</p>
           <br>
           <img class="imple-img-1" src="https://static.igem.wiki/teams/4294/wiki/implementation/imple1.png">
           <img class="imple-img-2" src="https://static.igem.wiki/teams/4294/wiki/implementation/imple-2.png">
@@ -89,53 +80,13 @@
         <br><br>
         <h1>Health</h1>
         <br>
-        <p> Our project’s  goal is to create a <span style="color: #3aa9c5;">universal tool</span> that will be able to solve real-time multifactorial problems. Our bacterial perceptron will have 
-            special value in cases where the problem is too hard to reach, such a case is the human body. 
+        <p> Our project’s  goal is to create a <span style="color: #3aa9c5;">universal tool</span> that will be able to solve real-time multifactorial problems. Our bacterial perceptron will have special value in cases where the problem is too hard to reach, taking for example the human body. 
             <br><br>
             What about a <span style="color: #3aa9c5;">living therapeutic</span> that could detect the problem in real-time and decide if a medicine is needed or not?
         </p>
         <br>
+
         <div class="collapsible_in">
-            <input type="checkbox" id="Gut">
-            <label for="Gut">Gut Disbalances + </label>
-            <div class="collapsible-in-text">
-            <p>The human body is cohabited by microorganisms, this symbiosis is frequently referred to as the microbiome. The most studied microbiome 
-                is the one of the human gut, known as the gut microbiome[1].  Up to 1000 different bacterial species are found in the human gut. Each 
-                one of these species is essential for the function of the human gut, as it contributes to processes such as food digestion and 
-                immunity. In case the balance between the different species gets distracted, this is called dysbiosis, and multiple diseases appear. 
-                Gut disbalances are linked to diseases such as inflammatory bowel diseases (IBD), irritable bowel syndrome (IBS), diabetes, obesity, 
-                cancer, and cardiovascular and central nervous system disorders. [2]. According to the World Health Organization (WHO), probiotics are 
-                “live strains of strictly selected microorganisms which, when administered in adequate amounts, confer a health benefit 
-                on the host”. [3,4]. In order to help with the treatment of gut disbalances we plan to design a bacterial perceptron that will have as 
-                inputs miRNAs or gDNAs detected in the human gut, the levels of which have been linked to gut disbalances in individuals with the 
-                disease. Regarding the gDNAs, B.subtitlis has the natural competence ability of B. subtilis to detect unique DNA sequences present in 
-                the environment, we plan to use this ability in order to program B.subtilis to detect different species in the human gut[5]. B. 
-                subtilis can uptake environmental DNA and integrate it using specific sequences in each genome homologous recombination. 
-                (Dubnau, D. Genetic competence in Bacillus subtilis. Microbiological Reviews (1991)). The sequence length and similarity affect the 
-                recombination efficiency. By engineering these two factors in the genome of B.subtilis for different  strains found in the human 
-                gut we will be able to incorporate the weights and control the expression of the quorum sensing molecule, in an analogous way that the 
-                different Ribosome Binding Sites control the expression of the quorum sensing molecule in our system. If the quorum sensing molecule
-                concentration passes a certain threshold, the production of a certain substance that helps with gut disbalances will be produced. 
-                This substance could be reuterin which has been proven to restore the microbiome balance. [6,7,8]. Regarding the miRNAs approach, 
-                there are multiple databases that connect levels of miRNAs to a specific gut disbalance disorder [9]. After bioinformatic processing 
-                we will be able to classify these miRNAs by importance and frequency in the population and program the weights of our living 
-                therapeutic by adjusting the complementarity of our miRNA to a specific locus, in this case, our weights will be engineered based on
-                miRNA interference [10,11].
-
-                <center>
-                <img class="imple-img-gut" src="https://static.igem.wiki/teams/4294/wiki/implementation/gut-img.png">
-                <h5 style="text-align: center;">Figure 2: B. Subtilis finds different microorganisms in the gut microbiome environment and because of its 
-                    natural competence intakes their g.DNA. This leads to Homologous Recombination and production of a OC6 or other quorum sensing molecule 
-                    that will activate the receivers to produce reuterin.<br> (Created in Biorender.com)
-                </h5>
-                </center>
-             </p>
-            </div>
-        </div>
-        
-
-
-         <div class="collapsible_in">
             <input type="checkbox" id="theranostic">
             <label for="theranostic">Cancer - Targeted drug delivery - Theranostic systems +</label>
             <div class="collapsible-in-text">
@@ -168,22 +119,31 @@
         </div>
 
 
+        <div class="collapsible_in">
+            <input type="checkbox" id="Gut">
+            <label for="Gut">Gut Disbalances + </label>
+            <div class="collapsible-in-text">
+            <p>The human body is cohabited by microorganisms, this symbiosis is frequently referred to as the microbiome. The most studied microbiome is the one of the human gut, known as the gut microbiome[1].  Up to 1000 different bacterial species are found in the human gut. Each one of these species is essential for the function of the human gut, as it contributes to processes such as food digestion and immunity. In case that the balance between the different species gets distracted (called dysbiosis), multiple diseases could  emerge. Gut disbalances are linked to diseases such as inflammatory bowel diseases (IBD), irritable bowel syndrome (IBS), diabetes, obesity, cancer, and cardiovascular and central nervous system disorders. [2]. According to the World Health Organization (WHO), probiotics are “live strains of strictly selected microorganisms which, when administered in adequate amounts, confer a health benefit on the host” [3,4]. In order to help with the treatment of gut disbalances we plan to design a bacterial perceptron that will have miRNAs or gDNAs detected in the human gut as inputs, the levels of which have been linked to gut disbalances in individuals with the disease. Regarding the gDNAs, <it>B.subtitlis</it> has the natural competence ability to detect unique DNA sequences present in the environment. So we plan to use this ability in order to program <it>B.subtilis</it> to detect different species in the human gut [5]. In fact, <it>B. Subtilis</it> can uptake environmental DNA and integrate it using specific sequences in each genome homologous recombination. (Dubnau, D. Genetic competence in Bacillus subtilis. Microbiological Reviews (1991)). The sequence’s length and similarity affect the recombination efficiency. By engineering these two factors in the genome of, <it>B.subtilis</it> for different  strains found in the human gut, we will be able to incorporate the weights and control the expression of the quorum sensing molecule, in a similar way that the different Ribosome Binding Sites control the expression of the quorum sensing molecule in our system. If the quorum sensing molecule concentration surpasses a certain threshold, the production of a certain substance that helps with gut disbalances will be activated. This substance could be reuterin which has been proven to restore the microbiome balance. [6,7,8]. Regarding the miRNAs approach, there are multiple databases that correlate levels of miRNAs to a specific gut disbalance disorder [9]. After bioinformatic processing, we will be able to classify these miRNAs by importance and frequency in the population. Then, we will set the weights of our living therapeutic by adjusting the complementarity of our miRNA to a specific locus.  In this case, our weights will be engineered based on miRNA interference [10,11].
+
+
+                <center>
+                <img class="imple-img-gut" src="https://static.igem.wiki/teams/4294/wiki/implementation/gut-img.png">
+                <h5 style="text-align: center;">Figure 2: <it>B. Subtilis</it> detects different microorganisms in the gut microbiome environment and because of its natural competence, internalizes their g.DNA. This leads to Homologous Recombination and production of a OC6 or other quorum sensing molecule that will activate the receivers to produce reuterin.<br> (Created in Biorender.com)
+                </h5>
+                </center>
+             </p>
+            </div>
+        </div>
+        
+
+
+        
+
          <div class="collapsible_in">
             <input type="checkbox" id="bacviral">
             <label for="bacviral">Bacterial or Viral Infection - Classification +</label>
             <div class="collapsible-in-text">
-            <p>The most common problem in acute infections is identifying the cause. The similarity of the symptoms between viral and bacterial 
-                infections makes it difficult for health personnel to identify the optimal treatment in urgent situations. This is an issue because it
-                 leads to overuse of antibiotics [24] and contributes to antibiotic resistance. Research has shown that discriminating between viral and 
-                 bacterial infections requires simultaneous testing for multiple factors, some of which belong to the individual’s immune response and 
-                 not to the infectant itself [25]. What if we had a bacterial artificial intelligence classification system that would simultaneously 
-                 test for three different factors and decide for the best treatment for the patient? Our project “Perspectives” seems like a perfect 
-                 candidate for this job because it can evaluate different inputs, assigning each of them the appropriate significance depending on if it 
-                 recognizes the bacterial or the viral infections [26]. Three molecules that could be recognized according to literature are: NF-related 
-                 apoptosis-inducing ligand (TRAIL) [27] which is upregulated in viral infection patients, IP-10 which was higher in viral patients 
-                 compared to bacterial patients, and CRP (C-Reactive Protein) which is mainly encountered in bacterial infections but has been correlated 
-                 to infection with some viral strains as well. This could be used as a diagnostic tool, huge research has been done on how human samples 
-                 affect bacterial biosensors [28].
+            <p>Identifying the cause in acute infections constitutes a common medical problem. The symptoms' similarity between viral and bacterial infections makes it difficult for health specialists to identify the optimal treatment in urgent situations. This situation often leads to the overuse of antibiotics [24] and contributes to antibiotic resistance. Research has shown that discriminating between viral and bacterial infections requires simultaneous testing for multiple factors, some of which belong to the individual's immune response and not to the pathogen itself [25]. What if we had a bacterial artificial intelligence classification system or a cell-free system following a similar principle that would simultaneously test for three different factors and classifiy for the best treatment for the patient? Our project “Perspectives” seems like a perfect candidate for this task because it can evaluate different inputs, assigning each of them the appropriate significance depending on if it recognizes the bacterial or the viral infections [26]. Three molecules that could be recognized according to literature are: NF-related apoptosis-inducing ligand (TRAIL) [27] which is upregulated in viral infection patients, IP-10 which is higher in viral patients compared to bacterial patients, and CRP (C-Reactive Protein) which is mainly encountered in bacterial infections but has been correlated to some viral strains' infection as well. In this way, our circuit could be used as a diagnostic tool, taking into account that huge research has been done on how human samples affect bacterial biosensors [28].
             </p>
             </div>
         </div>
@@ -192,12 +152,7 @@
             <input type="checkbox" id="diabetic">
             <label for="diabetic">Prevention of Diabetic Ketoacidosis +</label>
             <div class="collapsible-in-text">
-            <p>Poor control of type one diabetes often leads to diabetic ketoacidosis that is a danger to human health. Diabetic ketoacidosis is 
-                characterized by pH lower than 7.35, high blood sugar levels and low insulin levels. Following the lead of David Ausländer [29] who 
-                designed a pH-biosensor using a microencapsulated HEK293 cell line batches, we would like to adjust our bacterial artificial intelligence 
-                system to detect not only pH as an indicator of ketoacidosis but also high blood sugar levels and insulin levels (this could be used as 
-                the negative weight – this means if insulin levels are high do not secrete more) as inputs and secrete insulin as an output to prevent or 
-                treat diabetic ketoacidosis. 
+            <p>Poor control of type one diabetes may lead to diabetic ketoacidosis, which could be lethal. Diabetic ketoacidosis is characterized by pH lower than 7.35, high blood sugar levels and low insulin levels. Following the lead of David Ausländer [29] who designed a pH-biosensor using microencapsulated HEK293 cell line batches, a biological perceptron embedded in a living therapeutic could incorporate multiple input signals, like the aforementioned pH level, glucose level and insulin level to classify in real time the patient's status and produce a suitable amount of insulin.
             </p>
             </div>
         </div>
@@ -207,15 +162,7 @@
             <label for="pharma">Pharmaceutical Industry - RnD +</label>
             <div class="collapsible-in-text">
             <p>
-            As it’s known, developing new, efficient, and safe drugs is extremely time-consuming, expensive, and can take even 12 years on average.  [30] 
-            The first stage of that discovery begins in the laboratory. According to the FDA, thousands of compounds may be potential candidates for 
-            development as a medical treatment at this stage. After early testing, however, only a small number of compounds look promising and call for 
-            further study [31].  Also, many diseases have a very complicated phenotype, often related to a complicated genotype. Therefore, the existence 
-            of a biosensing artificial neural network system could be extremely beneficial to the RnD phase. [32] In the last few years, a lot of research
-             has been done to reveal the connection between cancer and miRNA profiles[33,34]. According to them, many miRNAs are associated with cancer 
-             types, but some miRNAs have a stronger correlation with a specific type of cancer. Also, the ANNs appear as a promising tool for 
-             pharmaceutical scientists [35]. What about a biological system that could classify the new tested molecules, accordingly to the provoked 
-             change in the phenotype of cell lines, between the possible new drugs and the molecules that are not effective or safe? 
+            As it’s known, developing new, efficient, and safe drugs is extremely time-consuming, expensive, and can take even 12 years on average.  [30] The first stage of that discovery begins in the laboratory. According to the FDA, thousands of compounds may be potential candidates for development as a medical treatment at this stage. After early testing, however, only a small number of compounds seems promising and calls for further study [31].  Also, many diseases have a very complicated phenotype, often related to a complicated genotype. Therefore, the existence of a biosensing artificial neural network system could be extremely beneficial to the Research and Development (RnD) phase. [32] In the last few years, a lot of research has been done to reveal the connection between cancer and miRNA profiles[33,34]. According to them, many miRNAs are associated with cancer types, but some miRNAs have a stronger correlation to a specific type of cancer. Also, the ANNs appear as a promising tool for pharmaceutical scientists [35]. What about a biological system that could classify the new tested molecules, according to the provoked change in the phenotype of cell lines, between the possible new drugs and the molecules that are not effective or safe? 
             <br><br>
             Our system’s design could play a leading role in the RnD domain in this framework. Let’s take as an example, colorectal cancer. Firstly, we 
             could gather a significant amount of patient samples as well as a significant amount of cancer-free individual samples and analyze them in
@@ -225,11 +172,7 @@
              collect a significant number of samples of patients during the course of therapy and analyze them also with the usage of an Artificial Neural 
              Network [37]. 
             <br><br>
-            After that, the potential candidate molecules will be added to cell lines with colorectal cancer. By giving to our system the lysate of that 
-            cells or a portion of their medium we could have a classification between promising molecules and molecules with no efficiency or safety. In 
-            the framework of the above experiments, the scientist can use either mammalian cells [38] or bacteria cells that detect miRNAs. In either case,
-             toehold switches appear a very promising structure for the sensing part of miRNAs. The same principle of work could be used also for the 
-             discovery of new antidepressants [39], new anticancer drugs for Hodgkin lymphoma [40]and new anticancer drugs for breast cancer [41,42]. 
+            After that, the potential candidate molecules will be added to colorectal cancer cell lines. By giving to our system the lysate of these cells or a portion of their medium we could have a classification between promising molecules and molecules with no efficiency or safety. In the framework of the above experiments, the scientist can use either mammalian cells [38] or bacterial cells that detect miRNAs. Toehold switches could be engineered to bind to input miRNA and respond in a weighted manner by an output production. The same principle of work could be used also for the discovery of new antidepressants [39], new anticancer drugs for Hodgkin lymphoma [40]and new anticancer drugs for breast cancer [41,42]. 
             </p>
             </div>
         </div>
@@ -277,14 +220,7 @@
             <label for="water">Water Quality +</label>
             <div class="collapsible-in-text">
                 <p>
-                Inspired by the project S-POP [47], we propose a future implementation in order to make the future goals of S-POP become possible, by 
-                implementing our bacterial perceptron to detect water Persistent Organic Pollutants (POPs). The senders (E.coli) will be able to recognize 
-                different pollutants in the environment, using promoters of similar strength and adjusting the weights by different sequence independent- 
-                RBS, as demonstrated in the improve a part session (hyperlink), and also as proved by Mutalik et al. [48,49] for the BCDs. When the 
-                specific pollutant is recognized, our senders will produce OC6, by expressing the luxI gene, and will activate the receivers 
-                (S. oneidensis) to produce electricity, in this way our system will  be tuned to display oscillations with distinct periods depending on 
-                the pollutant detected and will allow us to make a useful diagnostic tool for water pollution. The electricity will be detected by a
-                 special device developed by Stockholm 2020 team.
+                Inspired by the project S-POP [47], we propose a future implementation in order to make the future goals of S-POP become possible, by implementing our bacterial perceptron to detect water Persistent Organic Pollutants (POPs). The senders (<it>E.coli</it>) will be able to recognize different pollutants in the environment, using promoters of similar strength and adjusting the weights by different context independent RBS sequences, as proved by Mutalik et al. [48,49] for the BCDs. When the specific pollutant is recognized, senders will produce OC6, by expressing the luxI gene, and will activate the receivers (<it>S. oneidensis</it>) to produce electricity. In this way, our system will  be tuned to display oscillations with distinct periods depending on the pollutant detected and will allow us to make a useful diagnostic tool for water pollution. The electricity will be detected by a special device developed by Stockholm 2020 team.
             </div>
           </div>
 
@@ -293,17 +229,7 @@
                 <label for="soil">Health of soil for classification of samples + </label>
                 <div class="collapsible-in-text">
                     <p>
-                    Another implementation of our project could be in the field of evaluating soil health. Soil health is very important in means of 
-                    plant health and production, but also affects human and animal health [50]. There are different kinds of indicators to access soil 
-                    health: Chemical Indicators, Physical Indicators and Biological Indicators. Our system could be redesigned to detect such indicators:  
-                    Nitrogen found in the soil via protein degradation is an indicator of its availability for plant assimilation, there are bacterial 
-                    nitrogen transporters that could be used to set Nitrogen as an input to our system [51],[52],[53]. The pH [54] of the soil is also 
-                    very important in determining soil health, there are several pH responsive promoters that could be incorporated in our system to 
-                    evaluate the pH. [55]. Last but not the least, salinity is important for some environments and could be detected by salt 
-                    activated promoters engineered in our system [56]. Our system could be adjusted for the weights for each input to respond in each 
-                    environment that the soil is situated. This will be a huge help for people that work in corps to identify if their soil is 
-                    appropriate for achieving the best production. Since we also plan to optimize our system in the future to recognize more inputs and 
-                    give more outputs, classification of soil samples to decide the best approach to increase productivity is a feasible approach.
+                    Another implementation of our project could be the evaluation of soil health. Soil health is very important in means of plant health and crop yield, but also affects human and animal health [50]. There are different kinds of indicators to assess soil health: Chemical Indicators, Physical Indicators and Biological Indicators. Our system could be redesigned to detect such indicators:  Nitrogen found in the soil via protein degradation is an indicator of its availability for plant assimilation, there are bacterial nitrogen transporters that could be used to set Nitrogen as an input to our system [51],[52],[53]. The pH [54] of the soil is also very important in determining soil health. There are already several pH responsive promoters that could be incorporated in our system to evaluate the pH. [55]. Last but not the least, salinity is important for some environments and could be detected by salt-activated promoters engineered in our system [56]. Our system could be adjusted for the weights of each input to respond in several soil compositions. This will be a huge help for people that work in the agricultural sector to optimize their crop production. 
                     </p>
                 </div>
             </div>
@@ -351,9 +277,7 @@
                 networks, since it could be the first step in the right direction in order to limit the ever-increasing carbon footprint that AI algorithms 
                 leave on the environment.  Moreover, it is on-par with the trend of using embedded AI systems, and combining its versatile nature, it has the 
                 potential to become the basis of a multipurpose classification system used in the environment, health and pharmaceutics domains, as analyzed 
-                in the previous sections. In terms of energy demands, those are limited to just the agar culture medium used for bacterial growth-at 5mL of 
-                LB when senders and receivers cultures are mixed (more on the P<a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a> page)-as well as a conventional device to execute a one-time 
-                training process via our Application (more on the Software page).
+                in the previous sections. Energy demands and carbon footprint could be reduced if such system is incorporated into photosynthetic cells, which harness light's energy and some of them can be easily cultured.
                 </p>
                 </div>
             </div>
@@ -383,7 +307,7 @@
               <label for ="collapsible-head">References</label>    
               <div class="collapsible-content">
                 <cite>
-                    <a https://www.nature.com/articles/d41586-020-00194-2">
+                    <a href="https://www.nature.com/articles/d41586-020-00194-2">
                         1. Herb Brody, The gut microbiome, OUTLOOK,29 January 2020. 
                        https://www.nature.com/articles/d41586-020-00194-2
                     </a>

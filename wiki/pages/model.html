@@ -291,17 +291,42 @@
                 <br><br>
                 Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation of the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
                 <br><br>
-                <div>
+                <div class="equations">
                   <p>
-                \(\frac{AHL_{int}}{dt} = k_{-1} [Mon] + -k_{1}[AHL_{int}][LuxR] -d_{AHLint}\)
+                \(\frac{Mon}{dt} = k{1}[LuxR][AHL_{int}] + 2k_{-2}[Dimer]-k_{-1}[Mon]-2k_{2}[Mon]^2 - d_{Mon}[Mon]\)
                   </p>
                 </div>
 
-                <div>
+<div class="equations">
                   <p>
-                \( \frac{LuxR}{dt} = \frac{p_{J23105}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} + k{-1}[Mon]- k{1}[LuxR]*[AHL_{int}]-d{LuxR}[LuxR]\)
+               \(\frac{Dimer}{dt}= k_{2}[Mon]^2 - k_{-2}[Dimer]-d_{Dimer}[Dimer] \)
                   </p>
                 </div>
+
+<div class="equations">
+                  <p>
+              \(\frac{d_{mng}}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} * [\beta_{Lux}+(1-\beta_{Lux})*\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] -d_{mng}[mng] \)
+                  </p>
+                </div>
+
+<div class="equations">
+                  <p>
+             \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \)
+                  </p>
+                </div>
+
+<div class="equations">
+                  <p>
+           \(\frac{d_{AHL_{ext}}}{dt} = D_{AHL}*[N]*(AHL_{int}- \frac{V_{eColi}}{V_{bead}} *AHL_{ext}) - d_{AHL}[AHL_{ext}]\)
+                  </p>
+                </div>
+
+<div class="equations">
+                  <p>
+           \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}} *AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}]\)
+                  </p>
+                </div>
+
 
                 At this point it would be useful to mention the different assumption made for the single cell kinetic model:
                 <br><br>

@@ -367,6 +367,10 @@ body{
 	font-size: 24px;
 }
 
+.collapsible-in-text p it{
+    font-family: 'Glacial Indeifference Italics';
+}
+
 
 
 /* Refs */
