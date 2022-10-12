@@ -70,15 +70,9 @@
             <div class="overview">
                 <h1>Overview</h1>
                 <p>
-                The goal of our project was to create functional communication between the two populations, the senders and the receivers. By the term 
-                functional, we mean that when the receivers are activated by different combinations of senders (induced and uninduced) 
-                (populations with different RBS variants) produce different activation patterns. In this way, when our project is
-                 <a href="https://2022.igem.wiki/athens/implementation">implemented</a> on 
-                real-world problems, it will be able to detect different inputs, assign different weights to them and only activate the
-                 receivers' population when a specific threshold is surpassed by a specific combination of receivers. 
-                <br><br>
-                In order to prove that our system is functional and meets the goal set by our team in the beginning of our project ideation, we 
-                performed simulations using python programming Language, Simulink and Comsol as well as wet lab experiments.
+                  The goal of this year’s Part Improvement was the adaptation of the spacer sequence between the Ribosome Binding Site and the Start Codon in order to reduce the context dependency 
+                  of a commonly used RBS, <a href="http://parts.igem.org/Part:BBa_B0034">BBa_B0034</a>. Ribosome Binding Sites are strongly influenced by their surrounding sequences and, therefore, such adaptations in these spacer regions might tune their function. 
+                  iGEM RBS parts are distributed with a specific 3’ spacer scar and, by modifying this spacer a new improved part,  <a href="http://parts.igem.org/Part:BBa_K4294559">BBa_K4294559</a>, was built and characterized regarding its context dependency.
                 </p>
             </div>
         </section>
@@ -91,8 +85,7 @@
         <!--<h2>Building and Performing Simulations</h2> -->
         <p>
           It is quite obvious that our project revolves around the Ribosome Binding Site (RBS) sequence characteristics. 
-          As it is often stated in the rest wiki pages, Ribosome Binding Sites are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an
-          are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an important role in defining their performance, the neighboring genetic context, namely 
+          As it is often stated in the rest wiki pages, Ribosome Binding Sites are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an important role in defining their performance, the neighboring genetic context, namely 
           their eighboring sequences, influence their function. For example, a complementary with the RBS sequence at the start of the Coding Sequence or at a transcribed operator 
           might trap the RBS in a stem-loop, inhibiting ribosome binding and, therefore, protein expression [1].
           In general, stable mRNA structures at the RBS are limiting the translation initiation rate. The same RBS might function considerably different across genetic contexts. 
@@ -237,7 +230,7 @@
         </p>  
         <br><br>
         <center>
-        <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f1.png">
+        <img class="img1" id="img1" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f1.png">
         <figcaption>Figure 1. Different Outlier Detection algorithms offered via the pycaret package
         </figcaption>
         </center>
@@ -256,7 +249,7 @@
         </p>  
         <br><br>
         <center>
-          <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f2.png">
+          <img class="img2" id="img3" src="https://static.igem.wiki/teams/4294/wiki/improve/ip-f2.png">
           <figcaption>Figure 2. Brief explanation of PCA  Algorithm [10].
           </figcaption>
           </center>
@@ -445,6 +438,7 @@
    effect of the genetic context on translation rate. The following characterization parts were generated (Table 3.)
     </p>
   <br>
+  <center>
   <table class="content-table">
     <thead>
       <tr>
@@ -489,9 +483,21 @@
          </p>
        <br>
        <p>
-        More information regarding the experimental procedures, construct validation, and the preliminary screening of the candidate variants using the RBS calculator are provided in this supplementary <a href="https://static.igem.wiki/teams/4294/wiki/dry-notebook/dry-lab-book-igem-athens-2022.pdf">pdf file</a>
+        More information regarding the construct validation and measurement results are provided in this supplementary <a href="https://static.igem.wiki/teams/4294/wiki/improve/ip-pdf-results.pdf">pdf file</a>
          </p>
        <br>
+       <center>
+       <div class="pdf-holder">
+          <object data="https://static.igem.wiki/teams/4294/wiki/improve/ip-pdf-results.pdf" 
+                    width="50%" 
+                    height="800px"> 
+            </object>
+        </div>  
+        <br><br>
+       </center>
+
+
+
        <h2>Results</h2>
        <br><br>
        <p>
@@ -576,11 +582,128 @@
                 <input type="checkbox" id="collapsible-head">
                     <label for ="collapsible-head">References</label>    
                     <div class="collapsible-content">
+                      <cite>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/2217199/">
+                            1. de Smit MH, van Duin J. Secondary structure of the ribosome binding site determines translational efficiency: a quantitative analysis. Proc Natl Acad Sci U S A. 1990 Oct;87(19):7668-72. doi: 10.1073/pnas.87.19.7668. PMID: 2217199; PMCID: PMC54809.
+                        </a>
+                    </cite>
+     <cite>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/23034349/">
+                            2. Lou C, Stanton B, Chen YJ, Munsky B, Voigt CA. Ribozyme-based insulator parts buffer synthetic circuits from genetic context. Nat Biotechnol. 2012 Nov;30(11):1137-42. doi: 10.1038/nbt.2401. Epub 2012 Oct 3. PMID: 23034349; PMCID: PMC3914141.
+                        </a>
+                    </cite>
+    <cite>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/29420821/">
+                            3. Sterk M, Romilly C, Wagner EGH. Unstructured 5'-tails act through ribosome standby to override inhibitory structure at ribosome binding sites. Nucleic Acids Res. 2018 May 4;46(8):4188-4199. doi: 10.1093/nar/gky073. PMID: 29420821; PMCID: PMC5934652.
+                        </a>
+                    </cite>
+    
+    
+                    <cite>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/23474465/">
+                            4.Mutalik VK, Guimaraes JC, Cambray G, Lam C, Christoffersen MJ, Mai QA, Tran AB, Paull M, Keasling JD, Arkin AP, Endy D. Precise and reliable gene expression via standard transcription and translation initiation elements. Nat Methods. 2013 Apr;10(4):354-60. doi: 10.1038/nmeth.2404. Epub 2013 Mar 10. PMID: 23474465.
+                        </a>
+                    </cite>    
                         <cite>
-                            <a href="https://www.researchgate.net/post/How_to_calculate_bacterial_cells_ml_from_OD600_in_Rosetta_cells">
-                                1. https://www.researchgate.net/post/How_to_calculate_bacterial_cells_ml_from_OD600_in_Rosetta_cells [Accessed 1/10/22]
+                          <cite>
+                            <a href="https://pubs.acs.org/doi/abs/10.1021/acssynbio.2c00139">
+                                5.   Duan Y, Zhang X, Zhai W, Zhang J, Zhang X, Xu G, Li H, Deng Z, Shi J, Xu Z. Deciphering the Rules of Ribosome Binding Site Differentiation in Context Dependence. ACS Synth Biol. 2022 Aug 19;11(8):2726-2740. doi: 10.1021/acssynbio.2c00139. Epub 2022 Jul 25. PMID: 35877551.
                             </a>
                         </cite>
+        
+        
+          <cite>
+                            <a href="https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U_test">
+                                6.  Mann–Whitney U test [Accessed 10/10/2022]
+        
+        
+                            </a>
+                        </cite>
+        
+          <cite>
+                            <a href="https://pycaret.org/">
+                                7.   PyCaret software tool. https://pycaret.org/ [Accessed 10/10/2022]
+                            </a>
+                        </cite>
+        
+        <cite>
+        <a href="https://www.tbi.univie.ac.at/RNA/RNAfold.1.html">
+                                8.RNAfold software tool. https://www.tbi.univie.ac.at/RNA/RNAfold.1.html [Accessed 12/10/2022]
+                            </a>
+                        </cite>
+      
+        
+        
+                        <cite>
+                          <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">
+                              9. Principal component analysis.
+      
+       
+      
+                          </a>
+                      </cite>
+       
+      <cite>
+                          <a href="https://devopedia.org/principal-component-analysis">
+                              10.https://devopedia.org/principal-component-analysis [Accessed 9/10/22]
+       
+      
+                          </a>
+                      </cite>
+      
+      <cite>
+                          <a href="https://www.sciencedirect.com/topics/computer-science/support-vector-machine">
+                              11.https://www.sciencedirect.com/topics/computer-science/support-vector-machine
+       [Accessed 9/10/22]
+       
+      
+                          </a>
+                      </cite>
+      
+      <cite>
+                          <a href="https://ieeexplore.ieee.org/abstract/document/1260106">
+                              12. Kun-Lun Li, Hou-Kuan Huang, Sheng-Feng Tian, Wei Xu. 2003
+      Improving one-class SVM for anomaly detection.Proceedings of the 2003 International Conference on Machine Learning and Cybernetics (IEEE Cat. No.03EX693)
+       
+      
+                          </a>
+                      </cite>
+      
+      <cite>
+                          <a href="https://papers.nips.cc/paper/1999/hash/8725fb777f25776ffa9076e44fcfd776-Abstract.html">
+                              13.Bernhard Schölkopf, Robert Williamson, Alex Smola, John Shawe-Taylor, and John Platt. 1999. Support vector method for novelty detection. In Proceedings of the 12th International Conference on Neural Information Processing Systems (NIPS'99). MIT Press, Cambridge, MA, USA, 582–588.
+                          </a>
+                      </cite>
+      
+      
+                        <cite>
+                          <a href="https://www.ibm.com/topics/knn">
+                              14. https://www.ibm.com/topics/knn [Accessed 10/10/22]
+                          </a>
+                      </cite> 
+      
+      <cite>
+                          <a href="https://www.researchgate.net/publication/352017898_Point-Denoise_Unsupervised_outlier_detection_for_3D_point_clouds_enhancement">
+                              15. Regaya, Y., Faldi, F., Amire, A., Point-Denoise: Unsupervised outlier detection for 3D point clouds enhancement. July 2021 DOI: 10.1007/s11042-021-10924-x
+      
+                          </a>
+                      </cite>
+      
+      
+      <cite>
+                          <a href="https://pubmed.ncbi.nlm.nih.gov/16369541/">
+                              16.Pédelacq JD, Cabantous S, Tran T, Terwilliger TC, Waldo GS. Engineering and characterization of a superfolder green fluorescent protein. Nat Biotechnol. 2006 Jan;24(1):79-88. doi: 10.1038/nbt1172. Epub 2005 Dec 20. Erratum in: Nat Biotechnol. 2006 Sep;24(9):1170. PMID: 16369541.
+      
+                          </a>
+                      </cite>
+      
+      <cite>
+                          <a href="https://pubmed.ncbi.nlm.nih.gov/23927491/">
+                              17.Takahashi S, Furusawa H, Ueda T, Okahata Y. Translation enhancer improves the ribosome liberation from translation initiation. J Am Chem Soc. 2013 Sep 4;135(35):13096-106. doi: 10.1021/ja405967h. Epub 2013 Aug 22. PMID: 23927491.
+      
+                          </a>
+                      </cite>
+      
                 </div>
             </section>
         </div>

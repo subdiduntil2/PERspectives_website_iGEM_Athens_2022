@@ -202,25 +202,26 @@ body{
     
 .ML h1{
     font-family: 'Glacial Indifference Bold';
-    color: #61b872;
+    color: #ffc973;
     font-size: 50px;
 }
 
 .ML h2{
     font-family: 'Glacial Indifference Bold';
-    color: #61b872;
+    color: #ffc973;
     font-size: 40px;
     font-weight: 200;
 }
 
-.ML h3{
-    color: #61b872;
+.ML h3 {
+    color: #ffc973;
     font-size: 35px;
     font-weight: 200;
 }
 
+
 .img3{
-    width: 80%;
+    width: 50%;
     border-radius: 20px;
     background: #e9e9eb;
 }
@@ -302,22 +303,11 @@ body{
     font-family: 'Glacial Indifference Italics';
 }
 
-.img1a{
-    width: 40%;  
+.img1{
+    width: 45%;  
     border-radius: 20px;  
 }
-.img1b{
-    width: 40%;  
-    border-radius: 20px;  
-}
-.img1c{
-    width: 40%;  
-    border-radius: 20px;  
-}
-.img1d{
-    width: 40%;  
-    border-radius: 20px;  
-}
+
 
 
 
@@ -437,11 +427,6 @@ body{
      display:block;
 }
 
-.text-box{
-    font-size: 25px;
-    text-align: justify;
-    padding-bottom: 5%;
-}
 
 .pdf-holder{
     font-size: 25px;
