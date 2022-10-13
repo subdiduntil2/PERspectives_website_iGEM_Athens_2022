@@ -52,14 +52,16 @@ html{
 
 .overview-model{
     background-color: #050a30;
+    padding-left: 10%;
+    padding-right: 10%;
     color: #e9e9eb;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .overview-model h1{
     color: #009879;
     text-align: center;
-    font-size: 65px;
+    font-size: 60px;
     padding-top: 10px;
     font-family: 'Glacial Indifference Bold';
 }
@@ -70,7 +72,7 @@ html{
     padding-bottom: 3%;
     padding-top: 1%;
     text-align: justify;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .attention-box{
@@ -167,7 +169,7 @@ html{
 .left-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 1em;
+    padding-right: 20px;
     padding-left: 0em;
     width: 20%;
     font-size:25px;
@@ -181,7 +183,7 @@ html{
 .right-side{
     color:var(--color-white);
     margin-left: 0em;
-    padding-right: 1em;
+    padding-right: 60px;
     padding-left: 1em;
     width:80%;
     align-content: center;
@@ -191,11 +193,10 @@ html{
 .index-bar{
     position: -webkit-sticky;
     position: sticky;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    padding-left: 1em;
     margin-top: 1em;
     top:150px;
-    bottom:200px;
-    width: 70%;
 }
 
 .lateral-index{
@@ -227,14 +228,36 @@ html{
   }
   
 .index-bar ul li a:hover {
-    color: var(--yellow);
+    color: var(--light-blue);
   }
 
+/* this the after effect with the yellow line */
 
+.index-bar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+    
+.index-bar ul li a:hover::after {
+    width: 0%;
+    }
+
+
+.anchorOffset {
+    display: block !important;
+    position: relative !important;
+    top: -100px !important;
+    visibility: hidden !important;
+  }
 
 .overview-section{
     background-color: #050a30;
-    color: #61b872;
+    color: #3aa9c5;
     font-size: 35px;
     font-family: 'Glacial Indifference Bold';
     padding: 5%;
@@ -251,20 +274,25 @@ html{
 
 .inside-section{
     text-align: justify;
-    padding-right: 4%;
+    padding-right: 0%;
     padding-top: 2%;
 }  
     
 .inside-section h1{
     font-family: 'Glacial Indifference Bold';
-    color: #61b872;
+    color: #3aa9c5;
     font-size: 50px;
     font-weight: 200;
 }
 
 .inside-section h2{
-    color: #61b872;
+    color: #3aa9c5;
     font-size: 40px;
+}
+
+.inside-section h3{
+    color: #3aa9c5;
+    font-size: 30px;
 }
 
 .inside-section it{
@@ -420,6 +448,66 @@ html{
     font-weight: bold;
     color: #102a4e;
   }
+
+.download-button{
+    background-color: #050a30;
+    color: #050a30;
+    font-size: 25px;
+    text-align: center;
+    padding: 3%;
+    border-radius: 100px;
+    width: 30%;
+    transition: all ease .3s;
+}
+
+.download-button:hover{
+    background-color: #050a30;
+    color: #050a30;
+    font-size: 25px;
+    text-align: center;
+    padding: 3%;
+    border-radius: 100px;
+    width: 30%;
+    transform: translate(0, -10px);
+    box-shadow:3px 3px #61b872;
+}
+
+/* images */
+
+.s-1{
+    width: 60%;
+    border-radius: 20px;
+}
+
+.s-2{
+    width: 60%;
+    border-radius: 20px;
+}
+
+.s-3{
+    width: 60%;
+    border-radius: 20px;
+}
+
+.s-4{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.s-5{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.s-6{
+    width: 20%;
+    border-radius: 20px;
+}
+
+.s-7{
+    width: 50%;
+    border-radius: 20px;
+}
 
 @media (max-width: 1200px){
     .buttons-1{

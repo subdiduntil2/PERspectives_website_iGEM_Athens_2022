@@ -25,7 +25,7 @@
     <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
 
     <!--MathJax Import-->
-    <script type= "text/javascript" src="../../athens/static/scripts/mathjax/tex-chtml.js"></script>
+    <script type= "text/javascript" src="../static/scripts/mathjax/tex-chtml.js"></script>
     
     <title>Perspectives | Model</title>
 </head>
@@ -88,7 +88,7 @@
         <div class="index-bar">
             <ul class="lateral-index">
                 <li class="lateral-content">
-                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                    <a href="#senders"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Senders</span></a>
                 </li>
                 <li class="lateral-content">
                     <a href="#weights-s">Weights Simulation</a>
@@ -103,19 +103,19 @@
                     <a href="#results-s">Results</a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                    <a href="#receivers"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Receivers</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                <a href="#stability"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Stability Analysis</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                <a href="#pattern"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Pattern Recognition</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Diffusion</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">References</span></a>
             </li>
             </ul>
         </div>
@@ -128,6 +128,7 @@
             <a id="weights-s" class="anchorOffset"></a>
             <br>
             <h1>pTeT Promoter</h1>
+            <br>
             The purpose of our team is to create 3x1 patterns of E.coli senders subpopulations that express the <it>LuxI</it> gene at a different, desirable rate.
             <br> 
             To achieve this, we designed a regulatory system based on the <span style="color: #61b872;">pTet promoter</span>. Given that there is no aTc in the system, the promoter is repressed by the TetR regulator. If aTc is present in the system, then it binds with the TetR, creating a complex, that is pumped out of the cell, allowing the mRNA of the following gene to be produced. For the production of the TetR our team used a <span style="color: #61b872;">constitutive promoter</span> from the iGEM Registry.
@@ -154,12 +155,16 @@
             1. The <span style="color: #ef4b4c;">strong intensity RBSs</span> intensity RBSs, with translation rate <span style="color: #ef4b4c;">more than 90000 au</span>.<br> 
             2. The <span style="color: #f38545f1;">medium intensity RBSs</span>, with translation rate around <span style="color: #f38545f1;">25000-40000 au</span>.<br> 
             3. The <span style="color: #61b872">weak intensity RBSs</span>, with translation rate  <span style="color: #61b872">less than 15000 au</span>.<br> <br> 
-            Practically, therefore, a library of RBSs emerged from which the strong ones would simulate a high weight, those with a moderate translation rate a moderate weight while the weak RBSs simulate the low weights for the perceptron.<br> <br> 
+            Practically, therefore, a library of RBSs emerged from which the strong ones would simulate hight weights, those with a moderate translation rate a moderate weight while the weak RBSs simulate the low weights for the perceptron.<br> <br> 
 
-            You can download our RBS Library <a href="https://static.igem.wiki/teams/4294/wiki/model/model/team-athens-rbs-library.csv">here</a>.<br><br>
+            <center>
+            <div class="download-button">
+            <h3><a href="https://static.igem.wiki/teams/4294/wiki/model/model/team-athens-rbs-library.csv">Download our RBS Library</a></h3>        
+            </div>
+            </center>
+            <br><br>
 
-
-            Finally, the RBSs that were going to be tested in the lab were:<br> <br> 
+            Finally, the RBSs that we decided to test in the lab are the following:<br> <br> 
 
 
             <center>
@@ -172,61 +177,61 @@
                     </thead>
                     <tbody>
                       <tr>
+                        <td>BCD2</td>
+                        <td>287840.97</td>
+                        <td><span style="color: #ef4b4c;">Very Strong</span></td>
+                      </tr>
+                      <tr class="active-row">
                         <td>S4</td>
                         <td>85298.9</td>
-                        <td>Strong</td>
-                      </tr>
-                      <tr class="active-row">
-                        <td>S5</td>
-                        <td>78686.2</td>
-                        <td>Strong</td>
-                      </tr>
-                      <tr>
-                        <td>S10</td>
-                        <td>31126.5</td>
-                        <td>Medium</td>
-                      </tr>
-                      <tr class="active-row">
-                        <td>S11</td>
-                        <td>30580.8</td>
-                        <td>Medium</td>
-                      </tr>
-                      <tr>
-                        <td>S12</td>
-                        <td>11058.3</td>
-                        <td>Weak</td>
-                      </tr>
-                      </tr>
-                      <tr class="active-row">
-                        <td>S13</td>
-                        <td>10752.1</td>
-                        <td>Weak</td>
+                        <td><span style="color: #ef4b4c;">Strong</span></td>
                       </tr>
                       <tr >
-                        <td>BCD1</td>
-                        <td>9455.2</td>
-                        <td>Weak</td>
+                        <td>S5</td>
+                        <td>78686.2</td>
+                        <td><span style="color: #ef4b4c;">Strong</span></td>
                       </tr>
                       <tr class="active-row">
-                        <td>BSD2</td>
-                        <td>287840.97</td>
-                        <td>Very Strong</td>
+                        <td>S10</td>
+                        <td>31126.5</td>
+                        <td><span style="color: #f38545f1;">Medium</span></td>
+                      </tr>
+                      <tr >
+                        <td>S11</td>
+                        <td>30580.8</td>
+                        <td><span style="color: #f38545f1;">Medium</span></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>S12</td>
+                        <td>11058.3</td>
+                        <td><span style="color: #61b872;">Weak</span></td>
+                      </tr>
+                      </tr>
+                      <tr >
+                        <td>S13</td>
+                        <td>10752.1</td>
+                        <td><span style="color: #61b872;">Weak</span></td>
+                      </tr>
+                      <tr class="active-row">
+                        <td>BCD1</td>
+                        <td>9455.2</td>
+                        <td><span style="color: #61b872;">Weak</span></td>
                       </tr>
                       <tr >
                         <td>BCD8</td>
                         <td>2190.04</td>
-                        <td>Weak</td>
+                        <td><span style="color: #61b872;">Weak</span></td>
                       </tr>
                       <tr class="active-row">
                         <td>BSD12</td>
                         <td>12782.75</td>
-                        <td>Weak</td>
+                        <td><span style="color: #61b872;">Weak</span></td>
                       </tr>
                        </tr>
                       <tr>
                         <td>BCD14</td>
                         <td>22019.63</td>
-                        <td>Weak</td>
+                        <td><span style="color: #61b872;">Weak</span></td>
                       </tr>
                     
                       
@@ -234,16 +239,18 @@
                 </table>
         
             <figcaption>
-                Table 1: RBSs for experimental use
+                Table 1: Final RBSs chosen for experimental use.
             </figcaption>
             </center>
             <br><br>
 
             <h1>Using Quorum Sensing to stimulate the weighted sum of the neural network</h1>
             <br>
-            In order to be able to simulate the weighted sum in the perceptron, we took advantage of the natural way bacteria communicate, the quorum sensing mechanism. So our ‘Senders’ subpopulation must be able to express the LuxI gene. The expression of that gene was regulated by the aTc promoter mentioned above. In this way, if we wanted to stimulate a small weight, we would use the aTc promoter followed by the LuxI gene with a low intensity RBS. And we would do the same thing respectively to simulate a medium or high perceptron weight. In this way every subpopulation of the senders would produce a specific amount of AHL which is determined by the RBS we used. By combining them together, we would have achieved the simulation of the weighted sum of the perceptron by adding up the total amount of lactone produced by each subpopulation. 
+            In order to be able to simulate the weighted sum of the perceptron, we took advantage of the natural way bacteria communicate, the quorum sensing mechanism. Thus, our senders subpopulation must be able to express the <it>LuxI </it>gene. The expression of the gene is regulated by the aTc promoter mentioned above. In this way, if we wanted to stimulate a small weight, we would use the aTc promoter followed by the LuxI gene with a low intensity RBS. Moreover we would do the same thing respectively to simulate a medium or high perceptron weight. In this way every subpopulation of the senders would produce a specific amount of AHL which is determined by the RBS we used. By combining them together, we would have achieved the simulation of the weighted sum of the perceptron by adding up the total amount of lactone produced by each subpopulation. 
             <br><br>
-            Senders’ Circuit Overview. TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested, please refer to Engineering Success) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription. Senders’ Circuit Overview. TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested, please refer to Engineering Success) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription.
+            <b>Senders' Circuit Overview:</b>
+          
+            TetR is expressed by a constitutive promoter (BBa_J23106 and PlacI were tested) and the BBa_B0034 RBS. It binds to specific operators in the Ptet promoter and blocks RNA polymerase binding and, thus, transcription. Please refer to <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> page for more details.
         
             <br><br>
 
@@ -260,8 +267,10 @@
     
                 <h1>Biochemical Reactions</h1>
                 <br>
-                For the kinetic modelling of the sender's system, we had to convert all the above design into biochemical equations, each of which will be characterized by its own rate of consumption or production of the chemical species. The resulting equations are:
+                For the kinetic modelling of the senders' system, we had to convert all the aforementioned design into biochemical equations, each of which is characterized by its own rate of consumption or production of the chemical species. The resulting equations are:
                 <br><br>
+
+    
                 1. ∅ → TetR <br>
                 2. TC + TetR→TetRTC<br>
                 3. TetRTC + Ptetoff  ↔ Pteton<br>
@@ -271,12 +280,12 @@
                 7. TC→ ∅<br>
                 8. TetRTC → ∅<br>
                 9. mRNALuxI → ∅<br>
-                
+      
 
                 <br><br>
                 Equation (1) describes the production of TetR by the constitutive promoter. Equation (2) describes the formation of the TetR+aTc comlex when aTc is present in the system and this formation leads to equation (3) describing the activation of the Ptet promoter.  Equations (4) and (6) describe the translation of the gene and finally the production of the LuxI enzyme. Equation (5) represents the deactivation of the Ptet promoter when aTc has been consumed. Finally, equations (7),(8) and (9) represent the degradation of the main chemical species of a aTc, the complex TetR+aTc and the mRNA respectively [1].
                 <br><br>
-                Once the LuxI gene has been expressed, the enzymatic reaction of the formation of the quorum sensing molecule (AHL) is taking place. The reaction is considered to be of a first order kinetic since the substrate of the enzyme reaction is produced naturally and abundantly within the cell. 
+                Once the <it>LuxI</it> gene has been expressed, the enzymatic reaction of the formation of the quorum sensing molecule (AHL) is taking place. The reaction is considered to be of a first order kinetic since the substrate of the enzyme reaction is produced naturally and abundantly within the cell. 
 
 
             </section> 
@@ -292,7 +301,7 @@
             
                 <b>Single cell model</b>
                 <br><br>
-                Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation of the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
+                Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation of the differential equations, both production and consumption as well as the degradation rates were taken into account. The <b>production</b> and <b>consumption rates</b> of each chemical can be represented by the following differential equations:
                 <br><br>
 
                 <div class="equations">
@@ -315,7 +324,7 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI] \)
+                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI]] \)
                 </p>
                 </div><br><br>
 
@@ -325,16 +334,15 @@
                 </p>
                 </div><br><br>
 
-                At this point it would be useful to mention the different assumption made for the single cell kinetic model:
+                At this point it would be useful to mention the different <b>assumptions</b> made for the single cell kinetic model:
                 <br><br>
-                1. We assume that the expression of a gene can be fully characterised by a Hill Equation.<br>
-                2. We assume that the production of the AHL by the LuxI enzyme is a first order kinetic reaction, so the ODE describing this reaction is formed respectively.<br><br>
+                1. We assume that the expression of a gene can be <b>fully characterised by a Hill Equation</b>.<br>
+                2. We assume that the production of the AHL by the LuxI enzyme is a <b>first order kinetic reaction</b>, so the ODE describing this reaction is formed respectively.<br><br>
 
-                <br><br>
                 Equations (1),(2) and (3) describe the change of the concentration of TetR, the complex TetR+aTc and the LuxI enzyme respectively. Equation (4) is the representation of the first order enzymatic reaction that expresses the change of the concentration of the lactone that is the quorum sensing molecule. The total amount of this lactone simulates the weighted sum of the artificial neural network. 
                 <br><br>
 
-                Initially, the kinetic constants for the one-cell model were found in the literature as we needed to analyze the system and have an indicative value for the amount of lactone produced over time and to choose whether the plasmids we would medium or high copy. We followed very specific criteria for the choice of kinetic constants. We always checked if the experiments in the research works from which we were inspired used the same microorganisms as us and the same experimental conditions as those that we would develop our system. By keeping the desired amount of AHL produced constant, we ran our Python scripts and concluded that the copy number of the plasmid used at the Senders’ system should be low. You can find the python scripts <a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/senders_model_all.ipynb">here</a>.
+                Initially, the kinetic constants for the one-cell model were found in the literature as we needed to analyze the system and have an indicative value for the amount of lactone produced over time and to choose whether the plasmids we would medium or high copy. We followed very specific criteria for the choice of kinetic constants. We always checked if the experiments in the research works from which we were inspired, used the same microorganisms as us and the same experimental conditions as those that we would develop our system. By keeping the desired amount of AHL produced constant, we ran our model and concluded that the copy number of the plasmid used at the senders' system should be low. 
 
                 The the matrix below consists of the initial values of our kinetic constants found in literature:
                 <br><br>
@@ -489,30 +497,36 @@
             
                 </center> 
                 <br><br>
-                In terms of the non-literature values, those are obtained by the In Silico Tool of Salislab, which offered a proportional scale of strength for our promoter and rbs constructs. In order to convert them to time-scale parameters.
+                In terms of the non-literature values, those are obtained by the In Silico Tool of Salislab that offered a proportional scale of strength for our promoter and rbs constructs. 
                 <br><br>
-                For Translation Rates: The maximum possible translation rate offered by salislab is around 250000 a.u. which corresponds to the maximum elongation rate, i.e 18 aminoacids/sec. Knowing that each amino acid has 3nucleotides, the following time-scale formula emerges:
+                <h2>Time Scale Convertion</h2>
+                <br>
+                <h3>Translation Rates</h3>
+                The maximum possible translation rate offered by salislab is around 250000 a.u. which corresponds to the maximum elongation rate, i.e 18 aminoacids/sec. Knowing that each amino acid has 3nucleotides, the following time-scale formula emerges:
                 <br><br>
                 k_gene=(4.14 proteins/mRNA/second)*[TIR_salis/250000]
                 <br><br>
 
-                For Transcription Rates: In a similar manner, the maximum transcription elongation rate in E.Coli is 90nts/sec  and the RNA polymerase II footprint was found to be 40 nucleotides [4]. Finding out that the maximum transcription rate of Salislab is 100000 a.u. ,we have the formula: 
+                <h3>Transcription Rates</h3> In a similar manner, the maximum transcription elongation rate in E.Coli is 90nts/sec and the RNA polymerase II footprint was found to be 40 nucleotides [4]. Finding out that the maximum transcription rate of Salislab is 100000 a.u. ,we have the formula: 
                 <br><br>
-                    p_gene=(90/40)*(TIR_salis/100000), or
-                    <br><br>
-                    p_gene=2.25*(TIR_salis/100000)
-                    <br><br>
-                The formulas were used  in order to receive the time-scale values of our constructs
+                <div class="equations">
+                  \( p_{gene}=(90/40)*(TIR_{salis}/100000) \), or
+                  <br><br>
+                  \( p_{gene}=2.25*(TIR_{salis}/100000) \)
+                  <br><br>
+                </div>
+                   
+                The above formulas were used  in order to receive the time-scale values of our constructs.
                 <br><br>
                 <b>Whole cell model</b>
                 <br><br> 
 
-                Then, wanting to have a complete picture of our overall system at the level of bacterial populations, we upgraded our model for multiple cells. The scale-up had to include the study of phenomena such as the growth of the bacterial population and how this affects the amount of lactone produced as well as the diffusion of the lactone in and out of the cells. Assumptions made for the whole cell kinetic model:
+                Then, wanting to have a complete picture of our overall system at the level of bacterial populations, we upgraded our model for multiple cells. The scale-up had to include the study of phenomena such as the growth of the bacterial population and how this affects the amount of lactone produced as well as the diffusion of the lactone in and out of the cells. The assumptions made for the whole cell kinetic model are the following:
                 <br><br>
-                1. We assume that the expression of a gene can be fully characterised by a Hill Equation <br> 
-                2. We assume that the production of the AHL by the LuxI enzyme is a first order kinetic reaction, so the ODE describing this reaction is formed respectively<br>
-                3. We assume that the diffusion of the lactone outside the cells is characterized by the same Fick’s constant as the diffusion of the lactone inside the cells<br>
-                4. We assume that the growth of the bacterial population is occurs logarithmically<br><br> 
+                1. We assume that the expression of a gene can be <b>fully characterised by a Hill Equation</b>.<br> 
+                2. We assume that the production of the AHL by the <it>LuxI</it> enzyme is a <b>first order kinetic reaction</b>, so the ODE describing this reaction is formed respectively.<br>
+                3. We assume that the diffusion of the lactone outside the cells is characterized by the <b>same Fick's constant</b> as the diffusion of the lactone inside the cells.<br>
+                4. We assume that the <b>growth of the bacterial population</b>  occurs <b>logarithmically</b>.<br><br> 
 
 
                 The production and consumption rates of each chemical can be represented by the following added differential equations:
@@ -562,7 +576,7 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_tet]^n} + [TetR]^n} - d_{LuxI} [LuxI] \)
+                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * (\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI]) \)
                 </p>
                 </div><br><br>
 
@@ -589,7 +603,17 @@
 
 
                 Equation (1) is a representation of how the number of cells is growing with time. Equations (2) and (3) explain how the concentration of the aTc inducer is changing inside and outside of a cell due to diffusion, and similarly equations (8) and (9) describe the diffusion phenomena for AHL-OC6. 
+                <br><br>
 
+                <h2>Model Development</h2>
+                In order to develop our model, we used python programming language. More specifically, we used the the libraries <a href="https://scipy.org/">scipy</a> and <a href="https://pypi.org/project/lmfit/">lmfit</a>. lmfit provides a <b>Least-Squares Minimization</b> routine and class with a simple, flexible approach to parameterizing a model for fitting to data. More information on the senders model as well as the results of our experiments can be found in our GitLab repository <a href="https://gitlab.igem.org/2022/software-tools/athens/-/tree/main/Model">here</a>.<br><br>
+
+                <center>
+                <div class="download-button">
+                <h3><a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/senders_model_all.ipynb">Senders Model Code</a></h3>        
+                </div>
+                </center>
+                
             </section> 
 
             <section class="inside-section">
@@ -599,39 +623,36 @@
                 <h1>Results</h1>
                 <br>
 
-                As mentioned above, the initial purpose of our kinetic model-both the single cell and the whole cell versions-was to get a respectable understanding of our system and its various parts not only in the time domain as well as for different aTc inputs, even with a limited amount of experimental data. That should be implemented both for the single-cell and for the whole cell models, before model fit to the experimental data would be executed. 
+                As mentioned above, the initial purpose of our kinetic model-both for the single cell and the whole cell versions-was to understand our system and its various parts, not only in the time domain, but also  its behavior based on the different aTc inputs, even with a limited amount of experimental data. To that end initially, we performed some experiments based, for which the parmaeters of the system we tuned based on the current literature. In this way, we obtained some preliminary results on the systems behavior that were shared and discussed with the wet lab. More information on the <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> page. 
                 <br><br>
 
-                <h2>Time-scale</h2>
-                <br>
-                In time domain, our kinetic model for the BCD2 RBS variant showed the following results (at full induction aTc=10**(-4) M )
-
-
+                The results presented below refere to our kinetic model of the <b>BCD2</b> RBS variant, at <b>full induction</b> (aTc=10**(-4) M ).
                 <br><br>
                 
-                <h2>For the single-cell model
+                <h2>Single-Cell Model
                 </h2>
                 <br>
                 <center>
                 <img class="s-2" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-2.png">
                 <figcaption>
-                    Figure 2: Change in concentration of chemical species after solving the ODs for the single-cell model                 
+                    Figure 2: Change in concentration of chemical species after solving the ODs for the single-cell model.               
                 </figcaption>
                 </center>
                 <br>
 
-                <h2>For the whole-cell model
+                <h2>Whole-Cell Model
                 </h2>
                 <br>
                 <center>
                 <img class="s-3" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-3.png">
                 <figcaption>
-                    Figure 3: Change in concentration of chemical species after solving the ODs for the whole-cell model 
+                    Figure 3: Change in concentration of chemical species after solving the ODs for the whole-cell model.
                 </figcaption>
                 </center>
                 <br>
 
-                From the graphs above, we can clearly comprehend the following:<br><br>
+                <h3>Discussion</h3>  
+                From the graphs above, we can comprehend the following:<br>
                 1. The concentration of external and internal aTc follows similar values, due to a significant decrease of volume from the external volume of the bead (at 200μL) to the Vecoli (at around 1000pL). This was also experimentally validated by [5] where a maximum 10-fold gap between extracellular and intracellular aTc was observed (see Supplementary Table 10).<br>
                 2. The diffusion of aTc is immediate leading to an instant reduction of the TetR Repressor. However, at around the 3h mark the entire aTc concentration tends to zero, which subsequently brings back the TetR repressor and diminishes the amount of AHL produced.<br>
                 3. In the whole cell model, we observe a decrease of the internal AHL molecules due to the fast diffusion phenomena throughout the E.coli membrane (described by the D_AHL constant). The entire AHL amount of the cell culture is estimated at 5*10**(11) molecules (for a 200μL Bead).<br><br>
@@ -646,12 +667,12 @@
                 </figcaption>
                 </center>
                 <br><br>
-                As we can clearly observe, the lack of diffusion phenomena in the first modelling approach lead to a false estimate of the aTc value required for full induction of the senders population. As a result, our team decided to keep the whole cell model for parameter fitting and simulations, since it would correlate better with the complex conditions of our lab experiments.
+                As we observe, the lack of diffusion phenomena in the first modelling approach lead to a false estimate of the aTc value required for full induction of the senders population. As a result, our team decided to <b>keep the whole cell model for parameter fitting and simulations</b>, since it would correlate better with the complex conditions of our wets lab experiments.
                 <br><br>
                 <h2>Lab Data Comparison and Model Fit
                 </h2>
-                <br><br>
-                At first, a straight-comparison of our literature whole-cell model with the lab induction data was required in order to view differences and fault estimates.
+                <br>
+                At first, a straight-comparison of our literature whole-cell model with the lab induction data was required in order to compare the two models, detect the differences and fault estimates.
                 <br><br>
 
                 <center>
@@ -662,26 +683,26 @@
                 </center>
                 <br><br> 
 
-                It is obvious that despite its ability to predict the experimental value of LuxI measured at full induction, our model lacked the capability to accurately predict the initiation of induction. Due to that fact, a model fitting method-via error minimization-was required in order to obtain the correct model parameters. In particular, we used the Python library lmfit and the routine minimize() with the integrated Nelder-Mead Algorithm in order to perform our parameter optimization.
+                Despite its ability to predict the experimental value of LuxI measured at full induction, our literature model lacked the capability to accurately predict the initiation of induction. Due to that fact, a model fitting method-via error minimization-was required in order to obtain the correct model parameters. As metnioned previously, we used the python library <a href="https://pypi.org/project/lmfit/">lmfit</a> and more specifically the routine <b>minimize()</b> with the integrated <b>Nelder-Mead slgorithm</b> in order to perform our parameter optimization.
                 <br><br> 
-                In terms of the Nelder-Mead Algorithm, it is a numerical method used to find the minimum or maximum of an objective function in a multidimensional space. It is a direct search method (based on function comparison) and is often applied to nonlinear optimization problems for which derivatives may not be known. 
+                Nelder-Mead algorithm is a numerical method used to find the minimum or maximum of an objective function in a multidimensional space. It is a direct search method (based on function comparison) and is often applied to nonlinear optimization problems for which derivatives may not be known. A simple flow-chart of the Nelder-Mead algorithm is presented below:
                 <br><br> 
 
                 <center>
                     <img class="s-6" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-6.png">
                     <figcaption>
-                        Figure 6:A simple flow-chart of the Nelder-Mead algorithm [6]
+                        Figure 6: Flow-chart of the Nelder-Mead algorithm. [6]
                                     </figcaption>
                     </center>
                     <br><br> 
-                    On the table below, we show the parameters opted to be fitted to our experimental data as well as the fitting results for the BCD 2 RBS:
+                    On the table below, we show the parameters opted to be fitted to our experimental data as well as the fitting results for the BCD 2 RBS. For each parameter you can find: the parameter symbol, description, the value obtained from literature review and its source and finally the calculated value, based on the experimental data fit.:
                     <br><br>
                     <center>
                     <table class="content-table">
                         <thead>
                           <tr>
                             <th>Symbol</th>
-                            <th>Meaning</th>
+                            <th>Description</th>
                             <th>Literature Value</th>
                             <th>Source</th>
                             <th>Fitted Value</th>
@@ -772,10 +793,10 @@
         <div class="index-bar">
             <ul class="lateral-index">
                 <li class="lateral-content">
-                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                    <a href="#senders"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Senders</span></a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                    <a href="#receivers"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Receivers</span></a>
                 </li>
                 <li class="lateral-content">
                     <a href="#oplo">Constructs</a>
@@ -790,16 +811,16 @@
                     <a href="#results-r">Results</a>
                 </li>
                 <li class="lateral-content">
-                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                <a href="#stability"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Stability Analysis</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                <a href="#pattern"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Pattern Recognition</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                <a href="#diffusion"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Diffusion</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+                <a href="#references"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">References</span></a>
             </li>
             </ul>
         </div>
@@ -1668,25 +1689,25 @@
         <div class="index-bar">
             <ul class="lateral-index">
                 <li class="lateral-content">
-                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                    <a href="#senders"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Senders</span></a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                    <a href="#receivers"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Receivers</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                <a href="#stability"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Stability Analysis</span></a>
                 </li>
                 <li class="lateral-content">
                     <a href="#overview-stability">Overview</a>
                 </li>
                 <li class="lateral-content">
-                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                <a href="#pattern"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Pattern Recognition</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                <a href="#diffusion"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Diffusion</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+                <a href="#references"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">References</span></a>
             </li>
             </ul>
         </div>
@@ -1978,25 +1999,25 @@
         <div class="index-bar">
             <ul class="lateral-index">
                 <li class="lateral-content">
-                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                    <a href="#senders"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Senders</span></a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                    <a href="#receivers"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Receivers</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                <a href="#stability"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Stability Analysis</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                <a href="#pattern"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Pattern Recognition</span></a>
                 </li>
                 <li class="lateral-content">
                 <a href="#overview-pattern">Overview</a>
                 </li>
                 <li class="lateral-content">
-                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                <a href="#diffusion"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Diffusion</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+                <a href="#references"><span style="font-size: 25px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">References</span></a>
             </li>
             </ul>
         </div>
@@ -2298,19 +2319,19 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
         <div class="index-bar">
             <ul class="lateral-index">
                 <li class="lateral-content">
-                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Senders</span></a>
+                    <a href="#senders"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Senders</span></a>
                 </li>
                 <li class="lateral-content">
-                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Receivers</span></a>
+                    <a href="#receivers"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Receivers</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Stability Analysis</span></a>
+                <a href="#stability"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Stability Analysis</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Pattern Recognition</span></a>
+                <a href="#pattern"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Pattern Recognition</span></a>
                 </li>
                 <li class="lateral-content">
-                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">Diffusion</span></a>
+                <a href="#diffusion"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">Diffusion</span></a>
                 </li>
                 <li class="lateral-content">
                 <a href="#comsol">COMSOL</a>
@@ -2322,7 +2343,7 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
                 <a href="#results-comsol">Results</a>
                 </li>
                 <li class="lateral-content">
-                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #61b872;">References</span></a>
+                <a href="#references"><span style="font-size: 28px; font-family: 'Glacial Indifference Bold'; color: #3aa9c5;">References</span></a>
             </li>
             </ul>
         </div>
