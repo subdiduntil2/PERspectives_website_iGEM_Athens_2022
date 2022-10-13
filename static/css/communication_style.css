@@ -357,13 +357,13 @@ body{
     height: 100%;
     width: 100%;
 }
-.container_biochem #slider-img-bio-1{
+.container_biochem #chem-img-bio-1{
     background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/biochem2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.container_biochem #slider-img-bio-2{
+.container_biochem #chem-img-bio-2{
     background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/biochem-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
