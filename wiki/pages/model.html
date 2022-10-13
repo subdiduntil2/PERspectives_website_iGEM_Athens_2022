@@ -306,31 +306,31 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[ATC_{int}]}{dt} = k_{-comlex}[complex]- k_{complex}[ATC_{int}][TetR] - d_{ATC}[ATC_{int}] \)
+                \(\frac{d[ATC_{int}]}{dt} = k_{-comlex}[complex]- k_{complex}[ATC_{int}][TetR] - d_{ATC}[ATC_{int}] \ (1) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[tetR]}{dt} = \frac{p_{J23105} * k_{tetr} * CN_{senders}}{d_{mRNATetR}} + k_{-complex} [complex] - k_{complex} [ATC_{int}] [TetR] - d_{TetR} [TetR] \)
+                \(\frac{d[tetR]}{dt} = \frac{p_{J23105} * k_{tetr} * CN_{senders}}{d_{mRNATetR}} + k_{-complex} [complex] - k_{complex} [ATC_{int}] [TetR] - d_{TetR} [TetR] \ (2) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations"> 
                 <p>
-                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex}[complex] - d_{complex}[complex]\)
+                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex}[complex] - d_{complex}[complex] \ (3)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI]] \)
+                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * [\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI]] \ (4) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{int}]}{dt} = k_{A} [LuxI] - d_{AHL} [AHL] \)
+                \(\frac{d[AHL_{int}]}{dt} = k_{A} [LuxI] - d_{AHL} [AHL] \ (5)\)
                 </p>
                 </div><br><br>
 
@@ -534,27 +534,27 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \)
+                \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \ (1) \)
                 </p>
                 </div><br><br>
 
 
                 <div class="equations">
                 <p>
-                \(\frac{d[ATC_{ext}]}{dt} = D_{ATC} [N] ([ATC_{int}] - \frac{V_{E.Coli}}{V_{bead}} [ATC_{ext}]) - d_{ATC} [ATC_{ext}] \) 
+                \(\frac{d[ATC_{ext}]}{dt} = D_{ATC} [N] ([ATC_{int}] - \frac{V_{E.Coli}}{V_{bead}} [ATC_{ext}]) - d_{ATC} [ATC_{ext}] \ (2) \) 
                 </p>
                 </div><br><br>
 
 
                 <div class="equations">
                 <p>
-                \(\frac{d[ATC_{int}]}{dt} = D_{ATC} * (\frac{V_{E.Coli}}{V_{bead}} [ATC_{ext}]  - [ATC_{int}]) + k_(-complex)[comlex] -k_{complex} [ATC_{int}][TetR] -d_{ATC} [ATC_{int}] \)
+                \(\frac{d[ATC_{int}]}{dt} = D_{ATC} * (\frac{V_{E.Coli}}{V_{bead}} [ATC_{ext}]  - [ATC_{int}]) + k_(-complex)[comlex] -k_{complex} [ATC_{int}][TetR] -d_{ATC} [ATC_{int}] \ (3) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[tetR]}{dt} = \frac{p_{J23105} * k_{tetr} * CN_{senders}}{d_{mRNATetR}} + k_{-complex} [complex] - k_{complex} [ATC_{int}] [TetR] - d_{TetR} [TetR] \)
+                \(\frac{d[tetR]}{dt} = \frac{p_{J23105} * k_{tetr} * CN_{senders}}{d_{mRNATetR}} + k_{-complex} [complex] - k_{complex} [ATC_{int}] [TetR] - d_{TetR} [TetR] \ (4) \)
                 </p>
                 </div><br><br>
 
@@ -562,42 +562,35 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex} [complex] - d_{complex} [complex]\)  
-                </p>
-                </div><br><br>
-
-
-                <div class="equations">
-                <p>
-                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex} [complex] - d_{complex} [complex]\)
+                \(\frac{d[complex]}{dt} = k_{complex}[ATC_{int}][TetR] - k_{-complex} [complex] - d_{complex} [complex] \ (5)\)  
                 </p>
                 </div><br><br>
 
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * (\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI]) \)
+                \(\frac{d[LuxI]}{dt} = \frac{p_{tet} * k_{LuxI} * CN_{senders}}{d_{mRNALuxI}} * (\frac{Kd_{tet}^n}{Kd_{tet}^n + [TetR]^n} - d_{LuxI} [LuxI]) \ (6) \)
                 </p>
                 </div><br><br>
 
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL]}{dt} =k_{A} [LuxI] - d_{AHL} [AHL] \)
+                \(\frac{d[AHL]}{dt} =k_{A} [LuxI] - d_{AHL} [AHL] \ (7) \)
                 </p>
                 </div><br><br>
 
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{int}}{dt} = k_{A} [LuxI] + D_{AHL} ( \frac{V_{E.Coli}}{V_{bead}} [AHL_{ext}]) - d_{AHL} [AHL_{ext}] \)
+                \(\frac{d[AHL_{int}}{dt} = k_{A} [LuxI] + D_{AHL} ( \frac{V_{E.Coli}}{V_{bead}} [AHL_{ext}]) - d_{AHL} [AHL_{ext}] \ (8) \)
                 </p>
                 </div><br><br>
 
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{ext}}{dt} = D_{AHL} [N] ( [AHL_{int}] \frac{V_{E.Coli}}{V_{bead}} [AHL_{ext}]) - d_{AHL} [AHL_{ext}] \)
+                \(\frac{d[AHL_{ext}}{dt} = D_{AHL} [N] ( [AHL_{int}] \frac{V_{E.Coli}}{V_{bead}} [AHL_{ext}]) - d_{AHL} [AHL_{ext}] \ (9) \)
                 </p>
                 </div><br><br>
 
@@ -625,6 +618,8 @@
 
                 As mentioned above, the initial purpose of our kinetic model-both for the single cell and the whole cell versions-was to understand our system and its various parts, not only in the time domain, but also  its behavior based on the different aTc inputs, even with a limited amount of experimental data. To that end initially, we performed some experiments based, for which the parmaeters of the system we tuned based on the current literature. In this way, we obtained some preliminary results on the systems behavior that were shared and discussed with the wet lab. More information on the <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> page. 
                 <br><br>
+
+                It should be noticed that due to the fact that the TetR anc kd_tet values are of similar scale, the  <a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/senders_model_all.ipynb">repressible model script</a> couldn't produce the expected results, especially when we tried to fit parameters via the lmfit() library. As a result, in terms of coding, we used an inducible system for the production of LuxI by the TetR-aTc complex, since it didn't lead to misfit errors.
 
                 The results presented below refere to our kinetic model of the <b>BCD2</b> RBS variant, at <b>full induction</b> (aTc=10**(-4) M ).
                 <br><br>
@@ -698,7 +693,7 @@
                     On the table below, we show the parameters opted to be fitted to our experimental data as well as the fitting results for the BCD 2 RBS. For each parameter you can find: the parameter symbol, description, the value obtained from literature review and its source and finally the calculated value, based on the experimental data fit.:
                     <br><br>
                     <center>
-                    <table class="content-table">
+                    <table class="content-table" id="tb3">
                         <thead>
                           <tr>
                             <th>Symbol</th>
@@ -756,7 +751,7 @@
                         </tbody>
                     </table>
                     <figcaption>
-                        Table 3: Fitted values for kinetic constants
+                        Table 3: Kinetic constants overview.
                     </figcaption>
                     </center>
                     <br><br>
@@ -764,11 +759,13 @@
                 <center>
                 <img class="s-7" src="https://static.igem.wiki/teams/4294/wiki/model/model/senders-figure-7.png">
                 <figcaption>
-                    Model fitting for senders constants for RBS BCD2.
+                    Figure 7: Model fitting for senders parameters for RBS BCD2.
                 </figcaption>
                 </center>
                 <br><br> 
-                The parameters chosen above where quite obviously the main reason for the difference between the experimental and the theoretical model results; The dissociation constant is a crucial value for our system since it determines the input aTc on which the induction will begin and on our case the literature value was a bit too high for our own system. On the other hand, salislab-despite its paramount value as a bioinformatics tool-mainly offer proportional values so the production rates it offered were almost certainly to be a bit inaccurate. Endly, the binding affinity has to do with the steepness of the plotted curve and is also a variable dependent on the experimental setup and measurements. The whole-cell fitted model of the senders will be used in the <a href="#pattern">pattern recognition</a> section (link) where the communication of the senders and the receivers cultures will be simulated.
+                As noted in <a href="#tb3">Table 3</a>, the theoretical model that was created based on the parametes we obtained by literature review, deviates from the model that was created based on the fitting of the experimental data. More specifically, there is a big deviation between the known and predicted  dissociation constant. The dissociation constant is a crucial value for our system since it determines the input aTc on which the induction will begin and on our case the literature value was a bit too high for our own system. Moreover, the parameters that were based on the proportional values for the RBSs obtained from the Salis RBS caluclator seem to not agree with our experimental data. Finally, the binding affinity is also a variable dependent on the experimental setup and measurements. Binding affinity corresponds to do with the steepness of the plotted curve. 
+                <br><br>
+                The whole-cell fitted model of the senders was used for the implementaion of the pattern recognition (see more in the <a href="#pattern">Pattern Recognition</a> section), where the communication of the senders and the receivers cultures is simulated.
             
                 
             </section> 
@@ -850,7 +847,8 @@
 
             <b>Construct no.2: PFR Loop</b>
             <br>
-            The PFR construct aims to increase the steepness of our activation function via the following process; The LuxR promoter is a leaky one and thus its leakiness provides a baseline production of LuxR that after the addition of OC6 will activate the production of more LuxR and thus LuxR-AHL. The LuxR-AHL dimer produced will then induce the production of mNeonGreen (as in the OpLo case) and it will simultaneously repress the production of phlf, via a LuxR repressible promoter. The phlf is responsible for the repression of the mneongreen construct, so its repression will - alongside the induction by LuxR-AHL-will lead to a simultaneous increase in the output concentration. The simultaneous control of mneongreen by the LuxR-AHL dimer and the phlf repressor is accomplished via a pLux-phlo hybrid promoter. This produces a steeper activation function than the Open Loop circuit, as we will see in the results section. 
+            The PFR construct aims to <b>increase the steepness</b> of our activation function via the following process:<br>
+            The LuxR is a leaky promoter and thus its leakiness provides a baseline production of LuxR that after the addition of OC6 will activate the production of more LuxR and thus LuxR-AHL. The LuxR-AHL dimer produced will then induce the production of mNeonGreen (as in the OpLo case) and it will simultaneously repress the production of phlf, via a LuxR repressible promoter. The phlf is responsible for the repression of the mNeonGreen construct, so its repression , along with the induction by LuxR-AHL, will lead to a simultaneous increase in the output concentration. The simultaneous control of mNeonGreen by the LuxR-AHL dimer and the phlf repressor is accomplished via a pLux-phlo hybrid promoter. This produces a steeper activation function than the Open Loop circuit, as it is also noted in the results section. 
             <br><br>
 
             <center>
@@ -867,7 +865,7 @@
     
                 <h1>Biochemical Reactions</h1>
                 <br>
-                For the kinetic modelling of the receivers system, we had to convert all the above designs into biochemical equations, each of which will be characterized by its own rate of consumption or production of the chemical species. The resulting equations are:
+                For the kinetic modelling of the receivers system, we had to convert all the aforementioned design choices in the constructs into biochemical equations, each of which is characterized by its own rate of consumption or production of the chemical species. The resulting equations are:
                 <br><br>
                  1. ∅ →LuxRreg<br>
                  2. LuxAHL + LuxRreg ↔LuxRcomplex<br>
@@ -893,11 +891,11 @@
     
                 <h1>Kinetic Model</h1>
                 <br>
-                To develop the kinetic model of the receivers, our team worked on two levels just like we did at the senders’ kinetic model. At first, the differential equations for the production of chemical species inside a single cell were developed. Then we scaled-up our approach by studying the production of the fluorescent protein from the whole receivers population. The difference is found in the fact that for this model our team analyzed and also tested three constructs experimentally. The purpose of this effort was to see which of the three systems we had designed would work best as an activation function of a perceptron and would have the sharpest response. So practically, we have created one single-cell and one whole-cell model for each construct.
+                To develop the kinetic model of the receivers, our team worked on two levels as for the senders' kinetic model. At first, the differential equations for the production of chemical species inside a single cell were developed. Then we scaled-up our approach by studying the production of the fluorescent protein from the whole receivers population. The difference lies in the fact that for this model our team analyzed and also tested three constructs experimentally. The purpose of this effort was to see which of the three systems we had designed would work best as an activation function of a perceptron and would have the sharpest response. You can find more information in the <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> page. Overall, we created one single-cell and one whole-cell model for each construct.
                 <br><br>
                 
                 <h2>Construct no.1: Open Loop</h2> 
-                <br><br>
+                <br>
                 <b>Single cell model</b>
                 <br><br>
                 Initially, to simplify the model, the change in the concentration of the basic chemical species in a single cell of each subpopulation was studied. For the creation the differential equations, both production and consumption as well as the degradation rates were taken into account The production and consumption rates of each chemical can be represented by the following differential equations:
@@ -905,7 +903,7 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}} *AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}]\)
+                \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}} *AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}] \ (1)\)
                 </p>
                 </div><br><br>
   
@@ -913,7 +911,7 @@
   
                 <div class="equations">
                   <p>
-                  \(\frac{d[LuxR]}{dt}= \frac{p_{J23105}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR]\)
+                  \(\frac{d[LuxR]}{dt}= \frac{p_{J23105}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR] \ (2)\)
                   </p>
                   </div><br><br>
 
@@ -921,35 +919,37 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{Mon}{dt} = k{1}[LuxR][AHL_{int}] + 2k_{-2}[Dimer]-k_{-1}[Mon]-2k_{2}[Mon]^2 - d_{Mon}[Mon]\)
+                \(\frac{Mon}{dt} = k{1}[LuxR][AHL_{int}] + 2k_{-2}[Dimer]-k_{-1}[Mon]-2k_{2}[Mon]^2 - d_{Mon}[Mon] \ (3)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{Dimer}{dt}= k_{2}[Mon]^2 - k_{-2}[Dimer]-d_{Dimer}[Dimer] \)
+                \(\frac{Dimer}{dt}= k_{2}[Mon]^2 - k_{-2}[Dimer]-d_{Dimer}[Dimer] \ (4) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d_{mng}}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} * [\beta_{Lux}+(1-\beta_{Lux})*\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] -d_{mng}[mng] \)
+                \(\frac{d_{mng}}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} * [\beta_{Lux}+(1-\beta_{Lux})*\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] -d_{mng}[mng] \ (5) \)
                 </p>
                 </div><br><br>
 
 
-                At this point it would be useful to mention the different assumption made for the single cell kinetic model:
+                At this point it would be useful to mention the different <b>assumptions</b> made for the single cell kinetic model:
                 <br><br>
-                1. We assume that the expression of a gene can be fully characterised by a Hill Equation. <br> 
-                2. The LuxR-AHL dimerization is described via a second-order kinetic reaction, so the ODE describing this reaction is formed respectively. <br>
-                The degradation rate of AHL inside and outside the membrane remains the same. <br>
-                <3. br><br>
-                Equation (1) represents the change of concentration of the AHL, in order to complete the induction inside the cell. Equation (2) describes the change of the concentration of the LuxR from the lactone reaching the receiver's cell. Equations (3) and (4) describe the change of the concentration of the monomer complex and the dimer, practically leading to the activation of the promoter. Equation (5) is the representation of the production of the fluorescent protein, the mNeon Green.
+                1. We assume that the expression of a gene can be <b>fully characterised by a Hill Equation</b>. <br> 
+                2. The LuxR-AHL dimerization is described via a <b>second-order kinetic reaction</b>, so the ODE describing this reaction is formed respectively. <br>
+                3. The <b>degradation rate of AHL</b> inside and outside the membrane remains the <b>same</b>. <br>
+                <br><br>
+                Equation (1) represents the change of concentration of the AHL, in order to complete the induction inside the cell. Equation (2) describes the change of the concentration of the LuxR from the lactone reaching the receiver's cell. Equations (3) and (4) describe the change of the concentration of the monomer complex and the dimer, practically leading to the activation of the promoter. Equation (5) is the representation of the production of the fluorescent protein, the mNeonGreen.
                 <br><br>
 
                 <b>Whole cell model</b>
                 <br><br>
-                Then, wanting to have a complete picture of our overall system at the level of bacterial populations, we upgraded our model for multiple cells. The scale-up had to include the study of phenomena such as the growth of the bacterial population and how this affects the amount of lactone produced as well as the diffusion of the lactone in and out of the cells. assumption made for the whole cell kinetic model:
+                In order to have a complete picture of our overall system at the level of bacterial populations, we upgraded our model for multiple cells. The scale-up had to include the study of phenomena such as the growth of the bacterial population and how this affects the amount of lactone produced, as well as the diffusion of the lactone in and out of the cells.
+                <br><br>
+                The <b>assumptions</b> made for the whole cell kinetic model are the following:
                 <br><br>
                 1. We assume that the expression of a gene can be fully characterised by a Hill Equation.  <br>
                 2. We assume that the diffusion of the lactone outside the cells is characterized by the same Fick’s constant as the diffusion of the lactone inside the cells.<br>
@@ -961,44 +961,43 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \)
+                \(\frac{dN}{dt} = \mu * [N] *(1-\frac {[N]}{[N_{max}]}) \ (1)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                   <p>
-                  \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}} *AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}]\)
+                  \(\frac{d_{AHL_{ext}}}{dt} = D_{AHL}*[N]*(AHL_{int}- \frac{V_{eColi}}{V_{bead}} *AHL_{ext}) - d_{AHL}[AHL_{ext}] \ (2)\)
                   </p>
                   </div><br><br>
 
+                <div class="equations">
+                  <p>
+                  \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}} *AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}] \ (3) \)
+                  </p>
+                  </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d_{AHL_{ext}}}{dt} = D_{AHL}*[N]*(AHL_{int}- \frac{V_{eColi}}{V_{bead}} *AHL_{ext}) - d_{AHL}[AHL_{ext}]\)
+                \(\frac{d[LuxR]}{dt}= \frac{p_{J23105}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR] \ (4)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxR]}{dt}= \frac{p_{J23105}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR]\)
+                \(\frac{d[Mon]}{dt}= k_{1} [LuxR][AHL_{int}]+2 k_{-2}[Dimer]-k_{-1}[Mon]^2 - d_{Mon}[Mon] \ (5)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[Mon]}{dt}= k_{1} [LuxR][AHL_{int}]+2 k_{-2}[Dimer]-k_{-1}[Mon]^2 - d_{Mon}[Mon]\)
+                \(\frac{d[Dimer]}{dt} = k_{2}[Mon]^2 - k_{-2} [Dimer] - d_{Dimer} [Dimer] \ (6) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[Dimer]}{dt} = k_{2}[Mon]^2 - k_{-2} [Dimer] - d_{Dimer} [Dimer] \)
-                </p>
-                </div><br><br>
-
-                <div class="equations">
-                <p>
-                \(\frac{d[mng]}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} + [\beta_{Lux} +(1-\beta_{Lux})* \frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] - d_{mng} [mng]\) 
+                \(\frac{d[mng]}{dt} = \frac{p_{Lux}*k_{mng}*CN_{rec}}{d_{mRNAmng}} + [\beta_{Lux} +(1-\beta_{Lux})* \frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] - d_{mng} [mng] \ (7)\) 
                 </p>
                 </div><br><br>
 
@@ -1007,37 +1006,40 @@
                 <br><br>
 
                 <h2>Construct no.2: PFR Loop</h2>
+                <br
+                <b>Single cell model</b>
+                <br><br>>
+                
+                In a similar manner, we create the single and whole cell model of the PFR construct:
                 <br><br>
-                In a similar manner we can take a look at the single and whole cell model of the PFR construct:
-                <br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{int}]}{dt} = k_{-1}[Mon] - k_{1} * [AHL_{int}][LuxR] - d_{AHL}[AHL_{int}] \)
+                \(\frac{d[AHL_{int}]}{dt} = k_{-1}[Mon] - k_{1} * [AHL_{int}][LuxR] - d_{AHL}[AHL_{int}] \ (1) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxR]}{dt} = \frac{p_{Lux}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}}  * [(1-\beta_{Lux})+\beta_{Lux} *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}]  + k_{-1}[Mon]-k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR] \)
+                \(\frac{d[LuxR]}{dt} = \frac{p_{Lux}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}}  * [(1-\beta_{Lux})+\beta_{Lux} *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}]  + k_{-1}[Mon]-k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR] \ (2) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[Mon]}{dt} = k_{2} [Mon]^2 - k_{-2}[Dimer] - k_{-1}[Mon]-2k_{2}[Mon]^2 -d_{Mon}[Mon] \)
+                \(\frac{d[Mon]}{dt} = k_{2} [Mon]^2 - k_{-2}[Dimer] - k_{-1}[Mon]-2k_{2}[Mon]^2 -d_{Mon}[Mon] \ (3) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[Dimer]}{dt} = k_{2} [Mon]^2 - k_{-2}[Dimer] - d_{Dimer}[Dimer]\)
+                \(\frac{d[Dimer]}{dt} = k_{2} [Mon]^2 - k_{-2}[Dimer] - d_{Dimer}[Dimer] \ (4)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[phlf]}{dt} = \frac{p_{Lux}*k_{phlf}*CN_{rec}}{d_{mRNAphlf}} * [\beta_{Lux} + (1-\beta_{Lux}) * \frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} ]- d_{phlf}[phlf]\)
+                \(\frac{d[phlf]}{dt} = \frac{p_{Lux}*k_{phlf}*CN_{rec}}{d_{mRNAphlf}} * [\beta_{Lux} + (1-\beta_{Lux}) * \frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} ]- d_{phlf}[phlf] \ (5)\)
                 </p>
                 </div><br><br>
 
@@ -1055,7 +1057,7 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[mng]}{dt} = \frac{p_{hybrid}*k_{mng}*CN_{rec}}{d_{mRNAmng}} *Hill_{Lux} * Hill_{phlf} - d_{mng} [mng]\)
+                \(\frac{d[mng]}{dt} = \frac{p_{hybrid}*k_{mng}*CN_{rec}}{d_{mRNAmng}} *Hill_{Lux} * Hill_{phlf} - d_{mng} [mng] \ (6)\)
                 </p>
                 </div><br><br>
 
@@ -1069,43 +1071,43 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{dN}{dt} = \mu * [N] *(1-\frac{[N]}{[N_{max}]}) \)
+                \(\frac{dN}{dt} = \mu * [N] *(1-\frac{[N]}{[N_{max}]}) \ (1)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{ext}]}{dt} = D_{AHL} *[N] *( AHL_{int} - \frac{V_{eColi}}{V_{bead}} *AHL_{ext}) - d_{AHL}[AHL_{ext}]\)
+                \(\frac{d[AHL_{ext}]}{dt} = D_{AHL} *[N] *( AHL_{int} - \frac{V_{eColi}}{V_{bead}} *AHL_{ext}) - d_{AHL}[AHL_{ext}] \ (2)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}}*AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}] \)
+                \(\frac{d[AHL_{int}]}{dt} = k_{-1}*[Mon]+D_{AHL}*(\frac{V_{eColi}}{V_{bead}}*AHL_{ext} - AHL_{int}) -k_{1}*[AHL_{int}][LuxR] - d_{AHL} [AHL_{int}] \ (3) \)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[LuxR]}{dt}= \frac{p_{Lux}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} [\beta_{Lux} + (1-\beta_{Lux}) *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR]\)
+                \(\frac{d[LuxR]}{dt}= \frac{p_{Lux}*k_{LuxR}*CN_{rec}}{d_{mRNALuxR}} [\beta_{Lux} + (1-\beta_{Lux}) *\frac{[Dimer]^n}{Kd_{Lux}^n+[Dimer]^n}] + k_{-1} [Mon] - k_{1}[LuxR][AHL_{int}] - d_{LuxR}[LuxR] \ (4)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[Mon]}{dt} = k_{1}[LuxR][AHL_{int}] + 2 k_{-2}[Dimer] - k_{-1} [Mon] -2k_{2}[Mon]^2 - d_{Mon} [Mon] \)
+                \(\frac{d[Mon]}{dt} = k_{1}[LuxR][AHL_{int}] + 2 k_{-2}[Dimer] - k_{-1} [Mon] -2k_{2}[Mon]^2 - d_{Mon} [Mon] \ (5)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[Dimer]}{dt} = k_{2} [Mon]^2 - k_{-2} [Dimer] \)
+                \(\frac{d[Dimer]}{dt} = k_{2} [Mon]^2 - k_{-2} [Dimer] \ (6)\)
                 </p>
                 </div><br><br>
 
                 <div class="equations">
                 <p>
-                \(\frac{d[phlf]}{dt} = \frac{p_{Lux}*k_{phlf}*CN_{rec}}{d_{mRNAphlf}} * [\beta_{Lux} + (1-\beta_{Lux}) * \frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} ]- d_{phlf}[phlf]\) 
+                \(\frac{d[phlf]}{dt} = \frac{p_{Lux}*k_{phlf}*CN_{rec}}{d_{mRNAphlf}} * [\beta_{Lux} + (1-\beta_{Lux}) * \frac{Kd_{Lux}^n}{Kd_{Lux}^n+[Dimer]^n} ]- d_{phlf}[phlf] \ (7)\) 
                 </p>
                 </div><br><br>
 
@@ -1126,16 +1128,16 @@
 
                 <div class="equations">
                 <p>
-                \(\frac{d[mng]}{dt} = \frac{p_{hybrid}*k_{mng}*CN_{rec}}{d_{mRNAmng}} *Hill_{Lux} * Hill_{phlf} - d_{mng} [mng]\)
+                \(\frac{d[mng]}{dt} = \frac{p_{hybrid}*k_{mng}*CN_{rec}}{d_{mRNAmng}} *Hill_{Lux} * Hill_{phlf} - d_{mng} [mng] \ (8)\)
                 </p>
                 </div><br><br>
                 
 
-                The the matrix below consists of the initial values of our kinetic constants found in literature:
+                Tables <a href="#r-tb1">1</a> and <a href="#r-tb2">2</a> below containthe values of our kinetic constants obtained by reviewing the current literature for the OpLo and PFR constructs respectively.:
                 <br><br>
 
                 <center>
-                <table class="content-table">
+                <table class="content-table" id="r-tb1">
                     <thead>
                       <tr>
                         <th>Kinetic Constant</th>
@@ -1175,7 +1177,8 @@
                         <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
                       </tr>
                         <tr class="active-row">
-                            <td>Dissociation Rate of of dimer (LuxR-AHL)2</td>
+                        <td>k-2</td>  
+                        <td>Dissociation Rate of of dimer (LuxR-AHL)2</td>
                         <td>1(1/min)</td>
                         <td><a href="https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6/tables/1"> Literature </a></td>
                       </tr>
@@ -1324,13 +1327,13 @@
                     </tbody>
                 </table>
                 <figcaption>
-                    Table 1: Kinetic constants found in literature for the Open Loop construct 
+                    Table 1: Kinetic constants found in literature for the Open Loop construct. 
                 </figcaption>
                 </center>
                 <br><br>
 
                 <center>
-                    <table class="content-table">
+                    <table class="content-table" id="r-tb2">
                         <thead>
                           <tr>
                              <th>Kinetic Constant</th>
@@ -1414,10 +1417,21 @@
                         </tbody>
                     </table>
                     <figcaption>
-                        Table 2 : Additional  kinetic constants found in literature for the PF Loop construct 
+                        Table 2 : Additional  kinetic constants found in literature for the PF Loop construct. 
                     </figcaption>
             
                 </center> 
+                <br><br>
+                <center>
+                  <div class="download-button">
+                  <h3><a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/receivers_oplo_all.ipynb">OpLo Model Code</a></h3>       
+                  </div>
+                  <br><br>
+                  <div class="download-button"> 
+                    <h3><a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/receivers_pfr_all.ipynb">PFR Model Code</a></h3>       
+                    </div>
+                  </center>
+
             </section> 
 
             <section class="inside-section">
@@ -1427,49 +1441,47 @@
                 <h1>Results</h1>
                 <br>
 
-                As in the senders model, our team decided to make a direct comparison of our theoretical single and whole cell models, both in time-scale and for different induction concentrations of AHL and for both constructs. However, in this section, we are going to present only a part of our results, since the full analysis and codes, with their respective results, are available on gitlab, <a href="">here</a>.
+                Similar to pipeline we followed for modelling our senders system, our team also compared the theoretical single and whole cell models for the receivers, both in time-scale and for different induction concentrations of AHL. However, in this section, we are going to present only a part of our results, since the full analysis and codes, with their respective results, are available on our GitLab repository, <a href="https://gitlab.igem.org/2022/software-tools/athens/-/tree/main/Model">here</a>.
                 <br><br>
 
-                <h2>Time-scale</h2>
-                <br><br>
-                We are going to show the time-scale results of our whole-cell PFR model at full induction of 10^(-6) M OC6 and make a short explanation.
+                Below we present the time-scale results of our whole-cell PFR model, at full induction of 10^(-6) M OC6.
                 <br><br>
                 <center>
                 <img class="r-model" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-model.png">
                 <figcaption>
-                Figure 2: Change in concentration of chemical species after solving the ODs
+                Figure 2: Change in concentration of chemical species after solving the ODs.
                 </figcaption>
                 </center>
                 <br>
 
-                From the graphs above we can clearly notice that, as in the case of aTc, the diffusion of AHL through the membrane is rapid, and it leads to a similar concentration of internal and external AHL [8]. This leads to the creation of the dimer inducer within the 100 minutes, which not only induces the production of mneongreen but also reduces the repressor phlf. That is until the 600 minute mark where-since there is no AHL inside the cell-the dimer starts significantly decreasing, thus stopping the repression of phlf. The increase of phlf and reduction of dimer mean that the produced fluorescence starts dropping (around the 600 minute mark).
+                From the graphs above we can clearly notice that, as in the case of aTc, the diffusion of AHL through the membrane is rapid, and it leads to a similar concentration of internal and external AHL [8]. This leads to the creation of the dimer inducer within the 100 minutes, which not only induces the production of mNeonGreen, but also reduces the repressor phlf. This observation lasts until the 600 minute mark, where-since there is no AHL inside the cell-the dimer starts significantly decreasing, thus stopping the repression of phlf. The increase of phlf and reduction of dimer mean that the produced fluorescence starts dropping (around the 600 minute mark).
                 <br><br>
-                Similar results were shown by the rest single-and-whole cell models of OpLo and PFR
+                Similar results were shown by the rest single-and-whole cell models of OpLo and PFR.
                 <br><br>
-                <h2>Transfer Function of OpLo</h2>
-                At first we should represent the literature transfer function both for the single and the whole cell models.
+                <h2>Transfer Function of OpLo</h2><br>
+                First, we represent the literature transfer function both for the single and the whole cell models.
                 <br><br>
 
                 <center>
                 <img class="r-3" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-3.png">
                 <figcaption>
-                    Figure 3: Ρepresentation of the transfer function for single-cell and whole-cell model                </figcaption>
+                    Figure 3: Transfer function for single-cell and whole-cell model.                </figcaption>
                 </center>
                 <br>
 
-                As in the sender’s model, the whole-cell description of our system gives more consistent results and is closer to the experimental data, since the induction in that case starts for lower concentrations of AHL. A similar difference was observed in the  PFR single-and-whole cell models as well.
+                Similar to the senders model, the whole-cell description of our system gives more consistent results and is closer to the experimental data, since the induction in that case starts for lower concentrations of AHL. A similar difference was observed in the  PFR single-and-whole cell models as well.
                 <br><br>
 
-                <h2>Comparison to data and Model Fit of OpLo
+                <h2>Comparison to Experimental Data and Model Fit of OpLo
                 </h2>
-                <br><br>
-                At first, we aimed to compare our theoretical whole-cell model to the experimental data, as done in the senders’ case. Viewing the results below, we assume that-despite its approximately valid representation of our system-our literature model lacks the accuracy needed in order to be used as it is for the pattern recognition task later on. Thus we again decided to perform model fit via the lmfit library of Python.
+                <br>
+                First, we aimed to compare our theoretical whole-cell model to the experimental data. By reviewing the results below, we assume that-despite its approximately valid representation of our system-our literature model lacks the accuracy needed in order to be used for the pattern recognition task. Thus we again decided to perform model fit using the python library <a href="https://pypi.org/project/lmfit/">lmfit</a>.
                 <br><br>
 
                 <center>
                 <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-4.png">
                 <figcaption>
-                    Figure 4: Comparison of the theoretical model with the experimental data for the Open Loop construct                 
+                    Figure 4: Comparison of the theoretical model with the experimental data for the Open Loop construct.                 
                 </figcaption>
                 </center>
                 <br>
@@ -1479,7 +1491,7 @@
                     <thead>
                       <tr>
                         <th>Symbol</th>
-                        <th>Meaning</th>
+                        <th>Description</th>
                         <th>Initial Value</th>
                         <th>Source</th>
                         <th>Fitted Value</th>
@@ -1548,11 +1560,11 @@
                 </table>
                 <figcaption>
 
-                    Table 3: Fitted values for Open Loop construct 
+                    Table 3: Fitted values for Open Loop construct. 
                </figcaption>
                 </center>
-                <br><br>
-                And the fitted model for OpLo is presented below:
+                <br>
+                Below the fitted model for OpLo is presented:
                 <br><br>
 
                 <center>
@@ -1561,30 +1573,31 @@
                     Figure 5: Model fitting for Open Loop construct                 </figcaption>
                 </center>
                 <br>
-                The model fit process gave us some important variables that could not be accurately estimated otherwise and include the curve steepness, the production rates of LuxR and mneongreen as well as the dissociation constant of the PLux Promoter. Some of those values will be used for the characterization of the PFR construct below.
+                The model fit process gave us some important variables, which could not be accurately estimated otherwise. These include:
+                <b>the curve steepness</b>, <b>the production rates of LuxR and mNeonGreen</b> as well as <b>the dissociation constant of the PLux promoter</b>. Some of those values were used for the characterization of the PFR construct below.
                 <br><br>
                 <h2> PFR: Transfer Function and model fit
                 </h2>
 
-                <br><br>
+                <br>
                 Using the fitted values of d_mng,d_mrnamng, kd_lux and b_plux that would remain unchanged for the PFR and with the rest of the values from literature, we extracted the same comparison of theoretical and and experimental transfer functions:
                 <br><br>
 
                 <center>
                 <img class="r-6" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-6.png">
                 <figcaption>
-                    Figure 6: Comparison of the theoretical model with the experimental data for the PF loop construct
+                    Figure 6: Comparison of the theoretical model with the experimental data for the PFR loop construct.
                 </figcaption>
                 </center>
                 <br><br>
 
-                As we can clearly observe, the OpLo results used for the characterization of PFR resulted in a much more accurate prediction of the later construct. However, there are still some inaccuracies, in terms of the curve steepness,the leakiness of the hybrid promoter and the characterization of the phlf molecule. After fit, we obtained a more accurate reconstruction of the experimental data via our model:
+                As we can clearly observe, the OpLo results used for the characterization of PFR resulted in a more accurate prediction of the later construct. However, there are still some inaccuracies, in terms of the curve steepness,the leakiness of the hybrid promoter and the characterization of the phlf molecule. After the fitting, we obtained a more accurate reconstruction of the experimental data via our model:
                 <br><br>
 
                 <center>
                 <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/model/model/receivers-figure-7.png">
                 <figcaption>
-                    Figure 7: Model fitting for PF Loop construct
+                    Figure 7: Model fitting for PFR Loop construct.
                 </figcaption>
                 </center>
                 <br><br>
@@ -1594,7 +1607,7 @@
                         <thead>
                           <tr>
                             <th>Symbol</th>
-                            <th>Meaning</th>
+                            <th>Description</th>
                             <th>Initial Value</th>
                             <th>Source</th>
                             <th>Fitted Value</th>
@@ -1665,12 +1678,11 @@
 
                 <figcaption>
 
-                Table 4: Fitted values for PF Loop construct                
+                Table 4: Fitted values for PFR Loop construct.                
                 </figcaption>
                 </center>
                 <br><br>
-                Now that our team has successfully characterized both transfer function circuits, we aim to directly compare them while simulating a pattern recognition task and view which implementation is more accurate in terms of expected and actual output concentrations.
-
+                After the successful characterization of the transfer function circuits, we aimed to directly compare them while simulating a pattern recognition task and decide which implementation is more accurate in terms of expected and actual output concentrations.
             </section> 
     
     
@@ -1719,10 +1731,10 @@
             <section class="inside-section">
             <a id="overview-stability" class="anchorOffset"></a>
             <br>
-            As it has been analysed in the implementations section (link), our team is inspired to utilize its biological perceptron for recognizing complex patterns in a variety of different circumstances, leading to the creation of a novel “thinking” biosensor of E.Coli consortia. However, it is of paramount importance to gain in-depth knowledge about more complex aspects of our system, apart from the concentration analysis that our main model offers. One such aspect are the diffusion phenomena through the cell membrane, that try to demonstrate the change of AHL concentration as the molecules get from the senders to the receivers consortia and the various effects on both populations.On the other hand, the stability analysis that will follow offers context on a different issue regarding our biosensor; the frequency that it could receive new input values for classification!
+            As it has been analysed in the <a href="https://2022.igem.wiki/athens/implementation">Impementation</a> page, our team is inspired to utilize its biological perceptron for recognizing complex patterns in a variety of different circumstances, leading to the creation of a novel “thinking” biosensor of E.Coli consortia. However, it is of paramount importance to gain in-depth knowledge about more complex aspects of our system, apart from the concentration analysis that our main model offers. One such aspect are the diffusion phenomena through the cell membrane, that try to demonstrate the change of AHL concentration as the molecules get from the senders to the receivers consortia and the various effects on both populations.On the other hand, the stability analysis that will follow offers context on a different issue regarding our biosensor; the frequency that it could receive new input values for classification.
             <br><br>
 
-            And here comes some fundamental theory from control systems. At first we should validate that our system is stable and will lead to a steady state concentration of output fluorescence. For that purpose and for the entire analysis, our initial model equations have been simplified to just to equations, one for the senders and one for the receivers, as shown below:
+            Below we summarize the fundamental theory from control systems. At first we should validate that our system is stable and will lead to a steady state concentration of mNeonGreen. For that purpose and for the entire analysis, our initial model equations have been simplified to just two equations, one for the senders and one for the receivers, as shown below:
             <br><br>
             
             <div class="equations">
@@ -1745,9 +1757,9 @@
             </div>
 
             <br><br>
-            , where our three sender’s subpopulations are being modelled as one, which produces the summation of the subpopulations OC6. This OC6 value, shown as x1 here, will be used as induction input to the receiver’s population, whose fluorescence is shown as the x2 variable. Endly, both equations are using Hill functions to model the induction. 
+            ,where the three senders subpopulations are being modelled as one, which produces the summation of the subpopulations OC6. This OC6 value, shown as x1 here, is used as induction input to the receivers population, whose fluorescence is shown as the x2 variable. Finally, both equations are using Hill functions to model the induction. 
             <br><br>
-            However, in order to properly study the system's frequency behaviour, we should first perform a linearization method which will bring our system to the state-space. After performing such a task, we receive the following linearized control model:
+            However, in order to properly study the system's frequency behavior, we should first perform a linearization method which brings our system to the state-space. After performing such a task, we received the following linearized control model:
             <br><br>
 
             <div class="equations">
@@ -1786,37 +1798,30 @@
             </p>
             </div><br>
 
-            Where, A=[a11,a12][a21,a22] <br><br>
-
-
+            <div class="equations">
+              <p>
+              \( where \ A=[a_{11}, a_{12}][a_{21}, a_{22}]  \)
+            </p>
+            </div><br>
 
             <div class="equations">
-            <p>
-            \(\frac{d[x_{2}]}{dt} = f_{2}(t)= (a_{send}) * \frac{u^n2}{K_{1}^n2+u^n2} - d_{2}* x_{2}\)
-            </p>
-            </div><br><br>
+              <p>
+              \(B=[b_{1}],b_{2}]\)
+              </p>
+              </div><br><br>
+
+              <div class="equations">
+                <p>
+                \(a_{11}= \frac{df_{1}}{dx_{1}} = -d_{1} \)
+                </p>
+                </div><br><br>       
 
 
-
-            <div class="equations">
-            <p>
-            \(A = [a_{11}, a_{12}] [a_{11}, a_{22}]\)
-            </p>
-            </div><br><br>
-
-
-            <div class="equations">
-            <p>
-            \(B=[b_{1}],b_{2}]\)
-            </p>
-            </div><br><br>
-
-            <div class="equations">
-            <p>
-            \(a_{11}= \frac{df_{1}}{dx_{1}} = -d_{1} \)
-            </p>
-            </div><br><br>
-
+                <div class="equations">
+                  <p>
+                  \(\frac{d[x_{2}]}{dt} = f_{2}(t)= (a_{send}) * \frac{u^n2}{K_{1}^n2+u^n2} - d_{2}* x_{2}\)
+                  </p>
+                  </div><br><br>
 
             <div class="equations">
             <p>
@@ -1848,7 +1853,7 @@
             
             <br><br>
 
-            It should be assumed that the initial value of u and x1, i.e. u(t0) and x1(t0) should be different to zero, in order to have non-zero values and thus a meaningful analysis. Considering from our diffusion analysis (link) that the diffusion is a rapid procedure that begins around the 6second mark, it would be safe to assume that we would achieve non zero values for t0>1minute.
+            It should be assumed that the initial value of u and x1, i.e. u(t0) and x1(t0) should be different to zero, in order to have non-zero values and thus a meaningful analysis. Considering from our <a href="https://2022.igem.wiki/athens/model#dissudion">diffusion analysis</a> that the diffusion is a rapid procedure that begins around the 6 second mark, it would be safe to assume that we would achieve non zero values for t0>1minute.
             <br><br>
 
             In terms of the stability of our system, it is common truth [9] that a stable system has all of its eigenvalues negative, which is true in our case since the λI-A=0 equation brings the following solutions:
@@ -1856,25 +1861,19 @@
 
             <div class="equations">
                 <p>
-                  λ_{1} = -d_{1}
+                  \(λ_{1} = -d_{1} \ and \ λ_{2} = -d_{2}\)
                 </p>
             </div><br>
-            and
-            <div class="equations">
-              <p>
-                λ_{2} = -d_{2}
-              </p>
-          </div><br>
             
 
             ,which are negative, assuming positive degradation rates of aTc and AHL. 
             <br><br>
-            Moving on, we would like to quantify how often we could update the input states of our perceptron without leading to any instabilities (i.e. problematic output). And there also comes control theory to offer us a useful tool, the Bode plots and the meaning of phase margin. In particular, phase margin is a metric that corresponds to the difference between the phase lag of our system at a given frequency minus the value of -180degrees, a value crucial for our system since phase values below -180degrees lead to unstable systems. In simpler terms, the higher the phase margin for a certain frequency the better for our system. 
+            Moving on, we quantified how often we could update the input states of our perceptron without leading to any instabilities (i.e. problematic output). And there also comes control theory to offer us a useful tool, the <b>Bode plots</b> and the meaning of <b>phase margin</b>. In particular, phase margin is a metric that corresponds to the difference between the phase lag of our system at a given frequency minus the value of -180degrees. This ia a crucial value for our system since phase values below -180degrees lead to unstable systems. In simpler terms, the higher the phase margin for a certain frequency the better for our system. 
             <br><br>
             Furthermore, it is a common ground that, when designing electronic systems and amplifiers, we set a minimum value of phase margin (usually using the frequency where we have unity gain), and use a variety of theoretical and practical methods in order to accomplish that. More information on the electrical side offers the 6th chapter of the book [10]. However, in our case it is just enough to set as maximum frequency f_max the frequency where a minimum amount of phase margin is accomplished, which will be set at 35 degrees and corresponds to a phase lag of -145degrees. Our system should not receive input values at frequencies that reduce the phase margin below that threshold.
             <br><br>
             
-            Initially, in order to receive the bode plots of our system, we should convert the state-space system to a transfer function H(s), which was accomplished via matlab's module ss2tf(). We received:
+            Initially, in order to receive the bode plots of our system, we converted the state-space system to a transfer function H(s), which was accomplished via matlab's module <a href="https://www.mathworks.com/help/matlab/ref/ss2tf.html">ss2tf()</a>. We received:
             <br><br>
             
             <div class="equations">
@@ -1886,7 +1885,7 @@
             <br><br>
             where A and x1(t0) are constant values, for known t0 initial time of analysis. 
             
-            Parameter table for stability analysis constants (same as in the parameters tables for the model’s page
+            Below the parameter table for stability analysis constants is presented.
 
             <center>
             <table class="content-table">
@@ -1940,14 +1939,14 @@
                 </tbody>
             </table>
             <figcaption>
-                Table 1. Parameter Tables for stability analysis transfer function with the OpLo construct parameters. The parameters used refer to the BCD2 literature construct.
+                Table 1. Parameter Tables for stability analysis transfer function with the OpLo construct parameters. The parameters refer to the BCD2 literature construct.
             </figcaption>
             </center>
 
             <br><br>
-            Since the gain A/x1(t0) of our system is not the main purpose of it, it won't be our main concern going forward. On the other hand, we have to take a closer look at the denominator of the transfer function, and the values d1,d2  which are the poles of the system. Generally speaking, a pole leads to a decrease of the phase lag of our system by 90 degrees. So in our case the two poles of d1 and d2 will eventually lead to an unstable system after a certain frequency, which we would like to be the highest possible. The problem of decrease in the phase value is more serious in the case of two poles which are close to each other, since this leads to a more rapid decrease of our system’s phase lag, almost instantly to -180 degrees.
+            Since the gain A/x1(t0) of our system is not the main purpose of it, it was not our main concern. On the other hand, we have to take a closer look at the denominator of the transfer function, and the values d1,d2  which are the poles of the system. Generally, a pole leads to a decrease of the phase lag of our system by 90 degrees. So in our case, the two poles of d1 and d2 will eventually lead to an unstable system after a certain frequency, which we would like to be the highest possible. The problem of decrease in the phase value is more serious in the case of two poles which are close to each other, since this leads to a more rapid decrease of our system's phase lag, almost instantly to -180 degrees.
             <br><br>
-            Unfortunately for our system, we noticed that d1=d2=0.01 [1/min] as it has been documented in the parameters of the model’s page (link). As a result, the phase bode plot of our initial system lead to a steep decrease in phase lag and thus in instability.
+            For our system, we noticed that d1=d2=0.01 [1/min] as it has been documented in the parameters of the <a href="#senders">model's page</a>. As a result, the phase bode plot of our initial system lead to a steep decrease in phase lag and thus in instability.
             <br><br>
 
             <center>
@@ -2026,33 +2025,33 @@
     <div class="right-side">
     
            <!-- Overview  -->
-           <section class="diffusion-section">
+           <section class="inside-section">
             <a id="overview-pattern" class="anchorOffset"></a>
             <br>
-            The biological sensor our team aims to create, is intending to analyze complex stimuli. The system we propose was therefore originally designed to recognize 3x1 bits patterns. These patterns are created by on-off bits. We consider “on” a subpopulation of senders that is induced with aTc and “off” a senders subpopulation that is not induced with aTc, and as a result there will be no lactone production regardless of the RBS. The possible patterns are: 
+            The biological sensor our team aims to create, is intending to analyze complex stimuli. The system we propose was therefore originally designed to recognize <b>3x1 bits patterns</b>. These patterns are created by <b>on-off bits</b>. We consider “on” a subpopulation of senders that is induced with aTc and “off” a senders subpopulation that is not induced with aTc, and as a result there will be no lactone production regardless of the RBS. The possible patterns are: 
             <br><br>
             
 
             <center>
             <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-1.png">
             <figcaption>
-                Figure 1: On-Off patterns. On is equivalent to an induced subpopulation of senders, Off equivalent to an uninduced subpopulation of senders
+                Figure 1: On-Off patterns. On is equivalent to an induced subpopulation of senders, Off equivalent to an uninduced subpopulation of senders.
             </figcaption>
             </center>
             <br>
 
-            The 166 RBSs that make up the library we have created were divided into three families according to the rate of translation they show when followed by the LuxI gene. The RBSs that have high translation initiation rate are called the “Strong (S)” RBSs, the ones with medium translation initiation rate are called the “Medium (M)” RBSs and the ones with low translation initiation rate are called “Weak (W)”. So by creating different combinations of RBS triads we expect different amount of lactone produced.
+            We have created a library of <a href="#senders">166 RBSs</a>. The RBSs were divided into three families according to the rate of translation they show when followed by the LuxI gene. The RBSs that have high translation initiation rate are called “Strong (S)” RBSs, the ones with medium translation initiation rate are called “Medium (M)” RBSs and the ones with low translation initiation rate are called “Weak (W)”. So by creating different combinations of RBS triads we expect different amount of lactone produced.
     
-            <br>
+            <br><br>
             <center>
               <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-2.png">
               <figcaption>
-                Figure 2: Patterns by combining subpopulations of senders with RBS of different strength
+                Figure 2: Patterns by combining subpopulations of senders with RBS of different strength.
               </figcaption>
               </center>
               <br><br>
               <p>
-                Τhus combining RBSs with different strengths in populations that are induced or not, we create patterns that can be provided to the senders as inputs, which our system will be able to recognize. 
+                Thus combining RBSs with different strengths in populations that are induced or not, we create patterns that can be provided to the senders as inputs, which our system will be able to recognize. 
                 Theoretically, from each 3x1 bit pattern we expect a different amount of lactone production when all of the senders subpopulations are induced with aTc. Since the strength of each RBS is translated 
                 into an amount of lactone produced and finally the subpopulations of senders are mixed, the position of each bit does not matter but only what RBS each subpopulation has and if the population is induced or not.
                  Furthermore, it is obvious that the maximum amount of the lactone will be produced in case no. 2 where the subpopulations of the senders all have very strong RBSs. 
@@ -2245,7 +2244,7 @@
     <p>Via training from our <a href="https://2022.igem.wiki/athens/software">software</a> for the pattern above, it was concluded that the sequences to be used should be the following:</p>
     <br><br>
     <center>
-      <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-3.png">
+      <img class="pat-3" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-3.png">
       <figcaption>
         Figure 3. Received weight values and RBS constructs for each of the senders populations (X1,X2,X3).
       </center>
@@ -2254,7 +2253,7 @@
       ,meaning that we should use 1 strong RBS and two medium to low ones. </p>
       <br>
       <p>
-Of course, for the sender's 1 population we decided to use our strongest RBS, BCD2 due to the fact that we want output = 1 whenever the sender’s population is induced. 
+For the sender's 1 population we decided to use our strongest RBS, BCD2 due to the fact that we want output = 1 whenever the sender’s population is induced. 
 As for the other 2 populations, we decided to use a medium RBS for each one, BCD12, since we would like to have no fluorescence when only each one of these sender’s population is induced (see index 1,2). 
 On the other hand, when both senders 1 and 2 are induced we expect that the strength of two medium RBS combined would lead to an OC6 production similar to that of BCD2 and thus lead to high fluorescence. 
      </p>
@@ -2291,7 +2290,7 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
      </p>
      <br>
      <center>
-      <img class="pat-1" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-4.png">
+      <img class="pat-4" src="https://static.igem.wiki/teams/4294/wiki/model/model/pr-figure-4.png">
       <figcaption>
         Figure 4. Direct Comparison of the OpLo and PFR receivers constructs.
       </center>
@@ -2300,7 +2299,12 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
         From the results above, the significance of the steep activation function is displayed; for the high value patterns the AHL produced from BCD2 is enough to give us the wanted output 1. 
         However, the analog nature of OpLo means that even the medium RBS alone can offer a fluorescence output similar to that of fully induced BCD2. On the other hand, such a concern doesn’t exist on the PFR construct, 
         where the receivers are not activated only with the induction of one medium RBS. Moreover, we witness that in the pattern with index 2, 2 medium RBS’s are more than capable to induce the receiver’s population.
-      </p>
+      </p><br><br>
+      <center>
+        <div class="download-button">
+        <h3><a href="https://gitlab.igem.org/2022/software-tools/athens/-/blob/main/Model/proof_all.ipynb">Pattern Recognition Code</a></h3>        
+        </div>
+        </center>
     
   
             </section>
@@ -2368,7 +2372,7 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
                 <a id="comsol" class="anchorOffset"></a>
                 <h1>Creation of Our “Geometry” Using COMSOL</h1>
                 <br>
-                For this specific analysis we used the COMSOL software and more specifically version 5.2. Initially, it was chosen to perform a two-dimensional and time dependent analysis with “Transport of Diluted Species” as a selected Physics. We created the geometry of each well using concentric disks with the corresponding dimensions, one for the outer ring (where the sender's populations would be), one for the membrane and one for the inner disk (where the receiver's population would be). We added “water” as the material of the outer ring and the inner disk and added a blank material for the membrane. For this material we tried to determine as many of the basic properties as we could since we did not have much data available for the membrane except those written on the technical data sheet of the product (density, permeability etc). So basically our basic geometry for the analysis was:
+                For this specific analysis we used the <a href="https://www.comsol.com/">COMSOL software</a> and more specifically version 5.2. Initially, it was chosen to perform a two-dimensional and time dependent analysis with “Transport of Diluted Species” as a selected Physics. We created the geometry of each well using concentric disks with the corresponding dimensions, one for the outer ring (where the senders populations would be), one for the membrane and one for the inner disk (where the receiver's population would be). We added “water” as the material of the outer ring and the inner disk and added a blank material for the membrane. For this material we tried to determine as many of the basic properties as we could since we did not have much data available for the membrane except those written on the technical data sheet of the product (density, permeability etc). So basically our basic geometry for the analysis was:
                 <br><br>
 
                 <center>
@@ -2391,7 +2395,7 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
                 <center>
                 <img class="dif-2" src="https://static.igem.wiki/teams/4294/wiki/model/image-2.png">
                 <figcaption>
-                Figure 2: Data collected for ODEs for the production of the lactone by the senders
+                Figure 2: Data collected for ODEs for the production of the lactone by the senders.
                 </figcaption>
                 </center>
                 <br>
@@ -2402,7 +2406,7 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
                 <center>
                 <img class="dif-3" src="https://static.igem.wiki/teams/4294/wiki/model/image-3.png">
                 <figcaption>
-                Figure 3: The Mesh
+                Figure 3: The Mesh.
                 </figcaption>
                 </center>
                 <br>
@@ -2421,7 +2425,7 @@ On the other hand, when both senders 1 and 2 are induced we expect that the stre
                 <center>
                 <img class="dif-4" src="https://static.igem.wiki/teams/4294/wiki/model/image-4.png">
                 <figcaption>
-                Figure 4: indicative results
+                Figure 4: Indicative results.
                 </figcaption>
                 </center>
                 <br>

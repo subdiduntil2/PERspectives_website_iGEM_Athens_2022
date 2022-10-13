@@ -394,6 +394,38 @@ body{
     background-size: 100%;
 }
 
+.container_tedx #tedxx0{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/pre-aegean.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_tedx #tedxx1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedxx2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedxx3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedx #tedxx4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .container_tedx .button-holder-tedx .button_tedx{
     background-color: #61b872;
     width: 15px;
@@ -405,12 +437,92 @@ body{
 .container_tedx .button-holder-tedx{
     position: absolute;
     justify-content: center;
-    left: 12%;
-    bottom: 1%;
+    left: 12%; 
+    bottom: 1%; 
 }
 .button_tedx:hover{
     background-color: #61b872;
 }
+
+
+
+.container_tedxx{
+    position: relative;
+    width: 580px;
+    height: 550px;
+    border-radius: 80px;
+    border: 10px solid #3aa9c5;
+    background: #e9e9e9;
+    position: relative;
+}
+
+.container_tedxx .wrapper_tedxx{
+    width: 500px;
+    height:550px;
+    translate: 0% -15%;
+    border-radius: 50px;   
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container_tedxx .wrapper-holder-tedxx{
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    height: 100%;
+    width: 100%;
+}
+
+.container_tedxx #tedxx0{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/pre-aegean.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_tedxx #tedxx1{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedxx #tedxx2{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedxx #tedxx3{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_tedxx #tedxx4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/collaborations/aegean-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container_tedxx .button-holder-tedxx .button_tedxx{
+    background-color: #61b872;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: .3rem;
+}
+.container_tedxx .button-holder-tedxx{
+    position: absolute;
+    justify-content: center;
+    left: 38%; 
+    bottom: 4%; 
+}
+.button_tedxx:hover{
+    background-color: #61b872;
+}
+
+
 
 /* responsive */
 @media(max-width: 1300px){

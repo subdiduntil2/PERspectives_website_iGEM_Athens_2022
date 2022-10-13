@@ -404,8 +404,9 @@ html{
 }
 
 .equations{
+    width: 100%;
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 /* Table */
@@ -452,6 +453,7 @@ html{
 .download-button{
     background-color: #050a30;
     color: #050a30;
+    border: 3px solid  #61b872;
     font-size: 25px;
     text-align: center;
     padding: 3%;
@@ -463,6 +465,7 @@ html{
 .download-button:hover{
     background-color: #050a30;
     color: #050a30;
+    border: 0px;
     font-size: 25px;
     text-align: center;
     padding: 3%;
@@ -509,6 +512,80 @@ html{
     border-radius: 20px;
 }
 
+.r-model{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.r-3{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.r-4{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.r-5{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.r-6{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.r-7{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.sa-1{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.sa-2{
+    width: 50%;
+    border-radius: 20px;
+}
+
+.pat-1{
+    width: 20%;
+    border-radius: 5px;
+}
+.pat-3{
+    width: 70%;
+    border-radius: 5px;
+}
+
+.pat-4{
+    width: 65%;
+    border-radius: 20px;
+}
+
+.dif-1{
+    width: 45%;
+    border-radius: 20px;
+}
+
+.dif-2{
+    width: 45%;
+    border-radius: 20px;
+}
+
+.dif-3{
+    width: 45%;
+    border-radius: 20px;
+}
+
+.dif-4{
+    width: 60%;
+    border-radius: 20px;
+}
+
 @media (max-width: 1200px){
     .buttons-1{
         display: none;
@@ -534,6 +611,7 @@ html{
     }
 
     .equations{
-        font-size: 18px;
+        width: 80%;
+        font-size: 15px;
     }
 }
