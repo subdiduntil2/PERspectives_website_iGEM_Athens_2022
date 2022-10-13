@@ -47,14 +47,63 @@
                   <a href="#intro">Overview</a>
               </li>
               <li class="lateral-content">
-                  <a href="#general_info">General Info</a>
-              </li>
-              <li class="lateral-content">
-                  <a href="#senders">Senders</a>
-              </li>
-              <li class="lateral-content">
-                <a href="#receivers">Receivers</a>
-              </li>
+                <button class="collapsible_menu">General Info</button>
+                <div class="content_menu">
+                    <ul>
+                    <li class="lateral-content">
+                    <a href="#gen-golden-gate">Golden Gate Assembly</a>
+                    </li>
+                    <li class="lateral-content">
+                      <a href="#gen-plasmid">Plasmid Vectors</a>
+                      </li>
+                    <li class="lateral-content">
+                    <a href="#gen-strains">Bacterial Strains</a>
+                    </li>
+                    <li class="lateral-content">
+                    <a href="#gen-visual">Visual output</a>
+                    </li>   
+                    <li class="lateral-content">
+                      <a href="#gen-luxi">LuxI/LuxR quorum sensing</a>
+                      </li> 
+                    </ul>
+                </div>
+            </li>
+            <li class="lateral-content">
+              <button class="collapsible_menu">Senders</button>
+              <div class="content_menu">
+                  <ul>
+                  <li class="lateral-content">
+                  <a href="#sen-rbs">RBS</a>
+                  </li>
+                  <li class="lateral-content">
+                  <a href="#sen-main">Main Circuit</a>
+                  </li>
+                  <li class="lateral-content">
+                  <a href="#sen-char">Characterisation</a>
+                  </li>   
+                  <li class="lateral-content">
+                    <a href="#sen-cross">Cross-talk</a>
+                    </li> 
+                  </ul>
+              </div>
+          </li>
+
+          <li class="lateral-content">
+            <button class="collapsible_menu">Receivers</button>
+            <div class="content_menu">
+                <ul>
+                <li class="lateral-content">
+                <a href="#rec-oplo">OpLo</a>
+                </li>
+                <li class="lateral-content">
+                <a href="#rec-PF">PF and PFc</a>
+                </li>  
+                <li class="lateral-content">
+                  <a href="#rec-pfr">PFR and PFcR</a>
+                  </li> 
+                </ul>
+            </div>
+        </li>
               <li class="lateral-content">
                   <a href="#references">References</a>
               </li>
@@ -91,7 +140,8 @@
         <br><br>
         <p>
 
-        <h2>Golden Gate Assembly</h2>
+        <h2 >Golden Gate Assembly</h2>
+        <a id="gen-golden-gate" class="anchorOffset"></a>
         <br>
 
         We considered several assembly approaches to build our constructs. We finally opted for Golden Gate Assembly, as it comprises a fast and easy method to assemble different DNA parts in a single plasmid, while offering modularity and high efficiency. The fact that we found out that the 2022 iGEM DNA Distribution kit would contain Golden Gate Assembly-compatible parts further encouraged this decision of ours, since it provided a safety net in case the parts designed by us did not function as expected.
@@ -266,6 +316,7 @@
         </center>
 
         <h2>Plasmid Vectors</h2>
+        <a id="gen-plasmid" class="anchorOffset"></a>
         <br>
         After we had decided that we would build our plasmids using Golden Gate Assembly, we had to select the vectors that would “host” the regulatory and coding sequences our circuits would consist of. 
         <br><br>
@@ -323,11 +374,11 @@
                     <td>B</td>
                   </tr>
                   </tr>
-                  <tr>
+                  <tr class="active-row">
                     <td>pSC101</td>
                     <td>C</td>
                   </tr>
-                  <tr class="active-row">
+                  <tr>
                     <td>pUC</td>
                     <td>A</td>
                   </tr>
@@ -407,6 +458,7 @@
             </li>
 
         <h2>Bacterial Strains</h2>
+        <a id="gen-strains" class="anchorOffset"></a>
         <br>
 
         <b>Bacterial Strains</b>
@@ -424,6 +476,7 @@
         <br><br>
 
         <h2>Visual output</h2>
+        <a id="gen-visual" class="anchorOffset"></a>
         <br>
 
         We chose a visual output for our system due to its ease of detection and wide range of available options. After a lot of reflection on integrating less utilized natural visual responses of bacterial cells to quorum sensing stimuli, such as bioluminescence (which can be measured with a luminometer) or biofilm formation (which can be observed and measured by staining bacterial cultures with Congo red [5], crystal violet [6], or safranin [7] dyes), we decided to proceed with the well-characterized method of fluorescent proteins. 
@@ -479,6 +532,7 @@
         <br><br>
 
         <h2>The intermediate signal in our biological perceptron - LuxI/LuxR quorum sensing system</h2>
+        <a id="gen-luxi" class="anchorOffset"></a>
         <br>
         In our biological Perceptron the input pattern is converted, in a weighted manner, into an intermediate signal by the senders and the sum of this intermediate dictates the final behavior of the receivers. 
         <br><br>
@@ -496,6 +550,7 @@
         <section class="senders">
           <a id="senders" class="anchorOffset"></a>
           <h1>The Biological Input Processors - The Senders</h1>
+          <a id="sen-rbs" class="anchorOffset"></a>
           <br><br>
           <p>
           A perceptron algorithm includes the recognition of input patterns and the conversion of these patterns to an intermediate signal in a weighted manner. Namely, each bit in its activated (“1”) state has a different power to determine the final result.
@@ -700,7 +755,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
 
           <figcaption>
             Table 3.
-            Translation initiation rates predicted by the RBS calculator. The TIR of the second SD sequence was used for this analysis, since ,according to Mutalik et. al, it is the main determinant of the GOI’s translation rate. The ribosomes from SD1 reinitiate translation from SD2.
+            Translation initiation rates predicted by the RBS calculator. The TIR of the second SD sequence was used for this analysis, since ,according to Mutalik et. al, it is the main determinant of the GOI's translation rate. The ribosomes from SD1 reinitiate translation from SD2.
           </figcaption>
         </center>
         <br><br>
@@ -709,6 +764,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
 
         <h2>Senders’ main circuit
         </h2>
+        <a id="sen-main" class="anchorOffset"></a>
         <br>
         <h3>Defining the input for pattern generation - The TetR repressor system.</h3>
         <br>
@@ -804,6 +860,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
           <br><br>
 
           <h2>Characterisation of the Ribosome Binding Sites</h2>
+          <a id="sen-char" class="anchorOffset"></a>
           <br>
           <h3>Characterisation of RBS strength utilizing a LuxI-mNeonGreen bicistronic design with a translation Termination-Reinitiation (TeRe) strategy.</h3>
           In order to characterize the strength of our senders’ RBS, we had to measure the LuxI each subpopulation produced in the scale of time. 
@@ -921,6 +978,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
                 The 36nt luxI-sfGFP fusion was proved to be a successful part in the characterization to determine the relative strength of the RBS variants in the context of the LuxI CDS. Please, refer to the Engineering Success tab and Results tab for more.  
                 <br><br>     
           <h2>Cross-talk </h2> 
+          <a id="sen-cross" class="anchorOffset"></a>
           <br>
 
           After deciding that the input patterns will be generated by a single chemical inducer, a problem that emerged was how to deal with cross-talk among senders. For this aspect of our project, cross-talk is defined as the unintended stimulation of supposedly inactivated sender cells by residual inducer molecules when they are mixed with activated senders to produce a specific pattern based on the strengths of their RBS. 
@@ -994,8 +1052,9 @@ Results from the RBS calculator regarding the translation initiation rate of the
           Irrespective of the existing literature, every circuit that is built requires testing and tuning. On the grounds of our narrow time window to perform extensive characterisation experiments, we followed a step-by-step approach regarding the receivers’ genetic circuits. Starting from a simple open loop circuit, which was necessary to obtain vital parameters of our parts (refer to <a href="https://2022.igem.wiki/athens/model">Model</a> section), two variations of a positive feedback and two variations of a coherent feed forward loop coupled with a positive feedback at its first step were built. Progressively introducing new components to our circuits enables troubleshooting and better interpretation of the results.
           <br><br>
 
-          <h3>Open Loop Circuit (OL or OpLo)
-          </h3><br>
+          <h2>Open Loop Circuit (OL or OpLo)
+          </h2><br>
+          <a id="rec-oplo" class="anchorOffset"></a>
           This is a circuit of the LuxR quorum sensing regulator at its simplest form. LuxR is constitutively expressed. When concentration of OC6 increases, it binds with LuxR, LuxR forms stable dimmers and binds to its binding site (lux box), upstream of the -35 region of the Plux promoter, activating the transcription of the downstream output.
 
           <center>
@@ -1024,8 +1083,9 @@ Results from the RBS calculator regarding the translation initiation rate of the
             </figcaption>
             </center> 
 
-          <h3>Positive Feedback Circuit (PF and PFc).
-          </h3><br>
+          <h2>Positive Feedback Circuit (PF and PFc).
+          </h2><br>
+          <a id="rec-PF" class="anchorOffset"></a>
           One already tested and widely utilized method to engineer a bistable circuit, are transcriptional Positive Feedbacks. In such circuits, an activator of an output induces its own production as well after induction with its respective ligand. A similar circuit was built by Li et. al [12] to achieve a steeper activation function of the CinR quorum sensing activator system. 
           <br><br>
           In our case, Plux was placed upstream of the LuxR coding sequence and the output coding sequence. Therefore, LuxR activates its own production after binding with OC6 and establishes a positive feedback.
@@ -1074,6 +1134,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
               </center> 
 
               <h2>A coherent feed forward loop coupled with a Positive Feedback (PFR, PFcR)</h2><br>
+              <a id="rec-pfr" class="anchorOffset"></a>
               For transcriptionally regulated gene expression, one approach to achieve a switch-like response is an engineered promoter onto which multiple transcription regulators bind cooperatively or a biochemical mimic of this effect.
               <br><br>
               This led us to the design of the part BBa_K4294301, a hybrid promoter which includes a LuxR activator binding domain (luxbox) upstream the -35 hexamer and a PhlF operator (phlO) that spans from the core sequence and the -10 hexamer to the proximal promoter sequence.
@@ -1154,8 +1215,8 @@ Results from the RBS calculator regarding the translation initiation rate of the
                         </cite>
         
                         <cite>
-                            <a href="">
-                                4.
+                            <a href="https://doi.org/10.1038/ncomms12266">
+                              [4]: Nadler, D.C., Morgan, S.-A., Flamholz, A., Kortright, K.E., Savage, D.F., 2016. Rapid construction of metabolite biosensors using domain-insertion profiling. Nat Commun 7, 12266. https://doi.org/10.1038/ncomms12266 [Accessed in June 2022]
                             </a>
                         </cite>
         
@@ -1380,6 +1441,44 @@ Results from the RBS calculator regarding the translation initiation rate of the
             </div>
             </div>
 
+<script>
+  var coll = document.getElementsByClassName("collapsible_menu");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+          
+<script>
+  var slideIndex = 1;
+
+  function currentDiv(n, top_level_div) {
+      showDivs(slideIndex = n, top_level_div);
+  }
+
+  function showDivs(n, top_level_div) {
+      var i;
+      var x = document.getElementsByClassName(top_level_div)[0].children;
+      
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+      }
+      
+      x[slideIndex-1].style.display = "block";
+  }
+</script>            
 
 </body>
 
