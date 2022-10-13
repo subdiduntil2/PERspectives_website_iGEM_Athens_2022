@@ -86,8 +86,9 @@
                 The goal of our project was to create a system of bacterial artificial intelligence. But to reach this goal, we had to determine smaller 
                 steps that would lead us to make the project feasible.
                 <br><br>
-                The first step was to characterize 11 RBS that we chose after the characterization made by our <a href="https://2022.igem.wiki/athens/model">Dry Lab</a>, using the De Novo DNA software. 
-                This would help us  determine if all of them work and which of them are the most suitable for our system.                
+                The first step was to characterize 11 RBS that we chose after the predictions characterization made by our <a href="https://2022.igem.wiki/athens/model">Dry Lab</a>, using the De Novo DNA software. This would help us ascertain whether all of them work and which ones are the most suitable for our system.
+
+                
               </p>
           </div>
 
@@ -102,26 +103,26 @@
             <img class="weights-img" src="https://static.igem.wiki/teams/4294/wiki/results/results-gifs.gif">
             </center>
             <br>
-            As mentioned in the <a href="https://2022.igem.wiki/athens/description">Description</a> the weights of our bacterial artificial system are determined by different Ribosome Binding Sites (RBS). Each RBS gives an alternative translation rate giving us the opportunity to assign different weights to an input. This means that different senders populations produce different amount of the Acylhomoserine synthase when encountering the input (aTc- C22H22N2O7 · HCl).
+            As mentioned in the <a href="https://2022.igem.wiki/athens/description">Description</a> page, the weights of our bacterial artificial system are determined by different Ribosome Binding Sites (RBS). Each RBS corresponds to an alternative translation rate, thus enabling the assignment of different weights to an input. This means that different sender subpopulations produce different amounts of acyl-homoserine synthase when encountering the input, namely aTc.
             <br><br>
-            Our team performed Golden Gate Assembly (Level 1 and Level 2) in order to make the constructs with 11 RBS variants (Table 1) (see <a href="https://2022.igem.wiki/athens/design">Design</a> and <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a>). In order to make functional constructs and characterize our RBS variants we followed several engineering cycles as described in the Engineering Success tab.
+            Our team performed Golden Gate Assembly (level 1 and level 2) in order to make the constructs with the 11 RBS variants (Table 1) (see see <a href="https://2022.igem.wiki/athens/design">Design</a>). Unfortunately, our first try did not yield functional constructs and they had to be reassembled through several engineering cycles as described in the Engineering Success tab.
             <br><br>
-            Our first constructs, which included the overlapping version of the luxI gene and mNeonGreen (<a href="https://2022.igem.wiki/athens/design">bisistronic design</a>) fluorescent protein gene, did not produce any results as assessed both by induction experiments with multiple inducer concentrations (aTc) and in different bacterial strains (<a href="#img2">Figure 2</a>). We also assessed the production of Acylhomoserine synthase and mNeonGreen with SDS-PAGE analysis (<a href="#img1">Figure 1</a>) and in-gel fluorescense of cell lysates in two cell types BL21 (DE3) (level2 construct) and DH5a-z1 (level 1 construct) after 3h induction with aTc, centrifuge and sonication of the cells. The in-gel fluorescence did not produce any results except for the positive control (OL ColE1 induced). The SDS-PAGE confirmed that our constructs did not work in BL21 cells (or the small quantity of protein was lost in the transfer step) but worked in a leaky way in DH5a-z1. This was the first sign that made us realise there was a problem with the chosen promoter for the TetR repressor, as DH5a-z1 cells encode for this repressor in their genome.
+            Our first constructs, which included the overlapping version of the luxI gene and the mNeonGreen gene (<a href="https://2022.igem.wiki/athens/design">design based on TeRe mechanism</a>), did not produce any results as assessed both by induction experiments with multiple inducer concentrations (aTc) and in different bacterial strains (<a href="#img2">Figure 2</a>). We also assessed the production of acyl-homoserine synthase and mNeonGreen with SDS-PAGE analysis and Coomassie staining (<a href="#img1">Figure 1</a>) and in-gel fluorescence of cell lysates in two cell types BL21 (DE3) (level 2 construct) and DH5a-z1 (level 1 construct) after a 3h induction with aTc, centrifugation and sonication of the cells. The in-gel fluorescence did not produce any results except for the positive control (OL colE1 induced). The SDS-PAGE confirmed that our constructs did not work in BL21 cells (or the small quantity of protein was lost in the transfer step), but worked in a leaky way in DH5a-z1. This was the first sign that made us realize there was a problem with the chosen promoter for the TetR repressor, as DH5a-z1 cells have the repressor gene integrated in their chromosomal DNA.
             <br><br>     
 
             <center>
             <img class="img1" id="img1" src="https://static.igem.wiki/teams/4294/wiki/results/figure-1.png">
-            <h5>Figure 1: SDS-PAGE: OL ColEI for positive control for mNeonGreen. S4- DH5a-z1 produces luxI but not mNeon Green both at induced and uninduced state. S4-BL21 is not producing  luxI or mNeonGreen with or without induction.
+            <h5>Figure 1: SDS-PAGE: OL colEI for positive control for mNeonGreen. S4-DH5a-z1 cells produce LuxI but not mNeon Green both at induced and uninduced state. S4-BL21 cells do no produce LuxI or mNeonGreen with or without induction.
             </h5>
             </center>
 
             <br>
-            Measurements for mNeonGreen Protein were performed with excitation wavelength 476nm and emission wavelength 547nm, as recommended by the plate reader manufacturer for proteins that the emission and excitation wavelength overlap, according to the fluorescent protein database mNeonGreen has an excitation wavelength at 506nm and an emission wavelength at 517nm. It is also important to mention that according Tutol et al. (2019) [1] chloride has an effect on mNeonGreen that is why we tried changing the buffer that we resuspended the pellets for measurement in case this was affecting the measurements we were conducting (<a href="#img3">Figure 3</a>).
+            Measurements for mNeonGreen fluorescent protein were performed with excitation wavelength 476nm and emission wavelength 547nm, as recommended by the plate reader manufacturer for proteins whose emission and excitation wavelength overlap. According to the fluorescent protein database, mNeonGreen has an excitation wavelength at 506nm and an emission wavelength at 517nm. It is also important to note that, according to Tutol et al. (2019) [1], excessive presence of chloride ions can have a negative effect on mNeonGreen; that is why we tried changing the buffer where we resuspended the pellets before measuring them, in case this was affecting our measurements (<a href="#img3">Figure 3</a>).
             <br><br>
 
             <center>
             <img class="img2" id="img2" src="https://static.igem.wiki/teams/4294/wiki/results/figure-2.png">
-            <h5>Figure 2: Testing senders pTU1- luxI mNeonGreen with multiple aTc concentrations (2.16μΜ,0.4μΜ,0.09μΜ). This induction resulted in very low fluorescence signal, maximum 340 RFU (ratio) 20h post induction.
+            <h5>Figure 2: Testing senders pTU1-luxI/mNeonGreen with multiple aTc concentrations (2.16μΜ,0.4μΜ,0.09μΜ). This induction resulted in very low fluorescence signal, maximum 340 RFU (ratio) 20h post induction.
             </h5>
             </center>
             
@@ -129,58 +130,44 @@
             
             <center>
             <img class="img3" id="img3" src="https://static.igem.wiki/teams/4294/wiki/results/figure-3.png">
-            <h5>Figure 3: Testing the effect of chloride in mNeonGreen Fluorescence, there was no significant effect in changing the solvent where we performed the resuspension of our pellets.
+            <h5>Figure 3: Testing the effect of chloride ions on mNeonGreen fluorescence; there was no significant effect when changing the solvent for pellet resuspension.
             </h5>
             </center>
             
             <br>
-            The resuspension of the cells to a chloride free buffer did not change the negative results. 
+            The resuspension of the cells to a chloride-free buffer did not change the negative results. 
             <br><br>
-            Last but not least in an attempt to fully characterise the problem with our constructs we wanted once again to test if the <i>luxI</i> gene 
-            is expressed in the luxI-mNeonGreen construct. That is why we tested the effect of the supernatant of BL21 luxI-mNeonGreen for S4 RBS after 
-            3h induction with aTc on the receivers construct OL-ColE1 (BL21). This experiment proved that the luxI gene is merely  functional and can 
-            produce OC6 to activate the receivers and made us realise the problem is  also in the bisistronic design with
-             mNeonGreen (<a href="#img4">Figure 4</a>). Although luxI is expressed in BL21 cells, it is not detected in SDS-PAGE 
-             (<a href="#img1">Figure 1</a>) and that can be attributed to very low production of this protein.Taking into account that the coomasie 
-             staining happened after this polyacrylamide gel was used in transfer for western blotting for some other samples, the remaining quantity is 
-             even smaller. That is maybe why the receivers are only slightly induced by the supernatant of BL21 senders. The same construct has been 
-             proven to be highly induced when using externally provided OC6 (see Receivers results) and also compared to the final sender constructs 
-             (luxI sfGFP, see <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a>). For all these reasons we considered 
+            In a last attempt to pinpoint the problem with our constructs, we wanted once again to test if the <it>luxI</it> gene is expressed in the luxI/mNeonGreen construct. That is why we tested the effect of the supernatant of BL21 luxI/mNeonGreen S4 RBS cells after 3h induction with aTc on the receivers construct OL-colE1 (BL21). This experiment proved that the luxI gene is functional and can produce OC6 to activate the receivers and made us realize the problem is also located in the TeRe-based design with mNeonGreen (<a href="#img4">Figure 4</a>). Although LuxI was expressed in BL21 cells, it is not detected in SDS-PAGE 
+             (<a href="#img1">Figure 1</a>) and that can be attributed to very low production of this protein.Taking into account that the Coomassie staining happened after this polyacrylamide gel was used in transfer for Western blotting for some other samples, the remaining quantity was even smaller. That is maybe why the receivers were only slightly induced by the supernatant of BL21 senders. The same construct has been proven to be highly induced when using externally provided OC6 (see Receivers Results) and also compared to the final sender constructs (luxI/sfGFP, see <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a>). For all these reasons we considered 
              these constructs not functional and proceeded in creating new constructs.
             <br><br>
 
             <center>
             <img class="img4" id="img4" src="https://static.igem.wiki/teams/4294/wiki/results/figure-4.png">
-            <h5>Figure 4: We tested the effect of the supernatant of BL21 luxI-mNeonGreen for S4 RBS after 3h induction with aTc on the Receiver's construct OL-ColE1 (BL21). This experiment proved that the luxI gene is functional and can produce OC6 to activate the receivers and made us realise the problem is the bisistronic design with mNeonGreen.
+            <h5>Figure 4: We tested the effect of the supernatant of luxI/mNeonGreen S4 RBS cells after 3h induction with aTc on the receivers' construct OL-colE1 (BL21). This experiment proved that the <it>luxI</it> gene is functional and can produce OC6 to activate the receivers and made us realize the problem is the TeRe-inspired design with mNeonGreen.
             </h5>
             </center>
 
             <br>
-            As described in the <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> page, we then proceeded in creating a new construct 
-            which included the first 36 nucleotides of the <i>luxI</i> gene followed by the <i>sfGFP</i> gene in order to estimate the translation rate 
-            produced by the different RBS variants taking into account that RBS sequences are context dependent. We tested this construct (level 2) 
-            for 11 different RBS in the BL21(DE3) cells but there was no sign of induction (<a href="#img5">Figure 5</a>). We present an example for this 
-            induction experiment for BCD2. We also tried to change the promoter which constitutively controlled the expression of the TetR operator, but again we 
-            did not get any positive results (See <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a>) (<a href="#img6">Figure 6</a>).
+            As described in the <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> page, we then proceeded with creating a new construct which included the first 36 nucleotides of the <it>luxI</it> gene followed by the <it>sfGFP</it> gene in order to estimate the translation rate displayed by the different RBS variants taking into account that RBS sequences are context dependent. We tested this construct (level 2) for 11 different RBS in BL21(DE3) cells but there was no sign of induction (Figure 5). We present an example for this induction experiment for BCD2. We also tried to change the promoter which constitutively controlled the expression of the TetR repressor, but again we did not get any positive results  (See <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a>) (<a href="#img6">Figure 6</a>).
             <br><br>
 
             <center>
             <img class="img5" id="img5" src="https://static.igem.wiki/teams/4294/wiki/results/figure-5.png">
-            <h5>Figure 5: Induction experiment of BL21 luxI 36nt -sfGFP. Example for BCD2. The cells produced a stable amount of fluorescence expressed in RFU that did not change after induction.
+            <h5>Figure 5: Induction experiment of BL21 luxI 36nt -sfGFP. Example for BCD2. The cells produced a stable amount of fluorescence expressed in RFU that did not increase significantly after induction.
             </h5>
             </center>
             <br>
 
             <center>
             <img class="img6" id="img6" src="https://static.igem.wiki/teams/4294/wiki/results/figure-6.png">
-            <h5>Figure 6: Induction experiment of DH5a cells with pLacI promoter for the expression of TetR. The change of promoter to a previously characterised one for the same system did not produce the expected results.
+            <h5>Figure 6: Induction experiment of DH5a cells with pLacI promoter for the expression of TetR. The change of promoter to a previously characterized one for the same system did not yield the expected results.
             </h5>
             </center>
             <br>
 
-            So as described in the <a href="https://2022.igem.wiki/athens/proof-of-concept">Engineering Success</a> page we proceed in transforming the level 1 constructs in E.coli DH5a-z1  which encode in their genome the 
-            TetR repressor under a promoter that was proved successful for our project. The DH5a-z1 cells gave us the opportunity to fully characterize 11 RBS and 
-            the results are presented below.
+            So as described in the <a href="https://2022.igem.wiki/athens/proof-of-concept">Engineering Success</a> page, we proceeded with transforming the level 1 constructs in <it>E.coli</it> DH5a-z1, which have the <it>tetR</it> gene integrated in their genome under a promoter that was proved to work for our constructs. The DH5a-z1 cells gave us the opportunity to fully characterize the 11 RBS and the results are presented below.
+
             <br><br>
             
             </p>
@@ -273,18 +260,13 @@
                 
               </tbody>
           </table>
-          <figcaption>Table 1: All the Ribosome Binding Sites (RBS) characterised in our project classified by their strength as indicated by De Novo DNA 
+          <figcaption>Table 1: All the Ribosome Binding Sites (RBS) characterized in our project classified by their strength as indicated by De Novo DNA 
             (RBS calculator). The BCDs were also more accurately predicted by Mutalik, V. et al. [2] for our project but are not represented in this 
             table</figcaption>
           </center>
           <br>
           <p> 
-          As described in the protocols, we used the FlexStation3 (Molecular Devices) Plate Reader to perform the Fluorescence and the OD600nm measurements. 
-          The exact Protocol for the induction is described in the protocol section. Below we present in diagrams the results for the luxI-sfGFP constructs for 
-          the 11 RBS in different time frames (0-240min) from the initiation of the induction and in different inducer concentrations (2-5,12*10^(-6)μΜ) 
-          (Table 2). Last but not least, we compare the RBS for the difference in sfGFP production with the luxI context dependence (Figures 4,5,6). All the 
-          measurements of fluorescence for sfGFP were performed with gain 300, excitation wavelength 485, emission wavelength 510. Regarding the OD600nm, all 
-          measurements were recorded without using the Pathcheck option to fulfil the needs of our project.
+          As described in the Protocols, we used the FlexStation3 (Molecular Devices) Plate Reader to conduct the fluorescence and the OD600nm measurements. The exact Protocol for the induction is described in the <a href="https://2022.igem.wiki/athens/protocols">Protocols</a> page. We present below the diagrams with the results for the luxI-sfGFP constructs for the 11 RBS in different time frames (0-240min) from the initiation of the induction and in different inducer concentrations (2-5,12*10^(-6)μΜ) (Table 2). Last but not least, we compare the RBS for the difference in sfGFP production with the luxI context dependence (Figures 4,5,6). All the measurements of fluorescence for sfGFP were performed with gain 300, excitation wavelength 485nm, emission wavelength 510nm. Regarding the OD600nm, all measurements were recorded without using the Pathcheck option to fulfil the needs of our project.
           </p>
           <br>
 
@@ -327,24 +309,20 @@
           <br>
 
           From <a href="tb2">Table 2</a> and Figures <a href="img4">4</a>,<a href="img5">5</a>,<a href="img6">6</a> we can conclude that the characterised 
-          RBS can be shorted by strength as follows: 
+          RBS can be sorted by strength as follows: 
+
           <br><br>
 
           <h2>BCD2 > S11 > S13 > S10 > BCD12 > S4 > BCD14 > S12 >BCD8 > S5 > BCD1</h2>
 
           <br><br>
-          These results vary a lot from our predictions. This can be attributed to change of strain from our initial BL21 (DE3) for which the Dry Lab made the calculations, to DH5a-z1 in order for our system to work. It is also important to note that, as we learned during meetings that are recorded in our Integrated Human Practices Page, both Dr. Skretas and Dr. Di Ventura mentioned that RBSs are a good way to calculate weights but RBS calculators are not always reliable and should always be confirmed with experimental procedures.Τhat is why our team tested 11 RBS sequences instead of 3 that were needed for our project. 
+          These results differ significantly from our predictions. This can be attributed to the change of strain from our initial BL21 (DE3), for which the Dry Lab made the calculations, to DH5a-z1 in order for our system to work. It is also important to note that, as we learned during meetings that are recorded in our Integrated Human Practices page, both Dr. Skretas and Prof. Di Ventura mentioned that RBS are a good way to calculate weights but RBS calculators are not always reliable and should always be confirmed with experimental procedures. Τhat is why our team tested 11 RBS sequences instead of 3 that were needed for our project.  
           <br><br>
-          In this set of experiments we achieved the characterization of 11 RBS in the context dependence of <i>luxI</i>. This is a library that future teams 
-          may use in order to incorporate this gene to their contstracts and control the luxI translation in a way that fits the needs of their project.
+          In this set of experiments we achieved the characterization of 11 RBS in the context dependence of <it>luxI</it>. This is a library that future teams may use in order to incorporate this gene to their contstracts and control the <it>luxI</it> translation in a way that fits the needs of their project.
           <br><br>
-          We then proceeded in a second series of experiments for our constructs. This time we used the <i>luxI</i> only constructs. Because the <i>luxI</i> 
-          gene expression does not result in any visual output and because we did not have the resources to perform either affinity chromatography or western 
-          blotting even though we had included a 6*His-tag in our constructs, we chose an indirect way to quantify its production. 
+          We then proceeded to a second series of experiments for our constructs. This time we used the <it>luxI</it> only constructs. Since the <it>luxI</it> gene expression does not result in any visual output and since we did not have the resources to perform either affinity chromatography or Western blotting (even though we had included a 6*His-tag in our constructs), we chose an indirect way to quantify its production. 
           <br><br>
-          These experiments aimed to characterise the activation of the Receiver caused by the different RBS. As mentioned in the protocols, we used the 
-          supernatant of each one of the senders after 3h induction with multiple concentrations of aTc for the induction of the Receivers 
-          (OL ColE1 construct) and quantified the production of mNeonGreen produced when induced with different supernatants. The results are presented 
+          These experiments aimed to characterize the activation of the receivers caused by the different RBS. As mentioned in the Protocols, we used the supernatant of each one of the senders after 3h induction with multiple concentrations of aTc for the induction of the receivers (OL colE1 construct) and quantified the production of mNeonGreen produced when induced with different supernatants. The results are presented 
           in <a href="tb3">Table 3</a>.
           <br><br>
 
@@ -382,18 +360,7 @@
               <br>
 
               <p>
-              The results are not  similar to the characterisation of the RBSs with sfGFP for many reasons. We tried to name some reasons why this 
-              difference is observed. First of all, these results concern the activation of the Receivers. The activation rate depends on the amount of
-               OC6 produced by the Senders, which is not known, and it also depends on the concentration of Sender cells at the 3 hours, when the
-                induction happened. Our team did not take into account the sender cells population density after the 3 hour induction, therefore the 
-                differences encountered between our characterization and the measurement of the luxI-sfGFP constructs can not be considered to be the 
-                same because the results caused by the supernatants could be attributed to differences in the senders population density and not the RBS 
-                strength. Also, the induction time of the senders may not have been the appropriate and more experiments are needed to optimise that. 
-                We also came to the conclusion that a different ratio of Senders:Receivers is needed. After sharing our results with the Dry lab, they 
-                informed us that the optimal ratio is 1:10. We incorporated this knowledge into the proof of concept experiments. Taking into account the 
-                above, we present these results to prove the capability of the senders to activate in different amounts the receivers and to point out 
-                the importance for the appropriate balance to exist between the two populations. We elaborate more on that in 
-                the <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a> page.
+              The results are not similar to the characterization of the RBS with sfGFP for many reasons. We tried to name some reasons why this difference is observed. First of all, these results concern the activation of the Receivers. The activation rate depends on the amount of OC6 produced by the Senders, which is not known, and it also depends on the concentration of Sender cells at the 3 hours time point, when the induction happened. Our team did not take into account the sender cells population density after the 3 hour induction, therefore the differences encountered between our characterization and the measurement of the luxI-sfGFP constructs can not be considered to be the same, because the results caused by the supernatants could be attributed to differences in the senders population density and not the RBS strength. Also, the induction time of the senders may not have been the appropriate one and more experiments are needed to optimize that. We also came to the conclusion that a different ratio of Senders:Receivers is needed. After sharing our results with the Dry lab, they informed us that the optimal ratio is 1:10 or 1:7. We incorporated this knowledge into the Proof of Concept experiments. Taking into account the above, we present these results to prove the capability of the senders to activate the receivers in a differentiated manner and to point out the importance of the appropriate balance between the two populations. We elaborate more on that in the <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a> page.
               </p>
 
         </section>
@@ -438,7 +405,7 @@
 <!-- Receivers  -->
         <section class="res-sec">
             <a id="res-sec" class="anchorOffset"></a>
-            As we described in our <a href="https://2022.igem.wiki/athens/design">Design</a> page, we wanted to test different constructs of the Receivers’ circuit in order to better represent the binary form of the output of the Perceptron algorithm. When the intermediate molecule exceeds the threshold, then the output is produced. We designed our system that way to achieve a steep activation that simulates better the function of the algorithm (Output:1 or Output:0), and also achieve the reduction of leakiness. 
+            As we described in our Design page, we wanted to test different constructs for the receivers’ circuit in order to better represent the binary form of the output of the Perceptron algorithm. When the intermediate molecule exceeds the threshold, then the output is produced. We designed our system that way to achieve a steep activation that better simulates the function of the algorithm (Output:1 or Output:0), and also achieve the reduction of leakiness. 
             <br><br> 
             The constructs we tried to test are presented in the table below:
             <br>
@@ -488,12 +455,12 @@
 
             We used different concentrations of externally provided OC6 to induce the Receivers separately from the Senders in order to characterise their activation.
             <br><br> 
-            After some test experiments we decided to measure the Fluorescence without using Pathcheck at the plate reader, as we realised that after some hours, the OD could not be measured with Pathcheck, due to cells' exponential growth. 
-            Also, our measurements were taken until the timepoint of 4h, because we observed that at approximately 3h fluorescence stabilises and dying cells start to precipitate  at the bottom of the plate, affecting the OD measurement.
+            After some preliminary experiments we decided to measure the Fluorescence without using the pathcheck option at the plate reader, as we realised that after some hours, the OD could not be measured with Pathcheck, due to cells' exponential growth. 
+            Also, our measurements were taken until the time point of 4h, because we observed that at approximately 3h fluorescence reaches its plateau and dying cells start to precipitate at the bottom of the plate, affecting the OD measurement.
             <br><br>
             Measurements for mNeonGreen Protein were performed with excitation wavelength 476nm and emission wavelength 547nm, as recommended by the plate reader manufacturer for proteins that the emission and excitation wavelength overlap, according to the fluorescent protein database mNeonGreen has an excitation wavelength at 506nm and an emission wavelength at 517nm.The protocol we followed for the induction with OC6 can be found in the protocols page. 
             <br><br>
-            We used different concentrations of OC6 for each construct according to the optimization experiments. We measured Absorbance at 600 nm and Fluorescence as described in our Protocols book. We then calculated the ratio Fluorescnce/OD600nm. Below are presented the results of ratio increase in different concentrations and in time.
+            We used different concentrations of OC6 for each construct according to the optimization experiments. We measured absorbance at 600 nm and fluorescence as described in our Protocols book. We then calculated the ratio Fluorescnce/OD600nm. The data demonstrating the ratio increasing are presented below in different concentrations and in the scale of time.
             <br><br>
 
 
@@ -506,7 +473,7 @@
 
             It is observed that the fluorescence ratio increases as the concentration increases. But after 0.01 μΜ the ratio reaches its highest value. 
             <br><br>
-            We present at <a href="#img13">Figure 13</a> the results of the induction of the same construct, but using the other pTU2-RFP origin plasmid (coLE1).
+            In <a href="#img13">Figure 13</a> we present the results of the induction of the same construct, but using the other pTU2-RFP origin plasmid (coLE1).
             <br><br>
 
             <center>
@@ -516,7 +483,7 @@
             </center>
             <br> 
 
-            Then, in order to achieve steeper activation, we tested the PF construct, but as it can be seen in <a href="#img14">Figure 14</a>, the results were not expected. 
+            Then, in order to achieve steeper activation, we tested the PF construct, but as it can be seen at Figure 14, the results showed no significant activation of the receivers. 
             <br><br>
 
             <center>
@@ -582,7 +549,7 @@
               decision, a decision in the form of “0” or “1”. This means that the receivers population as mentioned in our results but also in the 
               <a href="https://2022.igem.wiki/athens/design">Design</a> page had to be steeply activated, that is why we tested multiple constructs, some simple and some more complex. From the 
               constructs we tested as indicated by the figures above, the most functional but without steep activation function were the open loops 
-              (ColE1+P15A) that we also used for the interaction between the senders and the receivers. But the one that seems extremely promising is 
+              (ColE1) that we also used for the interaction between the senders and the receivers. But the one that seems extremely promising is 
               the PFR construct that is presented with a very steep slope.
               <br><br>
               Our future goals include testing the system as a whole with the PFR construct to optimise its function.              
