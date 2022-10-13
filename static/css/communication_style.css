@@ -128,36 +128,22 @@ body{
     color: var(--yellow);
   }
 
+/* this the after effect with the yellow line */
+
+.index-bar ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ffc973;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
     
-.collapsible_menu {
-background-color: #050a30;
-color: #e9e9e9;
-font-family: 'Glacial Indifference Bold';
-cursor: pointer;
-padding: 0px;
-width: 100%;
-border: none;
-text-align: left;
-outline: none;
-font-size: 25px;
-}
+.index-bar ul li a:hover::after {
+    width: 0%;
+    }
 
-.active, .collapsible_menu:hover {
-    color: var(--yellow);
-}
-
-.content_menu{
-padding-top: 7%;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
-background-color: #050a30;
-border-radius: 15px;
-}  
-
-.content_menu ul{
-    list-style: none;
-}
 
 .anchorOffset {
     display: block !important;
@@ -255,15 +241,15 @@ border-radius: 15px;
 }
 .container_ngos .button-holder-ngos .button_ngos{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
 .container_ngos .button-holder-ngos{
     position: absolute;
-    left: 42%;
+    left: 45%;
     bottom: 4%;
 }
 .button_ngos:hover{
@@ -321,9 +307,9 @@ border-radius: 15px;
 
 .container_unique .button-holder-unique .button_unique{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
@@ -357,10 +343,10 @@ border-radius: 15px;
 }
 
 .container_biochem .wrapper_biochem{
-    width: 600px;
+    width: 700px;
     height: 520px;
     translate: 0% -5%;
-    /* border-radius: 50px;    */
+    border-radius: 50px;   
     margin: 5rem auto;
     overflow: hidden;
 }
@@ -371,13 +357,13 @@ border-radius: 15px;
     height: 100%;
     width: 100%;
 }
-.container_biochem #chem-img-bio-1{
+.container_biochem #slider-img-bio-1{
     background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/biochem2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.container_biochem #chem-img-bio-2{
+.container_biochem #slider-img-bio-2{
     background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/fairytale/biochem-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -387,16 +373,16 @@ border-radius: 15px;
 
 .container_biochem .button-holder-biochem .button_biochem{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
-.container_biochem .button-holder-biochem{
+.button_biochem .button-holder-biochem{
     position: absolute;
     left: 47%;
-    bottom: 3%;
+    bottom: 2%;
 }
 .button_biochem:hover{
     background-color: #61b872;
@@ -414,7 +400,7 @@ border-radius: 15px;
 
 .container_socials{
     width: 650px;
-    height: 1080px;
+    height: 1000px;
     border-radius: 80px;
     border: 10px solid #050a30;
     background: #e9e9e9;
@@ -423,7 +409,7 @@ border-radius: 15px;
 .container_socials .wrapper_socials{
     width: 520px;
     height: 900px;
-    translate: 0% 0%;
+    translate: 0% -5%;
     border-radius: 50px;   
     margin: 5rem auto;
     overflow: hidden;
@@ -480,9 +466,9 @@ border-radius: 15px;
 
 .container_socials .button-holder-socials .button_socials{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
@@ -490,7 +476,7 @@ border-radius: 15px;
 .container_socials .button-holder-socials{
     position: relative;
     left: 0%;
-    bottom: 5%;
+    bottom: 11.5%;
 }
 .button_socials:hover{
     background-color: #61b872;
@@ -593,15 +579,15 @@ border-radius: 15px;
 
 .container_tedx .button-holder-tedx .button_tedx{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
 .container_tedx .button-holder-tedx{
     position: absolute;
-    left: 29%;
+    left: 30%;
     bottom: 4%;
 }
 .button_tedx:hover{
@@ -681,15 +667,15 @@ border-radius: 15px;
 
 .container_schms .button-holder-schms .button_schms{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
 .container_schms .button-holder-schms{
     position: absolute;
-    left: 37%;
+    left: 40%;
     bottom: 4%;
 }
 .button_schms:hover{
@@ -769,15 +755,15 @@ border-radius: 15px;
 
 .container_debate .button-holder-debate .button_debate{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
 .container_debate .button-holder-debate{
     position: absolute;
-    left: 36%;
+    left: 40%;
     bottom: 4%;
 }
 .button_debate:hover{
@@ -819,96 +805,6 @@ border-radius: 15px;
     font-size: 40px;
 }
 
-.container_anav1{
-    width: 800px;
-    height: 650px;
-    border-radius: 80px;
-    border: 10px solid #050a30;
-    background: #e9e9e9;
-    position: relative;
-}
-
-.container_anav1 .wrapper_anav1{
-    width: 700px;
-    height: 520px;
-    translate: 0% -5%;
-    border-radius: 0px;   
-    margin: 5rem auto;
-    overflow: hidden;
-}
-
-.container_anav1 .wrapper-holder-anav1{
-    display: grid;
-    grid-template-columns: repeat(10, 100%);
-    height: 100%;
-    width: 100%;
-}
-.container_anav1 #anav1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavr2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 110%;
-}
-.container_anav1 #anav2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavr1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_anav1 #anav3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavryta.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50%;
-}
-.container_anav1 #anav4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavr3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_anav1 #anav5{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavr4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_anav1 #anav6{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavr6.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_anav1 #anav7{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavr7.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_anav1 #anav8{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/anavryta/anavryta-after.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.container_anav1 .button-holder-anav1 .button_anav1{
-    background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container_anav1 .button-holder-anav1{
-    position: absolute;
-    left: 32%;
-    bottom: 3%;
-}
-.button_anav1:hover{
-    background-color: #61b872;
-}
-
 .sarakas{
     text-align: justify;
 }
@@ -944,19 +840,31 @@ border-radius: 15px;
     width: 100%;
 }
 .container_sarakas #sarakas1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/sarakas/sarakatsanis-1.png);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/sarakatsanis-visit-to-lab-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_sarakas #sarakas2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/sarakas/sarakatsanis-5.png);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/sarakatsanis-visit-to-lab-2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container_sarakas #sarakas3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/sarakas-live.jpg);
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/sarakatsanis-visit-to-lab-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_sarakas #sarakas4{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/sarakatsanis-visit-to-lab-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.container_sarakas #sarakas5{
+    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/sarakatsanis-visit-to-lab-5.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -965,22 +873,20 @@ border-radius: 15px;
 
 .container_sarakas .button-holder-sarakas .button_sarakas{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
 .container_sarakas .button-holder-sarakas{
     position: absolute;
-    left: 45%;
+    left: 40%;
     bottom: 2%;
 }
 .button_sarakas:hover{
     background-color: #61b872;
 }
-
-/* Researchers Night */
 
 .researchers_night{
     text-align: justify;
@@ -995,15 +901,13 @@ border-radius: 15px;
 .researchers_night h2{
     font-family: 'Glacial Indifference';
     color: #61b872;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .researchers_night it{
     font-family: 'Glacial Indifference Italics';
     font-size: 25px;
 }
-
-/* general gallery */
 
 .container_ren_1{
     position: relative;
@@ -1025,7 +929,7 @@ border-radius: 15px;
 
 .container_ren_1 .wrapper-holder-ren_1{
     display: grid;
-    grid-template-columns: repeat(3, 100%);
+    grid-template-columns: repeat(4, 100%);
     height: 100%;
     width: 100%;
 }
@@ -1051,386 +955,19 @@ border-radius: 15px;
 }
 .container_ren_1 .button-holder-ren_1 .button_ren_1{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
 .container_ren_1 .button-holder-ren_1{
     position: absolute;
-    left: 44%;
+    left: 45%;
     bottom: 2%;
 }
 .button_ren_1:hover{
     background-color: #61b872;
-}
-
- /* coloured bacteria gallery */
-
-.container_ren_2{
-    position: relative;
-    width: 800px;
-    height: 750px;
-    border-radius: 80px;
-    border: 10px solid #050a30;
-    background: #e9e9e9;
-}
-
-.container_ren_2 .wrapper_ren_2{
-    width: 70%;
-    height: 620px;
-    translate: 0% -5%;
-    border-radius: 0px;   
-    margin: 5rem auto;
-    overflow: hidden;
-}
-
-.container_ren_2 .wrapper-holder-ren_2{
-    display: grid;
-    grid-template-columns: repeat(4, 100%);
-    height: 100%;
-    width: 100%;
-}
-.container_ren_2 #ren_2-img-1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/coloured-bacteria-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_ren_2 #ren_2-img-2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/coloured-bacteria-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_2 #ren_2-img-3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/coloured-bacteria-3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_2 #ren_2-img-4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/coloured-bacteria-4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_2 .button-holder-ren_2 .button_ren_2{
-    background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container_ren_2 .button-holder-ren_2{
-    position: absolute;
-    left: 40%;
-    bottom: 2%;
-}
-.button_ren_2:hover{
-    background-color: #61b872;
-}
-
-/* electro */
-
-.ren-electro{
-    width: 40%;
-    border-radius: 20px;
-}
-
- /* central dogma */
-
- .container_ren_3{
-    position: relative;
-    width: 800px;
-    height: 750px;
-    border-radius: 80px;
-    border: 10px solid #050a30;
-    background: #e9e9e9;
-}
-
-.container_ren_3 .wrapper_ren_3{
-    width: 70%;
-    height: 620px;
-    translate: 0% -5%;
-    border-radius: 0px;   
-    margin: 5rem auto;
-    overflow: hidden;
-}
-
-.container_ren_3 .wrapper-holder-ren_3{
-    display: grid;
-    grid-template-columns: repeat(4, 100%);
-    height: 100%;
-    width: 100%;
-}
-.container_ren_3 #ren_3-img-1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/central-dogma-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_ren_3 #ren_3-img-2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/central-dogma-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_3 #ren_3-img-3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/central-dogma-3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_3 #ren_3-img-4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/central-dogma-4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_3 .button-holder-ren_3 .button_ren_3{
-    background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container_ren_3 .button-holder-ren_3{
-    position: absolute;
-    left: 42%;
-    bottom: 1%;
-}
-.button_ren_3:hover{
-    background-color: #61b872;
-}
-
- /* props */
-
- .container_ren_4{
-    position: relative;
-    width: 800px;
-    height: 750px;
-    border-radius: 80px;
-    border: 10px solid #050a30;
-    background: #e9e9e9;
-}
-
-.container_ren_4 .wrapper_ren_4{
-    width: 70%;
-    height: 620px;
-    translate: 0% -5%;
-    border-radius: 0px;   
-    margin: 5rem auto;
-    overflow: hidden;
-}
-
-.container_ren_4 .wrapper-holder-ren_4{
-    display: grid;
-    grid-template-columns: repeat(4, 100%);
-    height: 100%;
-    width: 100%;
-}
-.container_ren_4 #ren_4-img-1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/props-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_ren_4 #ren_4-img-2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/props-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_4 #ren_4-img-3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/props-4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_4 #ren_4-img-4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/education-communication/researchers-night/props-5.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_4 .button-holder-ren_4 .button_ren_4{
-    background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container_ren_4 .button-holder-ren_4{
-    position: absolute;
-    left: 41%;
-    bottom: 2%;
-}
-.button_ren_4:hover{
-    background-color: #61b872;
-}
-
- /* props */
-
- .container_ren_5{
-    position: relative;
-    width: 800px;
-    height: 750px;
-    border-radius: 80px;
-    border: 10px solid #050a30;
-    background: #e9e9e9;
-}
-
-.container_ren_5 .wrapper_ren_5{
-    width: 70%;
-    height: 620px;
-    translate: 0% -5%;
-    border-radius: 0px;   
-    margin: 5rem auto;
-    overflow: hidden;
-}
-
-.container_ren_5 .wrapper-holder-ren_5{
-    display: grid;
-    grid-template-columns: repeat(5, 100%);
-    height: 100%;
-    width: 100%;
-}
-.container_ren_5 #ren_5-img-1{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/copy-of-img-20220930-174200.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container_ren_5 #ren_5-img-2{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/copy-of-img-20220930-183342.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_5 #ren_5-img-3{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/copy-of-img-20220930-204209.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_5 #ren_5-img-4{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/copy-of-img-20220930-213746.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_5 #ren_5-img-5{
-    background-image: url(https://static.igem.wiki/teams/4294/wiki/human-practices/copy-of-img-20220930-213803.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
-}
-.container_ren_5 .button-holder-ren_5 .button_ren_5{
-    background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: .3rem;
-}
-.container_ren_5 .button-holder-ren_5{
-    position: absolute;
-    left: 37%;
-    bottom: 2%;
-}
-.button_ren_5:hover{
-    background-color: #61b872;
-}
-
-/* Refs */
-.collapsible label {
-    padding:20px 20px;
-    position:relative;
-    z-index:1;
-    font-weight:600;
-    padding:20px 20px;
-    text-align: left;
-    transition: all 0.5s linear;
-    background-color:#050a30;
-    border-radius:20px;
-    display:flex;
-    position:relative;
-    color:#e9e9eb;
-    cursor:pointer;
-    font-size: 30px;
-}
-
-.collapsible img{
-    position:relative;
-    
-}
-
-
-.collapsible label:hover{
-    color:var(--yellow)
-}
-
-/*
-.collapsible label a::after {
-    content: '';
-    width: 0%;
-    height: 1px;
-    background-color: #ffc973;
-    display: block;
-    margin: auto; 
-    transition: all 0.5s;
-  }
-    
-.collapsible label a:hover::after {
-    width: 30%;
-}
-*/
-.collapsible-content{
-    overflow:hidden;
-    max-height:0px;
-    padding-bottom:25px;
-    overflow:hidden;
-    top:-100%;
-    opacity:0;
-    transition: max-height 0.5s ease-out;
-    transition: all 0.5s ease;
-    font-size:20px;
-}
-
-.collapsible input{
-    display:none;
-}
-
-.collapsible input:checked ~ .collapsible-content{
-    max-height:30000px;
-    padding-bottom:5px;
-    background-color:#102a4e;
-    opacity:1;
-    top:0;
-}
-
-.collapsible-content cite a {
-     padding: 10px 10px;
-     color:#e9e9eb;
-     display:block;
 }
 
 .fairytale{
@@ -1453,7 +990,7 @@ border-radius: 15px;
 }
 
 .container_fairy .wrapper_fairy{
-    width: 90%;
+    width: 700px;
     height: 520px;
     translate: 0% -5%;
     border-radius: 0px;   
@@ -1501,9 +1038,9 @@ border-radius: 15px;
 
 .container_fairy .button-holder-fairy .button_fairy{
     background-color: #61b872;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     display: inline-block;
     margin: .3rem;
 }
@@ -1511,7 +1048,7 @@ border-radius: 15px;
 .container_fairy .button-holder-fairy{
     position: relative;
     left: 0%;
-    bottom: 15%;
+    bottom: 12%;
 }
 .button_fairy:hover{
     background-color: #61b872;
