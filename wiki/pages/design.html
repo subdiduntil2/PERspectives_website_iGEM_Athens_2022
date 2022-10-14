@@ -214,16 +214,14 @@
         </table>
         <figcaption>
         Table 1.
-        Overhangs for Level 2 Golden Gate assembly regarding the Receivers’ Circuits. TUs were ordered as gene fragments from Twist and submitted as 
-        such to the iGEM registry. The part code is, therefore, included to facilitate registry search. For the parts in the following tables, please 
-        refer to the <a href="https://2022.igem.wiki/athens/parts">Parts</a> page.        
+        Overhangs for Level 2 Golden Gate assembly regarding the Receivers’ Circuits. TUs were ordered as gene fragments and submitted as such to the iGEM registry. The part code is, therefore, included to facilitate registry search. For the parts in the following tables, please refer to the <a href="https://2022.igem.wiki/athens/parts">Parts</a> page.        
         </figcaption>
         </center>
 
         <br><br>
         <b>Senders' Circuits</b>
         <br><br>
-        Senders’ Level 1 TUs were assembled using Golden Gate Assembly with BsaI.
+        
 
         <center>
         <table class="content-table">
@@ -269,7 +267,7 @@
             </tbody>
         </table>
         <figcaption>
-          Table 2. Senders’ Level 2 TUs were assembled using Golden Gate Assembly with BsmBI.           
+          Table 2. Senders’ Level 1 TUs were assembled using Golden Gate Assembly with BsaI.           
         </figcaption>
         </center>
 
@@ -309,11 +307,12 @@
         </table>
 
         <figcaption>
-          Table 3. Overhangs for Level 2 Golden Gate assembly regarding the Senders’ Circuits. The boxes in blue contain overhangs used in our
-           senders’ redesigned circuits with a variation in TetR constitutive expression promoter and RBS (PlacI and tet1 RBS instead of J23106 and
-            B0034 RBS), which are described in more detail in the <a href="https://2022.igem.wiki/athens/engineering">Engineering Sucess</a> page.
+          Table 3. Senders’ Level 2 TUs were assembled using Golden Gate Assembly with BsmBI.
         </figcaption>
         </center>
+
+        Overhangs for Level 2 Golden Gate assembly regarding the Senders’ Circuits. The last two boxes contain overhangs used in our senders’ redesigned circuits with a variation in TetR constitutive expression promoter and RBS (PlacI and tet1 RBS instead of J23106 and
+            B0034 RBS), which are described in more detail in the <a href="https://2022.igem.wiki/athens/engineering">Engineering Sucess</a> page.
 
         <h2>Plasmid Vectors</h2>
         <a id="gen-plasmid" class="anchorOffset"></a>
@@ -401,7 +400,7 @@
         <ul>
 
         <li>
-        pTU1-A-lacZ [3]: We utilized pTU1-A-lacZ as our level 1 (as hinted by the “1” in its name)-Golden Gate acceptor vector for assembling the LuxI expressing transcriptional units with the different RBS in our senders. This vector has an ampicillin (Amp) resistance gene and is a high copy plasmid; it is also approximately 2.5kbp in size. Since it would not be present in the senders to be induced, we did not have to select a version with a particular origin of replication (taking into consideration possible interactions with other plasmids transformed in the same cell or how copy number would affect expression dynamics). pTU1-A-lacZ contains the gene coding for LacZ, which allowed us to select recombined constructs through blue-white screening on agar plates spread with x-gal and IPTG (blue colonies: transformed with the undesired parental plasmid, white colonies: transformed with a recombinant plasmid). Another trait worth mentioning of pTU1-A-lacZ is that it is optimized to be used as a part-carrying vector should the transcriptional unit it contains be utilized as a fragment in level 2 assembly, as it also includes two BsmBI cut sites “outside” its level 1 restriction positions. The “A” in the vector’s name indicates that the transcriptional unit assembled inside this particular plasmid will be placed upstream of other transcriptional units (assembled in pTU1-A-lacZ “B”, “C”, etc. counterparts) should it be included in a level 2-Golden Gate assembly. This detail was given particular attention, as many of our constructs contain repressor genes that are constitutively expressed. We designed our constructs placing the constitutively expressed genes downstream of all inducibly expressed CDS, to reduce leakiness from our constitutively translated transcriptional units.
+        pTU1-A-lacZ [3]: We utilized pTU1-A-lacZ as our level 1 (as hinted by the “1” in its name)-Golden Gate acceptor vector for assembling the LuxI expressing transcriptional units with the different RBS in our senders. This vector has an ampicillin (Amp) resistance gene and is a high copy plasmid; it is also approximately 2.5kbp in size. Since it would not be present in the senders to be induced, we did not have to select a version with a particular origin of replication (taking into consideration possible interactions with other plasmids transformed in the same cell or how copy number would affect expression dynamics). pTU1-A-lacZ contains the gene coding for LacZ, which allowed us to select recombined constructs through blue-white screening on agar plates spread with x-gal and IPTG (blue colonies: transformed with the undesired parental plasmid, white colonies: transformed with a recombinant plasmid). Another trait worth mentioning of pTU1-A-lacZ is that it is optimized to be used as a part-carrying vector should the transcriptional unit it contains be utilized as a fragment in level 2 assembly, as it also includes two BsmBI cut sites “outside” its level 1 restriction positions. The “A” in the vector’s name indicates that the transcriptional unit assembled inside this particular plasmid will be placed upstream of other transcriptional units (assembled in pTU1-A-lacZ “B”, “C”, etc. counterparts) should it be included in a level 2-Golden Gate assembly. This detail was given particular attention, as many of our constructs contain repressor genes that are constitutively expressed. We designed our constructs placing the constitutively expressed genes downstream of all inducibly expressed CDS, to reduce leakiness due to transcriptional readthrough from our constitutively translated transcriptional units.
         <br><br>
         
         <center>
@@ -414,7 +413,7 @@
         </li>
 
         <li>
-        pTU2-A-RFP (colE1 ori) [3]: We used pTU2-A-RFP (colE1 ori) as a level 2 (as indicated by the “2” in its name)-Golden Gate acceptor vector for assembling all different versions of the mNeonGreen/LuxR expression system in receivers: Open Loop (OL or OpLo), Positive Feedback (PF), Positive Feedback with a constitutive promoter (PFc), Positive Feedback with a Repressor (PF+R) and Positive Feedback with a Repressor and a constitutive promoter (PFc+R). This vector has a chloramphenicol (Cm) resistance gene and is a medium copy plasmid; it is approximately 3kbp in size. We selected a medium-copy plasmid for the expression of our system in receiver cells, as such a plasmid would allow the production of our visual output (mNeonGreen) while maintaining it at the levels receivers are actually activated by OC6 molecules; namely, without having a potentially high-copy vector counterbalance the different amount of AHL molecules receivers are stimulated by. This medium-copy backbone would not stress out cells carrying it either.  Another reason we chose this particular vector was its marker; pTU2-A-RFP (colE1 ori) contains an RFP gene, enabling screening of colonies expressing recombinant plasmids without the need to use additional reagents (magenta colonies: transformed with the undesired parental plasmid, white colonies: transformed with a recombinant plasmid). 
+          pTU2-A-RFP (colE1 ori) [3]: We used pTU2-A-RFP (colE1 ori) as a level 2 (as indicated by the “2” in its name)-Golden Gate acceptor vector for assembling all different versions of the mNeonGreen/LuxR expression system in receivers: Open Loop (OL or OpLo), Positive Feedback (PF), Positive Feedback with a constitutive promoter (PFc), Positive Feedback with a Repressor (PF+R) and Positive Feedback with a Repressor and a constitutive promoter (PFc+R). This vector has a chloramphenicol (Cm) resistance gene and is a medium copy plasmid; it is approximately 3kbp in size. We selected a medium-copy plasmid for the expression of our system in receiver cells, as such a plasmid would allow the production of our visual output (mNeonGreen) while maintaining it at the levels receivers are actually activated by OC6 molecules; namely, without having a potentially high-copy vector counterbalance the different amount of AHL molecules receivers are stimulated by. This medium-copy backbone would not stress out cells carrying it either. A lower copy number plasmid would still allow for a considerable dynamic range as indicated by a preliminary prediction from our dry lab members (see <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> for more). Another reason we chose this particular vector was its marker; pTU2-A-RFP (colE1 ori) contains an RFP gene, enabling screening of colonies expressing recombinant plasmids without the need to use additional reagents (magenta colonies: transformed with the undesired parental plasmid, white colonies: transformed with a recombinant plasmid).
         <br><br>
 
         <center>
@@ -471,7 +470,7 @@
         <b>BL21 (DE3):</b><br>
         BL21 is a high level expression strain that is used for induction experiments and expression of heterologous proteins. That is why we considered this strain appropriate for our project.
         <br><br>
-        <b>DH5a-Z1:s</b><br>
+        <b>DH5a-Z1:</b><br>
         DH5a-Z1 strain has the TetR repressor encoded in its genome. We chose to use this strain in our engineering cycles after our experimental data indicated that the TetR expression system in our Level 2 constructs probably did not provide the right repression dynamics.
         <br><br>
 
@@ -528,7 +527,8 @@
 
         Since our experiments required a fluorescent protein that efficiently emits the light it absorbs (measured by quantum yield), is particularly bright (indicated by brightness), has a high turnover rate (shown by maturation and lifetime), as we planned to measure receivers’ fluorescence every 30 minutes to produce our curves, resists to photobleaching (hinted by photostability) and is certified as monomeric, we proceeded with integrating mNeonGreen in our constructs. An extra asset of mNeonGreen is that, although having been recognized as a better-performing fluorescent protein than eGFP, its fluorescence can still be measured with standard GFP filters (excitation peak: 488nm, emission peak: 511nm [9], [10]); this way, anyone with a standard fluorometer that measures GFP and its variants can replicate our experiments or use our receiver constructs in their own experimental setup.
         <br><br>
-        For the RBS strength characterization, superfolder GFP (sfGFP) was utilized in fusion with the first 36 nucleotides of LuxI during our engineering cycle as well.
+        For the RBS strength characterization, superfolder GFP (sfGFP) was utilized in fusion with the first 36 nucleotides of the coding sequence of LuxI during our engineering cycle as well.
+
         <br><br>
 
         <h2>The intermediate signal in our biological perceptron - LuxI/LuxR quorum sensing system</h2>
@@ -538,7 +538,8 @@
         <br><br>
         Quorum sensing (QS) systems were an obvious choice, since there are plenty of QS systems well characterized and commonly used in synthetic 
         circuits. Our deployed QS system is the LuxI/LuxR system (for more information about our final choice, please refer to 
-        the <a href="https://2022.igem.wiki/athens/human-practices">Integrated Human practices</a> page). LuxI synthase catalyzes the production of 3-oxohexanoyl-homoserine lactone (OC6 for short), which belongs to a family of QS molecules called N-Acetyl-Homoserin-Lactones (AHLs). Activated Senders express LuxI and the produced OC6 molecules diffuse outside of the senders and into the receivers. Inside the receivers OC6 molecules bind to LuxR, a transcriptional regulator that forms its functional dimer after binding with OC6, which activates the Plux promoter and, therefore, the  downstream gene [11].
+        the <a href="https://2022.igem.wiki/athens/human-practices">Integrated Human practices</a> page). LuxI synthase catalyzes the production of 3-oxohexanoyl-homoserine lactone (OC6 for short), which belongs to a family of QS molecules called N-Acetyl-Homoserin-Lactones (AHLs). Activated Senders express LuxI and the produced OC6 molecules diffuse outside of the senders and into the receivers. Inside the receivers OC6 molecules bind to LuxR, a transcriptional regulator that forms its functional dimer after binding with OC6, which activates the Plux promoter and, therefore, the expression of the downstream gene [11].
+
         <br><br>   
         
         </p>
@@ -560,9 +561,9 @@
   
           <h2>The Ribosome Binding Site as a plug-and-play device to tune the weights.</h2>
           <br>
-          Tuning the weights in a biological perceptron corresponds to finding ways to tweak the contribution of each activated sender to the weighted sum for a given amount of time. Possible ways to achieve that is transcriptional regulation via promoter strength manipulation, like in Ximing Li’s work [12], variation of the translation rate by changing the RBS, by different mutants of the synthase possessing different enzymatic capability, synthase degradation rate deploying degradation tags, mRNA stability and more.
+          Tuning the weights in a biological perceptron corresponds to finding ways to tweak the contribution of each activated sender to the weighted sum. Possible ways to achieve that is transcriptional regulation via promoter strength manipulation, like in Ximing Li’s work [12], variation of the translation rate by changing the RBS, by different mutants of the synthase possessing different enzymatic capability, synthase degradation rate deploying degradation tags, mRNA stability and more.
           <br><br>
-          In our project, translational regulation via RBS manipulation was chosen as the determining factor of the weights. RBS sequences are versatile, potentially plug-and-play devices that could be placed upstream any gene of interest to provide the desired translation rate.
+          In our project, translational regulation via manipulation of the RBS sequence was chosen as the determining factor of the weights. RBS sequences are versatile, potentially plug-and-play devices that could be placed upstream of any gene of interest to provide the desired translation rate.
           <br><br>
           <h3>Synthetic RBS Library
           </h3>
@@ -682,7 +683,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
        
        The iGEM distribution kit includes three different BCDs, BCD1 (BBa_J428034), BCD8 (BBa_K2680561) and BCD12 (BBa_K2680529). We decided to deploy these BCDs and we ordered the BCD2 (BBa_K4294102), the strongest variant of all according to Mutalik et. al and BCD14 (BBa_K4294114).
        <br><br>
-       As a preliminary evaluation of their strength we took into account both the paper’s plots that compare the strength and variability of the BCDs and the RBS calculator.
+       As a preliminary evaluation of their strengths we took into account both the paper’s plots that compare the strength and variability of the BCDs and the RBS calculator.
        <br><br>
        <center>
         <img class="mutalik" src="https://static.igem.wiki/teams/4294/wiki/design-not/mutalik.png">
@@ -770,9 +771,11 @@ Results from the RBS calculator regarding the translation initiation rate of the
         <br>
         After a long way to decide the right inducer as the input, we chose the well known and characterized TetR repressor system. TetR forms a dimer and binds to tet operators in PTet promoter and blocks the assembly of the transcription machinery. PTet is a medium strength promoter that is constitutively “ON” in the absence of TetR. It contains two tet operators, one inside the core promoter sequence and the other after the -10 hexamer, leading to efficient repression. The system is efficiently induced via anhydrotetracycline (aTc), a tetracycline derivative which binds Tet R with an ~35-fold higher binding constant, being an effective inducer at very low concentrations. Additionally, its antibiotic activity is ~100-fold lower and has minimal toxic effect on E.coli cells in the concentration used for induction[18].
         <br><br>
-        Main characteristics needed from the senders’ induction system were the low leakiness, dynamic range. Steepness would be an extra asset, because it would make more compatible with our perceptron ideation if senders responded in an ON/OFF fashion as well. More information about the concept of steep response curves can be found in the Receivers’ circuit design, where it is more thoroughly examined.
+        Main characteristics needed from the senders’ induction system were the low leakiness and dynamic range. Steepness would be an extra asset, because it would make our system more compatible with our perceptron ideation if senders responded in an ON/OFF fashion as well. More information about the concept of steep response curves can be found in the Receivers’ circuit design, where it is more thoroughly examined.
+
         <br><br>
-        An extensive characterization and optimization of inducible systems in E.coli was made by Meyer et. al to create the E.coli Marionette Strains [19]. This comprehensive characterization provides useful information about repressible systems’ characteristics, such as the repressor’s binding and dimerization constants, max and minimum output (i.e. the leakiness). Among the several common systems that are characterized, we thought that the TetR repressor systems suits our design goals best. It lies at the lower end of the spectrum regarding its leakiness when it is genome encoded and in the middle when it is plasmid regulated, its dynamic range lies in the middle of the spectrum, and, most importantly, it shows the steepest response curve of all. Even though these parameters were extracted from measurements of E.coli Marionette strains, these strains derive from DH10B (Marionette-Clo) and BL21 (Marionette Pro). Therefore, we believe it was rational to chose the senders’ induction system based on those parameters.
+        An extensive characterization and optimization of inducible systems in E.coli was made by Meyer et. al to create the E.coli Marionette Strains [19]. This comprehensive characterization provides useful information about repressible systems’ characteristics, such as the repressor’s binding and dimerization constants, max and minimum output (i.e. the leakiness). Among the several common systems that are characterized, we thought that the TetR repressor system suits our design goals best. It lies at the lower end of the spectrum regarding its leakiness when it is genome encoded and in the middle when it is plasmid regulated, its dynamic range lies in the middle of the spectrum, and, most importantly, it shows the steepest response curve of all (the highest n constant in the Hill’s function). Even though these parameters were extracted from measurements of E.coli Marionette strains, these strains derive from DH10B (Marionette-Clo) and BL21 (Marionette Pro). Therefore, we believe it was rational to choose the senders’ induction system based on those parameters.
+
         <br><br>      
         <center>
           <table class="content-table">
@@ -841,16 +844,15 @@ Results from the RBS calculator regarding the translation initiation rate of the
 
           <center>
             <img class="s-f3" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f3.png">
-            <figcaption>Figure 3. (pTU1(S10)-luxI Map.png)
-              Plasmid map of a Level 1 construct with one of the synthetic RBS controlling LuxI translation.                        
+            <figcaption>Figure 3: Plasmid map of a Level 1 construct with one of the synthetic RBS controlling LuxI translation.                    
                </figcaption>
             </center>
             <br>
 
             <center>
               <img class="s-f4" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f4.png">
-              <figcaption>Figure 4 (pSend(S10)-luxI (p15A ori) Map)
-                Plasmid map of a Level 2 construct.                                     
+              <figcaption>Figure 4: Plasmid map of a Level 2 construct.
+                                    
                  </figcaption>
               </center>
               <br><br>
@@ -863,7 +865,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
           <a id="sen-char" class="anchorOffset"></a>
           <br>
           <h3>Characterisation of RBS strength utilizing a LuxI-mNeonGreen bicistronic design with a translation Termination-Reinitiation (TeRe) strategy.</h3>
-          In order to characterize the strength of our senders’ RBS, we had to measure the LuxI each subpopulation produced in the scale of time. 
+          In order to characterize the strength of our senders’ RBS, we had to find a way to measure the relative LuxI synthesis of each subpopulation in the scale of time. 
           <br><br>
           From a very early stage of our designing sessions, we agreed to steer clear of complex and time-consuming measurement methods, such as column-based purification procedures, or processes that required specialized equipment we did not have access to, e.g. Western blotting. Nevertheless, we added a C-terminal hexa-HisTag in our senders’ final constructs, to perform protein analysis through Western blotting, just in case our main scheme did not work as planned.
           <br><br>
@@ -904,8 +906,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
             <center>
               <img class="s-f8" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f8.png">
 
-              <figcaption>Figure 8 (pTU1(S10)-luxI_mNeonGreen Map.png)
-                Plasmid map of the Level 1 construct with the TeRe design.
+              <figcaption>Figure 8: Plasmid map of the Level 1 construct with the TeRe design.
                                            
                  </figcaption>
               </center> 
@@ -913,8 +914,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
               <center>
                 <img class="s-f9" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f9.png">
   
-                <figcaption>Figure 9 (pSend(S10)-luxI_mNeonGreen (p15A ori) Map)
-                  Plasmid map of the Level 2 construct with the TeRe design.
+                <figcaption>Figure 9: Plasmid map of the Level 2 construct with the TeRe design.
                                              
                    </figcaption>
                 </center> 
@@ -950,8 +950,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
           <center>
             <img class="s-f11" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f11.png">
 
-            <figcaption>Figure 11 (pTU1(S10)-(36nt)luxI_sfGFP Map.png)
-              Plasmid map of a Level 1 plasmid with the 36ntLuxI-sfGFP fusion CDS.         
+            <figcaption>Figure 11 Plasmid map of a Level 1 plasmid with the 36ntLuxI-sfGFP fusion CDS.        
                                          
                </figcaption>
             </center> 
@@ -959,9 +958,8 @@ Results from the RBS calculator regarding the translation initiation rate of the
             <center>
               <img class="s-f12" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f12.png">
 
-              <figcaption>Figure 12 (pSend(S10)-(36nt)luxI_sfGFP (p15A ori) Map)
-                Plasmid map of a Level 2 plasmid with the 36ntLuxI-sfGFP fusion TU. TetR is constitutively expressed by the promoter BBa_J23106.
-                
+              <figcaption>Figure 12 Plasmid map of a Level 2 plasmid with the 36ntLuxI-sfGFP fusion TU. TetR is constitutively expressed by the promoter BBa_J23106.
+
                                            
                  </figcaption>
               </center> 
@@ -969,13 +967,12 @@ Results from the RBS calculator regarding the translation initiation rate of the
               <center>
                 <img class="s-f13" src="https://static.igem.wiki/teams/4294/wiki/design-not/senders-f13.png">
   
-                <figcaption>Figure 13 (pSend(S10)-(36nt)luxI_sfGFP (pLacI_Stet1) (p15A ori) Map)
-                  Plasmid map of a Level 2 plasmid with the 36ntLuxI-sfGFP fusion TU. TetR is constitutively expressed by the promoter PlacI. This is an alteration of the original circuit that was designed during troubleshooting to explore whether a change in TetR dynamics would improve the system's response to aTc.                
+                <figcaption>Figure 13 Plasmid map of a Level 2 plasmid with the 36ntLuxI-sfGFP fusion TU. TetR is constitutively expressed by the promoter PlacI. This is an alteration of the original circuit that was designed during troubleshooting to explore whether a change in TetR dynamics would improve the system's response to aTc.              
                                              
                    </figcaption>
                 </center> 
                 <br><br>
-                The 36nt luxI-sfGFP fusion was proved to be a successful part in the characterization to determine the relative strength of the RBS variants in the context of the LuxI CDS. Please, refer to the Engineering Success tab and Results tab for more.  
+                The 36nt LuxI-sfGFP fusion was proved to be a successful part in the characterization to determine the relative strength of the RBS variants in the context of the LuxI CDS. Please, refer to the Engineering Success tab and Results tab for more.  
                 <br><br>     
           <h2>Cross-talk </h2> 
           <a id="sen-cross" class="anchorOffset"></a>
@@ -990,7 +987,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
           5. Certainly, a simple wash of the different sender cultures’ supernatants could also resolve the issue by removing the inducer altogether.<br>
           6. We even thought about harnessing the photosensitive nature of our inducer, aTc, and exposing it to blue light to photobleach it before mixing different senders’ subpopulations, so that it could not activate sender cells anymore [25].<br><br>
 
-          All potential solutions mentioned above present a number of challenges, such as leading us to a vicious circle by perpetuating cross-talk issues or requiring specialized optogenetics equipment which we could not afford, so we eventually culminated in a completely different approach. During our investigation of potential solutions and after consulting with our advisors, we encountered a paper analyzing the tetracycline destructase family, a group of enzymes that degrade tetracycline and its derivatives, such as aTc [26]. We decided to incorporate such an enzyme, called TetX, in our cross-talk tackling strategy by co-transforming it in senders’ subpopulations we wish to keep uninduced. As already mentioned, we designed this construct with pTKEI-Dest as its backbone, because its ori (incompatibility group A) would not interfere with the replication of the senders’ final construct (incompatibility group B).
+          All potential solutions mentioned above present a number of challenges, such as leading us to a vicious circle by perpetuating cross-talk issues or requiring specialized optogenetics equipment which we could not afford, so we eventually culminated in a completely different approach. During our investigation of potential solutions and after consulting with our advisors, we encountered a paper analyzing the tetracycline destructase family, a group of enzymes that degrade tetracycline and its derivatives, such as aTc [26]. We decided to incorporate such an enzyme, called TetX, in our cross-talk tackling strategy by co-transforming it in senders’ subpopulations we wish to keep uninduced. As already mentioned, we designed this construct with pTKEI-Dest as its backbone, because its ori (incompatibility group A) would not interfere with the replication of the senders’ final construct (incompatibility group B). TetX is placed downstream the Ptac Promoter, which contains a lac operator. pTKEI vector incorporates a constitutive LacI expression and, therefore, TetX production is induced by IPTG. 
           <br><br>
           <center>
           <img class="s-f14" src="https://static.igem.wiki/teams/4294/wiki/design-not/psend-tetx-map.png">
@@ -1046,11 +1043,9 @@ Results from the RBS calculator regarding the translation initiation rate of the
           <h2>A step-by-step approach to achieve ultrasensitivity
           </h2>
           <br>
-          A number of possible ways at different levels of gene expression and protein function to build a bistable switch exist[28]. A well known example is the construction of the first toggle switch in E.coli; a circuit that responds in an ON/OFF fashion effectively[29]. Such bistable circuits are based on mutual inhibition relationships between transcriptional repressors in the circuit.  At the level of transcription, binding cooperativity of transcription factors and the number and topology of operators has been proven to correlate with a response steepness. Cooperative binding of multiple transcription factors to the same promoter or a biochemical process mimicking this effect may promote ultrasensitivity as well [28]. Moreover, circuit architectures with proven enhanced steepness are transcriptional positive feedbacks [30] and transcriptional cascades [31]. Further strategies include a sequestering molecule that binds a circuit component and prevents its effect. Sequestration has been achieved using sRNAs [32] that bind to mRNA, proteins that bind to transcription factors[33] or translation machinery components [34] and decoy DNA operators [35,36] that titrate the transcription factor away from the output promoter. The above approaches are often coupled in such a way that their respective effects generate a greater impact on the final response [34].
-
+          A number of possible ways at different levels of gene expression and protein function to build a bistable switch exist[28]. A well known example is the construction of the first toggle switch in E.coli; a circuit that responds in an ON/OFF fashion effectively[29]. Such bistable circuits are based on mutual inhibition relationships between transcriptional repressors in the circuit.  At the level of transcription, binding cooperativity of transcription factors and the number and topology of operators has been proven to correlate with a response’s steepness. Cooperative binding of multiple transcription factors to the same promoter or a biochemical process mimicking this effect may promote ultrasensitivity as well [28]. Moreover, circuit architectures with proven enhanced steepness are transcriptional positive feedbacks [30] and transcriptional cascades [31]. Further strategies include a sequestering molecule that binds a circuit component and prevents its effect. Sequestration has been achieved using sRNAs [32] that bind to mRNA, proteins that bind to transcription factors[33] or translation machinery components [34] and decoy DNA operators [35,36] that titrate the transcription factor away from the output promoter. The above approaches are often coupled in such a way that their respective effects generate a greater impact on the final response [34].
           <br><br>
-          Irrespective of the existing literature, every circuit that is built requires testing and tuning. On the grounds of our narrow time window to perform extensive characterisation experiments, we followed a step-by-step approach regarding the receivers’ genetic circuits. Starting from a simple open loop circuit, which was necessary to obtain vital parameters of our parts (refer to <a href="https://2022.igem.wiki/athens/model">Model</a> section), two variations of a positive feedback and two variations of a coherent feed forward loop coupled with a positive feedback at its first step were built. Progressively introducing new components to our circuits enables troubleshooting and better interpretation of the results.
-          <br><br>
+          Irrespective of the existing literature, every circuit that is built requires testing and tuning. On the grounds of our narrow time window to perform extensive characterisation experiments, we followed a step-by-step approach regarding the receivers’ genetic circuits. Starting from a simple open loop circuit, which was necessary to obtain vital parameters of our parts (refer to Model section), two variations of a positive feedback and two variations of a coherent feed forward loop coupled with a positive feedback at its first step were built. Progressively introducing new components to our circuits enables troubleshooting and better interpretation of the results, a process that was also facilitated by estimations by our Dry Lab (see <a href="https://2022.igem.wiki/athens/engineering">Engineering Success</a> for more).
 
           <h2>Open Loop Circuit (OL or OpLo)
           </h2><br>
@@ -1086,8 +1081,8 @@ Results from the RBS calculator regarding the translation initiation rate of the
           <h2>Positive Feedback Circuit (PF and PFc).
           </h2><br>
           <a id="rec-PF" class="anchorOffset"></a>
-          One already tested and widely utilized method to engineer a bistable circuit, are transcriptional Positive Feedbacks. In such circuits, an activator of an output induces its own production as well after induction with its respective ligand. A similar circuit was built by Li et. al [12] to achieve a steeper activation function of the CinR quorum sensing activator system. 
-          <br><br>
+          One already tested and widely utilized method to engineer a bistable circuit are transcriptional Positive Feedbacks. In such circuits, an activator of an output induces its own production as well after induction with its respective ligand. A similar circuit was built by Li et. al [12] to achieve a steeper activation function of the CinR quorum sensing activator system. 
+                    <br><br>
           In our case, Plux was placed upstream of the LuxR coding sequence and the output coding sequence. Therefore, LuxR activates its own production after binding with OC6 and establishes a positive feedback.
           <br><br>
           Two possible topologies exist; LuxR being controlled only by the Plux promoter or providing an extra TU for constitutive LuxR production.
@@ -1109,12 +1104,12 @@ Results from the RBS calculator regarding the translation initiation rate of the
             <img class="r-4" src="https://static.igem.wiki/teams/4294/wiki/design-not/4g.png">
             <figcaption> Figure 4.
               a.Flow chart of a Positive Feedback circuit<br>
-              b.Flowchart of a positive feedback circuit.<br>
+              b.PF (Positive Feedback) genetic circuit overview. LuxR is placed downstream the Plux inducible promoter and BBa_B0034 RBS. The leakiness of Plux promoter provides a basal LuxR concentration in the cell that will be activated by OC6 and promote the production of more LuxR and of the output, resulting in a positive feedback loop. Output (mNeonGreen) is placed downstream of a Plux promoter and BBa_B0034 RBS.
+              <br>
               c.PF (Positive Feedback) genetic circuit overview. LuxR is placed downstream of the promoter Plux inducible promoter and BBa_B0034 RBS. The d.leakiness of Plux promoter provides a basal LuxR concentration in the cell that will be activated by OC6 and promote the production of more LuxR and of the output, resulting in a positive feedback loop. Output (mNeonGreen) is placed downstream Plux promoter and BBa_B0034 RBS.<br>
               
-              e.PF at is “OFF” state (‘“0”)
-              PF at its “ON” state (“1”)
-              Fc (Positive Feedback with constitutive LuxR production) genetic circuit overview. Two LuxR TU exist in this circuit. One expresses LuxR constitutively and provides a higher LuxR concentration in the cell. The other LuxR TU (with the Plux promoter) is responsible for the generation of the positive feedback after induction with OC6. Output (mNeonGreen) is placed downstream of the Plux promoter and BBa_B0034 RBS.<br>
+              e.PFc (Positive Feedback with constitutive LuxR production) genetic circuit overview. Two LuxR TUs exist in this circuit. One expresses LuxR constitutively and provides a higher LuxR concentration in the cell. The other LuxR TU (with the Plux promoter) is responsible for the generation of the positive feedback after induction with OC6. Output (mNeonGreen) is placed downstream of the Plux promoter and BBa_B0034 RBS.
+              <br>
               f.PFc at its “OFF” state (“0”)<br>
               g.PFc at its “ON” state (“1”)<br>
                                      
@@ -1161,7 +1156,7 @@ Results from the RBS calculator regarding the translation initiation rate of the
                   <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7f.png">  
                   <img class="r-7" src="https://static.igem.wiki/teams/4294/wiki/design-not/7g.png">
                   <figcaption> Figure 7.
-                    a. Flow chart of PFR (Positive Feedback + Repressor) and PFcR (Positive Feedback with constitutive LuxR production + Repressor) circuits. This topology resembles the one of a coherent feedforward loop with an added positive involving the first step.
+                    a. Flow chart of PFR (Positive Feedback + Repressor) and PFcR (Positive Feedback with constitutive LuxR production + Repressor) circuits. This topology resembles the one of a coherent feedforward loop with an added positive feedback involving the first step.
                     b. PFR genetic circuit overview. The output is controlled by the hybrid promoter BBa_K4294301, which is activated by LuxR and repressed by PhlF. LuxR is placed downstream of the Plux promoter, establishing a positive feedback after induction with OC6 as previously described. LuxR also binds to a Plux repressible promoter (BBa_J107103), which controls the production of PhlF, blocking PhlF expression after induction with OC6. Every coding sequence is placed downstream a BBa_B0034 RBS. PhlF has a high efficiency NDENYALAA degradation tag.
                     c. PFR circuit at its “OFF” state (“0”)
                     d. PFR circuit at its “ON” state (“1”)
