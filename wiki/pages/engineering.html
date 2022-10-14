@@ -21,6 +21,9 @@
      <!--Custom to top button CSS-->
      <link href="{{url_for('static',filename='css/to_top_button.css')}}" rel="stylesheet">
     <title> Perspectives | Engineering</title>
+
+    <!--MathJax Import-->
+    <script type= "text/javascript" src="../../athens/static/scripts/mathjax/tex-chtml.js"></script>
 </head>
 
 <body>
@@ -100,7 +103,7 @@
             <a id="symmary-rec" class="anchorOffset"></a>
             <h1>Receivers </h1>
             <br>
-            A circuit with a steeper response curve incorporating the LuxR and PhlF regulators was successfully engineered and tested. These circuits are described in detail in the “Design” tab.
+            A circuit with a steeper response curve incorporating the LuxR and PhlF regulators was successfully engineered and tested. These circuits are described in detail in the <a href="https://2022.igem.wiki/athens/design">Design </a>tab.
             <br><br>
 
             <center>
@@ -142,7 +145,7 @@
             <b><a href="http://parts.igem.org/Part:BBa_K4294207"><b>BBa_K4294207</b></a> 36nt LuxI - sfGFP fusion</b>
             <br>
             To our knowledge, the fusion of the 36 first nucleotides of the  LuxI Coding Sequence with sfGFP has not been reported before. These fusions make the characterisation of relative translation levels of LuxI synthase easier. LuxI is part of a widely used quorum sensing system and improving its characterisation strategies is important. For more information regarding the results generated with this part, refer to the <a href="https://2022.igem.wiki/athens/results">Results
-            </a> pather or the <a href="https://2022.igem.wiki/athens/parts">Parts</a> registry page.
+            </a> tab or the <a href="https://2022.igem.wiki/athens/parts">Parts</a> registry page.
             <br><br>
 
             <b><a href="http://parts.igem.org/Part:BBa_K4294301"><b>BBa_K4294301</b></a> LuxR-Phlf controlled hybrid promoter</b>
@@ -221,7 +224,7 @@
               <br><br>
               <b>Model guided design</b>
               <br>
-              In terms of dry lab simulations, before our team began with the OL construct characterization in the lab, we performed some parametric simulations with emphasis on three different design parameters; the construct’s copy number and the RBS variants used in the open loop circuit, regarding the production rates of LuxR and mNeonGreen. For that purpose, our modeling team used the whole-cell model for the OL construct, which is more analytically described in the receiver’s <a href="https://2022.igem.wiki/athens/model">Model</a> page.             
+              In terms of dry lab simulations, before our team began with the OL (<a href="http://parts.igem.org/Part:BBa_K4294801">BBa_K4294801</a>) construct characterization in the lab, we performed some parametric simulations with emphasis on three different design parameters; the construct’s copy number and the RBS variants used in the open loop circuit, regarding the production rates of LuxR and mNeonGreen. For that purpose, our modeling team used the whole-cell model for the OL construct, which is more analytically described in the receiver’s <a href="https://2022.igem.wiki/athens/model">Model</a> page.             
               <br>
 
               <center>
@@ -236,13 +239,13 @@
               <br><br>
               <ul>
                <li>
-              Both the leakiness and final fluorescence values seem to be mainly dependent on the RBS of the mNeonGreen that would be used. So it would be wise to go with a moderate RBS variant in order to reduce the leakiness observed. As a result, we opted not to use the RBS BBa_B0030 to control the translation of LuxR.
+              Both the leakiness and final fluorescence values seem to be mainly dependent on the RBS of the mNeonGreen that would be used. So it would be wise to go with a moderate RBS variant in order to reduce the leakiness observed. As a result, we opted not to use the RBS BBa_B0030 to control the translation of mNeonGreen.
               </li>
               <li>
               On the other hand, the RBS for the production of the LuxR seems to be directly influencing the initiation point of our function; the stronger the RBS controlling LuxR translation, the lower AHL value needed to cause induction. We noticed that the RBS ‘30’ construct is shifted to the left of the x-axis in comparison to ‘32’ and ‘34’. We decided therefore to exclude the RBS ‘30’ as a potential sequence for the production of LuxR since it might lead to a system with a response to very low OC6 concentrations, which could lead to the activation of the receivers by any combination of senders. 
               </li>
               <li>
-              Finally the copy number is playing a hybrid role on our transfer functions, since it regulates not only the overall production values of mNeonGreen (including leakiness) but also leads to a minor increase in the AHL inducer concentration needed in order for the induction to start.
+                Finally the copy number has a positive impact on the dynamic range with the tradeoff being a slight increase in leakiness. 
               </li>
               </ul>
               <br><br>
@@ -259,10 +262,10 @@
                 </li>
                     <ul>
                     <li>  
-                    As vectors we used the BBa_K4294092 pTU2-A-RFP (colE1 origin) and the BBa_K4294093 pTU2-A-RFP (p15A origin). 
+                      As vectors we used the <a href="http://parts.igem.org/Part:BBa_K4294092" > BBa_K4294092</a> pTU2-A-RFP (colE1 origin) and the<a href="http://parts.igem.org/Part:BBa_K4294093" > BBa_K4294093</a>  pTU2-A-RFP (p15A origin).
                     </li>
                     <li>
-                    The parts used as inserts were the BBa_K4294806 (TU pLux Output for OL, PF, PFc) and the BBa_K4294808 (TU constitutive LuxR for OL)
+                      The parts used as inserts were the <a href="http://parts.igem.org/Part:BBa_K4294806" > BBa_K4294806</a>  (TU pLux Output for OL, PF, PFc) and the BBa_K4294808 (TU constitutive LuxR for OL)
                     </li>
                     </ul>
                 <li>
@@ -277,7 +280,9 @@
                 <li>
                 Plasmid Miniprep.
                 </li>
+                <li>
                 Diagnostic Digest and PCR amplification (primers flanking the insert: Biobrick Prefix Forward Primer BBa_K4294021, pTU2 Reverse Primer  BBa_K4294032) for both Open Loop constructs.
+              </li>
                 <li>
                 Agarose gel electrophoresis.
                 <br>
@@ -302,7 +307,7 @@
                   L: Ladder 1kb plus<br>
                   1: Open-loop (pTU2-A-RFP colE1 origin) from the 2nd colony uncut<br>
                   2: Open-loop (pTU2-A-RFP colE1 origin) from the 1st colony cut with BsaI & HindIII<br>
-                  3: Open-loop (pTU2-A-RFP colE1 origin) from the 2nd colony<br>
+                  3: Open-loop (pTU2-A-RFP colE1 origin) from the 2nd colony cut with BsaI & HindIII<br>
                   4: Open-loop (pTU2-A-RFP p15a origin) from PCR<br>
                   a: Agarose gel 1%<br>
                   b: Agarose gel 1%<br>
@@ -312,17 +317,18 @@
                 </center>
                 <br>              
               
-              <center>
-              <img class="fig-4" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-4.png">
-              <figcaption>
-                Figure 4:  Induction of OL constructs with different OC6 concentrations and in different timepoints. Comparison between p15A (a) origin and ColE1(b).
-              </figcaption>
-              </center>
-              <br>
 
               <h1>Test</h1>
               <br>
               To test the aforementioned constructs, <it>E. coli</it> BL21 cells were transformed with the open loop constructs and were induced with a range of concentrations of Acyl Homoserine-Lactone (OC6). Cells were incubated in a shaking incubator and successive measurements of absorbance at 600nm and fluorescence were taken using the plate reader FlexStation® 3 for a time period of 4h. The results showed an increase in the RFU/OD600nm ratio and a sigmoidal response curve for both constructs.
+              <br><br>
+              <center>
+                <img class="fig-4" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-4.png">
+                <figcaption>
+                  Figure 4:  Induction of OL constructs with different OC6 concentrations and in different timepoints. Comparison between p15A (a) origin and ColE1(b).
+                </figcaption>
+                </center>
+                <br>
               <br><br>
 
               <h1>Learn</h1>
@@ -340,30 +346,76 @@
               <h1>Design</h1>
               <br>
               <p>
-              With the goal to build an ultrasensitive, switch-like response, and inspired by previous related work, two circuit designs in two variations regarding the basal LuxR expression were chosen. A LuxR transcriptional Positive Feedback loop (PF and PFc) and a circuit that incorporates an extra repressor (PhlF) that is regulated by LuxR (PFR, PFcR) resulting in a coherent feedforward loop with an embedded LuxR transcriptional Positive Feedback.
+                With the goal to build an ultrasensitive, switch-like response, and inspired by previous related work, two circuit designs in two variations regarding the basal LuxR expression were chosen. A LuxR transcriptional Positive Feedback loop (PF <a href="http://parts.igem.org/Part:BBa_K4294802" > BBa_K4294802</a> and PFc <a href="http://parts.igem.org/Part:BBa_K4294803" > BBa_K4294803</a>) and a circuit that incorporates an extra repressor (PhlF) that is regulated by LuxR (PFR <a href="http://parts.igem.org/Part:BBa_K4294804" > BBa_K4294804</a> , PFcR <a href="http://parts.igem.org/Part:BBa_K4294805" > BBa_K4294805</a>) resulting in a coherent feedforward loop with an embedded LuxR transcriptional Positive Feedback.
               <br><br>
               <b>Dry Lab Prediction</b>
-              In terms of design simulations, we were able to perform a simulation of the PFR construct in parallel with the characterisation of OL constructs by the wet lab, valuable for the circuit design finalization, since a circuit incorporating such regulatory elements in the same topology has not, to our knowledge, been characterized. As analyzed in the receiver’s model section , we used some of the fitted parameters from the OpLo (OL) system and alongside the rest of the literature ones we received the following whole-cell transfer function:
+              <br>
+              In terms of design simulations, we were able to perform a simulation of the more complex constructs in parallel with the characterisation of OL constructs by the wet lab, which was valuable for  potential design reconsiderations regarding the circuit’s dynamics in case the predictions indicated no success regarding the steepness of the response curve. As analyzed in the receiver’s model section , we used some of the fitted parameters from the OL system and alongside the rest of the literature ones we received the following whole-cell transfer functions of the constructs of PF, PFR and PFC. For that purpose, and in order to have a proportional comprehension of the differences between all 4 constructs, we used the same steepness of curve parameter that was produced via OpLo’s model fit (n=0.5). <br><br>
 
               <center>
-              <img class="fig-5" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-5.png">
+              <img class="fig-5" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-compare-figure.png">
               <figcaption>
-              Figure 5: Theoretical model results for the PFR construct.
+                Figure 5: Theoretical model for all receiver’s constructs 
               </figcaption>
               </center>
               <br>
               
-              The received curve for the PFR system displays an increased steepness and it would be the receiver’s design with the most potential.
+              The results seem to show only a major difference on the initiation point of the activation function, but no significant change regarding the activation function, with the PFR construct being only predicted to obtain high maximum fluorescence values at close to maximum induction. So, we needed a specific metric to calculate the average steepness of each implementation. 
               <br><br> 
-              On the other hand, the simulations displayed for the PF and PFc results weren’t the expected ones and lead to similar results as in the case for the OL system. It should be mentioned that, for all the simulations in the PFR we used the RBS construct BBa_0034 and a medium copy number origin of replication (ColE1), from the 1st engineering cycle.
-              <br><br> 
-              Even though every circuit would be experimentally tested, the above simulation would aid a potential redesign of a circuit in parallel with the experiments in case of no functional circuits predicted. 
-              <br><br> 
+              The metric used was the slope of the curve which is produced via the <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html"> linregress()</a> function of python. In short, slope is used to calculate the average derivative of a given input set of values. The higher the slope value, the more steep the input curve is on average. The mathematical relationship that gives us the slope for a certain set of inputs [x,y] is:
+              <br><br>
+         
+              <div class="equations">
+                <p>
+                <!--  \(\frac{d[AHL_{int}]}{dt} = k_{A} [LuxI] - d_{AHL} [AHL] \ \) -->
+                  \( \sum_{1}^{n} \frac{(x-x_{mean})*(y-y_{mean})}{(x-x_{mean})^2} \ \)
+                </p>
+                </div>
+              
+                <br>
+                with x_mean and y_mean the mean values of x and y respectively
+                <br><br>
+                We received the following results:
+
+              <center>
+                <table class="content-table">
+                  <thead>
+                    <tr>
+                      <th>Construct Name</th>
+                      <th>Slope Value</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>OpLo Fitted</td>
+                      <td>9865.963124200252 *10^(5)</td>
+                    </tr>
+                    <tr class="active-row">
+                      <td>PF simulation</td>
+                      <td>10158.234094974923 *10^(5)</td>
+                    </tr>
+                    <tr>
+                      <td>PFc simulation</td>
+                      <td>9804.986979851485 *10^(5)</td>
+                    </tr>
+                    <tr class="active-row">
+                      <td>PFR simulation</td>
+                      <td>14004.347302977303 *10^(5)</td>
+                    </tr>
+                  </tbody>
+              </table>
+              <figcaption>Table 1. Slope values for all receiver's constructs</figcaption>
+              <br>
+              <p>From table 1, we can assume that the PFR construct is the one for the most potential in order to reproduce a steep activation function, since it gives us the highest slope value. In terms of the initiation point, since PFR has the lowest one, we assume that a potential increase in receiver's volume should be needed (it was later shown in the <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of concept</a> page).<br><br>
+              
+                Even though every circuit would be experimentally tested, the above simulation would aid a potential redesign of a circuit in parallel with the experiments in case of no functional circuits predicted. 
+              </p>
+              </center>
+              <br>
               <h1>Build</h1>
               <br>
               <ul>
                 <li>
-                  We performed 4 different Golden Gate Assemblies with BsmBI by using the vector BBa_K4294092 pTU2-A-RFP (colE1 origin) for all the constructs.                
+                  We performed 4 different Golden Gate Assemblies with BsmBI by using the vector <a href="http://parts.igem.org/Part:BBa_K4294092" > BBa_K4294092</a>   pTU2-A-RFP (colE1 origin) for all the constructs.                
                 </li>
                     <ul>
                     <li>  
@@ -371,10 +423,10 @@
                     </li>
                         <ul>
                           <li>
-                            BBa_K4294806 (TU pLux Output for OL, PF, PFc)
+                            <a href="http://parts.igem.org/Part:BBa_K4294806" > BBa_K4294806</a>  (TU pLux Output for OL, PF, PFc)
                           </li>
                           <li>
-                            BBa_K4294809 (TU pLux LuxR PF, PF+ R) 
+                            <a href="http://parts.igem.org/Part:BBa_K4294809" > BBa_K4294809</a> (TU pLux LuxR PF, PF+ R) ) 
                           </li>
                         </ul>
 
@@ -383,13 +435,13 @@
                     </li>
                         <ul>
                           <li>
-                            BBa_K4294812 (TU Output for PF+ R, PFc+ R)
+                            <a href="http://parts.igem.org/Part:BBa_K4294812" > BBa_K4294812</a>   (TU Output for PF+ R, PFc+ R)
                           </li>
                           <li>
-                            BBa_K4294807 (TU pLuxr PhlF)
+                            <a href="http://parts.igem.org/Part:BBa_K4294807" > BBa_K4294807</a> (TU pLuxr PhlF)
                           </li>
                           <li>
-                            BBa_K4294809 (TU pLux LuxR PF, PF+ R) 
+                            <a href="http://parts.igem.org/Part:BBa_K4294809" > BBa_K4294809</a> (TU pLux LuxR PF, PF+ R) 
                           </li>
                         </ul>
 
@@ -398,13 +450,13 @@
                       </li>
                             <ul>
                               <li>
-                                BBa_K4294806 (TU pLux Output for OL, PF, PFc)
+                                <a href="http://parts.igem.org/Part:BBa_K4294806" > BBa_K4294806</a>(TU pLux Output for OL, PF, PFc)
                               </li>
                               <li>
-                                BBa_K4294810 (TU pLux LuxR PFc, PFc+ R)
+                                <a href="http://parts.igem.org/Part:BBa_K4294810" > BBa_K4294810</a> (TU pLux LuxR PFc, PFc+ R)
                               </li>
                               <li>
-                                BBa_K4294811 (TU constitutive LuxR for PFc, PFc+R) 
+                                <a href="http://parts.igem.org/Part:BBa_K4294811" > BBa_K4294811</a> (TU constitutive LuxR for PFc, PFc+R) 
                               </li>
                             </ul>
                       <li>  
@@ -412,22 +464,22 @@
                       </li>
                             <ul>
                               <li>
-                                BBa_K4294812 (TU Output for PF+ R, PFc+ R)
+                                <a href="http://parts.igem.org/Part:BBa_K4294812" > BBa_K4294812 </a> (TU Output for PF+ R, PFc+ R)
                               </li>
                               <li>
-                                BBa_K4294807(TU pLuxr PhlF)
+                                <a href="http://parts.igem.org/Part:BBa_K4294807" > BBa_K4294807</a> (TU pLuxr PhlF)
                               </li>
                               <li>
-                                BBa_K4294811 (TU constitutive LuxR for PFc, PFc+R)
+                                <a href="http://parts.igem.org/Part:BBa_K4294811" > BBa_K4294811 </a>(TU constitutive LuxR for PFc, PFc+R)
                               </li>
                               <li>
-                                BBa_K4294810 (TU pLux LuxR PFc, PFc+ R)
+                                <a href="http://parts.igem.org/Part:BBa_K4294810" > BBa_K4294810 </a>  (TU pLux LuxR PFc, PFc+ R)
                               </li>
                             </ul>
 
 
                 <li>
-                  Transformation on <it>E. coli<\it> DH5a at LB - Agar plates containing chloramphenicol. 
+                  Transformation on <it>E. coli</it> DH5a at LB - Agar plates containing chloramphenicol. 
                 </li>
                 <li>
                   Choose the white colonies (plasmids with insert) over the red colonies (no insert in plasmid).
@@ -438,7 +490,9 @@
                 <li>
                   Plasmid Miniprep.
                 </li>
+                <li>
                 Diagnostic Digest and PCR amplification with primers binding upstream and downstream of the insert region for the Positive Feedback construct (pTU2-A-RFP colE1 origin), for Positive Feedback with constitutive production of LuxR construct (pTU2-A-RFP colE1 origin), for Positive Feedback + Repressor with constitutive production of LuxR construct (pTU2-A-RFP colE1 origin) and for Positive Feedback +Repressor construct (pTU2-A-RFP colE1 origin).
+                </li>
                 <li>
                   Agarose gel electrophoresis.
                 <br>
@@ -452,7 +506,7 @@
                       Positive Feedback with constitutive production of LuxR construct (pTU2-A-RFP colE1 origin) cut with BsaI: 2 zones at 2959bp + 2027 bp.
                     </li>
                     <li>
-                      Positive Feedback construct  (pTU2-A-RFP colE1 origin) cut with  BsaI and HindIII: 3 zones at 847 bp & 111 bp & 2027 bp.
+                      Positive Feedback construct  (pTU2-A-RFP colE1 origin) cut with  BsaI and HindIII: 3 zones at 847 bp & 1111 bp & 2027 bp
                     </li>
                   </ul>
                 </ul>  
@@ -469,9 +523,9 @@
                 4: PFc (pTU2-A-RFP colE1 origin) cut with BsaI<br>
                 5: PF (pTU2-A-RFP colE1 origin) cut with BsaI and HindIII<br>
                 <br>
-                Figure 6 shows that our diagnostic digest on the receiver’s PF and PFc constructs resulted in the expected bands. The zone of 111 bp is very faint in lane 5 (PF (pTU2-A-RFP colE1 origin) cut with BsaI and HindIII) due to its small size.
               </figcaption>
               </center>
+              Figure 6 shows that our diagnostic digest on the receiver’s PF and PFc constructs resulted in the expected bands. The zone of 847 bp is very faint in lane 5 (PF (pTU2-A-RFP colE1 origin) cut with BsaI and HindIII) due to its small size.
               <br>
 
               Regarding the PFR and PFc+R constructs:<br>
@@ -497,11 +551,11 @@
               3: Control pTU2-A-RFP colE1 origin uncut<br>
               4: Control pTU2-A-RFP colE1 origin cut with BsaI<br>
               5: PFc +R (pTU2-A-RFP colE1 origin) cut with BsaI<br>
+            </figcaption>
+            </center>
               <br>
               Figure 7 shows that our diagnostic digest on the receiver’s PFR and PFc+R constructs resulted in the expected bands.
-              </figcaption>
-              </center>
-              <br>
+              <br><br>
 
               <h1>Test</h1>
               <br>
@@ -553,15 +607,15 @@
 
               <h1>Learn</h1>
               <br>
-              PF: According to the results that are presented in the figure 8 there is no significant increase in RFU/OD600nm ratio in comparison with other constructs. This circuit presents an uncommon response in comparison with similar circuits from the literature. 
+              PF: According to the results that are presented in the figure 8 there is no significant increase in RFU/OD600nm ratio in comparison with other constructs. This circuit presents an uncommon response in comparison with similar circuits from the literature. This circuit presents an uncommon response.
               <br><br> 
-              PFc: According to the results that are presented in figure 9. there is a slight increase in fluorescence expressed in arbitrary units, which could, by a rough approximation, resemble a sigmoidal response curve in the 0.1 to 1 μM of inducer but in general, seems more linear. The response curve does not fulfill our goals regarding steepness and dynamic range and this result is also considered unreliable due to its uncommon response in comparison with similar circuits from the literature. 
+              PFc: According to the results that are presented in figure 9, there is a slight increase in fluorescence expressed in arbitrary units, which could, by a rough approximation, resemble a sigmoidal response curve in the 0.1 to 1 μM of inducer but in general, seems more linear. The response curve does not fulfill our goals regarding steepness and dynamic range and this result is also considered unreliable due to its uncommon response in comparison with similar circuits from the literature [11]. 
               <br><br> 
               PFR: This circuit is characterized by a response curve with low leakiness, high dynamic range and a steeper activation function. For the transition from Min to Max state a 100-fold increase in inducer’s concentration seems necessary. However, in the sigmoid part of the response curve, the slope of the curve is gradually increasing. This is an indicator that a repeat of these measurements with more OC6 concentrations within the Min to Max range will probably better reveal the increased steepness in a more narrow OC6 concentration range. Our model supports the hypothesis of this circuit’s steeper activation function (see Model section for more).
               <br><br> 
               PFcR: This circuit topology fails to be robustly induced. An approximal sigmoidal response curve is observed in the 0.0001μM to 0.001 μM inducer range, but the dynamic range is quite low. The only 10fold increase in OC6 concentration required for a response transition from Min to Max is an indicator of a switch-like response. However, on the grounds of this low Min to Max range, it is also probable that the higher response in 0.001 μM was an artifact.
               <br><br> 
-              In conclusion, the PFR and PFcR circuit architectures may provide a steeper activation function to our biological perceptron. More specifically, PFR shows the most robust response and a further tuning of its components dynamics in a model driven approach could potentially improve its response. Potential solutions include PhlF tagging with a variety of degradation tags to estimate the ideal degradation rates, a LuxR repressible promoter of different strength and modifications of the LuxR dynamics (constitutive promoter strength in PFcR, RBS controlling its translation, potential tagging with degradation tags). 
+              In conclusion, the PFR circuit architecture may provide a steeper activation function to our biological perceptron. More specifically, PFR shows the most robust response and a further tuning of its components dynamics in a model driven approach could potentially improve its response. Potential solutions include PhlF tagging with a variety of degradation tags to estimate the ideal degradation rates, a LuxR repressible promoter of different strength and modifications of the LuxR dynamics (constitutive promoter strength in PFcR, RBS controlling its translation, potential tagging with degradation tags). 
               <br> <br> 
 
               <center>
@@ -623,7 +677,6 @@
   </div>
   
   <div class="right-side">
-
           <!-- Circuit  -->
           <section class="circuit">
           <a id="circuit" class="anchorOffset"></a>
@@ -662,13 +715,14 @@
                 </li>
                     <ul>
                     <li>  
-                      As vector we used the  BBa_K4294091 (pTU1-A-lacΖ).
+                      As vector we used the  <a href="http://parts.igem.org/Part:BBa_K4294091" > BBa_K4294091</a>  (pTU1-A-lacΖ).
+
                     </li>
                     <li>
-                      As inserts we used the parts: BBa_K3424010 (TetR promoter), BBa_K4294210 (LuxI and mNeonGreen coding sequences separated by the stop-start pentanucleotide "TAATG"), BBa_B0015 (Double Terminator).
+                      As inserts we used the parts:  <a href="http://parts.igem.org/Part:BBa_K3424010" > BBa_K3424010</a> (TetR promoter), <a href="http://parts.igem.org/Part:BBa_K4294210" > BBa_K4294210</a>   (LuxI and mNeonGreen coding sequences separated by the stop-start pentanucleotide "TAATG"), <a href="http://parts.igem.org/Part:BBa_B0015" > BBa_B0015</a>  (Double Terminator).
                     </li>
                     <li>
-                      And an RBS that was different for each construct. The RBSs was BBa_K4294004 (S4), BBa_K4294005 (S5), BBa_K4294010 (S10), BBa_K4294011 (S11), BBa_K4294012 (S12), BBa_K4294013 (S13), BBa_J428034 (BCD1),BBa_K4294102 (BCD2), BBa_K2680561 (BCD8), BBa_K2680529 (BCD12), BBa_K4294114 (BCD14).
+                      And an RBS that was different for each construct. The RBSs was <a href="http://parts.igem.org/Part:BBa_K4294004" > BBa_K4294004</a> (S4),  <a href="http://parts.igem.org/Part:BBa_K4294005" > BBa_K4294005</a>  (S5),<a href="http://parts.igem.org/Part:BBa_K4294010" > BBa_K4294010</a> (S10), <a href="http://parts.igem.org/Part:BBa_K4294011" > BBa_K4294011</a>  (S11), <a href="http://parts.igem.org/Part:BBa_K4294012" > BBa_K4294012</a>  (S12), <a href="http://parts.igem.org/Part:BBa_K4294013" > BBa_K4294013</a>  (S13), <a href="http://parts.igem.org/Part:BBa_J428034" > BBa_J428034</a>  (BCD1),<a href="http://parts.igem.org/Part:BBa_K4294102" > BBa_K4294102</a>   (BCD2), <a href="http://parts.igem.org/Part:BBa_K2680561" > BBa_K2680561</a>  (BCD8),<a href="http://parts.igem.org/Part:BBa_K2680529" > BBa_K2680529 </a>   (BCD12), <a href="http://parts.igem.org/Part:BBa_K4294114" > BBa_K4294114 </a>  (BCD14).
                     </li>
                     </ul>
                 <li>
@@ -741,7 +795,9 @@
                 <br>  
                 Figure 14 shows that our diagnostic digest on the sender’s constructs resulted in the expected bands. The diagnostic digest and the electrophoresis for the samples with faint bands were repeated to ensure they are correct.
                 <br><br>   
-
+                
+                An example part of level 1 constructs is <a href="http://parts.igem.org/Part:BBa_K4294981" > Part:BBa_K4294981</a>. For the all the codes of all the aforementioned level 1 constructs please refer to the <a href="https://2022.igem.wiki/athens/parts" > Parts</a> tab.
+                <br><br>  
                 <b>Level 2 constructs:
                 </b>
                 <ul>
@@ -750,13 +806,13 @@
                   </li>
                       <ul>
                       <li>  
-                        As vector we used  BBa_K4294093 (pTU2-A-RFP (p15A origin)).
+                        As vector we used <a href="http://parts.igem.org/Part:BBa_K4294093" > BBa_K4294093 </a>   (pTU2-A-RFP (p15A origin)).
                       </li>
                       <li>
-                        As inserts we used :The composite part BBa_K4294780 (TetR TU).
+                        As inserts we used :The composite part <a href="http://parts.igem.org/Part:BBa_K4294780" > BBa_K4294780 </a>    (TetR TU).
                       </li>
                       <li>
-                        And the composite parts that resulted from level 1 Golden Gate Assembly and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 the BBa_K4294981, for S5 level 2 the BBa_K4294982, for S10 level 2 the BBa_K4294983, for S11 level 2 the BBa_K4294984, for S12 level 2 the BBa_K4294985, for S13 level 2 the BBa_K4294986, for BCD1 Level 2 the BBa_K4294987, for BCD2 level 2 the BBa_K4294988, for BCD8 level 2 the BBa_K4294989, for BCD12 level 2 the BBa_K4294990 and for BCD14 level 2 the BBa_K4294991.
+                        And the composite parts that resulted from level 1 Golden Gate Assembly and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294981" > BBa_K4294981 </a>   , for S5 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294982" >  BBa_K4294982</a> , for S10 level 2 the<a href="http://parts.igem.org/Part:BBa_K4294983" >  BBa_K4294983</a> , for S11 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294984" >  BBa_K4294984</a>, for S12 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294985" >  BBa_K4294985</a>, for S13 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294986" >  BBa_K4294986</a>, for BCD1 Level 2 the <a href="http://parts.igem.org/Part:BBa_K4294987" >  BBa_K4294987</a> , for BCD2 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294988" >  BBa_K4294988</a>  , for BCD8 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294989" >  BBa_K4294989</a>  , for BCD12 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294990" >  BBa_K4294990</a>  and for BCD14 level 2 the <a href="http://parts.igem.org/Part:BBa_K4294991" >  BBa_K4294991</a> 
                       </li>
                       </ul>
                   <li>
@@ -800,7 +856,7 @@
                 <br>
   
                 <center>
-                  <img class="fig-14" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-14.png">
+                  <img class="fig-14" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-15.png">
                   <figcaption>
                     Figure 15:<br>
                     L: Ladder 1kb plus<br>
@@ -848,7 +904,7 @@
               </center>
               <br> 
 
-              It is also important to mention that according to Tutol et al. (2019) chloride has an effect on mNeonGreen folding . We therefore tried changing the buffer that we resuspended the pellets for measurement to rule out this, quite improbable, scenario. The results were consistent with every buffer as indicated in Figure 17 [4].
+              It is also important to mention that according to Tutol et al. (2019) chloride has an effect on mNeonGreen folding . We therefore tried changing the buffer that we resuspended the pellets for measurement to rule out this scenario. The results were consistent with every buffer as indicated in Figure 17 [4].
               <br><br>
 
               <center>
@@ -870,8 +926,7 @@
                 </center>
                 <br>
 
-              Last but not least, in an attempt to fully comprehend the multiple issues and troubleshoot, we tested the potential expression of LuxI by the LuxI-mNeonGreen CDS overlap construct by observing the effect of the supernatant of induced (after a 3h induction with aTc) BL21 sender cells with the LuxI-mNeonGreen CDS overlap on the output of receiver BL21 cells transformed with the OL-ColE1 construct. This experiment proved that LuxI is translated and OC6 is produced to activate the receivers. Receiver’s induction was nevertheless relatively low (Figure 19) (in comparison with the RFU observed when receivers are induced with externally added OC6 ) and this confirmed that LuxI is the only protein that can be translated from this construct and indicated a potential issue regarding the induction system.
-
+                Last but not least, in an attempt to fully comprehend the multiple issues and troubleshoot, we tested the potential expression of LuxI by the LuxI-mNeonGreen CDS overlap construct by observing the effect of the supernatant of induced (after a 3h induction with aTc) BL21 sender cells with the LuxI-mNeonGreen CDS overlap on the output of receiver BL21 cells transformed with the OL-ColE1 construct. This experiment proved that LuxI is translated and OC6 is produced to activate the receivers. Receiver’s induction was nevertheless relatively low (Figure 19) (in comparison with the RFU observed when receivers are induced with externally added OC6 ) and this confirmed that LuxI is the only protein that can be translated from this construct and indicated a potential issue regarding the induction system.
               <br><br>
 
               <center>
@@ -922,26 +977,26 @@
 
               <h1>Build</h1>
               <br>
-              To construct the 36nt LuxI- sfGFP CDS, the CDS of sfGFP was ordered as a gBlock from IDT. Primers (BBa_K4294082, BBa_K4294083) were used to add overhangs to the sfGFP CDS containing BsaI cut sites. The 5’ overhang would be 5’-CAAA-3’ to attach with the 36nt LuxI Double Stranded Oligo and the 3’ overhang would be 5’-GCTT-3’ to attach with the Terminator.
+              To construct the 36nt LuxI- sfGFP CDS, the CDS of sfGFP was ordered as a gBlock from IDT. Primers (<a href="http://parts.igem.org/Part:BBa_K4294082">BBa_K4294082</a>, <a href="http://parts.igem.org/Part:BBa_K4294083" >BBa_K4294083</a>) were used to add overhangs to the sfGFP CDS containing BsaI cut sites. The 5’ overhang would be 5’-CAAA-3’ to attach with the 36nt LuxI Double Stranded Oligo and the 3’ overhang would be 5’-GCTT-3’ to attach with the Terminator.
               <br><br>
-              The small 36nt double stranded oligo was constructed via primer annealing and extension following the protocol recommended from the iGEM registry (Knight:Annealing and primer extension with Taq polymerase). Primers BBa_K4294061 and BBa_K4294062 were used to construct the final oligo. The oligo includes BsaI cut sites on both sites. The 5’ overhang would be 5’ AATG 3’ to attach with the RBS and the 3’ overhang would be 5’CAAA3’ to attach with the sfGFP CDS.
+              The small 36nt double stranded oligo was constructed via primer annealing and extension following the protocol recommended from the iGEM registry (Knight:Annealing and primer extension with Taq polymerase).  Primers <a href="http://parts.igem.org/Part:BBa_K4294061">BBa_K4294061</a> and <a href="http://parts.igem.org/Part:BBa_K4294062">BBa_K4294062</a> were used to construct the final oligo. The oligo includes BsaI cut sites on both sites. The 5’ overhang would be 5’ AATG 3’ to attach with the RBS and the 3’ overhang would be 5’CAAA3’ to attach with the sfGFP CDS.
               <br><br>
 
               <b>Level 1 constructs:</b>
               <br><br>
               <ul>
                 <li>
-                  We performed Golden Gate Assemblies with BsaI using for every construct :
+                  We performed Golden Gate Assemblies with BsaI restriction enzyme, using for every construct :
                 </li>
                     <ul>
                     <li>  
-                      The vector BBa_K4294091 (pTU1-A-lacZ).
+                      The vector <a href="http://parts.igem.org/Part:BBa_K4294091" >BBa_K4294091</a> (pTU1-A-lacZ).
                     </li>
                     <li>
-                      The parts BBa_K3424010 (TetR promoter), BBa_K4294210 (LuxI codon optimised for E. Coli (+6His Tag)), BBa_K4294207 (36nt LuxI - sfGFP), BBa_B0015 (Double Terminator).
+                      The parts <a href="http://parts.igem.org/Part:BBa_K3424010" >BBa_K3424010</a>  (TetR promoter), <a href="http://parts.igem.org/Part:BBa_K4294207" >BBa_K4294207</a>  (36nt LuxI - sfGFP), <a href="http://parts.igem.org/Part:BBa_K4294207" >BBa_B0015 </a> (Double Terminator).  
                     </li>
                     <li>
-                      An RBS that was different for each construct. The RBSs was BBa_K4294004 (S4), BBa_K4294005 (S5), BBa_K4294010 (S10), BBa_K4294011 (S11), BBa_K4294012 (S12), BBa_K4294013 (S13), BBa_J428034 (BCD1),BBa_K4294102 (BCD2), BBa_K2680561 (BCD8), BBa_K2680529 (BCD12), BBa_K4294114 (BCD14).
+                      An RBS that was different for each construct. The RBSs was <a href="http://parts.igem.org/Part:BBa_K4294004" >BBa_K4294004 </a>  (S4), <a href="http://parts.igem.org/Part:BBa_K4294005" >BBa_K4294005 </a> (S5), <a href="http://parts.igem.org/Part:BBa_K4294010" >BBa_K4294010 </a> (S10), <a href="http://parts.igem.org/Part:BBa_K4294011" > BBa_K4294011</a> (S11), <a href="http://parts.igem.org/Part:BBa_K4294012" >BBa_K4294012</a>  (S12), BBa_K4294013 (S13),<a href="http://parts.igem.org/Part:BBa_J428034" >BBa_J428034</a>   (BCD1),<a href="http://parts.igem.org/Part:BBa_K4294102" >BBa_K4294102</a> (BCD2), BBa_K2680561 (BCD8), <a href="http://parts.igem.org/Part:BBa_K2680529" >BBa_K2680529 </a>  (BCD12), <a href="http://parts.igem.org/Part:BBa_K4294114" >BBa_K4294114</a> (BCD14).
                     </li>
                     </ul>
                 <li>
@@ -952,7 +1007,7 @@
                   <center>
                     <img class="fig-21" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-21.png">
                     <figcaption>
-                      Figure 21: Agar plate with Ampicillin, X-Gal and IPTG for blue-white screening with transformed <it>E. Coli <\it> DH5a colonies with BCD8 level 1 luxI36nt-sfGFP construct on pTU1-A-lacZ. We observe it under UV light.
+                      Figure 21: Agar plate with Ampicillin, X-Gal and IPTG for blue-white screening with transformed <it>E. Coli </it> DH5a colonies with BCD8 level 1 luxI36nt-sfGFP construct on pTU1-A-lacZ. We observe it under UV light.
                     </figcaption>
                     </center>
                 </li>
@@ -964,8 +1019,8 @@
                 </li>
                 <li>
                   Standard PCR and Colony PCR with Taq polymerase for all of the constructs by using the primers:<br>
-                  BBa_K4294031 (pTU1 Reverse).<br>
-                  BBa_K4294021 (Biobrick Prefix Forward).<br>                
+                  <a href="http://parts.igem.org/Part:BBa_K4294031" > BBa_K4294031</a>  (pTU1 Reverse). <br>
+                  <a href="http://parts.igem.org/Part:BBa_K4294021" > BBa_K4294021</a> (Biobrick Prefix Forward).              
                 </li>
                 <li>
                 Agarose gel electrophoresis.
@@ -987,7 +1042,7 @@
                     </li>
                   </ul>
                 </li>
-              </ul>  
+                
               <br>
 
               <center>
@@ -1039,9 +1094,12 @@
                 <br>  
                 As shown in Figures 22 and 23, our colony PCR on the level 1 sender’s constructs resulted in the expected bands for some colonies, that we subsequently picked to start liquid cultures and isolate their plasmids (miniprep).
                 <br><br>   
+                <br>
+                An example part of level 1 constructs is <a href="http://parts.igem.org/Part:BBa_K4294754" > Part:Part:BBa_K4294754</a>. For the all the codes of all the aforementioned level 1 constructs please refer to the <a href="https://2022.igem.wiki/athens/parts" > Parts</a> tab.
                 <li>
                   So, we did plasmid minipreps using all the bacteria strains that contained the desired constructs and we continued with the construction of level 2 plasmids.
                 </li>
+              </ul>
               <br><br>
               
             
@@ -1054,13 +1112,13 @@
                   </li>
                       <ul>
                       <li>  
-                        The vector BBa_K4294093 (pTU2-A-RFP (p15A origin)).
+                        The vector <a href="http://parts.igem.org/Part:BBa_K4294093" > BBa_K4294093</a>   (pTU2-A-RFP (p15A origin)).
                       </li>
                       <li>
-                        The composite part BBa_K4294780 (TetR TU).
+                        The composite part <a href="http://parts.igem.org/Part:BBa_K4294780" > BBa_K4294780</a>   (TetR TU).
                       </li>
                       <li>
-                        The composite parts that resulted from level 1 Golden Gate Assembly and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 we used the BBa_K4294754, for S5 level 2 we used the BBa_K4294755, for S10 level 2 we used the BBa_K4294760, for S11 level 2 we used the BBa_K4294761, for S12 level 2 we used the BBa_K4294762, for S13 level 2 we used the BBa_K4294763, for BCD1 Level 2  we used the BBa_K4294771, for BCD2 level 2 we used the BBa_K4294772, for BCD8 level 2 we used the BBa_K4294773, for BCD12 level 2 we used the BBa_K4294774 and for BCD14 level 2 we used the BBa_K4294775.
+                        The composite parts that resulted from level 1 Golden Gate Assembly and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294754" > BBa_K4294754</a> , for S5 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294755" > BBa_K4294755</a> , for S10 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294760" > BBa_K4294760</a> , for S11 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294761" > BBa_K4294761</a> , for S12 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294761" > BBa_K4294762</a> , for S13 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294761" > BBa_K4294763</a> , for BCD1 Level 2  we used the <a href="http://parts.igem.org/Part:BBa_K4294771" > BBa_K4294771</a> , for BCD2 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294772" >BBa_K4294772</a> , for BCD8 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294772" >BBa_K4294773</a> , for BCD12 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294774" >BBa_K4294774</a>  and for BCD14 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294774" >BBa_K4294775</a> .
                       </li>
                       </ul>
                   <li>
@@ -1079,8 +1137,9 @@
                     Selection of the white colonies (plasmids with insert) over the red colonies (no insert in plasmid).
                   </li>
                   Colony PCR amplification for all of the constructs by using the primers:<br>
-                  BBa_K4294032 (pTU2 Reverse).<br>
-                  BBa_K4294021 (Biobrick Prefix Forward).<br>       
+                  <a href="http://parts.igem.org/Part:BBa_K4294032" >BBa_K4294032</a> (pTU2 Reverse). <br>
+                  <a href="http://parts.igem.org/Part:BBa_K4294021" >BBa_K4294021</a>  (Biobrick Prefix Forward).
+     
                   <li>
                   Agarose gel electrophoresis.
                   <br>
@@ -1192,7 +1251,7 @@
 
               <ul>
                 <li>
-                  We constructed PlacI-tet1 sequence with flanking BsmBI cut sites using the Primerize [9,10] online software for PCR assembly with the primers BBa_K4294041, BBa_K4294042, BBa_K4294043, BBa_K4294044 designed by the same software.
+                  We constructed PlacI-tet1 sequence with flanking BsmBI cut sites using the Primerize [9,10] online software for PCR assembly with the primers <a href="http://parts.igem.org/Part:BBa_K4294041" >BBa_K4294041</a>, <a href="http://parts.igem.org/Part:BBa_K4294042">BBa_K4294042</a>, <a href="http://parts.igem.org/Part:BBa_K4294043">BBa_K4294043</a>, <a href="http://parts.igem.org/Part:BBa_K4294044">BBa_K4294044</a> designed by the same software.
                </li>
                 <li>
                 Agarose gel electrophoresis.
@@ -1212,7 +1271,7 @@
                     As shown in Figure 29, our electrophoresis on PlacI-tet1 resulted in the expected bands.   
                 </li>
                 <li>
-                  Primers with BsmBI overhangs were used to isolate TetR CDS (BBa_K4294051, BBa_K4294052) and the following terminator from an already assembled Level 2 plasmid so as to add the suitable overhangs for assembly with the PlacI-tet1 part and the pTU2 vector in the following Golden Gate Assembly. The TetR CDS - Terminator was isolated with gel extraction.
+                  Primers with BsmBI overhangs were used to isolate TetR CDS (<a href="http://parts.igem.org/Part:BBa_K4294051">BBa_K4294051</a>, <a href="http://parts.igem.org/Part:BBa_K4294052">BBa_K4294052</a>) and the following terminator from an already assembled Level 2 plasmid so as to add the suitable overhangs for assembly with the PlacI-tet1 part and the pTU2 vector in the following Golden Gate Assembly. The TetR CDS - Terminator was isolated with gel extraction.
                 </li>
                 <li>
                   We performed Golden Gate Assemblies with BsmBI using for every construct:
@@ -1222,13 +1281,13 @@
                     The vector pTU2-A-RFP (p15a origin).
                   </li>
                   <li>
-                    The BBa_K4294998 (PlacI-tet1).
+                    The <a href="http://parts.igem.org/Part:BBa_K4294998">BBa_K4294998 </a>(PlacI-tet1).
                   </li>
                   <li>
-                    The  BBa_K4294215 (TetR CDS).
+                    The <a href="http://parts.igem.org/Part:BBa_K4294215">BBa_K4294215</a>  (TetR CDS).
                   </li>
                   <li>
-                    The composite parts that resulted from the level 1 Golden Gate Assembly of the level 2 engineering cycle and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 we used the BBa_K4294754, for S5 level 2 we used the BBa_K4294755, for S10 level 2 we used the BBa_K4294760, for S11 level 2 we used the BBa_K4294761, for S12 level 2 we used the BBa_K4294762, for S13 level 2 we used the BBa_K4294763, for BCD1 Level 2  we used the BBa_K4294771, for BCD2 level 2 we used the BBa_K4294772, for BCD8 level 2 we used the BBa_K4294773, for BCD12 level 2 we used the BBa_K4294774 and for BCD14 level 2 we used the BBa_K4294775.
+                    The composite parts that resulted from the level 1 Golden Gate Assembly of the level 2 engineering cycle and were isolated by plasmid minipreps. Each of these was used to build a new level 2 construct. For S4 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294754">BBa_K4294754</a> , for S5 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294755">BBa_K4294755</a> , for S10 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294760">BBa_K4294760</a> , for S11 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294761">BBa_K4294761</a> , for S12 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294762">BBa_K4294762</a> , for S13 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294763">BBa_K4294763</a> , for BCD1 Level 2  we used the <a href="http://http://parts.igem.org/Part:BBa_K4294771">BBa_K4294771</a> , for BCD2 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294772">BBa_K4294772</a> , for BCD8 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294773">BBa_K4294773</a> , for BCD12 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294774">BBa_K4294774</a> and for BCD14 level 2 we used the <a href="http://parts.igem.org/Part:BBa_K4294775">BBa_K4294775</a> 
                   </li>
                 </ul>
               <li>
@@ -1248,9 +1307,8 @@
               </li>
               <li>
                 Colony PCR amplification for all the constructs by using the primers:<br>
-                BBa_K4294032 (pTU2 Reverse).<br>
-                BBa_K4294021 (Biobrick Prefix Forward).<br>
-
+                <a href="http://parts.igem.org/Part:BBa_K4294032" > BBa_K4294032</a>  (pTU2 Reverse).<br>
+                <a href="http://parts.igem.org/Part:BBa_K4294021" > BBa_K4294021</a> (Biobrick Prefix Forward).<br>
               </li>
               <li>
                 Agarose gel electrophoresis.
@@ -1293,7 +1351,7 @@
                   Plasmid minipreps from all the correct aforementioned level 2 sender’s constructs.
                 </li>
                 <li>
-                  Transform <it> E. coli </it> BL21 with the recombinant level 2 plasmids from the minipreps on LB-Agar plates containing chloramphenicol.
+                  Transformation of <it> E. coli </it> BL21 with the recombinant level 2 plasmids from the minipreps on LB-Agar plates containing chloramphenicol.
                 </li>
               <br>
 
@@ -1394,21 +1452,21 @@
                 </li>
                     <ul>
                     <li>  
-                    The vector BBa_K4294091 (pTU1-A-lacZ).
+                      The vector <a href="http://parts.igem.org/Part:BBa_K4294091" > BBa_K4294091</a>   (pTU1-A-lacZ).
                     </li>
                     <li>
-                    The parts BBa_K3424010 (TetR promoter), BBa_K4294210 (LuxI codon optimised for <it>E. coli<\it> (+6His Tag)), BBa_B0015 (Double Terminator).
+                      The parts <a href="http://parts.igem.org/Part:BBa_K3424010" >BBa_K3424010</a>  (TetR promoter), <a href="http://parts.igem.org/Part:BBa_K4294210" >BBa_K4294210</a>   (LuxI codon optimised for <i>E. coli</i> (+6His Tag)),<a href="http://parts.igem.org/Part:BBa_K4294210" >BBa_B0015 </a> (Double Terminator).
                     </li>
                     <li>
-                    An RBS that was different for each construct. The RBSs was BBa_K4294004 (S4), BBa_K4294005 (S5), BBa_K4294010 (S10), BBa_K4294011 (S11), BBa_K4294012 (S12), BBa_K4294013 (S13), BBa_J428034 (BCD1),BBa_K4294102 (BCD2), BBa_K2680561 (BCD8), BBa_K2680529 (BCD12), BBa_K4294114 (BCD14).
-                    </li>
+                      An RBS that was different for each construct. The RBSs was <a href="http://parts.igem.org/Part:BBa_K4294004" >BBa_K4294004 </a>  (S4), <a href="http://parts.igem.org/Part:BBa_K4294005" >BBa_K4294005 </a>(S5), <a href="http://parts.igem.org/Part:BBa_K4294010" >BBa_K4294010</a> (S10), <a href="http://parts.igem.org/Part:BBa_K4294011" >BBa_K4294011</a> (S11), <a href="http://parts.igem.org/Part:BBa_K4294012" >BBa_K4294012</a> (S12), <a href="http://parts.igem.org/Part:BBa_K4294013" >BBa_K4294013</a>  (S13), <a href="http://parts.igem.org/Part:BBa_J428034">BBa_J428034</a> (BCD1), <a href="http://parts.igem.org/Part:BBa_K4294102">BBa_K4294102</a>  (BCD2), <a href="http://parts.igem.org/Part:BBa_K2680561">BBa_K2680561</a> (BCD8), <a href="http://parts.igem.org/Part:BBa_K2680529">BBa_K2680529</a> (BCD12), <a href="http://parts.igem.org/Part:BBa_K4294114">BBa_K4294114 </a>(BCD14).
+
                     </ul>
                 <li>
                   Transformation of the recombinant plasmid on <it>E. coli</it> DH5a at LB - Agar - Ampicillin plates whith IPTG 0.1M and x-Gal 2% for Blue-White screening.
                   <center>
                     <img class="fig-36" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-36.png">
                     <figcaption>
-                      Figure 36: Agar plate with Ampicillin, X-Gal and IPTG for blue-white screening with transformed <it>E. coli<\it> DH5a colonies with BCD8 level 1 LuxI TU construct on pTU1-A-lacZ. 
+                      Figure 36: Agar plate with Ampicillin, X-Gal and IPTG for blue-white screening with transformed <it>E. coli </it> DH5a colonies with BCD8 level 1 LuxI TU construct on pTU1-A-lacZ. 
                     </figcaption>
                     </center>
                   </li>
@@ -1449,7 +1507,7 @@
               <br>
 
               <center>
-                <img class="fig-39" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-39.png">
+                <img class="fig-37" src="https://static.igem.wiki/teams/4294/wiki/engineering-success/es-figure-37.png">
                 <figcaption>
                   Figure 37:<br>
 
@@ -1475,13 +1533,15 @@
                 <br>  
 
                 As shown in Figure 37, our diagnostic digest on the level 1 sender’s constructs resulted in the expected bands (in the 1st, the 2nd and the 7th samples the zone at 978bp and 919bp respectively has very low brightness. However, we observe that there is a high concentration of uncut recombinant plasmid in the samples.              
+                <br></br>
+                An example part of level 1 constructs is <a href="http://parts.igem.org/Part:BBa_K4294704" > BBa_K4294704</a>. For the all the codes of all the aforementioned level 1 constructs please refer to the <a href="https://2022.igem.wiki/athens/parts" > Parts</a> tab.
                 <br><br>
 
 
 
               <h1>Test</h1>
               <br>
-              Figure 33 (“Final Characterization Circuit - Learn) represents the first trial of a Sender - Receiver interaction. More information regarding such experiments can be found in the <a href="https://2022.igem.wiki/athens/results">Results</a> and <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a> pages.
+              Figure 33 (Final Characterization Circuit - Learn) represents the first trial of a Sender - Receiver interaction. More information regarding such experiments can be found in the <a href="https://2022.igem.wiki/athens/results">Results</a> and <a href="https://2022.igem.wiki/athens/proof-of-concept">Proof of Concept</a> pages.
               </p>
 
             </div>
@@ -1503,8 +1563,7 @@
             <h1>Design</h1>
             <br>
             <p>
-            After deciding that the input patterns would be generated by one chemical inducer, a problem that emerged was keeping the supposedly “0” senders in the pattern uninduced. Even with washes before the senders are mixed, residual aTc might result in unwanted activation of a sender subpopulation and mess up the initial pattern. We decided to incorporate TetX, a tetracycline inactivation enzyme that breaks down aTc, in our cross-talk tackling strategy. As mentioned in the Design section, this construct was designed with pTKEI-Dest as its backbone, because its ori (incompatibility group A) would not interfere with the replication of the senders’ final construct (incompatibility group B). pTKEI would be co-transformed in the senders we wished to keep uninduced in the specific pattern.
-
+              After deciding that the input patterns would be generated by one chemical inducer, a problem that emerged was keeping the supposedly “0” senders in the pattern uninduced. Even with washes before the senders are mixed, residual aTc might result in unwanted activation of a sender subpopulation and mess up the initial pattern. We decided to incorporate TetX, a tetracycline inactivation enzyme that breaks down aTc, in our cross-talk tackling strategy. As mentioned in the Design section, this construct (<a href="http://parts.igem.org/Part:BBa_K4294790" > BBa_K4294790 </a>   ) was designed with pTKEI-Dest as its backbone, because its ori (incompatibility group A) would not interfere with the replication of the senders’ final construct (incompatibility group B). pTKEI would be co-transformed in the senders we wished to keep uninduced in the specific pattern.
             <h1>Build</h1>
             <br>
             <b>Level 1 constructs:</b>
@@ -1515,10 +1574,12 @@
                 </li>
                     <ul>
                     <li>  
-                      BBa_K4294094 (pTKEI - Dest vector).
+                      <a href="http://parts.igem.org/Part:BBa_K4294094" > BBa_K4294094</a>  (pTKEI - Dest vector).
+
                     </li>
                     <li>
-                      BBa_K4294790 (TetX TU).
+                      <a href="http://parts.igem.org/Part:BBa_K4294790" > BBa_K4294790</a> (TetX TU).
+
                     </li>
                     </ul>
                 <li>
@@ -1677,6 +1738,14 @@
       
                 </a>
             </cite>
+
+            <cite>
+              <a href="https://pubmed.ncbi.nlm.nih.gov/20187959/">
+               11. Nistala GJ, Wu K, Rao CV, Bhalerao KD. A modular positive feedback-based gene amplifier. J Biol Eng. 2010 Feb 26;4:4. doi: 10.1186/1754-1611-4-4. PMID: 20187959; PMCID: PMC2845093.
+    
+    
+              </a>
+          </cite>
       
       
             </div>

@@ -144,7 +144,7 @@ body{
   }
   
 .index-bar ul li a:hover {
-    color: #61b872;
+    color: #ffc973;
   }
 
     
@@ -162,7 +162,7 @@ font-size: 25px;
 }
 
 .active, .collapsible_menu:hover {
-    color: #61b872;
+    color: #ffc973;
 }
 .anchorOffset {
     display: block !important;
