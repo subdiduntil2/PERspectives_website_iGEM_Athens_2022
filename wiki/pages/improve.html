@@ -84,34 +84,24 @@
         <br><br>
         <!--<h2>Building and Performing Simulations</h2> -->
         <p>
-          It is quite obvious that our project revolves around the Ribosome Binding Site (RBS) sequence characteristics. 
-          As it is often stated in the rest wiki pages, Ribosome Binding Sites are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an important role in defining their performance, the neighboring genetic context, namely 
-          their eighboring sequences, influence their function. For example, a complementary with the RBS sequence at the start of the Coding Sequence or at a transcribed operator 
-          might trap the RBS in a stem-loop, inhibiting ribosome binding and, therefore, protein expression [1].
-          In general, stable mRNA structures at the RBS are limiting the translation initiation rate. The same RBS might function considerably different across genetic contexts. 
-          This makes RBS characterizations often unreliable and since the RBS strength at initiating translation must be evaluated in every new designed circuit, 
-          RBS parts must be improved in terms of their context dependency to become true versatile, plug-and-play devices.
+          In general, our project revolves widely around the characteristics of a Ribosome Binding Site (RBS) sequence. As it is often stated in the rest wiki pages, Ribosome Binding Sites are highly context dependent. Even though their intrinsic Shine-Dalgarno sequence plays an important role in defining their performance, the neighboring genetic context, namely their neighboring sequences, influence their function. For example, transcribed operator sequences or coding sequences (CDS) near the start codon that are complementary to the RBS might trap the RBS in a stem-loop, inhibiting ribosome binding and, therefore, protein expression [1]. In general, stable mRNA structures at the RBS are limiting the translation initiation rate. The same RBS might function considerably differently across varying genetic contexts. This makes RBS characterizations often unreliable and since the RBS strength at initiating translation must be evaluated in every new designed circuit, RBS parts must be improved in terms of their context dependency to become true versatile, plug-and-play devices.
         </p>
         <br><br>
         <p>
-          Many different approaches have been developed to combat this issue. Regarding the Promoter:5’UTR junction context, 
-          a few examples include self-cleaving ribozymes, which provide a standard genetic context at the 5’ end and can insulate the RBS from the Promoter’s context [2]
-          and unstructured 5’ tails acting as ribosome “standby sites”, which facilitate translation initiation by pre-bound to the mRNA ribosomes at the short frames of 
-          time in which the stable mRNA structure is transiently unfolded [3]. Regarding the 5’UTR: CDS junction, the often-mentioned bicistronic design (BCD) 
-          by Mutalik et. [4] al provides an efficient way to combat variability in protein expression.
+          Many different approaches have been developed to combat this issue. Regarding the Promoter:5’UTR junction context, a few examples include self-cleaving ribozymes, which provide a standard genetic context at the 5’ end and can insulate the RBS from the Promoter’s context [2] and unstructured 5’ tails acting as ribosome “standby sites”, which facilitate translation initiation by pre-bound to the mRNA ribosomes at the short frames of time in which the stable mRNA structure is transiently unfolded [3]. Regarding the 5’UTR: CDS junction, the often-mentioned bicistronic design (BCD) by Mutalik et. [4] al provides an efficient way to combat variability in protein expression.
         </p>
         <br><br>
         <p>
-          Prokaryotic RBS parts are often registered as sequences mostly consisting of a Shine Dalgarno sequence (the complementary sequence to the ribosomal rRNA).
-          However, all of the above indicates that their nearby genetic context also needs to be defined.iGEM RBS parts are distributed with an extra 5’ biobrick and 3’ biobrick scar which influence 
-          their function and probability of interaction with nearby sequences. 
+          Prokaryotic RBS parts are often registered as sequences mostly consisting of a Shine Dalgarno sequence (the complementary to the 16S rRNA sequence). However, all of the above indicates that their nearby genetic context also needs to be defined. iGEM RBS parts are distributed with an extra 5’ biobrick and 3’ biobrick scar which influence their function and probability of interaction with nearby sequences. 
         </p>
         <br><br>
         <p>
           In a recent research paper by Duan et. al [5],  general design criteria to improve programmability and minimize context dependence of RBS were proposed.
-          The translation of multiple genes under the same RBS was quantitatively characterized to evaluate the context dependence of each RBS variant in E. coli.
+          The translation of multiple genes under the same RBS was quantitatively characterized to evaluate the context dependence of each RBS variant in <it>E. coli</it>.
           Among other parameters of RBS function that were evaluated, their results showed that an AC-rich spacer region (−7 to −1) between the SD sequence
-          and the start codon was associated with low context dependence. Based on the aforementioned research we developed a version of the commonly used 
+          and the start codon was associated with lower context dependence.
+          <br><br>
+          Based on the aforementioned research we developed a version of the commonly used 
           BBa_B0034 RBS part with an altered spacer sequence between the RBS and the ATG start codon.
         </p>
         <br>
@@ -203,9 +193,8 @@
         </p>  
         <br><br>
         <p>
-        The dataset was provided in the research paper by Duan et. al.[5] In particular, they used a mutant RBS library with GFP and RFP fluorescent proteins
-        and characterized each mutant based on the difference in fluorescence.In this way, they created a labeled dataset of RBS sequences in which RBS variants with similar values of 
-        GFP and RFP fluorescence (lower than 20% difference) would be characterized as low context dependent (LCD) and the others would be labeled as high context dependent (HCD).
+          The dataset was provided in the research paper by Duan et. al.[5]. In particular, they characterized a library of RBS mutants in the context of GFP and RFP fluorescent proteins. In this way, they created a labeled dataset of RBS sequences in which RBS variants with similar values of GFP and RFP fluorescence(< 20% difference) would be characterized as low context dependent (LCD) and the others would be labeled as high context dependent(HCD).
+
         </p>  
         <br><br>
         <p>
@@ -371,10 +360,7 @@
       </center>
       <br><br>
       <p>    
-        Due to a lack of time for testing all 5 sequences, the wet lab team initially arbitrarily decided on testing 3 variants. Since all variants have the same AC content and one T or C in the spacer region, 
-        the T containing variants were selected on the grounds that an AT hydrogen bond with a neighboring sequence would offer less thermodynamic stability than a stronger GC bond. Hence, we were led to choose RBS 
-        variants with index values <b>2</b>, <b>3</b> and <b>5</b> on table 1 for experimental validation of our in silico analysis. In the end, due to time and wet lab engineering constraints, only the RBS variant with index value with index 5 (V59) 
-        was tested in comparison with the original BBa_B0034 RBS. 
+        Due to a lack of time for testing all 5 sequences, the wet lab team initially arbitrarily decided on testing 3 variants. Since all variants have the same AC content and one T or C in the spacer region, the T containing variants were selected on the grounds of the rough estimation that an AT hydrogen bond with a neighboring sequence would offer less stability than a stronger GC bond. Hence, we were led to choose RBS variants with index values 2,3,5 on table 1 for experimental validation of our in silico analysis. In the end, due to time and wet lab engineering constraints, only the RBS variant with index value 5 (V59) was tested in comparison with the original BBa_B0034 RBS.
       </p>
       <br>
       <p>    
@@ -426,16 +412,20 @@
             <td>catccca</td>
             <td>BBa_K4294626</td>
           </tr>
+          <tr>
+            <td>Elowitz RBS</td>
+            <td>tactagag</td>
+            <td>aaagaggagaaa</td>
+            <td>tactaa</td>
+            <td>BBa_K4294626</td>
+          </tr>
         </tbody>
     </table>
     <figcaption>Table 2. The selected RBS sequences. The original RBS BBa_B0034 is also added.</figcaption>
   </center>
   <br><br>
   <p>
-   To verify the reduction in context dependence of the improved RBS spacer variants, different genetic contexts were introduced by fusions of the fluorescent protein sfGFP 
-   with the first 36 nucleotides of the proteins Pencillin acylase (PA), Phosphomevalonate Kinase (PMK) and AraC. The sequences of the PA and PMK 36nt fragments were derived from Duan et. al [5]paper data 
-   and the sequence of the sfGFP and AraC CDS from Mutalik et. al [4] paper data. sfGFP retains its function when it is fused with poorly folded peptides[16] and is therefore a reliable reporter for examining the 
-   effect of the genetic context on translation rate. The following characterization parts were generated (Table 3.)
+    To verify the reduction in context dependency of the improved RBS spacer variants, different genetic contexts were introduced by fusions of the fluorescent protein sfGFP with the first 36 nucleotides of the proteins Penicillin acylase (PA), Phosphomevalonate Kinase (PMK) and AraC. The sequences of the PA and PMK 36nt fragments were derived from Duan et. al [5]paper data and the sequence of the sfGFP and AraC CDS from Mutalik et. al [4] paper data. sfGFP retains its function when it is fused with poorly folded peptides[16] and is therefore a reliable reporter for examining the effect of the genetic context on translation rate. The following characterization parts were generated (Table 3.)
     </p>
   <br>
   <center>
@@ -466,24 +456,17 @@
       </center>
       <br><br>
       <p>
-        The above parts together with the CDS of the sfGFP (BBa_K429420) create four genetic contexts in which the original BBA_B0034 RBS and the V59 RBS BBa_K4294559 variant was tested. 
-        Unfortunately the 36ntPMK - sfGFP fusion did not produce any fluorescence in both groups and therefore the context dependency was evaluated in three genetic contexts.
+        The above parts together with the CDS of sfGFP (BBa_K429420) create four genetic contexts in which the original BBa_B0034 RBS and the V59 RBS BBa_K4294559 variant were tested. Unfortunately the 36ntPMK - sfGFP fusion did not produce any fluorescence in both groups and therefore the context dependency was evaluated in three genetic contexts.
          </p>
        <br>
        <h2>Overview of the experimental procedure</h2>
        <br><br>
        <p>
-        As it is explained in more detail in the attached pdf file below, only the V59 BBa_K4294559 RBS was finally tested in comparison with BBa_B0034. The V59 RBS part and the 36nt Double Stranded Oligo parts were constructed via primer 
-        annealing and extension. BsaI cut sites were introduced to facilitate the assembly of the characterization constructs following the Golden Gate Assembly Protocol for BsaI. The plasmid vector was the pTU1-A-lacZ 
-        plasmid that was widely used in our project. The original RBS BBa_B0034 was isolated by the iGEM 2022 distribution kit plate 1 and compatible for the chosen assembly method. The transcription of the reporters was put 
-        under the control of the Ptet promoter and the final constructs were transformed into DH5a-z1 cells, which have a genome encoded TetR production. 
-        Induction of bacteria was performed with 0.5 μM aTc concentration for 3h. OD and Fluorescence measurements were taken using the Flexstation 3 (Molecular Devices) plate reader. 
-        The Fluorescence (in RFU)/OD600 ratio was calculated for each reporter construct, the average value and the standard sample deviation of the ratios of each construct for both RBS variants (original and v59) 
-        were calculated. Comparison of context dependence was evaluated via the calculation of the Coefficient of Variation of each group.
+        As it is explained in more detail in the attached pdf file below, only the V59 BBa_K4294559 RBS was finally tested in comparison with BBa_B0034. The V59 RBS part and the 36nt Double Stranded Oligo parts were constructed via primer annealing and extension. BsaI cut sites were introduced to facilitate the assembly of the characterization constructs following the Golden Gate Assembly Protocol for BsaI. The plasmid vector was the pTU1-A-lacZ plasmid that was widely used in our project. The Type2S cloning with BsaI compatible RBS BBa_B0034 was provided by the iGEM 2022 distribution kit plate 1. The transcription of the reporters was put under the control of the Ptet promoter and the final constructs were transformed into DH5a-z1 cells, which have genome encoded TetR production. Induction of bacteria was performed with 0.5 μM aTc concentration for 3h. OD and Fluorescence measurements were taken using the Flexstation 3 (Molecular Devices) plate reader. The Fluorescence (in RFU)/OD600 ratio was calculated for each reporter construct, the average value and the standard sample deviation of the ratios of all constructs for both RBS variants (original and v59) were calculated. Comparison of context dependence was evaluated via the calculation of the Coefficient of Variation of each group.
          </p>
        <br>
        <p>
-        More information regarding the construct validation and measurement results are provided in this supplementary <a href="https://static.igem.wiki/teams/4294/wiki/improve/ip-pdf-results.pdf">pdf file</a>
+        More information regarding the construct validation and measurement results are provided in this <a href="https://static.igem.wiki/teams/4294/wiki/improve/ip-pdf-results.pdf">pdf file</a>
          </p>
        <br>
        <center>
