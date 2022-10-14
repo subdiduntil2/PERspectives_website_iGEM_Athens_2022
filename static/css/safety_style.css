@@ -304,6 +304,13 @@ font-size: 25px;
     border-radius: 50px;
 }
 
+.what_img_2{
+    width: 30%;
+    float: right;
+    padding-left: 2em;
+    border-radius: 50px;
+}
+
 
 @media screen and (max-width: 1200px){
     .heading{
